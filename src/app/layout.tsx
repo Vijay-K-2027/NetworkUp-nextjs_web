@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +11,58 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const neueMontreal = localFont({
+  src: [
+    {
+      path: "./homepage/assets/fonts/NeueMontreal-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./homepage/assets/fonts/NeueMontreal-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./homepage/assets/fonts/NeueMontreal-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./homepage/assets/fonts/NeueMontreal-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./homepage/assets/fonts/NeueMontreal-Italic.otf",
+      weight: "600",
+      style: "italic",
+    },
+  ],
+  variable: "--font-neue-montreal",
+});
+
+const comfortaa = localFont({
+  src: [
+    {
+      path: "./homepage/assets/fonts/Comfortaa-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./homepage/assets/fonts/Comfortaa-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./homepage/assets/fonts/Comfortaa-Bold.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-comfortaa",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +78,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${neueMontreal.variable} ${comfortaa.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
+

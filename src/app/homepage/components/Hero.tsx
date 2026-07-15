@@ -2,8 +2,8 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-white">
-            <div className="mx-auto flex max-w-7xl flex-col items-center px-6 py-15 text-center">
+        <section id="product" className="relative overflow-hidden bg-white">
+            <div className="mx-auto flex max-w-7xl flex-col items-center px-6 py-25 text-center">
 
                 {/* Badge */}
                 <div className="w-350 mb-8 rounded-full border border-lime-200 bg-lime-50 px-6 py-2 text-sm font-medium text-black">
@@ -70,9 +70,7 @@ export default function Hero() {
                         </span>{" "}
                         top revenue teams
                     </p>
-
                 </div>
-
             </div>
         </section>
     );
