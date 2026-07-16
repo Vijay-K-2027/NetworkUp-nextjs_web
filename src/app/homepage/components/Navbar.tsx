@@ -84,14 +84,14 @@ export default function Navbar() {
                     </Link>
 
                     <nav className="hidden md:flex">
-                        <ul className="flex items-center gap-8 text-sm font-medium text-gray-600">
+                        <ul className="flex items-center gap-8 text-md font-medium text-gray-600">
                             {navItems.map((items, index) => {
                                 const isActive = activeSection === items.id;
                                 return (
                                     <li key={index} className="h-20 flex items-center">
                                         <a
                                             href={`#${items.id}`}
-                                            className={`text-sm font-semibold transition-all duration-200 pb-2 ${isActive
+                                            className={`text-md font-semibold transition-all duration-200 pb-2 ${isActive
                                                 ? "text-[#356221] border-b-2 border-[#76e11b]"
                                                 : "text-gray-600 hover:text-[#76e11b] border-b-2 border-transparent"
                                                 }`}

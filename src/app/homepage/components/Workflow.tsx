@@ -97,7 +97,7 @@ export default function Workflow() {
                             {/* Dashboard Mockup Image */}
                             <div className="w-full px-4 pb-4">
                                 <Image
-                                    src="/Workspace_Img.png"
+                                    src="/Workspace_img.png"
                                     alt="Dashboard metrics showing load times, bounce rates, page views and sessions"
                                     width={1200}
                                     height={800}

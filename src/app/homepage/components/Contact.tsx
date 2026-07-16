@@ -95,7 +95,7 @@ export default function Contact() {
                             <div className="grid grid-cols-3 gap-4 text-center">
                                 <div className="flex flex-col">
                                     <Clock size={18} stroke="#305239" className="mx-23 my-3" />
-                                    <span className="text-lg sm:text-xl font-bold text-gray-900 tracking-tight">
+                                    <span className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight">
                                         &lt; 2 Hours
                                     </span>
                                     <span className="text-[10px] font-bold text-black/80 uppercase tracking-wide mt-1">
@@ -104,7 +104,7 @@ export default function Contact() {
                                 </div>
                                 <div className="flex flex-col border-x border-zinc-100">
                                     <ShieldCheck size={18} stroke="#305239" className="mx-23 my-3" />
-                                    <span className="text-lg sm:text-xl font-bold text-gray-900 tracking-tight">
+                                    <span className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight">
                                         98%
                                     </span>
                                     <span className="text-[10px] font-bold text-black/80 uppercase tracking-wide mt-1">
@@ -113,7 +113,7 @@ export default function Contact() {
                                 </div>
                                 <div className="flex flex-col">
                                     <LucideUsers2 size={18} stroke="#305239" className="mx-23 my-3" />
-                                    <span className="text-lg sm:text-xl font-bold text-gray-900 tracking-tight">
+                                    <span className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight">
                                         1,500+
                                     </span>
                                     <span className="text-[10px] font-bold text-black/80 uppercase tracking-wide mt-1">

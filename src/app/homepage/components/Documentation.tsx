@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-// Removed the static 'isOpen' property since state should manage visibility dynamically
 const documents = [
     {
         "question": "What is NetworkUp.io and how does it help grow my LinkedIn network?",
@@ -32,7 +31,6 @@ const documents = [
 ];
 
 export default function Documentation() {
-    // Single state tracker holding the active index number
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleOpen = (index: number) => {
@@ -89,29 +87,38 @@ export default function Documentation() {
                             return (
                                 <div
                                     key={index}
-                                    className={`w-full bg-gray-200/70 flex flex-col items-start justify-start border-2 transition-colors duration-300 ${isOpen ? 'border-[#004900]/50' : 'border-[#00cc00]/60'} rounded-md p-4 sm:p-5`}
+                                    className={`w-full bg-white flex flex-col items-start justify-start border-0.5 transition-colors duration-300 ${isOpen ? 'border-[#6CB531]/50' : 'border-none'} shadow-[1px_2px_2px_rgba(0,0,0,0.15)] rounded-3xl p-4 sm:p-5`}
                                 >
                                     {/* Made entire row clickable for better mobile UX */}
                                     <div
                                         className="flex flex-row justify-between items-center w-full cursor-pointer group"
                                         onClick={() => toggleOpen(index)}
                                     >
-                                        <div className="text-base sm:text-lg font-medium text-black text-left pr-4 tracking-tight">
-                                            {doc.question}
+                                        <div className="flex flex-row items-center gap-x-3">
+                                            <button
+                                                type="button"
+                                                className={`text-xl sm:text-2xl ${isOpen ? 'text-[#ffffff]' : 'text-[#6CB531]'} font-bold rounded-full ${isOpen ? 'bg-[#6CB531]' : 'bg-[#f5f5dc]/50'} transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8`}
+                                                aria-expanded={isOpen}
+                                            >
+                                                {isOpen ? '−' : '＋'}
+                                            </button>
+                                            <div className="text-base sm:text-xl font-bold text-black text-left pr-4 ">
+                                                {doc.question}
+                                            </div>
                                         </div>
                                         <button
                                             type="button"
-                                            className="text-xl sm:text-2xl text-[#a3e635] font-bold transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8"
+                                            className={`text-sm ${isOpen ? 'text-[#a3e635]' : 'text-gray-700/50'} transform scale-x-200 transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8`}
                                             aria-expanded={isOpen}
                                         >
-                                            {isOpen ? '×' : '+'}
+                                            V
                                         </button>
                                     </div>
 
                                     {/* Content Area */}
                                     {isOpen && (
                                         <div
-                                            className="w-full text-left text-md md:text-lg text-black/70 pt-3 border-t border-gray-300/50 mt-3 leading-relaxed tracking-normal"
+                                            className="pl-10 w-full text-left text-md md:text-lg text-black/70 pt-3 border-t border-gray-300/50 mt-3 leading-relaxed tracking-[0.04rem]"
                                             dangerouslySetInnerHTML={{ __html: doc.answer }}
                                         />
                                     )}

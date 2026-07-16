@@ -8,7 +8,7 @@ const plans = [
     {
         name: "Starter",
         subtitle: "Perfect for individuals.",
-        price: "59",
+        price: "21",
         features: [
             {
                 name: "Account Management",
@@ -46,7 +46,7 @@ const plans = [
     {
         name: "Growth",
         subtitle: "For professional sales teams.",
-        price: "529",
+        price: "59",
         features: [
 
             {
@@ -89,7 +89,7 @@ const plans = [
     {
         name: "Enterprise",
         subtitle: "For organizations at scale.",
-        price: "1499",
+        price: "129",
         features: [
 
             {

@@ -23,7 +23,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-12 mb-10">
 
                     {/* Left Column: Brand Info & Newsletter */}
-                    <div className="md:col-span-1 lg:col-span-4 flex flex-col justify-between">
+                    <div className="md:col-span-1 lg:col-span-4 flex flex-col justify-between ">
                         <div>
                             {/* Logo */}
                             <div className="flex items-center gap-2.5 mb-6">
@@ -47,11 +47,11 @@ export default function Footer() {
                                 <h4 className="text-[10px] font-extrabold text-[#76e11b] tracking-wide uppercase mb-4">
                                     Stay Updated With Growth Insights
                                 </h4>
-                                <div className="flex flex-row justify-between w-[350px]">
+                                <div className="flex flex-row justify-between w-[340px]">
                                     <div className=" max-w-[290px] w-full flex items-center mb-4">
-                                        <input type="email" placeholder="Enter your email" className="w-full bg-zinc-100 border border-zinc-200 rounded-2xl px-5 py-3 pr-12 text-sm outline-none focus:border-[#76e11b] focus:ring-1 focus:ring-[#76e11b]/20" />
+                                        <input type="email" placeholder="Enter your email" className="w-full bg-zinc-100 border border-zinc-200 rounded-lg px-3 py-2 pr-12 text-sm outline-none focus:border-[#76e11b] focus:ring-1 focus:ring-[#76e11b]/20" />
                                     </div>
-                                    <button className="bg-[#76e11b] hover:bg-[#68c617] text-[#031d10] h-12 w-12 rounded-2xl flex items-center justify-center shadow-sm transition-transform">
+                                    <button className="bg-[#76e11b] hover:bg-[#68c617] text-[#031d10] h-9.5 w-9.5 rounded-lg flex items-center justify-center shadow-sm transition-transform">
                                         <ArrowRightIcon size={16} />
                                     </button>
                                 </div>
@@ -162,7 +162,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div >
                     <div className="block text-center border-t border-zinc-200/60 pt-6 text-md font-medium text-gray-400 tracking-wide">
                         &copy; 2026 NetworkUp.io. All rights reserved.
                     </div>
@@ -188,7 +188,7 @@ export default function Footer() {
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
                                     exit={{ opacity: 0, y: 50, scale: 0.95 }}
                                     transition={{ duration: 0.2, ease: "easeOut" }}
-                                    className="fixed bottom-6 right-6 z-50 flex flex-col items-end shadow-2xl rounded-2xl overflow-hidden bg-[#02140b]"
+                                    className="fixed bottom-12 right-6 z-50 flex flex-col items-end shadow-2xl rounded-2xl overflow-hidden bg-[#02140b]"
                                 >
                                     <Aipage onClose={() => setIsSidebarOpen(false)} />
                                 </motion.div>
