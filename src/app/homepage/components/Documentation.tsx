@@ -80,14 +80,14 @@ export default function Documentation() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delayChildren: 0.3 }}
-                        className="mt-10 w-full w-2xl md:w-4xl lg:w-7xl space-y-4 flex flex-col items-center justify-center"
+                        className="mt-10 w-full w-2xl md:w-4xl lg:w-7xl space-y-4 flex flex-col items-center justify-center "
                     >
                         {documents.map((doc, index) => {
                             const isOpen = openIndex === index;
                             return (
                                 <div
                                     key={index}
-                                    className={`w-full bg-white flex flex-col items-start justify-start border-0.5 transition-colors duration-300 ${isOpen ? 'border-[#6CB531]/50' : 'border-none'} shadow-[1px_2px_2px_rgba(0,0,0,0.15)] rounded-3xl p-4 sm:p-5`}
+                                    className={`w-full bg-white flex flex-col items-start justify-start border-0.5 hover:scale-102 transition-colors duration-300 ${isOpen ? 'border-[#6CB531]/50' : 'border-none'} shadow-[1px_2px_2px_rgba(0,0,0,0.15)] rounded-3xl p-4 sm:p-5`}
                                 >
                                     {/* Made entire row clickable for better mobile UX */}
                                     <div

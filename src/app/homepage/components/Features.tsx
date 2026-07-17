@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
+import { cardVariants, containerVariants} from '../assets/icons'
 import { SmartProspectingIcon, RelationshipIntelIcon, UnifiedInboxIcon, CampaignBuilderIcon, CampaignAnalyticsIcon, LeadEnrichmentIcon, IntegrationsIcon, AccountProtectionIcon } from "../assets/icons";
 import { BrainIcon, Database, UserSearch } from "lucide-react";
 import { BsInboxFill, BsMagic, BsShieldLock } from "react-icons/bs";
@@ -54,28 +55,6 @@ const features = [
     }
 ];
 
-const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.3
-        }
-    }
-};
-
-const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            type: "spring",
-            stiffness: 100,
-            damping: 15
-        }
-    }
-};
 
 export default function Features() {
     return (

@@ -210,7 +210,7 @@ export default function Pricing() {
                                 {/* Price */}
                                 <div className="flex items-baseline text-gray-900 mb-10">
                                     <span className="text-4xl sm:text-5xl font-bold tracking-tight">
-                                        ${`${billingType === "monthly" ? plan.price : Number(plan.price) * 12}`}
+                                        ${`${billingType === "monthly" ? Number(plan.price).toFixed(2) : ((Number(plan.price) * 12) * 0.8).toFixed(2)}`}
                                     </span>
                                     <span className="text-black text-sm ml-2">
                                         {`${billingType === "monthly" ? "/mo" : "/yr"}`}

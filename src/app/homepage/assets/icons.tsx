@@ -1,3 +1,5 @@
+import { Variants } from 'framer-motion';
+
 export const SmartProspectingIcon = () => (
     <svg
         className="h-8 w-8 text-[#356221]"
@@ -58,9 +60,11 @@ export const UnifiedInboxIcon = () => (
     </svg>
 );
 
-export const CampaignBuilderIcon = () => (
+export const CampaignBuilderIcon = ({ className, size }: { className?: string; size?: number } = {}) => (
     <svg
-        className="h-8 w-8 text-[#356221]"
+        className={className || "h-8 w-8 text-[#356221]"}
+        width={size}
+        height={size}
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -182,4 +186,25 @@ export const DisabledIcon = () => (
     </svg>
 )
 
+export const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.3
+        }
+    }
+};
 
+export const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "spring",
+            stiffness: 100,
+            damping: 15
+        }
+    }
+};

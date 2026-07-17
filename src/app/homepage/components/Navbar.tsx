@@ -118,8 +118,9 @@ export default function Navbar() {
                         Get Started
                     </button>
 
-                    <button className="hidden md:flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 hover:bg-gray-50">
+                    <button className="flex flex-row gap-2 items-center rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-black shadow transition hover:bg-gray-100">
                         <Bot size={22} strokeWidth={2} />
+                        Ask AI
                     </button>
 
                     <button

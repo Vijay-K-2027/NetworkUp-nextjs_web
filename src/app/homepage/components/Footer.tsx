@@ -13,6 +13,13 @@ const models = [
     { name: "Facebook", icon: "/facebook.svg" },
 ];
 
+const productLinks = ["Features", "Outreach", "Inbox", "Lead Finder", "Campaigns", "Roadmap"];
+const solutionsLinks = ["For Sales Teams", "For Agencies", "For Recruiters", "For Startups", "For Marketing Teams"];
+const resourcesLinks = ["Blog", "Help Center", "Guides", "API Documentation", "Video Tutorials"];
+const compareLinks = ["Waalaxy", "Dripify", "Expandi", "Apollo.io", "Sales Navigator"];
+const companyLinks = ["About Us", "Privacy Policy", "Terms of Service", "Contact Us"];
+const checklistItems = ["Product updates", "Growth strategies"];
+
 export default function Footer() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     return (
@@ -47,7 +54,7 @@ export default function Footer() {
                                 <h4 className="text-[10px] font-extrabold text-[#76e11b] tracking-wide uppercase mb-4">
                                     Stay Updated With Growth Insights
                                 </h4>
-                                <div className="flex flex-row justify-between w-[340px]">
+                                <div className="flex flex-row justify-between w-full max-w-[340px]">
                                     <div className=" max-w-[290px] w-full flex items-center mb-4">
                                         <input type="email" placeholder="Enter your email" className="w-full bg-zinc-100 border border-zinc-200 rounded-lg px-3 py-2 pr-12 text-sm outline-none focus:border-[#76e11b] focus:ring-1 focus:ring-[#76e11b]/20" />
                                     </div>
@@ -59,14 +66,12 @@ export default function Footer() {
 
                                 {/* Checklist */}
                                 <div className="flex flex-col gap-2">
-                                    <div className="flex items-center gap-2 text-xs text-black">
-                                        <CheckIcon size={16} stroke="#76e11b" />
-                                        <span>Product updates</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 text-xs text-black">
-                                        <CheckIcon size={16} stroke="#76e11b" />
-                                        <span>Growth strategies</span>
-                                    </div>
+                                    {checklistItems.map((item) => (
+                                        <div key={item} className="flex items-center gap-2 text-xs text-black">
+                                            <CheckIcon size={16} stroke="#76e11b" />
+                                            <span>{item}</span>
+                                        </div>
+                                    ))}
                                 </div>
                                 <span className="text-[10px] text-black font-medium block mt-3">
                                     No spam. Unsubscribe anytime.
@@ -91,12 +96,11 @@ export default function Footer() {
                                 Product
                             </h5>
                             <ul className="space-y-3.5 text-sm font-medium text-black/80">
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Features</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Outreach</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Inbox</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Lead Finder</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Campaigns</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Roadmap</a></li>
+                                {productLinks.map((label) => (
+                                    <li key={label}>
+                                        <a href="#" className="hover:text-green-600 transition-colors">{label}</a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
@@ -106,11 +110,11 @@ export default function Footer() {
                                 Solutions
                             </h5>
                             <ul className="space-y-3.5 text-sm font-medium text-black/80">
-                                <li><a href="#" className="hover:text-green-600 transition-colors">For Sales</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">For Agencies</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">For Recruiters</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">For Startups</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">For Marketing</a></li>
+                                {solutionsLinks.map((label) => (
+                                    <li key={label}>
+                                        <a href="#" className="hover:text-green-600 transition-colors">{label}</a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
@@ -120,11 +124,11 @@ export default function Footer() {
                                 Resources
                             </h5>
                             <ul className="space-y-3.5 text-sm font-medium text-black/80">
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Blog</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Help Center</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Guides</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">API Docs</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Tutorials</a></li>
+                                {resourcesLinks.map((label) => (
+                                    <li key={label}>
+                                        <a href="#" className="hover:text-green-600 transition-colors">{label}</a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
@@ -134,11 +138,13 @@ export default function Footer() {
                                 Compare
                             </h5>
                             <ul className="space-y-3.5 text-[15px] font-medium text-black/80 break-words">
-                                <li><a href="#" className="hover:text-green-600 transition-colors block ">NetworkUp.io vs Waalaxy</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors block ">NetworkUp.io vs Dripify</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors block ">NetworkUp.io vs Expandi</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors block ">NetworkUp.io vs Apollo.io</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors block ">NetworkUp.io vs Sales Navigator</a></li>
+                                {compareLinks.map((item) => (
+                                    <li key={item}>
+                                        <a href="#" className="hover:text-green-600 transition-colors block">
+                                            NetworkUp.io vs {item}
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                             <a href="#" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#356221] hover:text-[#76e11b] mt-5 transition-colors">
                                 <span>See all comparisions</span>
@@ -154,49 +160,50 @@ export default function Footer() {
                                 Company
                             </h5>
                             <ul className="space-y-3.5 text-sm font-medium text-black/80">
-                                <li><a href="#" className="hover:text-green-600 transition-colors">About Us</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Privacy Policy</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Terms of Service</a></li>
-                                <li><a href="#" className="hover:text-green-600 transition-colors">Contact Us</a></li>
+                                {companyLinks.map((label) => (
+                                    <li key={label}>
+                                        <a href="#" className="hover:text-green-600 transition-colors">{label}</a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div >
-                    <div className="block text-center border-t border-zinc-200/60 pt-6 text-md font-medium text-gray-400 tracking-wide">
+                <div className="border-t border-zinc-200/60 pt-6 mt-8 lg:pl-120 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="text-md font-medium text-gray-400 tracking-wide text-center sm:text-left">
                         &copy; 2026 NetworkUp.io. All rights reserved.
                     </div>
                     <button
-                        className="float-right -mt-15 -mr-40 min-w-[200px] hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        className="hover:scale-105 transition-transform duration-300 cursor-pointer"
                         onClick={() => setIsSidebarOpen(prev => !prev)}
                     >
-                        <Image src="/AI-panel.png" alt="AI Panel" width={150} height={150} />
+                        <Image src="/AI-panel.png" alt="AI Panel" width={150} height={150} className="w-[120px] sm:w-[150px] h-auto" />
                     </button>
-
-                    <AnimatePresence>
-                        {isSidebarOpen && (
-                            <>
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    className="fixed inset-0 z-40 bg-black/15 backdrop-blur-[1px]"
-                                    onClick={() => setIsSidebarOpen(false)}
-                                />
-                                <motion.div
-                                    initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                                    exit={{ opacity: 0, y: 50, scale: 0.95 }}
-                                    transition={{ duration: 0.2, ease: "easeOut" }}
-                                    className="fixed bottom-12 right-6 z-50 flex flex-col items-end shadow-2xl rounded-2xl overflow-hidden bg-[#02140b]"
-                                >
-                                    <Aipage onClose={() => setIsSidebarOpen(false)} />
-                                </motion.div>
-                            </>
-                        )}
-                    </AnimatePresence>
                 </div>
+
+                <AnimatePresence>
+                    {isSidebarOpen && (
+                        <>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                className="fixed inset-0 z-40 bg-black/15 backdrop-blur-[1px]"
+                                onClick={() => setIsSidebarOpen(false)}
+                            />
+                            <motion.div
+                                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                exit={{ opacity: 0, y: 50, scale: 0.95 }}
+                                transition={{ duration: 0.2, ease: "easeOut" }}
+                                className="fixed bottom-12 right-6 z-50 flex flex-col items-end shadow-2xl rounded-2xl overflow-hidden bg-[#02140b]"
+                            >
+                                <Aipage onClose={() => setIsSidebarOpen(false)} />
+                            </motion.div>
+                        </>
+                    )}
+                </AnimatePresence>
             </div>
-        </footer >
+        </footer>
     );
 }
