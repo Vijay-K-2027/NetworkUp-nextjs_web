@@ -67,7 +67,7 @@ const features = [
 
 export default function DashboardPreview() {
   return (
-    <div className="w-full h-screen bg-[#021807] flex items-center justify-center p-4 md:p-6 lg:p-8 overflow-hidden">
+    <div className="w-full h-screen bg-[#021807] flex items-center justify-center px-4 md:px-6 lg:px-8 py-4 md:py-5 lg:py-5 overflow-hidden">
       {/* Browser Frame Wrapper */}
       <div className="w-full max-w-[1550px] h-full flex items-center justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center justify-center h-full w-full">

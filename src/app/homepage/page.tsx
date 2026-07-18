@@ -1,5 +1,17 @@
+import type { Metadata } from "next";
 import Navbar from "@/app/homepage/components/Navbar";
 import Hero from "@/app/homepage/components/Hero";
+
+export const metadata: Metadata = {
+    title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
+    description: "Automate your LinkedIn networking with precision. Reach the right decision-makers, find high-quality leads, and convert conversations into opportunities at scale using advanced AI.",
+    openGraph: {
+        title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
+        description: "Automate your LinkedIn networking with precision. Reach the right decision-makers, find high-quality leads, and convert conversations into opportunities at scale using advanced AI.",
+        url: "https://networkup.io/homepage",
+    }
+};
+
 import DashboardPreview from "@/app/homepage/components/DashboardPreview";
 import Teams from "@/app/homepage/components/Teams";
 import Features from "@/app/homepage/components/Features";

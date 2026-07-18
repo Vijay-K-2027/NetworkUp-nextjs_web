@@ -111,7 +111,7 @@ export default function PromptAssistant() {
                                 <h4 className="text-sm font-bold text-[#feeae0]/70 tracking-wide mb-4">
                                     Popular prompts
                                 </h4>
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap gap-2 w-[500px]">
                                     {popularPrompts.map((prompt, index) => (
                                         <motion.button
                                             key={index}

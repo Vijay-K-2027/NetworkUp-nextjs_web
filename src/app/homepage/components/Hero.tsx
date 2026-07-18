@@ -2,11 +2,11 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section id="product" className="relative overflow-hidden bg-white">
+        <section id="product" className="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,_rgba(222,250,208,1)_0%,_rgba(222,250,208,0.1)_700px,_rgba(222,250,208,0.2)_100%)]">
             <div className="mx-auto flex max-w-7xl flex-col items-center px-6 py-25 text-center">
 
                 {/* Badge */}
-                <div className="w-350 mb-8 rounded-full border border-lime-200 bg-lime-50 px-6 py-2 text-sm font-medium text-black">
+                <div className="w-350 mb-8 rounded-full border border-lime-200 bg-lime-100/30 px-6 py-2 text-sm font-medium text-black">
                     <span className="mr-2 text-lime-500">●</span>
                     AI-Powered LinkedIn Growth Platform
                 </div>

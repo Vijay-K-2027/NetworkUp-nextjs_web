@@ -8,7 +8,7 @@ const plans = [
     {
         name: "Starter",
         subtitle: "Perfect for individuals.",
-        price: "21",
+        price: ["21", "15"],
         features: [
             {
                 name: "Account Management",
@@ -46,7 +46,7 @@ const plans = [
     {
         name: "Growth",
         subtitle: "For professional sales teams.",
-        price: "59",
+        price: ["59", "49"],
         features: [
 
             {
@@ -89,7 +89,7 @@ const plans = [
     {
         name: "Enterprise",
         subtitle: "For organizations at scale.",
-        price: "129",
+        price: ["129", "99"],
         features: [
 
             {
@@ -208,14 +208,18 @@ export default function Pricing() {
                                 </div>
 
                                 {/* Price */}
-                                <div className="flex items-baseline text-gray-900 mb-10">
-                                    <span className="text-4xl sm:text-5xl font-bold tracking-tight">
-                                        ${`${billingType === "monthly" ? Number(plan.price).toFixed(2) : ((Number(plan.price) * 12) * 0.8).toFixed(2)}`}
-                                    </span>
-                                    <span className="text-black text-sm ml-2">
-                                        {`${billingType === "monthly" ? "/mo" : "/yr"}`}
-                                    </span>
+                                <div className="flex flex-col mb-10 gap-1">
+                                    <div className="flex items-baseline text-gray-900">
+                                        <span className="text-4xl sm:text-5xl font-bold tracking-tight">
+                                            ${`${billingType === "monthly" ? plan.price[0] : plan.price[1]}`}
+                                        </span>
+                                        <span className="text-black text-sm ml-2">
+                                            {`${billingType === "monthly" ? "/mo" : ""}`}
+                                        </span>
+                                    </div>
+                                    <div className={`text-sm text-black ${billingType === "monthly" ? "hidden" : "flex"}`}>billed annually per month</div>
                                 </div>
+
 
                                 {/* Features List */}
                                 <ul className="space-y-4 mb-10">

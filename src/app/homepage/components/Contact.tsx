@@ -175,7 +175,7 @@ export default function Contact() {
                             className="w-full h-auto rounded-t-[2.25rem] block"
                         />
 
-                        <div className="p-8 sm:p-10 flex flex-col flex-grow justify-between -mt-9">
+                        <div className="p-8 sm:p-10 flex flex-col flex-grow justify-between -mt-12">
 
                             <div className="space-y-4">
                                 <a href="#" className="flex items-center justify-center gap-2 bg-gradient-to-b from-[#a8f460] to-[#68c617] hover:bg-[#68c617] text-[#031d10] font-extrabold text-sm py-4 px-6 rounded-2xl hover:scale-[1.01] transition-all">

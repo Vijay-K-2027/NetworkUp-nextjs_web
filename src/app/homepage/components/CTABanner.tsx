@@ -13,7 +13,7 @@ export default function CTABanner() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 max-w-3xl leading-[1.1]"
+                    className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 max-w-5xl leading-[1.1]"
                 >
                     Start growing your professional network today.
                 </motion.h2>
