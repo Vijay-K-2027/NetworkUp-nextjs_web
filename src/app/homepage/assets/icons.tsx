@@ -60,11 +60,9 @@ export const UnifiedInboxIcon = () => (
     </svg>
 );
 
-export const CampaignBuilderIcon = ({ className, size }: { className?: string; size?: number } = {}) => (
+export const CampaignBuilderIcon = () => (
     <svg
-        className={className || "h-8 w-8 text-[#356221]"}
-        width={size}
-        height={size}
+        className="h-8 w-8 text-[#356221]"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
