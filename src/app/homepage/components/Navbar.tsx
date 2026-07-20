@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Bot, Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 
 const navItems = [
@@ -15,6 +16,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
+    const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("");
 
@@ -114,7 +116,7 @@ export default function Navbar() {
                         Log In
                     </Link>
 
-                    <button className="rounded-xl bg-lime-400 px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-black shadow transition hover:bg-lime-500">
+                    <button className="rounded-xl bg-lime-400 px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-black shadow transition hover:bg-lime-500" onClick={() => router.push("homepage/subscription")}>
                         Get Started
                     </button>
 

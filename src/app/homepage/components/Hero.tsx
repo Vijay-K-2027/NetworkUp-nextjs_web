@@ -1,4 +1,5 @@
 import { ArrowRight, PlayCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -30,10 +31,12 @@ export default function Hero() {
                 {/* CTA Buttons */}
                 <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
 
-                    <button className="flex items-center gap-2 rounded-xl bg-lime-400 px-8 py-4 text-sm font-semibold text-black shadow-md transition hover:bg-lime-500">
-                        Get Started Free
-                        <ArrowRight size={18} strokeWidth={3} />
-                    </button>
+                    <Link href="/homepage/subscription">
+                        <div className="flex items-center gap-2 rounded-xl bg-lime-400 px-8 py-4 text-sm font-semibold text-black shadow-md transition hover:bg-lime-500">
+                            Get Started Free
+                            <ArrowRight size={18} strokeWidth={3} />
+                        </div>
+                    </Link>
 
                     <button className="flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-bold text-gray-700 transition hover:bg-gray-100">
                         <PlayCircle size={18} strokeWidth={3} />

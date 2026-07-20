@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const plans = [
     {
@@ -112,6 +113,7 @@ const plans = [
 ];
 
 export default function Pricing() {
+    const router = useRouter();
     const [billingType, setBillingType] = useState('monthly');
 
     const switchBilling = () => {
@@ -119,8 +121,8 @@ export default function Pricing() {
     }
 
     return (
-        <section id="pricing" className="w-full bg-[radial-gradient(circle_500px_at_center,_#002000_0%,_#002000_200px,_black_100%)] py-20 px-6 lg:px-8">
-            <div className="mx-auto max-w-7xl">
+        <section id="pricing" className="w-full bg-[radial-gradient(circle_500px_at_center,_#002000_0%,_#002200_200px,_black_100%)] pb-20 pt-5 px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl mb-20">
 
                 {/* Header */}
                 <div className="flex flex-col items-center text-center mb-20">
@@ -137,7 +139,7 @@ export default function Pricing() {
                         Start with a plan that fits your needs. You can upgrade, downgrade or cancel anytime.
                     </p>
 
-                    <div className="flex flex-row items-center mt-10 gap-3">
+                    <div className="flex flex-row items-center mt-10 gap-3 mb-10">
                         <span className="text-[#68c617] font-bold text-sm sm:text-base leading-relaxed">Monthly</span>
                         <span>
                             <label className="relative inline-block w-[50px] h-[26px] cursor-pointer">
@@ -177,7 +179,7 @@ export default function Pricing() {
                         >
                             {/* Popular Badge */}
                             {plan.popular && (
-                                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#c7f701] text-black font-bold text-[10px] sm:text-[12px] tracking-wide uppercase py-2 px-5 rounded-full shadow-[0_4px_10px_rgba(118,225,27,0.3)]">
+                                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#c7f701] text-black font-extrabold text-[10px] sm:text-[12px] tracking-wide uppercase py-2 px-6 rounded-full shadow-[0_4px_10px_rgba(118,225,27,0.3)]">
                                     Most Popular
                                 </span>
                             )}
@@ -215,7 +217,7 @@ export default function Pricing() {
                                                 }`}
                                         >
                                             <h3 className="text-md text-white/80 uppercase tracking-tight">{feature.name}</h3>
-                                            <hr className="border-white/30 w-[80%] text-center" />
+                                            <hr className="border-white/30 -mt-2 w-[80%] text-center" />
 
                                             <ul className="space-y-2 ml-4">
                                                 {feature.subFeatures.map((subFeature, sfIndex) => (
@@ -225,7 +227,7 @@ export default function Pricing() {
                                                             }`}
                                                     >
                                                         <span><Check stroke="#D8F9A8" size={12} /></span>
-                                                        <span className="text-md text-[#D8F9A8]/45">{subFeature.text}</span>
+                                                        <span className="text-md text-[#D8F9A8]/70">{subFeature.text}</span>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -238,6 +240,7 @@ export default function Pricing() {
                             <button
                                 className={`w-full py-4 px-6 rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 ${plan.popular ? "bg-gradient-to-b from-white/80 to-[#76e11b] hover:bg-[#c7f701] text-[#031d10] hover:scale-[1.01]" : "bg-black border-1 border-zinc-200/50 text-white hover:bg-black-50 hover:-translate-y-1 hover:border-zinc-300"
                                     }`}
+                                onClick={() => router.push("/homepage/login")}
                             >
                                 {plan.buttonText}
                             </button>
