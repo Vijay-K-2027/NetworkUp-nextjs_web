@@ -120,7 +120,12 @@ export default function Navbar() {
                         Get Started
                     </button>
 
-                    <button className="flex flex-row gap-2 items-center rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-black shadow transition hover:bg-gray-100">
+                    <button
+                        className="flex flex-row gap-2 items-center rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-black shadow transition hover:bg-gray-100 cursor-pointer"
+                        onClick={() => {
+                            window.dispatchEvent(new CustomEvent("toggle-ask-ai"));
+                        }}
+                    >
                         <Bot size={22} strokeWidth={2} />
                         Ask AI
                     </button>

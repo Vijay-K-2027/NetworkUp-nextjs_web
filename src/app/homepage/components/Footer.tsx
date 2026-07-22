@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ArrowRightIcon } from "lucide-react";
 import { CheckIcon, Star } from "lucide-react";
@@ -22,8 +22,17 @@ const checklistItems = ["Product updates", "Growth strategies"];
 
 export default function Footer() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    useEffect(() => {
+        const handleToggle = () => {
+            setIsSidebarOpen(prev => !prev);
+        };
+        window.addEventListener("toggle-ask-ai", handleToggle);
+        return () => window.removeEventListener("toggle-ask-ai", handleToggle);
+    }, []);
+
     return (
-        <footer id="resources" className="w-full bg-[#fafcf7] pt-24 pb-6 px-6 lg:px-8 border-t border-zinc-200/50">
+        <footer id="resources" className="w-full bg-[#fafcf7] pt-24 pb-6 px-6 lg:px-8 border-t border-zinc-200/50 relative z-50">
             <div className="mx-auto max-w-7xl">
 
                 {/* Upper Footer Grid */}
@@ -169,16 +178,10 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="border-t border-zinc-200/60 pt-6 mt-8 lg:pl-120 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="text-md font-medium text-gray-400 tracking-wide text-center sm:text-left">
+                <div className="border-t border-zinc-200/60 pt-6 mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <div className="text-md font-medium text-gray-400 tracking-wide text-center">
                         &copy; 2026 NetworkUp.io. All rights reserved.
                     </div>
-                    <button
-                        className="hover:scale-105 transition-transform duration-300 cursor-pointer"
-                        onClick={() => setIsSidebarOpen(prev => !prev)}
-                    >
-                        <Image src="/AI-panel.png" alt="AI Panel" width={150} height={150} className="w-[120px] sm:w-[150px] h-auto" />
-                    </button>
                 </div>
 
                 <AnimatePresence>
@@ -203,6 +206,18 @@ export default function Footer() {
                         </>
                     )}
                 </AnimatePresence>
+
+                {/* Floating AI Button (Fixed at the bottom-right, visible on all screens of the homepage when chat is closed) */}
+                {!isSidebarOpen && (
+                    <div className="fixed bottom-6 right-6 z-40">
+                        <button
+                            className="hover:scale-105 transition-transform duration-300 cursor-pointer shadow-2xl rounded-full overflow-hidden"
+                            onClick={() => setIsSidebarOpen(true)}
+                        >
+                            <Image src="/AI-panel.png" alt="AI Panel" width={150} height={150} className="w-[120px] sm:w-[150px] h-auto" />
+                        </button>
+                    </div>
+                )}
             </div>
         </footer>
     );
