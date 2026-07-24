@@ -29,7 +29,7 @@ const items = [
 
 export default function SetsApart() {
     return (
-        <section id="use-cases" className="w-full bg-[#fafcf7] pt-28 pb-10 px-6 lg:px-8 overflow-hidden bg-[radial-gradient(circle_at_bottom_left,_rgba(222,250,208,1)_0%,_rgba(222,250,208,0.2)_500px,_rgba(222,250,208,0%)_70%)]">
+        <section className="w-full bg-[#fafcf7] pt-28 pb-10 px-6 lg:px-8 overflow-hidden bg-[radial-gradient(circle_at_bottom_left,_rgba(222,250,208,1)_0%,_rgba(222,250,208,0.2)_500px,_rgba(222,250,208,0%)_70%)]">
             <div className="mx-auto max-w-7xl">
 
                 {/* Header */}

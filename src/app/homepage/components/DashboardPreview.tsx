@@ -1,6 +1,7 @@
 "use client";
 
-import { AlertTriangle, ArrowUpRight, Bell, Bot, Compass, HelpCircle, HelpCircleIcon, Inbox, LayoutDashboard, Megaphone, Search, Settings, ShieldCheck, Sparkles, UserCheck, Mail, UserPlus, Zap, ChevronLeft, ChevronRight, Plus, Upload, Briefcase, Landmark, ShoppingCart, GraduationCap, UserCircle2, LogOut, Rocket, PlugZap, Database, Microchip, UsersIcon, NetworkIcon, UserSearch, RocketIcon, MessagesSquare, Radar, ChartBar, Newspaper } from "lucide-react";
+import { useState } from "react";
+import { AlertTriangle, ArrowUpRight, Bell, Bot, Compass, HelpCircle, HelpCircleIcon, Inbox, LayoutDashboard, Megaphone, Search, Settings, ShieldCheck, Sparkles, UserCheck, Mail, UserPlus, Zap, ChevronLeft, ChevronRight, Plus, Upload, Briefcase, Landmark, ShoppingCart, GraduationCap, UserCircle2, LogOut, Rocket, PlugZap, Database, Microchip, UsersIcon, NetworkIcon, UserSearch, RocketIcon, MessagesSquare, Radar, ChartBar, Newspaper, Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import { cardVariants, containerVariants } from "../assets/icons";
 import Image from "next/image"
@@ -66,20 +67,31 @@ const features = [
 ]
 
 export default function DashboardPreview() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
-    <div className="w-full h-screen bg-[#021807] flex items-center justify-center px-4 md:px-6 lg:px-8 py-4 md:py-5 lg:py-5 overflow-hidden">
+    <div className="w-full min-h-screen lg:h-screen bg-[#021807] flex items-center justify-center px-4 md:px-6 lg:px-8 py-10 lg:py-5 overflow-y-auto lg:overflow-hidden">
       {/* Browser Frame Wrapper */}
-      <div className="w-full max-w-[1550px] h-full flex items-center justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center justify-center h-full w-full">
+      <div className="w-full max-w-[1550px] h-auto lg:h-full flex items-center justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center justify-center h-auto lg:h-full w-full">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="col-span-1 lg:col-span-7 bg-white h-full max-h-[82vh] rounded-2xl border border-white/10 shadow-2xl flex flex-col md:flex-row overflow-hidden"
+            className="col-span-1 lg:col-span-7 bg-white h-[550px] sm:h-[650px] lg:h-full lg:max-h-[82vh] rounded-none border border-white/10 shadow-2xl flex flex-col md:flex-row overflow-hidden relative"
           >
+            {/* Sidebar Backdrop for Mobile */}
+            {isSidebarOpen && (
+              <div
+                className="absolute inset-0 bg-black/60 z-40 md:hidden"
+                onClick={() => setIsSidebarOpen(false)}
+              />
+            )}
+
             {/* Sidebar */}
-            <aside className="w-full md:w-50 bg-[#0c240f] text-white flex flex-col justify-between p-2.5 shrink-0">
+            <aside className={`${
+              isSidebarOpen ? "flex absolute inset-y-0 left-0 z-50 w-52 shadow-2xl" : "hidden"
+            } md:relative md:flex md:w-50 bg-[#0c240f] text-white flex-col justify-between p-2.5 shrink-0 transition-all duration-300`}>
               <div>
                 {/* Logo Section */}
                 <div className="flex items-center gap-1 mb-3.5 px-1">
@@ -99,45 +111,45 @@ export default function DashboardPreview() {
                 {/* Sidebar Links */}
                 <nav className="space-y-1">
                   <div className="uppercase text-[9px] text-gray-300/50 pl-2 py-0.5" >Home</div>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-semibold transition-all bg-white/10 text-white shadow-[10px] ring-1 ring-white/10">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-semibold transition-all bg-white/10 text-white shadow-[10px] ring-1 ring-white/10" onClick={() => setIsSidebarOpen(false)}>
                     <LayoutDashboard size={11} className="text-lime-400" />
                     Dashboard
                   </button>
-                  <button className="w-full flex items-start justify-between gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-start justify-between gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <div className="flex items-center gap-2">
                       <Inbox size={13} className="text-gray-400" />
                       <span>Inbox</span>
                     </div>
                     <span className="bg-lime-400/30 text-lime-300 text-[8px] px-1.5 py-0.5 -mt-0.5 rounded-full">24</span>
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <BiUser size={13} className="text-gray-400" />
                     Leads
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <Compass size={13} className="text-gray-400" />
                     Discover
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <NetworkIcon size={13} className="text-gray-400" />
                     Network
                   </button>
 
                   <div className="h-1.5" />
                   <div className="uppercase text-[9px] text-gray-300/50 pl-2" >Automation</div>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <Rocket size={13} className="text-gray-400" />
                     Campaigns
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <FaTools size={13} className="text-gray-400" />
                     Campaign Builder
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <TbTemplate size={13} className="text-gray-400" />
                     Templates
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <GrTemplate size={13} className="text-gray-400" />
                     Automation Logs
                   </button>
@@ -147,7 +159,7 @@ export default function DashboardPreview() {
                     <Sparkles size={13} className="text-gray-400" />
                     <span>AI COPILOT</span>
                   </div>
-                  <button className="w-full flex items-start justify-between gap-0.5 px-2 py-1 rounded-lg text-[11px] font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-start justify-between gap-0.5 px-2 py-1 rounded-lg text-[11px] font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <div className="flex items-center gap-2">
                       <Bot size={13} className="text-gray-400" />
                       <span className="-ml-1 text-xs" >AI Workspace</span>
@@ -157,23 +169,23 @@ export default function DashboardPreview() {
 
                   <div className="h-1.5" />
                   <div className="uppercase text-[9px] text-gray-300/50 pl-2" >Administration</div>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <UsersIcon size={13} className="text-gray-400" />
                     Community
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <Microchip size={13} className="text-gray-400" />
                     Integration
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <Database size={13} className="text-gray-400" />
                     Billing
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <PlugZap size={13} className="text-gray-400" />
                     API & Webhooks
                   </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white">
+                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <Settings size={13} className="text-gray-400" />
                     Settings
                   </button>
@@ -200,38 +212,43 @@ export default function DashboardPreview() {
             <main className="flex-1 bg-[#fafbfa] p-2.5 sm:p-3 pb-2 flex flex-col justify-between overflow-hidden min-h-0">
 
               {/* Top Navigation */}
-              <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 pb-1.5 border-b border-gray-200/50">
-
-                <h2 className="font-extrabold text-sm sm:text-base">Dashboard</h2>
-
-                {/* Search Bar */}
-                <div className="relative flex-1 max-w-[200px]">
-                  <Search size={12} className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search leads, campaigns..."
-                    className="w-full bg-white border border-gray-200 pl-6 pr-2 py-1 rounded-lg text-[10px] focus:outline-none focus:ring-2 focus:ring-lime-400 shadow-sm transition"
-                    readOnly
+              <header className="flex items-center justify-between gap-2 pb-1.5 border-b border-gray-200/50 w-full">
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <Menu 
+                    size={16} 
+                    className="md:hidden text-gray-600 cursor-pointer shrink-0" 
+                    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                   />
+                  <h2 className="font-extrabold text-xs sm:text-base truncate">Dashboard</h2>
                 </div>
 
-                {/* Utility Actions */}
-                <div className="flex items-center gap-1.5 self-end sm:self-auto">
+                <div className="flex items-center gap-1.5 shrink-0">
+                  {/* Search Bar */}
+                  <div className="relative hidden sm:block w-36 md:w-44">
+                    <Search size={10} className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400" />
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      className="w-full bg-white border border-gray-200 pl-6 pr-2 py-0.5 rounded-lg text-[9px] focus:outline-none focus:ring-2 focus:ring-lime-400 shadow-sm transition"
+                      readOnly
+                    />
+                  </div>
+
                   <button className="relative p-1 text-gray-600 hover:text-black bg-white rounded-lg border border-gray-200 shadow-sm transition">
-                    <Bell size={13} />
-                    <span className="absolute top-0.5 right-0.5 w-1 h-1 bg-lime-500 rounded-full"></span>
+                    <Bell size={11} />
+                    <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 bg-lime-500 rounded-full"></span>
                   </button>
                   <button className="p-1 text-gray-600 hover:text-black bg-white rounded-lg border border-gray-200 shadow-sm transition">
-                    <Bot size={13} />
+                    <Bot size={11} />
                   </button>
                   <button className="p-1 text-gray-600 hover:text-black bg-white rounded-lg border border-gray-200 shadow-sm transition">
-                    <HelpCircle size={13} />
+                    <HelpCircle size={11} />
                   </button>
                 </div>
               </header>
 
               {/* Main Dash Content */}
-              <div className="space-y-2.5 pt-2 flex-1 flex flex-col min-h-0 justify-between">
+              <div className="space-y-2.5 pt-2 flex-1 flex flex-col min-h-0 justify-between overflow-y-auto pr-1">
 
                 {/* Greeting */}
                 <div>
@@ -252,7 +269,7 @@ export default function DashboardPreview() {
                     hidden: {},
                     visible: { transition: { staggerChildren: 0.06 } }
                   }}
-                  className="grid grid-cols-5 gap-2 shrink-0"
+                  className="grid grid-cols-2 sm:grid-cols-5 gap-2 shrink-0"
                 >
                   {[
                     { title: "New Connections", val: "1,248", pct: "+18%" },
@@ -268,7 +285,7 @@ export default function DashboardPreview() {
                         visible: { opacity: 1, y: 0, transition: { duration: 0.4 } }
                       }}
                       whileHover={{ y: -1.5, scale: 1.01 }}
-                      className="bg-white border border-gray-200/80 p-1.5 sm:p-2 rounded-xl shadow-sm transition-all duration-200 hover:shadow-md cursor-pointer"
+                      className={`bg-white border border-gray-200/80 p-1.5 sm:p-2 rounded-xl shadow-sm transition-all duration-200 hover:shadow-md cursor-pointer ${idx === 4 ? "col-span-2 sm:col-span-1" : ""}`}
                     >
                       <p className="text-[8px] font-bold text-gray-400 tracking-tight uppercase leading-none truncate">{stat.title}</p>
                       <div className="flex items-baseline justify-between mt-1 gap-0.5">
@@ -298,7 +315,7 @@ export default function DashboardPreview() {
                       hidden: { opacity: 0, y: 15 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
                     }}
-                    className="lg:col-span-3 bg-white border border-gray-200/80 p-2.5 rounded-2xl shadow-sm flex flex-col justify-between relative"
+                    className="col-span-1 lg:col-span-3 bg-white border border-gray-200/80 p-2.5 rounded-2xl shadow-sm flex flex-col justify-between relative"
                   >
                     <div className="pb-1 border-b border-gray-100 flex justify-between items-center">
                       <h3 className="font-extrabold text-[10px] text-gray-900">Weekly Performance Overview</h3>
@@ -438,7 +455,7 @@ export default function DashboardPreview() {
                       hidden: { opacity: 0, y: 15 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut", delay: 0.1 } }
                     }}
-                    className="col-span-2 bg-white border border-gray-200/80 p-2.5 rounded-2xl shadow-sm flex flex-col justify-between"
+                    className="col-span-1 lg:col-span-2 bg-white border border-gray-200/80 p-2.5 rounded-2xl shadow-sm flex flex-col justify-between"
                   >
                     <div>
                       <h3 className="font-extrabold text-[10px] text-gray-900 pb-1.5 border-b border-gray-100">Recent Activity</h3>
@@ -703,7 +720,7 @@ export default function DashboardPreview() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="col-span-1 lg:col-span-5 h-full max-h-[82vh] rounded-3xl p-5 shadow-lg bg-gradient-to-br from-[#6CB531]/30 via-[#05230c] to-[#05230c] border border-[#defad0]/15 w-full flex flex-col justify-center min-h-0 overflow-hidden"
+            className="col-span-1 lg:col-span-5 h-auto lg:h-full lg:max-h-[82vh] rounded-3xl p-5 shadow-lg bg-gradient-to-br from-[#6CB531]/30 via-[#05230c] to-[#05230c] border border-[#defad0]/15 w-full flex flex-col justify-center min-h-0 overflow-hidden"
           >
             <div className="w-full h-full flex flex-col justify-center py-2 min-h-0 overflow-hidden">
               <div className="flex flex-col items-center justify-center py-1.5 gap-1 shrink-0">

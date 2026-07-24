@@ -24,7 +24,7 @@ export default function Workflow() {
     ];
 
     return (
-        <section className="w-full bg-gradient-to-r from-[#001800] to-[#002000] py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section id="workflow" className="w-full bg-gradient-to-r from-[#001800] to-[#002000] py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
             <div className="mx-auto max-w-7xl">
                 {/* Kept standard grid-cols-12 system but divided sections evenly */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">

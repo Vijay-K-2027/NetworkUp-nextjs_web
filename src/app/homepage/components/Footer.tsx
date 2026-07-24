@@ -32,7 +32,7 @@ export default function Footer() {
     }, []);
 
     return (
-        <footer id="resources" className="w-full bg-[#fafcf7] pt-24 pb-6 px-6 lg:px-8 border-t border-zinc-200/50 relative z-50">
+        <footer className="w-full bg-[#fafcf7] pt-24 pb-6 px-6 lg:px-8 border-t border-zinc-200/50 relative z-50">
             <div className="mx-auto max-w-7xl">
 
                 {/* Upper Footer Grid */}
@@ -214,7 +214,7 @@ export default function Footer() {
                             className="hover:scale-105 transition-transform duration-300 cursor-pointer shadow-2xl rounded-full overflow-hidden"
                             onClick={() => setIsSidebarOpen(true)}
                         >
-                            <Image src="/AI-panel.png" alt="AI Panel" width={150} height={150} className="w-[120px] sm:w-[150px] h-auto" />
+                            <Image src="/AI-panel.png" alt="AI Panel" width={125} height={125} className="w-[100px] sm:w-[125px] h-auto" />
                         </button>
                     </div>
                 )}

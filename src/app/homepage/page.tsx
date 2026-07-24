@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "@/app/homepage/components/Navbar";
 import Hero from "@/app/homepage/components/Hero";
 
 export const metadata: Metadata = {
@@ -22,13 +21,10 @@ import Stats from "@/app/homepage/components/Stats";
 import Documentation from "@/app/homepage/components/Documentation";
 import Pricing from "@/app/homepage/components/Pricing";
 import Contact from "@/app/homepage/components/Contact";
-import CTABanner from "@/app/homepage/components/CTABanner";
-import Footer from "@/app/homepage/components/Footer";
 
 export default function Home() {
     return (
         <>
-            <Navbar />
             <Hero />
             <DashboardPreview />
             <Teams />
@@ -40,8 +36,6 @@ export default function Home() {
             <Pricing />
             <Contact />
             <Documentation />
-            <CTABanner />
-            <Footer />
         </>
     );
 }

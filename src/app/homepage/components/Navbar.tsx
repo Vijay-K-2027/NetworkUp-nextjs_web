@@ -4,19 +4,20 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Bot, Menu, X } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 
 const navItems = [
-    { label: "Product", id: "product" },
-    { label: "Features", id: "features" },
-    { label: "Use Cases", id: "use-cases" },
-    { label: "Pricing", id: "pricing" },
-    { label: "Resources", id: "resources" },
+    { label: "Product", id: "product", path: "/homepage#product" },
+    { label: "Solutions", id: "solutions", path: "/homepage/solutions" },
+    { label: "Overview", id: "features", path: "/homepage#features" },
+    { label: "AI Features", id: "workflow", path: "/homepage#workflow" },
+    { label: "Pricing", id: "pricing", path: "/homepage#pricing" },
 ];
 
 export default function Navbar() {
     const router = useRouter();
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("");
 
@@ -73,7 +74,7 @@ export default function Navbar() {
 
                 {/* Left side: Logo and Desktop Navigation */}
                 <div className="flex items-center gap-12">
-                    <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+                    <Link href="/homepage" className="flex items-center gap-3 flex-shrink-0">
                         <Image
                             src="/Logo.svg"
                             alt="Logo"
@@ -87,19 +88,18 @@ export default function Navbar() {
 
                     <nav className="hidden md:flex">
                         <ul className="flex items-center gap-8 text-md font-medium text-gray-600">
-                            {navItems.map((items, index) => {
-                                const isActive = activeSection === items.id;
+                            {navItems.map((item, index) => {
+                                const isActive = (pathname === item.path) || (pathname === "/homepage" && activeSection === item.id);
                                 return (
                                     <li key={index} className="h-20 flex items-center">
-                                        <a
-                                            href={`#${items.id}`}
+                                        <Link
+                                            href={item.path}
                                             className={`text-md font-semibold transition-all duration-200 pb-2 ${isActive
-                                                ? "text-[#356221] border-b-2 border-[#76e11b]"
-                                                : "text-gray-600 hover:text-[#76e11b] border-b-2 border-transparent"
+                                                ? "text-[#356221] border-b-2 border-[#76e11b]" : "text-gray-600 hover:text-[#76e11b] border-b-2 border-transparent"
                                                 }`}
                                         >
-                                            {items.label}
-                                        </a>
+                                            {item.label}
+                                        </Link>
                                     </li>
                                 );
                             })}
@@ -111,12 +111,12 @@ export default function Navbar() {
                 <div className="flex items-center gap-3 sm:gap-5">
                     <Link
                         href="#"
-                        className="rounded-xl bg-lime-400 px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-black shadow transition hover:bg-lime-500"
+                        className="rounded-xl bg-lime-400 px-4 sm:px-6 py-2.5 sm:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
                     >
                         Log In
                     </Link>
 
-                    <button className="rounded-xl bg-lime-400 px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-black shadow transition hover:bg-lime-500" onClick={() => router.push("homepage/subscription")}>
+                    <button className="rounded-xl bg-lime-400 px-4 sm:px-6 py-2.5 sm:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500" onClick={() => router.push("homepage/subscription")}>
                         Get Started
                     </button>
 
@@ -146,11 +146,11 @@ export default function Navbar() {
                     <nav className="mb-4">
                         <ul className="flex flex-col gap-4 text-base font-medium text-gray-600">
                             {navItems.map((item, index) => {
-                                const isActive = activeSection === item.id;
+                                const isActive = (pathname === item.path) || (pathname === "/homepage" && activeSection === item.id);
                                 return (
                                     <li key={index}>
                                         <Link
-                                            href={`#${item.id}`}
+                                            href={item.path}
                                             onClick={() => setIsOpen(false)}
                                             className={`block py-1 transition-colors duration-200 ${isActive ? "text-[#356221] font-bold" : "hover:text-green-600"
                                                 }`}
