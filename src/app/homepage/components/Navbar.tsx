@@ -12,7 +12,7 @@ const navItems = [
     { label: "Solutions", id: "solutions", path: "/homepage/solutions" },
     { label: "Overview", id: "features", path: "/homepage#features" },
     { label: "AI Features", id: "workflow", path: "/homepage#workflow" },
-    { label: "Pricing", id: "pricing", path: "/homepage#pricing" },
+    { label: "Pricing", id: "pricing", path: "/homepage/pricing" },
 ];
 
 export default function Navbar() {
