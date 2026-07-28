@@ -214,7 +214,7 @@ export default function Footer() {
                             className="hover:scale-105 transition-transform duration-300 cursor-pointer shadow-2xl rounded-full overflow-hidden"
                             onClick={() => setIsSidebarOpen(true)}
                         >
-                            <Image src="/AI-panel.png" alt="AI Panel" width={125} height={125} className="w-[100px] sm:w-[125px] h-auto" />
+                            <Image src="/AI-panel.png" alt="AI Panel" width={125} height={125} className="w-[100px] sm:w-[125px]" style={{ height: "auto" }} />
                         </button>
                     </div>
                 )}

@@ -1,124 +1,197 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Check, CircleCheck, X } from "lucide-react";
+import React from "react";
+import {
+    Star, Tag, Monitor, Lightbulb, MessageSquare, Target,
+    RefreshCw, BarChart3, Users, Puzzle, UserCheck, Gift, Check
+} from "lucide-react";
 
 const headings = [
-    "FEATURE", "NetworkUp", "HEYREACH", "DRIPIFY", "EXPANDI", "WAALAXY", "REACHY", "WE-CONNECT", "LINKED HELPER"
-]
+    "HEYREACH",
+    "EXPANDI",
+    "DRIPIFY",
+    "LINKED HELPER",
+    "MEET ALFRED",
+    "WE-CONNECT",
+    "WAALAXY"
+];
 
 const comparisons = [
-    ["Pricing", "Free → $21/mo", "$$$", "$$$", "$$", "$$", "$$", "$$", "$$"],
-    ["Runs locally (your IP)", "Yes", "No", "No", "No", "Yes", "No", "No", "No"],
-    ["Signal-based lead sourcing", "Yes", "No", "No", "No", "No", "No", "No", "Partial"],
-    ["AI-powered messaging (your key, 0% markup)", "Yes", "No", "No", "No", "No", "No", "No", "No"],
-    ["Lead scoring / ICP fit", "Yes", "No", "No", "No", "No", "No", "No", "No"],
-    ["Multi-account auto-rotation", "Yes", "Yes", "Partial", "No", "No", "No", "Yes", "No"],
-    ["Per-client isolation & exportable proof", "Yes", "Partial", "Partial", "No", "No", "No", "Partial", "No"],
-    ["Team collaboration", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "Yes", "Yes"],
-    ["CRM & Zapier integration", "Yes", "Yes", "Yes", "Yes", "Partial", "Yes", "Partial", "Yes"],
-    ["Free to start - no card", "Yes", "No", "No", "No", "No", "No", "No", "Yes"]
-]
-
-
+    {
+        feature: "Pricing",
+        icon: Tag,
+        networkUp: "Free → $39/mo",
+        values: ["$$$", "$$$", "$$", "$$", "$$", "$$", "$$"]
+    },
+    {
+        feature: "Runs locally (your IP)",
+        icon: Monitor,
+        networkUp: "Yes",
+        values: ["No", "No", "No", "Yes", "No", "No", "No"]
+    },
+    {
+        feature: "Al-powered lead discovery",
+        icon: Lightbulb,
+        networkUp: "Yes",
+        values: ["No", "Partial", "No", "No", "Partial", "No", "Partial"]
+    },
+    {
+        feature: "Smart Al messaging (0% spam risk)",
+        icon: MessageSquare,
+        networkUp: "Yes",
+        values: ["No", "No", "Partial", "No", "No", "No", "No"]
+    },
+    {
+        feature: "Lead scoring / ICP fit",
+        icon: Target,
+        networkUp: "Yes",
+        values: ["No", "No", "Partial", "No", "No", "No", "No"]
+    },
+    {
+        feature: "Multi-account auto-rotation",
+        icon: RefreshCw,
+        networkUp: "Yes",
+        values: ["Yes", "Partial", "No", "No", "No", "Yes", "No"]
+    },
+    {
+        feature: "Advanced analytics & reports",
+        icon: BarChart3,
+        networkUp: "Yes",
+        values: ["Partial", "Partial", "Partial", "No", "Partial", "Partial", "No"]
+    },
+    {
+        feature: "Team collaboration",
+        icon: Users,
+        networkUp: "Yes",
+        values: ["Partial", "Yes", "Partial", "No", "Yes", "Yes", "Partial"]
+    },
+    {
+        feature: "CRM & Zapier integration",
+        icon: Puzzle,
+        networkUp: "Yes",
+        values: ["Yes", "Yes", "Partial", "Yes", "Partial", "Partial", "Yes"]
+    },
+    {
+        feature: "Dedicated account manager",
+        icon: UserCheck,
+        networkUp: "Yes",
+        values: ["No", "No", "No", "No", "No", "No", "Partial"]
+    },
+    {
+        feature: "Free to start — no card",
+        icon: Gift,
+        networkUp: "Yes",
+        values: ["No", "No", "No", "No", "No", "No", "Yes"]
+    }
+];
 
 export default function Comparision() {
     return (
-        <section className="w-full bg-[#defad0]/20 py-12 md:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            <div className="mx-auto max-w-9xl px-6 lg:px-8">
-                <motion.div
-                    className="flex flex-col items-center justify-center gap-5 mb-10"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <h4 className="uppercase text-lime-700/70 tracking-wide text-center font-bold leading-[1px] text-md ">alternatives</h4>
-                    <h2 className="text-black w-[800px] text-center tracking-tight leading-[1.1] text-3xl sm:text-4xl md:text-5xl font-bold px-2">How NetworkUp compares to other LinkedIn automation tools</h2>
-                    <h5 className="text-[#356221] w-[800px] text-lg text-center leading-relaxed">Most tools send messages from the cloud. NetworkUp is a local agent that finds, scores and reaches your buyers from your own machine.</h5>
-                </motion.div>
-                <div className="my-5 shadow-2xl shadow-black/20">
-                    {/* Table */}
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="rounded-t-xl overflow-hidden bg-black"
-                    >
-                        <div className="grid grid-cols-9 bg-gray-400/25 w-fit">
-                            {headings.map((heading, index) => (
-                                <span
-                                    key={index}
-                                    className={`text-sm w-[140px] font-bold tracking-wider px-5 py-5 flex items-center justify-center text-center h-full min-h-[70px]
-                                        ${index === 1
-                                            ? "text-lime-400 bg-lime-400/10 border-x border-t border-gray-400/20"
-                                            : "text-[#defad0] mx-2 border-b border-gray-400/40"
-                                        }`}
-                                >
-                                    {heading}
-                                </span>
+        <section className="w-full bg-[#fafcf7] py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl">
+                {/* Header Section */}
+                <div className="flex flex-col items-center justify-center gap-4 mb-14 text-center">
+                    <span className="uppercase text-lime-700/80 tracking-widest font-extrabold text-xs">
+                        alternatives
+                    </span>
+                    <h2 className="text-gray-900 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight">
+                        How NetworkUp compares to other LinkedIn automation tools
+                    </h2>
+                    <p className="text-gray-600 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Most tools send messages from the cloud. NetworkUp is a local agent that finds, scores and reaches your buyers from your own machine.
+                    </p>
+                </div>
+
+                {/* Table Container */}
+                <div className="w-full bg-[#0c1017] rounded-3xl border border-zinc-800/80 shadow-2xl p-6 overflow-x-auto scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-track-transparent">
+                    <div className="min-w-[1190px] flex flex-col">
+
+                        {/* Table Header Row */}
+                        <div className="flex flex-row items-center border-b border-zinc-800/80 pb-4 mb-2">
+                            {/* Features Column Header */}
+                            <div className="w-[280px] flex items-center gap-2.5 pl-4 shrink-0">
+                                <Star size={16} className="text-[#76e11b] fill-[#76e11b]/20" />
+                                <span className="text-[#76e11b] font-extrabold text-xs tracking-wider uppercase">Features</span>
+                            </div>
+
+                            {/* NetworkUp Column Header */}
+                            <div className="w-[160px] flex flex-col items-center justify-center py-4 border-t border-x border-[#76e11b]/30 bg-[#76e11b]/[0.03] rounded-t-2xl shrink-0">
+                                <span className="text-[#76e11b] font-bold text-xs tracking-widest">NETWORKUP.IO</span>
+                            </div>
+
+                            {/* Competitor Column Headers */}
+                            {headings.map((comp) => (
+                                <div key={comp} className="w-[110px] text-center shrink-0 flex items-center justify-center px-2">
+                                    <span className="text-zinc-500 font-extrabold text-[10px] sm:text-xs tracking-wider uppercase leading-tight">
+                                        {comp}
+                                    </span>
+                                </div>
                             ))}
                         </div>
-                    </motion.div>
 
-                    <div>
-                        {comparisons.map((compare, index) => (
-                            <div key={index} className={`bg-black ${index === comparisons.length - 1 ? "rounded-b-xl" : ""}`}>
-                                <motion.div
-                                    initial={{ opacity: 0, x: -30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: 0.3 + (index * 0.1) }}
-                                    key={index} className="grid grid-cols-9 w-fit"
-                                >
-                                    {compare.map((c, i) => (
-                                        <span
-                                            key={i}
-                                            className={`w-[140px] font-medium text-center py-3 border-b last:border-r-0 border-gray-400/10 flex items-center justify-center min-h-[50px]
-            ${i === 1 ? "bg-gradient-to-t from-black/50 via-lime-400/10 to-lime-400/20 text-lime-400 px-5" : "mx-2 border-b border-gray-400/30"} 
-            ${i === 0 ? "font-bold text-left text-white justify-start px-5" : ""}`}
-                                        >
-                                            {(() => {
-                                                if (c === "Yes") {
-                                                    return i === 1 ? <CircleCheck size={20} stroke="black" fill="#a3e635" /> : <Check size={20} color="white" />;
-                                                }
-                                                if (c === "No") {
-                                                    return <span className="text-gray-400/50">-</span>;
-                                                }
-                                                if (c === "Partial") {
-                                                    return <span className="text-white">~</span>;
-                                                }
-                                                return <span className={`${i === 1 ? "text-lime-400" : "text-white/80"}`}>{c}</span>;
-                                            })()}
-                                        </span>
-                                    ))}
-                                </motion.div>
-                            </div>
-                        ))}
+                        {/* Table Body Rows */}
+                        <div className="flex flex-col">
+                            {comparisons.map((row, index) => {
+                                const isLast = index === comparisons.length - 1;
+                                return (
+                                    <div key={index} className="flex flex-row items-center border-b border-zinc-850 last:border-0 hover:bg-white/[0.02] transition-colors">
+                                        {/* Feature Name */}
+                                        <div className="w-[280px] flex items-center gap-3 pl-4 py-4 shrink-0">
+                                            <row.icon size={16} className="text-[#76e11b]/80" />
+                                            <span className="text-zinc-200 text-sm font-semibold tracking-wide">{row.feature}</span>
+                                        </div>
+
+                                        {/* NetworkUp Value */}
+                                        <div className={`w-[160px] flex items-center justify-center py-4 border-x border-[#76e11b]/30 bg-[#76e11b]/[0.03] shrink-0 ${isLast ? "border-b rounded-b-2xl" : ""}`}>
+                                            {row.networkUp === "Yes" ? (
+                                                <Check size={20} className="text-[#76e11b] stroke-[3]" />
+                                            ) : (
+                                                <span className="text-[#76e11b] text-sm font-bold">{row.networkUp}</span>
+                                            )}
+                                        </div>
+
+                                        {/* Competitor Values */}
+                                        {row.values.map((val, idx) => (
+                                            <div key={idx} className="w-[110px] flex items-center justify-center shrink-0 py-4">
+                                                {(() => {
+                                                    if (val === "Yes") {
+                                                        return <Check size={18} className="text-lime-400/90 stroke-[2.5]" />;
+                                                    }
+                                                    if (val === "No") {
+                                                        return <span className="text-white/80 font-semibold text-lg select-none">—</span>;
+                                                    }
+                                                    if (val === "Partial") {
+                                                        return <span className="text-white/80 font-bold text-md select-none">~</span>;
+                                                    }
+                                                    return <span className="text-zinc-400 text-sm font-medium">{val}</span>;
+                                                })()}
+                                            </div>
+                                        ))}
+                                    </div>
+                                );
+                            })}
+                        </div>
+
                     </div>
                 </div>
-                <motion.div
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="flex flex-row items-center justify-between w-full max-w-7xl mx-auto my-5"
-                >
-                    <h3 className="text-base px-20">✓ included</h3>
-                    <h3 className="text-base px-20">- not available</h3>
-                    <h3 className="text-base px-20">~ partial or paid add-on</h3>
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="flex flex-row items-center justify-center"
-                >
-                    <h3 className="text-base px-20 text-lime-700/50">Based on public pricing pages, July 2024. Click a competitor's name for the full comparision.</h3>
-                </motion.div>
+
+                {/* Table Legend */}
+                <div className="flex flex-row flex-wrap items-center justify-between gap-x-10 gap-y-3 w-full max-w-4xl mx-auto mt-10 text-zinc-500 text-xs sm:text-sm font-semibold">
+                    <span className="flex items-center gap-1.5">
+                        <Check size={16} className="text-[#76e11b]" /> included
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                        <span className="text-black/80 text-lg font-bold">—</span> not available
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                        <span className="text-black/80 text-md font-bold">~</span> partial or paid add-on
+                    </span>
+                </div>
+
+                <div className="text-center text-[10px] sm:text-xs text-zinc-500/80 font-medium mt-6">
+                    Based on public pricing pages, July 2024. Click a competitor's name for the full comparison.
+                </div>
             </div>
         </section>
-    )
+    );
 }

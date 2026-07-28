@@ -10,8 +10,8 @@ import { useRouter, usePathname } from "next/navigation";
 const navItems = [
     { label: "Product", id: "product", path: "/homepage#product" },
     { label: "Solutions", id: "solutions", path: "/homepage/solutions" },
-    { label: "Overview", id: "features", path: "/homepage#features" },
-    { label: "AI Features", id: "workflow", path: "/homepage#workflow" },
+    { label: "Overview", id: "features", path: "/homepage/overview" },
+    { label: "AI Features", id: "workflow", path: "/homepage/ai-features" },
     { label: "Pricing", id: "pricing", path: "/homepage/pricing" },
 ];
 
@@ -80,6 +80,7 @@ export default function Navbar() {
                             alt="Logo"
                             width={42}
                             height={42}
+                            style={{ height: "auto" }}
                         />
                         <span className="text-2xl font-bold font-[family-name:var(--font-comfortaa)] text-[#6CB531]">
                             NetworkUp<span className="text-zinc-500 font-base font-normal tracking-tight">.io</span>

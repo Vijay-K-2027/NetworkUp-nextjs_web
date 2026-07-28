@@ -52,7 +52,7 @@ const pillars = [
 
 export default function Pillars() {
     return (
-        <section id="solution" className="w-full bg-[#fafcf7] py-10 px-6 lg:px-8">
+        <section className="w-full bg-[#fafcf7] py-10 px-6 lg:px-8">
             <div className="mx-auto">
                 <div className="flex flex-col gap-y-2 items-center justify-between pb-5">
                     <h1 className="text-4xl font-bold">The Unified Networking Engine</h1>
@@ -65,7 +65,7 @@ export default function Pillars() {
                 </div>
                 <div className="grid grid-col-1 lg:grid-cols-3 max-w-6xl gap-15 w-full mx-35 my-5">
                     {pillars.map((pillar, index) => (
-                        <div key={index} className="flex flex-col bg-[radial-gradient(circle_at_top_left),_rgba(222,250,108,1)_0%,_rgba(222,250,108,0.4)_100px,_white_100%] rounded-xl h-[320px] w-[380px] border border-[#747A6E]/60 p-8" >
+                        <div key={index} className="flex flex-col bg-[radial-gradient(circle_at_top_right,_rgba(222,250,208,1)_0%,_rgba(222,250,208,0.2)_100px,_rgba(255,255,255,1)_100%)] rounded-xl h-[320px] w-[380px] border border-[#747A6E]/60 p-8" >
                             <div className="w-12 h-12 bg-lime-400 rounded-xl px-3.25 py-3.25">
                                 {<pillar.pillarIcon size={22} stroke="black" />}
                             </div>
