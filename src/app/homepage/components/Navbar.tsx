@@ -8,9 +8,9 @@ import { useRouter, usePathname } from "next/navigation";
 
 
 const navItems = [
-    { label: "Product", id: "product", path: "/homepage#product" },
+    { label: "Product", id: "product", path: "/" },
     { label: "Solutions", id: "solutions", path: "/homepage/solutions" },
-    { label: "Overview", id: "features", path: "/homepage/overview" },
+    { label: "Overview", id: "overview", path: "/homepage/overview" },
     { label: "AI Features", id: "workflow", path: "/homepage/ai-features" },
     { label: "Pricing", id: "pricing", path: "/homepage/pricing" },
 ];
