@@ -9,9 +9,9 @@ WORKDIR /app
 # Copy lock files to leverage caching
 COPY package.json package-lock.json* yarn.lock* pnpm-lock.yaml* ./
 RUN \
-  if [ -f package-lock.json ]; then npm ci; \
-  elif [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile; \
+  if [ -f package-lock.json ]; then npm install; \
+  elif [ -f yarn.lock ]; then yarn install; \
+  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i; \
   else echo "Lockfile not found." && exit 1; \
   fi
 
