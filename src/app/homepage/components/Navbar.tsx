@@ -10,9 +10,9 @@ import { useRouter, usePathname } from "next/navigation";
 const navItems = [
     { label: "Product", id: "product", path: "/" },
     { label: "Solutions", id: "solutions", path: "/homepage/solutions" },
-    { label: "Overview", id: "overview", path: "/homepage/overview" },
     { label: "AI Features", id: "workflow", path: "/homepage/ai-features" },
     { label: "Pricing", id: "pricing", path: "/homepage/pricing" },
+    { label: "About Us", id: "aboutUs", path: "/homepage/aboutUs" },
 ];
 
 export default function Navbar() {
@@ -70,32 +70,32 @@ export default function Navbar() {
                     </a>
                 </div>
             </div>
-            <div className="mx-auto flex h-20 max-w-full items-center justify-between px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto w-full flex h-20 items-center justify-between px-6 lg:px-8">
 
                 {/* Left side: Logo and Desktop Navigation */}
-                <div className="flex items-center gap-12">
-                    <Link href="/homepage" className="flex items-center gap-3 flex-shrink-0">
+                <div className="flex items-center gap-6 lg:gap-12">
+                    <Link href="/homepage" className="flex items-center gap-2 lg:gap-3 flex-shrink-0">
                         <Image
                             src="/Logo.svg"
                             alt="Logo"
-                            width={42}
-                            height={42}
+                            width={38}
+                            height={38}
                             style={{ height: "auto" }}
                         />
-                        <span className="text-2xl font-bold font-[family-name:var(--font-comfortaa)] text-[#6CB531]">
+                        <span className="text-xl lg:text-2xl font-bold font-[family-name:var(--font-comfortaa)] text-[#6CB531]">
                             NetworkUp<span className="text-zinc-500 font-base font-normal tracking-tight">.io</span>
                         </span>
                     </Link>
 
                     <nav className="hidden md:flex">
-                        <ul className="flex items-center gap-8 text-md font-medium text-gray-600">
+                        <ul className="flex items-center gap-4 lg:gap-8 text-sm lg:text-md font-medium text-gray-600">
                             {navItems.map((item, index) => {
                                 const isActive = (pathname === item.path) || (pathname === "/homepage" && activeSection === item.id);
                                 return (
                                     <li key={index} className="h-20 flex items-center">
                                         <Link
                                             href={item.path}
-                                            className={`text-md font-semibold transition-all duration-200 pb-2 ${isActive
+                                            className={`text-sm lg:text-md font-semibold transition-all duration-200 pb-2 ${isActive
                                                 ? "text-[#356221] border-b-2 border-[#76e11b]" : "text-gray-600 hover:text-[#76e11b] border-b-2 border-transparent"
                                                 }`}
                                         >
@@ -109,42 +109,45 @@ export default function Navbar() {
                 </div>
 
                 {/* Right side: Action Buttons & Mobile Menu Trigger */}
-                <div className="flex items-center gap-3 sm:gap-5">
+                <div className="flex items-center gap-2 sm:gap-4">
                     <Link
                         href="#"
-                        className="rounded-xl bg-lime-400 px-4 sm:px-6 py-2.5 sm:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
+                        className="hidden sm:inline-flex rounded-xl bg-lime-400 px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
                     >
                         Log In
                     </Link>
 
-                    <button className="rounded-xl bg-lime-400 px-4 sm:px-6 py-2.5 sm:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500" onClick={() => router.push("homepage/subscription")}>
+                    <button 
+                        className="hidden sm:inline-flex rounded-xl bg-lime-400 px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500" 
+                        onClick={() => router.push("homepage/subscription")}
+                    >
                         Get Started
                     </button>
 
                     <button
-                        className="flex flex-row gap-2 items-center rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-black shadow transition hover:bg-gray-100 cursor-pointer"
+                        className="flex flex-row gap-1.5 sm:gap-2 items-center rounded-xl px-3 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-black shadow transition hover:bg-gray-100 cursor-pointer"
                         onClick={() => {
                             window.dispatchEvent(new CustomEvent("toggle-ask-ai"));
                         }}
                     >
-                        <Bot size={22} strokeWidth={2} />
-                        Ask AI
+                        <Bot size={18} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2} />
+                        <span className="hidden xs:inline sm:inline">Ask AI</span>
                     </button>
 
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="flex md:hidden h-11 w-11 items-center justify-center rounded-xl border border-gray-200 hover:bg-gray-50 text-gray-700"
+                        className="flex md:hidden h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl border border-gray-200 hover:bg-gray-50 text-gray-700"
                         aria-label="Toggle Menu"
                     >
-                        {isOpen ? <X size={22} /> : <Menu size={22} />}
+                        {isOpen ? <X size={20} /> : <Menu size={20} />}
                     </button>
                 </div>
             </div>
 
             {/* Mobile Dropdown Drawer */}
             {isOpen && (
-                <div className="md:hidden border-t border-gray-200 bg-white px-6 py-4 shadow-inner">
-                    <nav className="mb-4">
+                <div className="md:hidden border-t border-gray-200 bg-white px-6 py-5 shadow-inner">
+                    <nav className="mb-5">
                         <ul className="flex flex-col gap-4 text-base font-medium text-gray-600">
                             {navItems.map((item, index) => {
                                 const isActive = (pathname === item.path) || (pathname === "/homepage" && activeSection === item.id);
@@ -163,6 +166,26 @@ export default function Navbar() {
                             })}
                         </ul>
                     </nav>
+                    
+                    {/* Compact Login/Signup inside Drawer for Mobile Screen Adjustments */}
+                    <div className="border-t border-gray-100 pt-4 flex flex-col gap-2.5 sm:hidden">
+                        <Link
+                            href="#"
+                            onClick={() => setIsOpen(false)}
+                            className="w-full text-center rounded-xl bg-lime-400 py-3 text-xs font-bold text-black shadow transition hover:bg-lime-500"
+                        >
+                            Log In
+                        </Link>
+                        <button
+                            onClick={() => {
+                                setIsOpen(false);
+                                router.push("homepage/subscription");
+                            }}
+                            className="w-full text-center rounded-xl bg-lime-400 py-3 text-xs font-bold text-black shadow transition hover:bg-lime-500"
+                        >
+                            Get Started
+                        </button>
+                    </div>
                 </div>
             )}
         </header>

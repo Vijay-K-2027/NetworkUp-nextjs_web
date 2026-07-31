@@ -144,7 +144,7 @@ const salesTeamContent3: InfoColumnProps = {
     ]
 };
 
-export default function Section1() {
+export default function Section0() {
     return (
         <section className="bg-[#fafcf7] py-16 px-6 lg:px-8">
             <div className="max-w-7xl mx-auto w-full flex flex-col gap-y-24 lg:gap-y-32">
