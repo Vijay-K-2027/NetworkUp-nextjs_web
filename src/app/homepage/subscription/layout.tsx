@@ -2,6 +2,42 @@ import React from "react";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Choose Your Subscription Plan | NetworkUp.io",
+    description: "Start your free trial or subscribe to a Growth or Enterprise plan to unlock advanced AI-powered LinkedIn outreach tools.",
+    keywords: ["networkup trial", "growth plan setup", "enterprise subscription networkup", "linkedin tool checkout"],
+    alternates: {
+        canonical: "https://networkup.io/homepage/subscription"
+    },
+    openGraph: {
+        title: "Choose Your Subscription Plan | NetworkUp.io",
+        description: "Start your free trial or subscribe to a Growth or Enterprise plan to unlock advanced AI-powered LinkedIn outreach tools.",
+        url: "https://networkup.io/homepage/subscription",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://networkup.io/og-subscription.png",
+                width: 1200,
+                height: 630,
+                alt: "Checkout NetworkUp Plans"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Choose Your Subscription Plan | NetworkUp.io",
+        description: "Start your free trial or subscribe to a Growth or Enterprise plan to unlock advanced AI-powered LinkedIn outreach tools.",
+        images: ["https://networkup.io/og-subscription.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 export default function SubscriptionLayout({ children }: { children: React.ReactNode }) {
     return (

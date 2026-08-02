@@ -9,7 +9,7 @@ import PromptAssistant from "@/app/homepage/components/PromptAssistant";
 import Stats from "@/app/homepage/components/Stats";
 import Pricing from "@/app/homepage/components/Pricing";
 import Contact from "@/app/homepage/components/Contact";
-import Documentation from "@/app/homepage/components/Documentation";
+import Document from "@/app/homepage/components/Documentation";
 
 export const metadata: Metadata = {
     title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
@@ -34,7 +34,7 @@ export default function Home() {
             <Stats />
             <Pricing />
             <Contact />
-            <Documentation />
+            <Document />
         </>
     );
 }

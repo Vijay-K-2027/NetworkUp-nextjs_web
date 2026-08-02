@@ -23,8 +23,8 @@ export default function Section5() {
     return (
         <section className="bg-[#fafcf7] py-16 px-6 lg:px-8">
             <div className="max-w-9xl mx-auto w-full">
-                <div className="flex flex-col lg:flex-row items-center justify-between">
-                    <div className="flex flex-1 flex-col gap-y-4">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+                    <div className="flex flex-1 flex-col gap-y-4 text-left">
                         <p className="text-[#71EB34] uppercase text-sm font-bold tracking-wider">Our Team Philosophy</p>
                         <h2 className="text-black text-3xl sm:text-4xl font-extrabold tracking-tight">Small team. Big mission.</h2>
                         <p className="text-black/60 text-lg sm:text-xl leading-relaxed max-w-xl">
@@ -33,7 +33,7 @@ export default function Section5() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1 w-full">
                         {section4Data.map((data, index) => (
-                            <div key={index} className="flex flex-col items-center text-center p-6 rounded-2xl hover:shadow-md transition-all duration-300">
+                            <div key={index} className="flex flex-col items-center text-center p-6 rounded-2xl hover:shadow-md transition-all duration-300 bg-white border border-gray-100/50">
                                 <div className="w-12 h-12 bg-[#EAFCEB] rounded-xl flex items-center justify-center mb-4">
                                     <data.icon className="w-6 h-6 text-[#71EB34]" />
                                 </div>
