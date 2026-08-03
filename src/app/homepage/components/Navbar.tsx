@@ -117,9 +117,9 @@ export default function Navbar() {
                         Log In
                     </Link>
 
-                    <button 
-                        className="hidden sm:inline-flex rounded-xl bg-lime-400 px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500" 
-                        onClick={() => router.push("homepage/subscription")}
+                    <button
+                        className="hidden sm:inline-flex rounded-xl bg-lime-400 px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
+                        onClick={() => router.push("subscription")}
                     >
                         Get Started
                     </button>
@@ -166,7 +166,7 @@ export default function Navbar() {
                             })}
                         </ul>
                     </nav>
-                    
+
                     {/* Compact Login/Signup inside Drawer for Mobile Screen Adjustments */}
                     <div className="border-t border-gray-100 pt-4 flex flex-col gap-2.5 sm:hidden">
                         <Link
