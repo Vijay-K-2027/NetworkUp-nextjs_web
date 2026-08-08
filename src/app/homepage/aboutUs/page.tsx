@@ -4,7 +4,7 @@ import Section2 from "./components/Section2";
 import Section3 from "./components/Section3";
 import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
-import Section6 from "./components/Section6";
+
 
 export const metadata: Metadata = {
     title: "About Us | NetworkUp.io",
@@ -47,10 +47,10 @@ export default function OverviewPage() {
     return (
         <>
             <div className="w-full max-w-9xl bg-[#fafcf7] mx-auto">
-                <div className="flex flex-col items-center justify-center py-10 mt-5 gap-y-2 ">
-                    <h4 className="uppercase text-lime-400 text-xl text-center font-bold">Our Story</h4>
-                    <h2 className="text-xl sm:text-2xl max-w-[400px] w-full text-center font-extrabold tracking-tighter -mt-2 px-4">How it all started </h2>
-                    <h3 className="max-w-[700px] w-full text-center text-sm sm:text-md text-gray-500 px-4">A journey driven by a simple belief —— outreach should be human, not manual.</h3>
+                <div className="flex flex-col items-center justify-center py-10 mt-5 gap-y-3 ">
+                    <h4 className="uppercase text-[#71EB34] text-xl text-center font-bold">Our Story</h4>
+                    <h2 className="text-2xl sm:text-3xl max-w-[400px] w-full text-center font-extrabold tracking-tighter -mt-2 px-4">How it all started </h2>
+                    <h3 className="w-full text-center text-md sm:text-lg text-gray-500 px-4">A journey driven by a simple belief — outreach should be human, not manual.</h3>
                 </div>
             </div>
             <Section1 />
@@ -58,7 +58,6 @@ export default function OverviewPage() {
             <Section3 />
             <Section4 />
             <Section5 />
-            <Section6 />
         </>
     )
 }

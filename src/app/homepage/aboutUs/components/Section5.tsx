@@ -1,48 +1,30 @@
-import { Clock, Heart, Users2, Zap } from "lucide-react"
+import Documentation from "../../Documentation";
 
-const section4Data = [
+const section5Data = [
     {
-        icon: Zap,
-        description: "Focused on solving one problem really well."
+        question: "What is NetworkUp.io?",
+        answer: "NetworkUp.io is a LinkedIn automation platform that helps professionals build meaningful connections through smart outreach and AI-powered workflows."
     },
     {
-        icon: Clock,
-        description: "Fast decision-making and execution."
+        question: "Why was NetworkUp.io created?",
+        answer: "We built NetworkUp.io to simplify LinkedIn outreach with tools that save time while keeping conversations personal."
     },
     {
-        icon: Users2,
-        description: "Direct access to the people building the product."
+        question: "Who can use NetworkUp.io?",
+        answer: "Sales teams, recruiters, agencies, founders, marketers, and consultants can all use NetworkUp.io to grow their network."
     },
     {
-        icon: Heart,
-        description: "We win when our users win."
+        question: "What is our mission?",
+        answer: "Our mission is to make professional networking faster, smarter, and more effective through ethical automation."
     },
+    {
+        question: "What values guide NetworkUp.io?",
+        answer: "We focus on simplicity, transparency, innovation, user privacy, and building genuine professional relationships."
+    }
 ]
 
 export default function Section5() {
     return (
-        <section className="bg-[#fafcf7] py-16 px-6 lg:px-8">
-            <div className="max-w-9xl mx-auto w-full">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-                    <div className="flex flex-1 flex-col gap-y-4 text-left">
-                        <p className="text-[#71EB34] uppercase text-sm font-bold tracking-wider">Our Team Philosophy</p>
-                        <h2 className="text-black text-3xl sm:text-4xl font-extrabold tracking-tight">Small team. Big mission.</h2>
-                        <p className="text-black/60 text-lg sm:text-xl leading-relaxed max-w-xl">
-                            We're a small team of builders, marketers, and problem-solvers who believe great products come from focus, discipline, and user obsession.
-                        </p>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1 w-full">
-                        {section4Data.map((data, index) => (
-                            <div key={index} className="flex flex-col items-center text-center p-6 rounded-2xl hover:shadow-md transition-all duration-300 bg-white border border-gray-100/50">
-                                <div className="w-12 h-12 bg-[#EAFCEB] rounded-xl flex items-center justify-center mb-4">
-                                    <data.icon className="w-6 h-6 text-[#71EB34]" />
-                                </div>
-                                <p className="text-black/90 text-sm font-bold leading-snug">{data.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </section>
+        <Documentation document={section5Data} />
     )
 }

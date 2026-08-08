@@ -1,10 +1,6 @@
 import { CircleCheck } from "lucide-react";
 import Image from "next/image";
 
-const section1Data = [
-    "Too many tools. Too many tabs.", "Manual work kills productivity.", "Personalization drives results.", "Automation should feel human."
-]
-
 export default function Section1() {
     return (
         <section className="bg-[#fafcf7] w-full max-w-8xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
@@ -14,20 +10,19 @@ export default function Section1() {
                 </div>
                 <div className="w-full lg:w-[45%] p-5">
                     <div className="flex flex-col items-start gap-y-4">
-                        <h1 className="text-[#71EB34] uppercase text-md font-bold">Why we built NetworkUp.io</h1>
+                        <h1 className="text-[#71EB34] uppercase text-md font-bold">About Us ——</h1>
                         <div className="flex flex-col text-left">
-                            <h2 className="text-black text-2xl sm:text-4xl font-extrabold leading-tight">Outreach should build </h2>
-                            <h3 className="text-black text-2xl sm:text-4xl font-extrabold leading-tight">relationships, not take hours.</h3>
+                            <h1 className="text-black text-4xl sm:text-6xl font-bold ">We build tools that</h1>
+                            <h2 className="text-black text-4xl sm:text-6xl font-bold ">help people <span className="text-[#71EB34]">connect</span>, </h2>
+                            <h3 className="text-black text-4xl sm:text-6xl font-bold ">conversations that</h3>
+                            <h4 className="text-[#71EB34] text-4xl sm:text-6xl font-bold ">create opportunities.</h4>
                         </div>
-                        <h4 className="text-gray-500 max-w-[650px] w-full text-left text-md md:text-lg mt-3 leading-relaxed">We built NetworkUp.io to remove the repetitive, time-consuming tasks from LinkedIn outreach —— so you can focus on what actually matters: having real conversations.</h4>
+                        <hr className="border-2 border-[#71E111]/20 w-full" />
+                        <h4 className="text-[#356221] w-full text-left text-lg md:text-xl leading-wide">At NetworkUp.io, we're on a mission to make LinkedIn outreach smarter, safer, and more effective. Built by the team behind WhiterApps, we combine deep product expertise with a passion for helping businesses grow through meaningful connections.</h4>
                     </div>
-                    <div className="flex flex-col gap-y-3 my-8">
-                        {section1Data.map((data, index) => (
-                            <div key={index} className="flex flex-row items-center gap-x-2">
-                                <CircleCheck size={20} className="stroke-[#71EB34]" />
-                                <span className="text-md text-black">{data}</span>
-                            </div>
-                        ))}
+                    <div className="flex flex-row gap-x-5 my-8">
+                        <button className="bg-[#71EB34] text-black font-bold px-6 py-3 rounded-xl">Start Free Trail </button>
+                        <button className="bg-transparent text-black font-bold hover:border-2 hover:text-[#71EB34] border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-200">Book a Demo</button>
                     </div>
                 </div>
             </div>

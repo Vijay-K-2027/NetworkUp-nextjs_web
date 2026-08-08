@@ -64,7 +64,7 @@ export default function Documentation({
                             return (
                                 <div
                                     key={index}
-                                    className={`w-full bg-white flex flex-col items-start justify-start border-0.5 hover:scale-102 transition-colors duration-300 ${isOpen ? 'border-[#6CB531]/50' : 'border-none'} shadow-[1px_2px_2px_rgba(0,0,0,0.15)] rounded-3xl p-4 sm:p-5`}
+                                    className={`w-full bg-white flex flex-col items-start justify-start border-1 hover:scale-101 transition-colors duration-300 ${isOpen ? 'border-[#faf5dc]' : 'border-none'} rounded-3xl p-4 sm:p-5`}
                                 >
                                     {/* Made entire row clickable for better mobile UX */}
                                     <div
@@ -74,7 +74,7 @@ export default function Documentation({
                                         <div className="flex flex-row items-center gap-x-3">
                                             <button
                                                 type="button"
-                                                className={`text-xl sm:text-2xl ${isOpen ? 'text-[#ffffff]' : 'text-[#6CB531]'} font-bold rounded-full ${isOpen ? 'bg-[#6CB531]' : 'bg-[#f5f5dc]/50'} transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8`}
+                                                className={`text-xl sm:text-2xl ${isOpen ? 'text-[#f5f5dc]' : 'text-[#71EB34]'} font-bold rounded-full ${isOpen ? 'bg-[#71EB34]' : 'bg-[#f5f5dc]/80'} transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8`}
                                                 aria-expanded={isOpen}
                                             >
                                                 {isOpen ? '−' : '＋'}

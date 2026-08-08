@@ -1,75 +1,123 @@
 "use client";
 
-import { Check, X } from "lucide-react"
+import { Check, CircleCheck, X } from "lucide-react"
 import React from "react";
 
 const details = [
+    // ACCOUNT MANAGEMENT
     {
-        topic: "Header",
-        feature: "Feature",
-        starter: "Starter",
-        growth: "Growth",
-        enterprise: "Enterprise"
+        topic: "Account Management",
+        feature: "LinkedIn Accounts",
+        starter: "1",
+        growth: "3",
+        enterprise: "Unlimited"
     },
     {
-        topic: "Core Engine",
-        feature: "AI Personalization Engine",
-        starter: "V1 (Basic)",
-        growth: "V2 (Pro)",
-        enterprise: "V3 (Enterprise)",
+        topic: "Account Management",
+        feature: "Team Members",
+        starter: "1",
+        growth: "10",
+        enterprise: "Unlimited"
     },
     {
-        topic: "Core Engine",
-        feature: "API Endpoint Access",
-        starter: "No",
+        topic: "Account Management",
+        feature: "ConvoBox",
+        starter: "Yes",
         growth: "Yes",
-        enterprise: "Yes (Priority)",
+        enterprise: "Yes",
     },
+    // OUTREACH
     {
-        topic: "Core Engine",
-        feature: "CRM Integrations",
-        starter: "Zapier Only",
-        growth: "Direct (Hubspot, SFDC)",
-        enterprise: "Full Native + Webhooks",
-    },
-    {
-        topic: "Core Engine",
-        feature: "White-label Reports",
-        starter: "No",
+        topic: "Outreach",
+        feature: "AI Outreach Writer",
+        starter: "Yes",
         growth: "Yes",
         enterprise: "Yes",
     },
     {
-        topic: "Growth Features",
-        feature: "LinkedIn Accounts",
-        starter: "1 Account",
-        growth: "3 Accounts",
+        topic: "Outreach",
+        feature: "Campaign Builder",
+        starter: "Basic",
+        growth: "Advanced",
+        enterprise: "Advanced + AI",
+    },
+    {
+        topic: "Outreach",
+        feature: "Personalized Variables",
+        starter: "Basic",
+        growth: "Unlimited",
         enterprise: "Unlimited",
     },
     {
-        topic: "Growth Features",
-        feature: "Monthly Messages",
-        starter: "500 / month",
-        growth: "Unlimited",
-        enterprise: "Priority Queue",
+        topic: "Outreach",
+        feature: "Smart Campaign Follow-ups",
+        starter: "No",
+        growth: "Yes",
+        enterprise: "Yes",
+    },
+    // AI & AUTOMATION
+    {
+        topic: "AI & Automation",
+        feature: "AI Personalization",
+        starter: "Basic",
+        growth: "Advanced",
+        enterprise: "Enterprise AI",
     },
     {
-        topic: "Growth Features",
-        feature: "Lead Discovery",
-        starter: "Standard",
-        growth: "AI-Powered",
-        enterprise: "Advanced Predictive AI",
-    },
-    {
-        topic: "Administration",
-        feature: "Team Collaboration",
+        topic: "AI & Automation",
+        feature: "AI Health Monitoring",
         starter: "No",
         growth: "Yes",
         enterprise: "Yes",
     },
     {
-        topic: "Administration",
-        feature: "Custom Training",
+        topic: "AI & Automation",
+        feature: "AI Workflow Builder",
+        starter: "No",
+        growth: "Yes",
+        enterprise: "Yes",
+    },
+    // LEAD DISCOVERY
+    {
+        topic: "Lead Discovery",
+        feature: "Prospect Discovery (on credit basis)",
+        starter: "Standard",
+        growth: "AI-powered",
+        enterprise: "Predictive AI",
+    },
+    {
+        topic: "Lead Discovery",
+        feature: "CRM Sync",
+        starter: "Zapier",
+        growth: "Native",
+        enterprise: "Native + Webhooks",
+    },
+    // ANALYTICS
+    {
+        topic: "Analytics",
+        feature: "Campaign Analytics",
+        starter: "Basic",
+        growth: "Advanced",
+        enterprise: "Enterprise",
+    },
+    {
+        topic: "Analytics",
+        feature: "White-label Reports",
+        starter: "No",
+        growth: "No",
+        enterprise: "Yes",
+    },
+    // SECURITY & SUPPORT
+    {
+        topic: "Security & Support",
+        feature: "AI Support Hub",
+        starter: "No",
+        growth: "Yes",
+        enterprise: "Yes",
+    },
+    {
+        topic: "Security & Support",
+        feature: "SSO / SAML",
         starter: "No",
         growth: "No",
         enterprise: "Yes",
@@ -77,95 +125,106 @@ const details = [
 ]
 
 export default function Detailed() {
-    const headers = details[0];
-    const bodyRows = details.slice(1);
+    const renderCell = (val: string, topic: string, isGrowth: boolean = false) => {
+        if (val === "Yes") {
+            return (
+                <CircleCheck size={25} className="fill-green-500 stroke-[#f5f5dc] shrink-0" />
+            );
+        }
+        if (val === "No") {
+            return <X size={25} className="stroke-red-400 stroke-[2] shrink-0" />;
+        }
+        return (
+            <span className={`text-xs sm:text-sm ${isGrowth ? "text-black font-extrabold" : "text-gray-600 font-medium"}`}>
+                {val}
+            </span>
+        );
+    };
+
+    let currentTopicGroup: string | null = null;
 
     return (
-        <section className="bg-[#fafcf7] py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-            <div className="container max-w-5xl mx-auto w-full">
-                <div className="flex flex-col items-center justify-center gap-3 mb-12">
-                    <h2 className="text-3xl font-bold text-black text-center ">Detailed Breakdown</h2>
-                    <h5 className="text-lg text-black/60 text-center ">Compare core features across our top plans.</h5>
+        <section className="bg-[#f5f5dc]/30 py-20 px-4 sm:px-6 lg:px-[100px]">
+            <div className="w-full">
+
+                {/* Header Section */}
+                <div className="flex flex-col items-center justify-center gap-3 mb-16">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-black text-center tracking-tight">Detailed Breakdown</h2>
+                    <p className="text-base sm:text-lg text-gray-500 text-center max-w-2xl">Compare core features across our top plans.</p>
                 </div>
 
-                <div className="w-full max-w-5xl mx-auto overflow-x-auto scrollbar-thin">
-                    <div className="min-w-[768px] flex flex-col">
-                        {/* Table Header */}
-                        <div className="grid grid-cols-14 rounded-t-xl bg-gray-500/5 px-7 py-5 border border-gray-400/60 font-bold text-lg text-black items-center">
-                            <span className="col-span-5 text-left">{headers.feature}</span>
-                            <span className="col-span-3 text-center">{headers.starter}</span>
-                            <span className="col-span-3 text-center">{headers.growth}</span>
-                            <span className="col-span-3 text-center">{headers.enterprise}</span>
+                {/* Table Container */}
+                <div className="w-full overflow-x-auto rounded-[24px] scrollbar-thin">
+                    <div className="min-w-[800px] flex flex-col bg-transparent">
+
+                        {/* Table Header Row */}
+                        <div className="grid grid-cols-12 items-stretch font-bold text-sm sm:text-base text-black bg-transparent">
+                            <div className="col-span-6 flex items-center justify-start py-6 px-8 pl-8 lg:pl-25 text-black font-extrabold">
+                                Feature
+                            </div>
+                            <div className="col-span-2 flex flex-col items-center justify-center py-6 px-4 gap-1 text-center">
+                                <span className="font-extrabold text-sm sm:text-base">Starter</span>
+                                <span className="text-[11px] sm:text-xs text-gray-400 font-semibold">$21/ mo</span>
+                            </div>
+                            <div className="col-span-2 flex flex-col items-center justify-center py-6 px-4 gap-1 text-center bg-[#71EB34]/10 relative">
+                                <span className="font-extrabold text-sm sm:text-base text-black">Growth</span>
+                                <span className="text-[11px] sm:text-xs text-[#356221] font-extrabold">$59/ mo</span>
+                            </div>
+                            <div className="col-span-2 flex flex-col items-center justify-center py-6 px-4 gap-1 text-center">
+                                <span className="font-extrabold text-sm sm:text-base">Enterprise</span>
+                                <span className="text-[11px] sm:text-xs text-gray-400 font-semibold">$129/ mo</span>
+                            </div>
                         </div>
 
-                        {/* Table Body */}
-                        {(() => {
-                            let currentTopicGroup: string | null = null;
+                        {/* Table Body Rows */}
+                        {details.map((detail, index) => {
+                            const isNewTopic = detail.topic !== currentTopicGroup;
+                            if (isNewTopic) {
+                                currentTopicGroup = detail.topic;
+                            }
 
-                            return bodyRows.map((detail, index) => {
-                                const isNewTopic = detail.topic !== currentTopicGroup;
-
-                                if (isNewTopic) {
-                                    currentTopicGroup = detail.topic;
-                                }
-
-                                return (
-                                    <React.Fragment key={index}>
-                                        {/* Full-Width Topic Header */}
-                                        {isNewTopic && (
-                                            <div className="col-span-12 px-7 py-4 bg-gray-100/60 font-bold text-base text-[#356221] border-x border-b border-gray-400/40 text-left uppercase tracking-wider">
+                            return (
+                                <React.Fragment key={index}>
+                                    {/* Topic Header Row */}
+                                    {isNewTopic && (
+                                        <div className="grid grid-cols-12 bg-[#71EB34]/15">
+                                            <div className="col-span-12 py-3 px-8 pl-8 lg:pl-25 text-[11px] font-extrabold text-[#356221] tracking-wider uppercase text-left">
                                                 {detail.topic}
                                             </div>
-                                        )}
-
-                                        {/* Feature Grid Row */}
-                                        <div
-                                            className={`grid grid-cols-14 px-7 py-6 border-b border-x border-gray-400/40 bg-white transition-all duration-200 hover:bg-[#defad0]/10 hover:translate-x-1 border-l-4 border-l-transparent hover:border-l-[#356221] hover:shadow-sm items-center ${index === bodyRows.length - 1 ? "rounded-b-xl" : ""}`}
-                                        >
-                                            {/* Feature Title */}
-                                            <span className="col-span-5 text-base text-black/70 text-left pr-4 font-medium">
-                                                {detail.feature}
-                                            </span>
-
-                                            {/* Starter Column */}
-                                            <span className="col-span-3 text-center flex items-center justify-center transition-transform duration-300 hover:scale-110">
-                                                {detail.starter === "No" ? (
-                                                    <X size={18} className="text-red-500 font-extrabold" />
-                                                ) : detail.starter === "Yes" ? (
-                                                    <Check size={18} className="text-green-600 font-extrabold" />
-                                                ) : (
-                                                    <span className="text-zinc-600 text-sm font-semibold">{detail.starter}</span>
-                                                )}
-                                            </span>
-
-                                            {/* Growth Column */}
-                                            <span className="col-span-3 text-center flex items-center justify-center transition-transform duration-300 hover:scale-110">
-                                                {detail.growth === "Yes" ? (
-                                                    <Check size={18} className="text-green-600 font-extrabold" />
-                                                ) : detail.growth === "No" ? (
-                                                    <X size={18} className="text-red-500 font-extrabold" />
-                                                ) : (
-                                                    <span className="text-zinc-650 text-sm font-semibold">{detail.growth}</span>
-                                                )}
-                                            </span>
-
-                                            {/* Enterprise Column */}
-                                            <span className="col-span-3 text-center flex items-center justify-center transition-transform duration-300 hover:scale-110">
-                                                {detail.enterprise === "Yes" ? (
-                                                    <Check size={18} className="text-green-600 font-extrabold" />
-                                                ) : detail.enterprise === "No" ? (
-                                                    <X size={18} className="text-red-500 font-extrabold" />
-                                                ) : (
-                                                    <span className="text-zinc-700 text-sm font-bold">{detail.enterprise}</span>
-                                                )}
-                                            </span>
                                         </div>
-                                    </React.Fragment>
-                                );
-                            });
-                        })()}
+                                    )}
+
+                                    {/* Feature Row */}
+                                    <div className="grid grid-cols-12 items-stretch hover:bg-[#71EB34]/5 transition-colors duration-150">
+
+                                        {/* Feature Name */}
+                                        <div className="col-span-6 flex items-center justify-start py-4 px-8 pl-8 lg:pl-25 text-left text-xs sm:text-sm font-semibold text-gray-700">
+                                            {detail.feature}
+                                        </div>
+
+                                        {/* Starter Col */}
+                                        <div className="col-span-2 flex items-center justify-center py-4 px-4 text-center">
+                                            {renderCell(detail.starter, detail.topic)}
+                                        </div>
+
+                                        {/* Growth Col (Highlighted) */}
+                                        <div className="col-span-2 flex items-center justify-center py-4 px-4 text-center bg-[#71EB34]/10 font-extrabold text-black">
+                                            {renderCell(detail.growth, detail.topic, true)}
+                                        </div>
+
+                                        {/* Enterprise Col */}
+                                        <div className="col-span-2 flex items-center justify-center py-4 px-4 text-center">
+                                            {renderCell(detail.enterprise, detail.topic)}
+                                        </div>
+
+                                    </div>
+                                </React.Fragment>
+                            );
+                        })}
+
                     </div>
                 </div>
+
             </div>
         </section>
     );
