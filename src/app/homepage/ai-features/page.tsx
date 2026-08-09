@@ -5,6 +5,7 @@ import Section3 from "./components/Section3";
 import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
+import Section7 from "./components/Section7";
 
 export const metadata: Metadata = {
     title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
@@ -50,8 +51,8 @@ export default function AIFeatures() {
             <Section2 />
             <Section3 />
             <Section5 />
+            <Section7 />
             <Section4 />
-
             <Section6 />
         </>
     )
