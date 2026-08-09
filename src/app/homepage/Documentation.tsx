@@ -57,7 +57,7 @@ export default function Documentation({
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delayChildren: 0.3 }}
-                        className="mt-10 w-full w-2xl md:w-4xl lg:w-7xl space-y-4 flex flex-col items-center justify-center "
+                        className="mt-10 w-full w-2xl md:w-3xl lg:w-4xl xl:w-5xl 2xl:w-7xl space-y-4 flex flex-col items-center justify-center "
                     >
                         {document.map((doc, index) => {
                             const isOpen = openIndex === index;

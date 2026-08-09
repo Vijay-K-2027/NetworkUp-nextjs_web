@@ -31,7 +31,7 @@ export default function Section3() {
     };
 
     return (
-        <section className="bg-gray-100/50 mx-10 py-12 md:py-18 px-3 sm:px-5 lg:px-7">
+        <section className="bg-[#fafcf7] mx-10 py-12 md:py-18 px-3 sm:px-5 lg:px-7">
             <div className="max-w-8xl mx-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
 
                 {/* Left Section - AI Message Writer Card Mockup */}

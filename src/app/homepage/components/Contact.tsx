@@ -54,7 +54,7 @@ export default function Contact() {
                 {/* 2 Column Layout */}
                 <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-8 items-stretch mx-auto">
                     {/* Left Card: Strategy Session */}
-                    <div className="lg:col-span-7 md:col-span-4 bg-white p-8 sm:p-10 rounded-[2.25rem] border border-zinc-200/60 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.01)] flex flex-col justify-between">
+                    <div className="lg:col-span-7 md:col-span-6 bg-white p-8 sm:p-10 rounded-[2.25rem] border border-zinc-200/60 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.01)] flex flex-col justify-between">
                         <div>
                             <h3 className="text-xl font-bold text-gray-900 mb-8 tracking-tight">
                                 Book a strategy session
@@ -124,7 +124,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <div className="relative lg:col-span-5 bg-[#162d1e] rounded-[2.25rem] shadow-[0_20px_40px_rgba(0,0,0,0.15)] flex flex-col overflow-hidden text-white">
+                    <div className="relative md:col-span-6 lg:col-span-5 bg-[#162d1e] rounded-[2.25rem] shadow-[0_20px_40px_rgba(0,0,0,0.15)] flex flex-col overflow-hidden text-white">
                         <div className="absolute top-8 left-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
                             {/* Avator Group */}
                             <div className="flex items-center">

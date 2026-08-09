@@ -17,7 +17,7 @@ export default function Teams() {
                 </div>
 
                 <div
-                    className="bg-[#ffffff] flex flex-wrap gap-6 sm:gap-10 md:gap-16 lg:gap-20 xl:gap-25 justify-center w-full"
+                    className="bg-[#ffffff] flex flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-16 xl:gap-20 justify-center w-full pb-10"
                 >
                     {row1.map((team) => (
                         <span
@@ -30,7 +30,7 @@ export default function Teams() {
                 </div>
 
                 <div
-                    className="bg-[#ffffff] flex flex-wrap gap-6 sm:gap-10 md:gap-16 lg:gap-20 xl:gap-25 justify-center w-full"
+                    className="bg-[#ffffff] flex flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-16 xl:gap-20 justify-center w-full"
                 >
                     {row2.map((team) => (
                         <span
