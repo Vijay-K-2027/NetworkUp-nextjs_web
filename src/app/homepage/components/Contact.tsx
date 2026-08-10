@@ -52,11 +52,11 @@ export default function Contact() {
                 </div>
 
                 {/* 2 Column Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-8 items-stretch mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mx-auto w-full">
                     {/* Left Card: Strategy Session */}
-                    <div className="lg:col-span-7 md:col-span-6 bg-white p-8 sm:p-10 rounded-[2.25rem] border border-zinc-200/60 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.01)] flex flex-col justify-between">
+                    <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-[2.25rem] border border-zinc-200/60 shadow-sm flex flex-col justify-between">
                         <div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-8 tracking-tight">
+                            <h3 className="text-xl font-bold text-gray-900 mb-8 tracking-tight text-center sm:text-left">
                                 Book a strategy session
                             </h3>
 
@@ -69,17 +69,17 @@ export default function Contact() {
                                     return (
                                         <div key={index} className="relative flex items-start gap-4">
                                             {/* Badge Icon */}
-                                            <div className={`absolute -left-8 flex h-8 w-8 items-center justify-center rounded-full -translate-x-1/2 z-10 border transition-all duration-300 ${step.active ? "bg-[#76e11b] border-[#76e11b] text-white shadow=[0_0_12px_rgbs(118,225,27,0.4)]" : "bg-white border-zinc-200 text-zinc-500"
+                                            <div className={`absolute -left-8 flex h-8 w-8 items-center justify-center rounded-full -translate-x-1/2 z-10 border transition-all duration-300 ${step.active ? "bg-[#76e11b] border-[#76e11b] text-white shadow-sm" : "bg-white border-zinc-200 text-zinc-500"
                                                 }`}
                                             >
                                                 <Icon size={16} />
                                             </div>
 
-                                            <div className="flex flex-col">
-                                                <h4 className="text-[20px] font-bold text-gray-900 tracking-tight mb-1">
+                                            <div className="flex flex-col text-left">
+                                                <h4 className="text-lg sm:text-[20px] font-bold text-gray-900 tracking-tight mb-1">
                                                     {step.title}
                                                 </h4>
-                                                <p className="text-gray-700 text-xs sm:text-sm leading-relaxed max-w-md">
+                                                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-md">
                                                     {step.desc}
                                                 </p>
                                             </div>
@@ -93,30 +93,30 @@ export default function Contact() {
                         <div className="border-t border-zinc-100 my-8 pt-8">
                             {/* Stats */}
                             <div className="grid grid-cols-3 gap-4 text-center">
-                                <div className="flex flex-col">
-                                    <Clock size={18} stroke="#305239" className="mx-23 my-3" />
-                                    <span className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight">
+                                <div className="flex flex-col items-center">
+                                    <Clock size={18} stroke="#305239" className="my-2.5 shrink-0" />
+                                    <span className="text-base sm:text-xl font-extrabold text-gray-900 tracking-tight">
                                         &lt; 2 Hours
                                     </span>
-                                    <span className="text-[10px] font-bold text-black/80 uppercase tracking-wide mt-1">
+                                    <span className="text-[9px] sm:text-[10px] font-bold text-black/80 uppercase tracking-wide mt-1">
                                         Response Time
                                     </span>
                                 </div>
-                                <div className="flex flex-col border-x border-zinc-100">
-                                    <ShieldCheck size={18} stroke="#305239" className="mx-23 my-3" />
-                                    <span className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight">
+                                <div className="flex flex-col items-center border-x border-zinc-100">
+                                    <ShieldCheck size={18} stroke="#305239" className="my-2.5 shrink-0" />
+                                    <span className="text-base sm:text-xl font-extrabold text-gray-900 tracking-tight">
                                         98%
                                     </span>
-                                    <span className="text-[10px] font-bold text-black/80 uppercase tracking-wide mt-1">
+                                    <span className="text-[9px] sm:text-[10px] font-bold text-black/80 uppercase tracking-wide mt-1">
                                         Client Success
                                     </span>
                                 </div>
-                                <div className="flex flex-col">
-                                    <LucideUsers2 size={18} stroke="#305239" className="mx-23 my-3" />
-                                    <span className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight">
+                                <div className="flex flex-col items-center">
+                                    <LucideUsers2 size={18} stroke="#305239" className="my-2.5 shrink-0" />
+                                    <span className="text-base sm:text-xl font-extrabold text-gray-900 tracking-tight">
                                         1,500+
                                     </span>
-                                    <span className="text-[10px] font-bold text-black/80 uppercase tracking-wide mt-1">
+                                    <span className="text-[9px] sm:text-[10px] font-bold text-black/80 uppercase tracking-wide mt-1">
                                         Active Teams
                                     </span>
                                 </div>
@@ -124,25 +124,25 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <div className="relative md:col-span-6 lg:col-span-5 bg-[#162d1e] rounded-[2.25rem] shadow-[0_20px_40px_rgba(0,0,0,0.15)] flex flex-col overflow-hidden text-white">
-                        <div className="absolute top-8 left-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
-                            {/* Avator Group */}
+                    <div className="relative lg:col-span-5 bg-[#162d1e] rounded-[2.25rem] shadow-xl flex flex-col overflow-hidden text-white w-full">
+                        <div className="absolute top-6 left-6 right-6 sm:top-8 sm:left-8 flex flex-row items-center justify-start gap-3 w-full">
+                            {/* Avatar Group */}
                             <div className="flex items-center">
-                                <div className="relative h-10 w-10 rounded-full border-1 border-white/20 overflow-hidden shrink-0">
+                                <div className="relative h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-white/20 overflow-hidden shrink-0">
                                     <img
                                         src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&fit=crop&q=80"
                                         alt="Representative Headshot 1"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="relative h-10 w-10 rounded-full border-1 border-white/20 overflow-hidden shrink-0 -ml-3">
+                                <div className="relative h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-white/20 overflow-hidden shrink-0 -ml-2.5">
                                     <img
                                         src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&fit=crop&q=80"
                                         alt="Representative Headshot 2"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="relative h-10 w-10 rounded-full border-1 border-white/20 overflow-hidden shrink-0 -ml-3">
+                                <div className="relative h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-white/20 overflow-hidden shrink-0 -ml-2.5">
                                     <img
                                         src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&fit=crop&q=80"
                                         alt="Representative Headshot 3"
@@ -150,19 +150,17 @@ export default function Contact() {
                                     />
                                 </div>
                                 {/* Count Badge */}
-                                <div className="relative h-10 w-10 rounded-full border-2 border-[#181818] bg-[#76e11b] text-[11px] font-extrabold text-[#031d10] flex items-center justify-center shrink-0 -ml-3 shadow-sm select-none">
+                                <div className="relative h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-[#162d1e] bg-[#76e11b] text-[9px] sm:text-[11px] font-extrabold text-[#031d10] flex items-center justify-center shrink-0 -ml-2.5 shadow-sm select-none">
                                     +12
                                 </div>
                             </div>
 
                             {/* Text Block */}
-                            <div className="flex flex-col -ml-3">
-                                <div className="flex items-center justify-center sm:justify-start gap-2">
-                                    <span className="font-bold text-[10px] sm:text-[13px] tracking-tight text-white">
-                                        Our experts are online.
-                                    </span>
-                                </div>
-                                <span className="text-zinc-400 text-[8px] sm:text-[10px] font-medium tracking-wide mt-1">
+                            <div className="flex flex-col items-start leading-tight">
+                                <span className="font-bold text-[11px] sm:text-[13px] tracking-tight text-white">
+                                    Our experts are online.
+                                </span>
+                                <span className="text-zinc-400 text-[9px] sm:text-[10px] font-medium tracking-wide mt-0.5">
                                     Join 200+ companies who switched this month.
                                 </span>
                             </div>
@@ -175,7 +173,7 @@ export default function Contact() {
                             className="w-full h-auto rounded-t-[2.25rem] block"
                         />
 
-                        <div className="p-8 sm:p-10 flex flex-col flex-grow justify-between -mt-12">
+                        <div className="p-6 sm:p-10 flex flex-col flex-grow justify-between -mt-12">
 
                             <div className="space-y-4">
                                 <a href="#" className="flex items-center justify-center gap-2 bg-gradient-to-b from-[#a8f460] to-[#68c617] hover:bg-[#68c617] text-[#031d10] font-extrabold text-sm py-4 px-6 rounded-2xl hover:scale-[1.01] transition-all">
@@ -189,15 +187,15 @@ export default function Contact() {
                             </div>
 
                             <ul className="space-y-3.5 border-t border-white/10 pt-6 mt-8">
-                                <li className="flex items-center gap-2.5 text-xs sm:text-sm font-normal tracking-wide text-emerald-50">
+                                <li className="flex items-center gap-2.5 text-xs sm:text-sm font-normal tracking-wide text-emerald-50 text-left">
                                     <CheckIcon />
                                     <span>GDPR & SOC2 Type II Complaint</span>
                                 </li>
-                                <li className="flex items-center gap-2.5 text-xs sm:text-sm font-normal tracking-wide text-emerald-50">
+                                <li className="flex items-center gap-2.5 text-xs sm:text-sm font-normal tracking-wide text-emerald-50 text-left">
                                     <CheckIcon />
                                     <span>Dedicated Account Manager</span>
                                 </li>
-                                <li className="flex items-center gap-2.5 text-xs sm:text-sm font-normal tracking-wide text-emerald-50">
+                                <li className="flex items-center gap-2.5 text-xs sm:text-sm font-normal tracking-wide text-emerald-50 text-left">
                                     <CheckIcon />
                                     <span>Custom CRM Integrations</span>
                                 </li>

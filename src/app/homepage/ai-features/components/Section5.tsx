@@ -5,13 +5,13 @@ export default function Section5() {
         <section className="bg-gray-100/60 w-full px-4 sm:px-6 lg:px-8 py-16">
             <div className="max-w-7xl mx-auto w-full">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full">
-                    
+
                     {/* Left Column: Information */}
                     <div className="flex flex-col items-start justify-center w-full lg:max-w-[48%] gap-y-5" >
                         <span className="uppercase text-xs sm:text-sm text-[#356221] font-extrabold tracking-wider leading-tight">
                             Real-Time Data
                         </span>
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-tight w-full max-w-[650px]">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black tracking-tight leading-tight w-full max-w-[650px]">
                             Understand your outreach instantly
                         </h2>
                         <p className="text-base sm:text-lg text-black/60 text-left w-full max-w-[550px] leading-relaxed">
@@ -31,7 +31,7 @@ export default function Section5() {
                             <h3 className="font-bold text-xl text-black text-left">Campaign Insights</h3>
                             <span className="uppercase rounded-md bg-gray-200/70 px-2 py-1 text-xs font-bold text-black/80">Live Updates</span>
                         </div>
-                        
+
                         <div className="flex flex-row items-center gap-x-4 w-full">
                             <div className="flex flex-col items-start justify-center rounded-xl border border-gray-100/70 gap-y-1 py-4 px-3 w-full max-w-[48%] bg-[#356221]/5 shrink-0">
                                 <h1 className="text-3xl sm:text-4xl font-extrabold text-left">18%</h1>

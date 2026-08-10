@@ -209,12 +209,19 @@ export default function Footer() {
 
                 {/* Floating AI Button (Fixed at the bottom-right, visible on all screens of the homepage when chat is closed) */}
                 {!isSidebarOpen && (
-                    <div className="fixed bottom-6 right-6 z-40">
+                    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40">
                         <button
                             className="hover:scale-105 transition-transform duration-300 cursor-pointer shadow-2xl rounded-full overflow-hidden"
                             onClick={() => setIsSidebarOpen(true)}
                         >
-                            <Image src="/AI-panel.png" alt="AI Panel" width={125} height={125} className="w-[100px] sm:w-[125px]" style={{ height: "auto" }} />
+                            <Image
+                                src="/AI-panel.png"
+                                alt="AI Panel"
+                                width={125}
+                                height={125}
+                                className="w-[65px] sm:w-[90px] md:w-[110px] lg:w-[125px]"
+                                style={{ height: "auto" }}
+                            />
                         </button>
                     </div>
                 )}

@@ -139,7 +139,7 @@ export default function Pricing() {
     }
 
     return (
-        <section id="pricing" className="w-full bg-[#fafcf7] py-20 px-6 lg:px-8">
+        <section className="w-full bg-[#fafcf7] py-20 px-6 lg:px-8">
             <div className="mx-auto max-w-7xl -mt-25">
 
                 {/* Header */}
@@ -147,7 +147,7 @@ export default function Pricing() {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                         Architected for high-growth teams
                     </h2>
-                    <p className="text-gray-500 text-sm sm:text-base w-[550px] leading-relaxed">
+                    <p className="text-gray-500 text-sm sm:text-base sm:w-[550px] leading-relaxed">
                         Choose the tier that matches your scale. Precision-engineered for high-performance LinkedIn networking.
                     </p>
 
