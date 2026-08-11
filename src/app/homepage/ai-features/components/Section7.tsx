@@ -13,9 +13,43 @@ export default function Section3() {
     return (
         <section className="bg-[#fafcf7] mx-10 py-12 md:py-18 px-3 sm:px-5 lg:px-7">
             <div className="max-w-8xl mx-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+                {/* Left Section - Text & Features */}
+                <motion.div
+                    className="flex flex-col lg:max-w-[40%] items-start gap-y-6 w-full order-1 lg:order-2"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                    <span className="uppercase text-xs text-[#356221] font-bold tracking-widest">
+                        AI Help Desk
+                    </span>
 
-                {/* Left Section - AI Message Writer Card Mockup */}
-                {/* Left Section - AI Chat Assistant Widget Mockup */}
+                    <h2 className="text-3xl sm:text-4xl font-bold text-left text-gray-900 leading-tight tracking-tight">
+                        Your AI assistant is <span className="text-[#356221] ">always available</span>
+                    </h2>
+
+                    <p className="text-lg sm:text-xl text-left text-[#555555] leading-relaxed max-w-2xl">
+                        Get instant answers and expert guidance on every aspect of your outreach strategy. Our AI Help Desk is deeply integrated with your data to provide context-aware support 24/7.
+                    </p>
+
+                    <div
+                        className="flex flex-col items-start gap-y-1 mt-2"
+                    >
+                        {features.map((data, index) => (
+                            <div
+                                key={index}
+                                className="flex flex-row items-center gap-x-3 py-1"
+                            >
+                                <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
+                                    <CircleCheck size={25} className="stroke-[#356221]/60 fill-[#356221]/30 stroke-[1]" />
+                                </div>
+                                <span className="text-base text-gray-700 font-medium">{data}</span>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
+                {/* Right Section - AI Message Writer Card Mockup */}
                 <motion.div
                     className="w-full lg:max-w-[580px] rounded-[32px] overflow-hidden border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] order-2 lg:order-1 bg-white"
                     initial={{ opacity: 0, x: -20 }}
@@ -114,42 +148,8 @@ export default function Section3() {
                     </div>
                 </motion.div>
 
-                {/* Right Section - Text & Features */}
-                <motion.div
-                    className="flex flex-col lg:max-w-[40%] items-start gap-y-6 w-full order-1 lg:order-2"
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                >
-                    <span className="uppercase text-xs text-[#356221] font-bold tracking-widest">
-                        AI Help Desk
-                    </span>
 
-                    <h2 className="text-3xl sm:text-4xl font-bold text-left text-gray-900 leading-tight tracking-tight">
-                        Your AI assistant is <span className="text-[#356221] ">always available</span>
-                    </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-[#555555] leading-relaxed max-w-2xl">
-                        Get instant answers and expert guidance on every aspect of your outreach strategy. Our AI Help Desk is deeply integrated with your data to provide context-aware support 24/7.
-                    </p>
-
-                    <div
-                        className="flex flex-col items-start gap-y-1 mt-2"
-                    >
-                        {features.map((data, index) => (
-                            <div
-                                key={index}
-                                className="flex flex-row items-center gap-x-3 py-1"
-                            >
-                                <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                                    <CircleCheck size={25} className="stroke-[#356221]/60 fill-[#356221]/30 stroke-[1]" />
-                                </div>
-                                <span className="text-base text-gray-700 font-medium">{data}</span>
-                            </div>
-                        ))}
-                    </div>
-                </motion.div>
 
             </div>
         </section>
