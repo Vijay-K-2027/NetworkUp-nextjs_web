@@ -42,7 +42,7 @@ export default function Part1() {
                 <h4 className="text-lg font-bold text-black">Agency Dashboard</h4>
             </div>
 
-            <div className="flex flex-row flex-wrap items-center gap-3 py-2 px-2">
+            <div className="flex flex-row flex-wrap items-center gap-1 py-2 px-2">
                 {part1Column.map((data, index) => (
                     <motion.div
                         key={index}
@@ -105,7 +105,7 @@ export default function Part1() {
             description="Run multiple outreach campaigns for your clients from a single workspace. Deliver better results with clear reporting and seamless collaboration."
             features={Part1Data}
             visualContent={visualContent}
-            visualPosition="right"
+            visualPosition="left"
             sectionBg="bg-white py-10 rounded-t-xl"
             containerClass="max-w-7xl mx-auto w-full"
         />

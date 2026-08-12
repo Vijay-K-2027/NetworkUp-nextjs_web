@@ -11,8 +11,8 @@ export default function Section3() {
     ]
 
     return (
-        <section className="bg-[#fafcf7] mx-10 py-12 md:py-18 px-3 sm:px-5 lg:px-7">
-            <div className="max-w-8xl mx-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+        <section className="w-full bg-[#fafcf7] py-12 md:py-18 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full">
                 {/* Left Section - Text & Features */}
                 <motion.div
                     className="flex flex-col lg:max-w-[40%] items-start gap-y-6 w-full order-1 lg:order-2"

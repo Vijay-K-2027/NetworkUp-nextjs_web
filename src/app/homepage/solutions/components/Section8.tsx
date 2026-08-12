@@ -25,7 +25,7 @@ export default function Section8() {
 
                 {/* Column 1: Left Title & Description */}
                 <motion.div
-                    className="flex flex-col lg:max-w-[45%] items-start gap-y-6 w-full order-1 lg:order-2"
+                    className="flex flex-col lg:max-w-[45%] items-start gap-y-6 w-full"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
