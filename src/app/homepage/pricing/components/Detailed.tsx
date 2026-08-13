@@ -2,6 +2,7 @@
 
 import { Check, CircleCheck, X } from "lucide-react"
 import React from "react";
+import { motion } from "framer-motion";
 
 const details = [
     // ACCOUNT MANAGEMENT
@@ -148,13 +149,25 @@ export default function Detailed() {
             <div className="w-full">
 
                 {/* Header Section */}
-                <div className="flex flex-col items-center justify-center gap-3 mb-16">
+                <motion.div
+                    className="flex flex-col items-center justify-center gap-3 mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-black text-center tracking-tight">Detailed Breakdown</h2>
                     <p className="text-base sm:text-lg text-gray-500 text-center max-w-2xl">Compare core features across our top plans.</p>
-                </div>
+                </motion.div>
 
                 {/* Table Container */}
-                <div className="w-full overflow-x-auto rounded-[24px] scrollbar-thin">
+                <motion.div
+                    className="w-full overflow-x-auto rounded-[24px] scrollbar-thin"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     <div className="min-w-[800px] flex flex-col bg-transparent">
 
                         {/* Table Header Row */}
@@ -187,15 +200,27 @@ export default function Detailed() {
                                 <React.Fragment key={index}>
                                     {/* Topic Header Row */}
                                     {isNewTopic && (
-                                        <div className="grid grid-cols-12 bg-[#71EB34]/15">
+                                        <motion.div
+                                            className="grid grid-cols-12 bg-[#71EB34]/15"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.5 }}
+                                        >
                                             <div className="col-span-12 py-3 px-8 pl-8 lg:pl-25 text-[11px] font-extrabold text-[#356221] tracking-wider uppercase text-left">
                                                 {detail.topic}
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     )}
 
                                     {/* Feature Row */}
-                                    <div className="grid grid-cols-12 items-stretch hover:bg-[#71EB34]/5 transition-colors duration-150">
+                                    <motion.div
+                                        className="grid grid-cols-12 items-stretch hover:bg-[#71EB34]/5 transition-colors duration-150"
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.4) }}
+                                    >
 
                                         {/* Feature Name */}
                                         <div className="col-span-6 flex items-center justify-start py-4 px-8 pl-8 lg:pl-25 text-left text-xs sm:text-sm font-semibold text-gray-700">
@@ -217,13 +242,13 @@ export default function Detailed() {
                                             {renderCell(detail.enterprise, detail.topic)}
                                         </div>
 
-                                    </div>
+                                    </motion.div>
                                 </React.Fragment>
                             );
                         })}
 
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </section>

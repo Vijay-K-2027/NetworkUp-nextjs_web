@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import {
     Star, Tag, Monitor, Lightbulb, MessageSquare, Target,
     RefreshCw, BarChart3, Users, Puzzle, UserCheck, Gift, Check
@@ -90,7 +91,13 @@ export default function Comparision() {
         <section className="w-full bg-[#fafcf7] py-16 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-7xl">
                 {/* Header Section */}
-                <div className="flex flex-col items-center justify-center gap-4 mb-14 text-center">
+                <motion.div 
+                    className="flex flex-col items-center justify-center gap-4 mb-14 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <span className="uppercase text-lime-700/80 tracking-widest font-extrabold text-xs">
                         alternatives
                     </span>
@@ -100,10 +107,16 @@ export default function Comparision() {
                     <p className="text-gray-600 text-base sm:text-lg max-w-2xl leading-relaxed">
                         Most tools send messages from the cloud. NetworkUp is a local agent that finds, scores and reaches your buyers from your own machine.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Table Container */}
-                <div className="w-full bg-[#0c1017] rounded-3xl border border-zinc-800/80 shadow-2xl p-6 overflow-x-auto scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-track-transparent">
+                <motion.div 
+                    className="w-full bg-[#0c1017] rounded-3xl border border-zinc-800/80 shadow-2xl p-6 overflow-x-auto scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-track-transparent"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     <div className="min-w-[1190px] flex flex-col">
 
                         {/* Table Header Row */}
@@ -134,7 +147,14 @@ export default function Comparision() {
                             {comparisons.map((row, index) => {
                                 const isLast = index === comparisons.length - 1;
                                 return (
-                                    <div key={index} className="flex flex-row items-center border-b border-zinc-850 last:border-0 hover:bg-white/[0.02] transition-colors">
+                                    <motion.div 
+                                        key={index} 
+                                        className="flex flex-row items-center border-b border-zinc-850 last:border-0 hover:bg-white/[0.02] transition-colors"
+                                        initial={{ opacity: 0, x: -10 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: Math.min(index * 0.04, 0.4) }}
+                                    >
                                         {/* Feature Name */}
                                         <div className="w-[280px] flex items-center gap-3 pl-4 py-4 shrink-0">
                                             <row.icon size={16} className="text-[#76e11b]/80" />
@@ -167,13 +187,13 @@ export default function Comparision() {
                                                 })()}
                                             </div>
                                         ))}
-                                    </div>
+                                    </motion.div>
                                 );
                             })}
                         </div>
 
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Table Legend */}
                 <div className="flex flex-row flex-wrap items-center justify-between gap-x-10 gap-y-3 w-full max-w-4xl mx-auto mt-10 text-zinc-500 text-xs sm:text-sm font-semibold">

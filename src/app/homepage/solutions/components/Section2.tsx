@@ -1,6 +1,7 @@
 "use client"
+import React from "react"
 import { motion } from "framer-motion"
-import { Mail, User2 } from "lucide-react"
+import { Check, Mail, CornerUpLeft, UserCheck } from "lucide-react"
 import SplitFeatureSection from "./SplitFeatureSection"
 
 const section2Data = [
@@ -13,67 +14,97 @@ const section2Data = [
 
 export default function Section2() {
     const visualContent = (
-        <motion.div 
+        <motion.div
             initial={{ scale: 0.96, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="w-full rounded-2xl bg-white border border-gray-100 p-6 shadow-xl flex flex-col items-start"
+            className="w-full rounded-[24px] sm:rounded-[32px] bg-white border border-gray-100 p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.02)] flex flex-col items-start gap-y-5"
         >
-            <div className="flex flex-row items-center justify-between w-full pb-4 border-b border-gray-100 mb-4">
-                <h4 className="text-lg font-bold text-black">Sales Outreach Campaign</h4>
-                <span className="text-xs font-bold text-gray-400 bg-gray-100 px-2 py-1 rounded">Day 1</span>
+            {/* Header */}
+            <div className="flex flex-row items-center justify-between w-full pb-2">
+                <h4 className="text-base sm:text-lg font-extrabold text-slate-800">Sales Outreach Campaign</h4>
+                <span className="text-xs font-bold text-slate-300">Day 1</span>
             </div>
-            
-            {/* Step 1 */}
-            <motion.div 
+
+            {/* Step 1: Sarah Johnson */}
+            <motion.div
                 initial={{ y: 15, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                className="flex flex-row items-center justify-between w-full p-4 rounded-xl border border-gray-100 bg-gray-50/50 mb-3"
+                className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full p-4 sm:p-5 rounded-[20px] border border-gray-100 bg-white shadow-sm hover:scale-[1.01] transition-transform duration-300 gap-4 text-left"
             >
-                <div className="flex items-center gap-x-3 flex-1">
-                    <div className="flex items-center justify-center bg-[#EAFCEB] rounded-full w-10 h-10 shrink-0">
-                        <User2 size={20} className="text-[#71EB34]" />
+                {/* Left Profile Info */}
+                <div className="flex items-center gap-3.5 flex-1">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shrink-0 border border-slate-100 shadow-sm">
+                        <img
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&fit=crop&q=80"
+                            alt="Sarah Johnson"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
-                    <div className="flex flex-col gap-y-1.5 flex-1">
-                        <div className="h-2.5 w-24 bg-gray-200 rounded-full"></div>
-                        <div className="h-1.5 w-16 bg-gray-100 rounded-full"></div>
+                    <div className="flex flex-col min-w-0 leading-tight">
+                        <span className="font-extrabold text-xs sm:text-sm text-slate-800">Sarah Johnson</span>
+                        <span className="text-[11px] sm:text-xs text-slate-400 font-semibold mt-0.5">Sales Director at HealthTech Inc.</span>
+                        <div className="flex items-center gap-1.5 mt-2">
+                            <Check size={14} className="text-[#71EB34] stroke-[3.5]" />
+                            <span className="text-[11px] sm:text-xs font-black text-[#71EB34]">Connection Request Sent</span>
+                        </div>
                     </div>
                 </div>
-                <div className="text-xs font-semibold text-gray-400">Day 1</div>
+
+                {/* Right Status Badge */}
+                <div className="flex flex-row sm:flex-col items-end justify-between sm:justify-start gap-2 w-full sm:w-auto shrink-0 border-t border-gray-50 pt-2.5 sm:pt-0 sm:border-0">
+                    <div className="flex flex-col items-left sm:items-end leading-tight">
+                        <span className="text-[11px] font-bold text-slate-400">Day 1</span>
+                        <span className="text-[9px] text-slate-400 font-semibold mt-0.5">May 7, 2025</span>
+                    </div>
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-xl text-[10px] sm:text-xs font-extrabold border bg-[#eefce6] text-[#356221] border-[#defad0] mt-0.5 sm:mt-2.5 shadow-sm select-none gap-1.5">
+                        <UserCheck size={14} className="stroke-[2.5]" />
+                        Accepted
+                    </span>
+                </div>
             </motion.div>
-            
-            {/* Step 2 */}
-            <motion.div 
+
+            {/* Step 2: Michael Chen */}
+            <motion.div
                 initial={{ y: 15, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 }}
-                className="flex flex-row items-center justify-between w-full p-4 rounded-xl border border-gray-100 bg-gray-50/50 mb-3"
+                className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full p-4 sm:p-5 rounded-[20px] border border-gray-100 bg-white shadow-sm hover:scale-[1.01] transition-transform duration-300 gap-4 text-left"
             >
-                <div className="flex items-center gap-x-3 flex-1">
-                    <div className="flex items-center justify-center bg-blue-50 rounded-full w-10 h-10 shrink-0">
-                        <Mail size={20} className="text-blue-500" />
+                {/* Left Profile Info */}
+                <div className="flex items-center gap-3.5 flex-1">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shrink-0 border border-slate-100 shadow-sm">
+                        <img
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&fit=crop&q=80"
+                            alt="Michael Chen"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
-                    <div className="flex flex-col gap-y-1.5 flex-1">
-                        <div className="h-2.5 w-32 bg-gray-200 rounded-full"></div>
-                        <div className="h-1.5 w-24 bg-gray-100 rounded-full"></div>
+                    <div className="flex flex-col min-w-0 leading-tight">
+                        <span className="font-extrabold text-xs sm:text-sm text-slate-800">Michael Chen</span>
+                        <span className="text-[11px] sm:text-xs text-slate-400 font-semibold mt-0.5">VP of Sales at FinTech Labs</span>
+                        <div className="flex items-center gap-1.5 mt-2">
+                            <Mail size={14} className="text-[#3b82f6] stroke-[2.5]" />
+                            <span className="text-[11px] sm:text-xs font-black text-[#3b82f6]">Follow-up Message Scheduled</span>
+                        </div>
                     </div>
                 </div>
-                <div className="text-xs font-semibold text-gray-400">Day 2</div>
-            </motion.div>
-            
-            {/* Message Preview */}
-            <motion.div 
-                initial={{ y: 15, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.5 }}
-                className="w-full p-4 rounded-xl border border-[#71EB34]/20 bg-lime-50/30 text-sm text-gray-700 leading-relaxed italic"
-            >
-                "Hi <span className="text-[#71EB34] font-semibold">{"{{first_name}}"}</span>, I noticed your work at <span className="text-[#71EB34] font-semibold">{"{{company}}"}</span>. We help <span className="text-[#71EB34] font-semibold">{"{{industry}}"}</span> teams like yours improve <span className="text-[#71EB34] font-semibold">{"{{outcome}}"}</span>."
+
+                {/* Right Status Badge */}
+                <div className="flex flex-row sm:flex-col items-end justify-between sm:justify-start gap-2 w-full sm:w-auto shrink-0 border-t border-gray-50 pt-2.5 sm:pt-0 sm:border-0">
+                    <div className="flex flex-col items-left sm:items-end leading-tight">
+                        <span className="text-[11px] font-bold text-slate-400">Day 2</span>
+                        <span className="text-[9px] text-slate-400 font-semibold mt-0.5">May 8, 2025</span>
+                    </div>
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-xl text-[10px] sm:text-xs font-extrabold border bg-[#eaf4fe] text-[#2b6cb0] border-[#d2e4f6] mt-0.5 sm:mt-2.5 shadow-sm select-none gap-1.5">
+                        <CornerUpLeft size={14} className="stroke-[2.5]" />
+                        Replied
+                    </span>
+                </div>
             </motion.div>
         </motion.div>
     )

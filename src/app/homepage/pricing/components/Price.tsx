@@ -147,7 +147,7 @@ export default function Price() {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
                         Architected for high-growth teams
                     </h2>
-                    <p className="text-gray-500 text-sm sm:text-base w-[550px] leading-relaxed">
+                    <p className="text-gray-500 text-sm sm:text-base w-[300px] sm:w-[550px] leading-relaxed">
                         Choose the tier that matches your scale. Precision-engineered for high-performance LinkedIn networking.
                     </p>
 
