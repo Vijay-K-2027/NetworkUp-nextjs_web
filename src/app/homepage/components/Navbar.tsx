@@ -119,7 +119,7 @@ export default function Navbar() {
 
                     <button
                         className="hidden sm:inline-flex rounded-xl bg-lime-400 px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
-                        onClick={() => router.push("subscription")}
+                        onClick={() => router.push("homepage/subscription")}
                     >
                         Get Started
                     </button>
