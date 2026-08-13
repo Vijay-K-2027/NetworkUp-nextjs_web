@@ -13,9 +13,8 @@ export default function Section3() {
     return (
         <section className="w-full bg-[#fafcf7] py-12 md:py-18 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full">
-                {/* Left Section - Text & Features */}
                 <motion.div
-                    className="flex flex-col lg:max-w-[40%] items-start gap-y-6 w-full order-1 lg:order-2"
+                    className="flex flex-col lg:max-w-[40%] items-start gap-y-6 w-full"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -51,7 +50,7 @@ export default function Section3() {
                 </motion.div>
                 {/* Right Section - AI Message Writer Card Mockup */}
                 <motion.div
-                    className="w-full lg:max-w-[580px] rounded-[32px] overflow-hidden border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] order-2 lg:order-1 bg-white"
+                    className="w-full lg:max-w-[580px] rounded-[32px] overflow-hidden border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] bg-white"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}

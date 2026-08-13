@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, SquarePen, Users, Zap, RefreshCw, Lock, ChevronRight, ArrowLeft, ArrowRight, ShieldCheck, Check } from "lucide-react";
+import { Search, SquarePen, Users, Zap, RefreshCw, Lock, ChevronRight, ArrowLeft, ArrowRight, ShieldCheck, Check, X } from "lucide-react";
 import Image from "next/image";
 
 const faqs = [
@@ -179,45 +179,34 @@ export default function Home({ onClose }: HomeProps) {
 
     return (
         <>
-            <header className="mx-auto my-2 h-[50px] w-[300px] rounded-t-2xl space-x-10 px-10 pt-2 flex flex-row items-center justify-between bg-[#02140b]">
-                <div className="flex flex-row items-start gap-x-2 -ml-5">
-                    <Image src="/Logo.svg" alt="Logo" width={30} height={30} />
-                    <h3 className="text-md text-[#00d400]/70 font-semibold mt-1">NetworkUp.io</h3>
+            <header className="mx-auto h-[50px] w-[300px] rounded-t-2xl px-5 pt-3.5 flex flex-row items-center justify-between bg-[#02140b] shrink-0">
+                <div className="flex flex-row items-center gap-x-2">
+                    <Image src="/Logo.svg" alt="Logo" width={24} height={24} />
+                    <h3 className="text-sm text-[#00d400]/70 font-semibold">NetworkUp.io</h3>
                 </div>
-                <div className="flex flex-row items-end justify-center gap-x-2 -mt-3">
-                    <div className="flex flex-row -space-x-2 ml-6 -mr-2">
-                        <div className="w-[25px] h-[25px] rounded-full">
-                            <img
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&fit=crop&q=80"
-                                alt="Representative Headshot 2"
-                                className="w-full h-full object-cover rounded-full"
-                            />
-                        </div>
-                        <div className="w-[25px] h-[25px] rounded-full">
-                            <img
-                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&fit=crop&q=80"
-                                alt="Representative Headshot 2"
-                                className="w-full h-full object-cover rounded-full"
-                            />
-                        </div>
-                        <div className="w-[25px] h-[25px] rounded-full">
-                            <img
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&fit=crop&q=80"
-                                alt="Representative Headshot 2"
-                                className="w-full h-full object-cover rounded-full"
-                            />
-                        </div>
+                <div className="flex flex-row items-center gap-x-2">
+                    <div className="flex flex-row -space-x-1.5 mr-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&fit=crop&q=80"
+                            alt="Representative Headshot 1"
+                            className="w-5 h-5 object-cover rounded-full border border-white/10"
+                        />
+                        <img
+                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&fit=crop&q=80"
+                            alt="Representative Headshot 2"
+                            className="w-5 h-5 object-cover rounded-full border border-white/10"
+                        />
                     </div>
-                    <div
-                        className="w-6 h-10 ml-2 pt-3 text-lg text-gray-400 p-1.5 cursor-pointer hover:text-white transition-colors"
+                    <button
+                        className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                         onClick={onClose}
                     >
-                        X
-                    </div>
+                        <X size={16} />
+                    </button>
                 </div>
             </header>
 
-            <main className="mx-auto -mt-2 flex flex-col items-center gap-y-4 h-[550px] w-[300px] bg-[#02140b] overflow-y-auto pb-4 px-4 scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <main className="mx-auto flex flex-col items-center gap-y-4 flex-1 w-[300px] bg-[#02140b] overflow-y-auto pb-4 px-4 custom-scrollbar">
                 {selectedFaqIndex !== null ? (
                     <div className="w-full flex flex-col items-start pt-5">
                         <button

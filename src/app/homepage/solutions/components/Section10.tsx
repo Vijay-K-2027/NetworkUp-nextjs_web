@@ -16,6 +16,7 @@ export default function Section10() {
         <section className="bg-[#fafcf7] w-full py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 w-full">
 
+                {/* Column 1: Left Title & Description */}
                 <motion.div
                     className="flex flex-col lg:max-w-[45%] items-start gap-y-6 w-full text-left"
                     initial={{ opacity: 0, x: 20 }}
@@ -48,15 +49,20 @@ export default function Section10() {
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                                     <Check size={25} className="stroke-[#71EB34] stroke-[1]" />
                                 </div>
-                                <span className="text-sm text-gray-600 font-bold">{data}</span>
+                                <span className="text-sm text-gray-700 font-bold text-left">{data}</span>
                             </div>
                         ))}
                     </div>
                 </motion.div>
 
                 {/* Column 2: Safety & Compliance Stack Mockup */}
-                <div className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0">
-
+                <motion.div 
+                    className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     <span className="text-xl font-extrabold text-slate-800 text-left">
                         Account Safety Overview
                     </span>
@@ -64,59 +70,77 @@ export default function Section10() {
                     {/* Safety Stack List */}
                     <div className="flex flex-col gap-4.5 w-full text-left">
                         {/* Card 1: Connection Requests */}
-                        <div className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4">
+                        <motion.div 
+                            className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4"
+                            initial={{ opacity: 0, y: 12 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                        >
                             <div className="flex items-center gap-4 flex-1 min-w-0">
                                 <div className="w-11 h-11 rounded-full bg-[#eefce6] text-[#356221] flex items-center justify-center shrink-0">
                                     <Users size={20} className="stroke-[2.2]" />
                                 </div>
                                 <div className="flex flex-col min-w-0 leading-tight">
-                                    <span className="font-extrabold text-sm sm:text-base text-slate-800 truncate">Connection Requests</span>
+                                    <span className="font-extrabold text-xs sm:text-base text-slate-800">Connection Requests</span>
                                     <span className="text-xs text-slate-400 font-bold mt-0.5">Weekly Limit</span>
                                 </div>
                             </div>
 
-                            <div className="flex flex-row items-center gap-20 sm:gap-32 shrink-0">
+                            <div className="flex flex-row items-center gap-12 sm:gap-32 shrink-0">
                                 <div className="flex flex-col items-end leading-tight">
-                                    <span className="font-black text-slate-800 text-sm sm:text-base">100</span>
+                                    <span className="font-black text-slate-800 text-xs sm:text-base">100</span>
                                     <span className="text-[10px] sm:text-xs text-slate-400 font-bold mt-0.5">Per Week</span>
                                 </div>
                                 <div className="w-6 h-6 rounded-full bg-[#71EB34] text-white flex items-center justify-center text-[10px] font-black shadow-sm shrink-0">
                                     ✓
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Card 2: Actions Per Day */}
-                        <div className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4">
+                        <motion.div 
+                            className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4"
+                            initial={{ opacity: 0, y: 12 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                        >
                             <div className="flex items-center gap-4 flex-1 min-w-0">
                                 <div className="w-11 h-11 rounded-full bg-[#eefce6] text-[#356221] flex items-center justify-center shrink-0">
                                     <Zap size={20} className="stroke-[2.2] fill-[#356221]" />
                                 </div>
                                 <div className="flex flex-col min-w-0 leading-tight">
-                                    <span className="font-extrabold text-sm sm:text-base text-slate-800 truncate">Actions Per Day</span>
+                                    <span className="font-extrabold text-xs sm:text-base text-slate-800">Actions Per Day</span>
                                     <span className="text-xs text-slate-400 font-bold mt-0.5">Daily Limit</span>
                                 </div>
                             </div>
 
-                            <div className="flex flex-row items-center gap-20 sm:gap-32 shrink-0">
+                            <div className="flex flex-row items-center gap-12 sm:gap-32 shrink-0">
                                 <div className="flex flex-col items-end leading-tight">
-                                    <span className="font-black text-slate-800 text-sm sm:text-base">50</span>
+                                    <span className="font-black text-slate-800 text-xs sm:text-base">50</span>
                                     <span className="text-[10px] sm:text-xs text-slate-400 font-bold mt-0.5">Per Day</span>
                                 </div>
                                 <div className="w-6 h-6 rounded-full bg-[#71EB34] text-white flex items-center justify-center text-[10px] font-black shadow-sm shrink-0">
                                     ✓
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Card 3: Proxy Location */}
-                        <div className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4">
+                        <motion.div 
+                            className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4"
+                            initial={{ opacity: 0, y: 12 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
+                        >
                             <div className="flex items-center gap-4 flex-1 min-w-0">
                                 <div className="w-11 h-11 rounded-full bg-[#eefce6] text-[#356221] flex items-center justify-center shrink-0">
                                     <MapPin size={20} className="stroke-[2.2]" />
                                 </div>
                                 <div className="flex flex-col min-w-0 leading-tight">
-                                    <span className="font-extrabold text-sm sm:text-base text-slate-800 truncate">Proxy Location</span>
+                                    <span className="font-extrabold text-xs sm:text-base text-slate-800">Proxy Location</span>
                                     <span className="text-xs text-slate-400 font-bold mt-0.5">United States (New York)</span>
                                 </div>
                             </div>
@@ -124,16 +148,22 @@ export default function Section10() {
                             <div className="px-3 py-1 bg-[#eefce6] text-[#356221] border border-[#defad0] rounded-lg text-xs font-bold shrink-0">
                                 Static IP
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Card 4: Status */}
-                        <div className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4">
+                        <motion.div 
+                            className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4"
+                            initial={{ opacity: 0, y: 12 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.6 }}
+                        >
                             <div className="flex items-center gap-4 flex-1 min-w-0">
                                 <div className="w-11 h-11 rounded-full bg-[#eefce6] text-[#356221] flex items-center justify-center shrink-0">
                                     <ShieldCheck size={20} className="stroke-[2.2]" />
                                 </div>
                                 <div className="flex flex-col min-w-0 leading-tight">
-                                    <span className="font-extrabold text-sm sm:text-base text-slate-800 truncate">Status</span>
+                                    <span className="font-extrabold text-xs sm:text-base text-slate-800">Status</span>
                                     <span className="text-xs text-slate-400 font-bold mt-0.5">All Systems Safe</span>
                                 </div>
                             </div>
@@ -141,9 +171,9 @@ export default function Section10() {
                             <div className="px-3 py-1 bg-[#eefce6] text-[#356221] border border-[#defad0] rounded-lg text-xs font-bold shrink-0">
                                 Protected
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

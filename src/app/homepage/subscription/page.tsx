@@ -135,7 +135,7 @@ export default function Pricing() {
                     <h2 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
                         Choose the plan that <span className="text-[#76e11b]">scales</span> with you
                     </h2>
-                    <p className="text-white text-sm sm:text-base w-[650px] leading-relaxed">
+                    <p className="text-white text-sm sm:text-base w-full max-w-[650px] px-4 leading-relaxed">
                         Start with a plan that fits your needs. You can upgrade, downgrade or cancel anytime.
                     </p>
 

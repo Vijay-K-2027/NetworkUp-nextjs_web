@@ -52,10 +52,10 @@ export default function AIFeatures() {
             <Section1 />
             <Section2 />
             <Section3 />
-            <Section9 />
             <Section5 />
             <Section7 />
             <Section8 />
+            <Section9 />
             <Section4 />
             <Section6 />
         </>

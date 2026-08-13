@@ -65,6 +65,7 @@ export default function Section9() {
         <section className="bg-[#fafcf7] w-full py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 w-full">
 
+                {/* Column 1: Left Title & Description */}
                 <motion.div
                     className="flex flex-col lg:max-w-[45%] items-start gap-y-6 w-full text-left"
                     initial={{ opacity: 0, x: 20 }}
@@ -97,15 +98,20 @@ export default function Section9() {
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                                     <Check size={25} className="stroke-[#71EB34] stroke-[1]" />
                                 </div>
-                                <span className="text-sm text-gray-600 font-bold">{data}</span>
+                                <span className="text-sm text-gray-600 font-bold text-left">{data}</span>
                             </div>
                         ))}
                     </div>
                 </motion.div>
 
                 {/* Column 2: CRM Lead List Dashboard Mockup */}
-                <div className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0">
-
+                <motion.div 
+                    className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     <span className="text-xl font-extrabold text-slate-800 text-left">
                         Lead Database
                     </span>
@@ -113,13 +119,17 @@ export default function Section9() {
                     {/* Stats Grid */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full">
                         {dataMap.map((data, index) => (
-                            <div
+                            <motion.div
                                 key={index}
                                 className="flex flex-col items-start bg-gray-100/50 rounded-2xl p-4.5 shadow-sm hover:-translate-y-0.5 transition-all duration-300 hover:shadow-md w-full"
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: 0.3 + index * 0.08 }}
                             >
                                 <span className="text-slate-400 font-extrabold text-[10px] uppercase tracking-wider mb-1 text-left">{data.title}</span>
                                 <h3 className="font-black text-slate-800 text-lg sm:text-xl leading-none">{data.no}</h3>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
 
@@ -162,7 +172,13 @@ export default function Section9() {
                     </div>
 
                     {/* CRM Table */}
-                    <div className="w-full overflow-x-auto border border-gray-200 rounded-2xl bg-white shadow-sm">
+                    <motion.div 
+                        className="w-full overflow-x-auto border border-gray-200 rounded-2xl bg-white shadow-sm"
+                        initial={{ opacity: 0, scale: 0.98 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
                         <table className="min-w-[650px] w-full border-collapse">
                             {/* Table Header */}
                             <thead className="bg-slate-50/80 border-b border-gray-250/70">
@@ -273,8 +289,8 @@ export default function Section9() {
                                 })}
                             </tbody>
                         </table>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );

@@ -199,7 +199,7 @@ export default function Footer() {
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: 50, scale: 0.95 }}
                                 transition={{ duration: 0.2, ease: "easeOut" }}
-                                className="fixed bottom-12 right-6 z-50 flex flex-col items-end shadow-2xl rounded-2xl overflow-hidden bg-[#02140b]"
+                                className="fixed bottom-12 right-6 z-50 flex flex-col items-end shadow-2xl rounded-2xl overflow-hidden bg-[#02140b] h-[75vh]"
                             >
                                 <Aipage onClose={() => setIsSidebarOpen(false)} />
                             </motion.div>

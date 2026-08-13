@@ -40,9 +40,8 @@ export default function Section9() {
         <section className="bg-[#fafcf7] w-full py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 w-full">
 
-                {/* Column 1: Left Title & Description */}
                 <motion.div
-                    className="flex flex-col lg:max-w-[45%] items-start gap-y-6 w-full order-1 lg:order-2"
+                    className="flex flex-col lg:max-w-[45%] items-start gap-y-6 w-full"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -56,7 +55,7 @@ export default function Section9() {
                         Automate Replies & Close Conversations on Autopilot
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-gray-300 leading-relaxed max-w-2xl">
+                    <p className="text-lg sm:text-xl text-left text-black/60 leading-relaxed max-w-2xl">
                         Turn every connection into a conversation automatically. Inbound automations engage your leads, respond instantly, and move warm leads to your inbox.
                     </p>
 
@@ -78,7 +77,13 @@ export default function Section9() {
                 </motion.div>
 
                 {/* Column 2: How It Works Flowchart Block */}
-                <div className="flex flex-col items-center justify-center w-full lg:max-w-[45%] border border-gray-200/85 bg-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 gap-y-6 shadow-lg">
+                <motion.div 
+                    className="flex flex-col items-center justify-center w-full lg:max-w-[45%] border border-gray-200/85 bg-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 gap-y-6 shadow-lg"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
                     <span className="text-xs uppercase font-extrabold text-[#356221] rounded-full bg-[#EAFCEB] px-4 py-1.5 w-fit">
                         How it Works
                     </span>
@@ -88,17 +93,29 @@ export default function Section9() {
                             const IconComponent = object.icon;
                             return (
                                 <React.Fragment key={index}>
-                                    <div className="flex flex-col items-center gap-y-2 text-center w-full sm:w-[22%]">
+                                    <motion.div 
+                                        className="flex flex-col items-center gap-y-2 text-center w-full sm:w-[22%]"
+                                        initial={{ opacity: 0, scale: 0.92, y: 10 }}
+                                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: 0.25 + index * 0.2 }}
+                                    >
                                         <div className="w-12 h-12 flex items-center justify-center bg-gray-50 rounded-xl border border-gray-200 shrink-0 shadow-sm">
                                             <IconComponent size={22} className="stroke-[#356221]" />
                                         </div>
                                         <h4 className="font-bold text-xs sm:text-sm text-black leading-tight">{object.title}</h4>
                                         <p className="text-[11px] sm:text-xs text-black/50 leading-snug px-0.5">{object.description}</p>
-                                    </div>
+                                    </motion.div>
                                     {index !== flowChart.length - 1 && (
-                                        <div className="text-gray-300 text-2xl font-bold rotate-90 sm:rotate-0 my-1 sm:my-0 shrink-0 select-none">
+                                        <motion.div 
+                                            className="text-gray-300 text-2xl font-bold rotate-90 sm:rotate-0 my-1 sm:my-0 shrink-0 select-none"
+                                            initial={{ opacity: 0, scale: 0.6 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.3, delay: 0.25 + index * 0.2 + 0.1 }}
+                                        >
                                             →
-                                        </div>
+                                        </motion.div>
                                     )}
                                 </React.Fragment>
                             );
@@ -111,7 +128,7 @@ export default function Section9() {
                             Runs automatically for every lead in your campaign sequence until they reply, you remove them, or sequence ends.
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

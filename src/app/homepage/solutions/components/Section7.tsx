@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { BriefcaseBusiness, Building, Check, Inbox, MapPin, MessageSquareMore, RefreshCcw, Tag, UserPlus, UserRoundCheck, ChevronDown } from "lucide-react";
+import { BriefcaseBusiness, Building, Check, MapPin, Tag, UserPlus, ChevronDown } from "lucide-react";
 
 const features = [
     "Extract from Multiple Sources: LinkedIn search, Sales Navigator, company pages, groups, events & more.",
@@ -9,7 +9,7 @@ const features = [
     "Bulk Extract: Extract hundreds or thousands of leads at once.",
     "Instant Export: Add leads directly to campaigns or your database.",
     "Clean & Verified Data: Get only relevant, valid and actionable leads."
-]
+];
 
 const dataChart = [
     {
@@ -37,8 +37,7 @@ const dataChart = [
         title: "Connections",
         description: "2nd"
     }
-
-]
+];
 
 export default function Section7() {
     return (
@@ -53,37 +52,38 @@ export default function Section7() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest bg-[#EAFCF7] p-1">
+                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest bg-[#EAFCF7] p-1.5 rounded w-fit">
                         Lead Extractor
                     </span>
 
-                    <h2 className="text-3xl sm:text-4xl font-bold text-left text-gray-900 leading-tight tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-left text-gray-900 leading-tight tracking-tight">
                         Find High-Quality Leads, Faster Than Ever
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-gray-300 leading-relaxed max-w-2xl">
+                    <p className="text-lg sm:text-xl text-left text-gray-550 leading-relaxed">
                         Extract targeted leads from LinkedIn, Sales Navigator, company pages, groups, events and more. Advanced filters help you find the right prospects in seconds.
                     </p>
 
-                    <div
-                        className="flex flex-col items-start gap-y-1 mt-2"
-                    >
+                    <div className="flex flex-col items-start gap-y-1 mt-2">
                         {features.map((data, index) => (
-                            <div
-                                key={index}
-                                className="flex flex-row items-center gap-x-3 py-1"
-                            >
+                            <div key={index} className="flex flex-row items-center gap-x-3 py-1">
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                                     <Check size={25} className="stroke-[#71EB34] stroke-[1]" />
                                 </div>
-                                <span className="text-sm text-gray-700 font-bold">{data}</span>
+                                <span className="text-sm text-gray-700 font-bold text-left">{data}</span>
                             </div>
                         ))}
                     </div>
                 </motion.div>
 
                 {/* Column 2: Lead Extractor Mockup Widget */}
-                <div className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/50 rounded-lg sm:rounded-xl p-6 sm:p-8 gap-y-6 shrink-0">
+                <motion.div 
+                    className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/50 rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 gap-y-6 shrink-0 shadow-sm"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     <span className="text-xl font-extrabold text-slate-800 text-left">
                         Lead Extractor
                     </span>
@@ -103,7 +103,14 @@ export default function Section7() {
                                 const IconComponent = object.icon;
                                 const isJobTitle = object.title === "Job Title";
                                 return (
-                                    <div key={index} className="flex flex-row items-center justify-between px-4 py-3 bg-white border border-gray-150 rounded-2xl shadow-sm w-full gap-2 hover:scale-[1.01] transition-transform duration-300">
+                                    <motion.div 
+                                        key={index} 
+                                        className="flex flex-row items-center justify-between px-4 py-3 bg-white border border-gray-155 rounded-2xl shadow-sm w-full gap-2 hover:scale-[1.01] transition-transform duration-300"
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: 0.3 + index * 0.08 }}
+                                    >
                                         <div className="flex items-center gap-3 flex-1 min-w-0">
                                             <IconComponent size={18} className="text-slate-600 shrink-0" />
                                             <div className="flex flex-row items-center text-left flex-1 min-w-0">
@@ -123,13 +130,19 @@ export default function Section7() {
                                             </div>
                                         </div>
                                         <ChevronDown size={14} className="text-slate-400 shrink-0" />
-                                    </div>
+                                    </motion.div>
                                 );
                             })}
                         </div>
 
                         {/* Right Side: Extraction Results List Card Mockup */}
-                        <div className="relative flex flex-col gap-3.5 bg-white border border-gray-150 rounded-[28px] p-5 shadow-md w-full sm:w-[38%] min-h-[250px] overflow-hidden justify-center shrink-0">
+                        <motion.div 
+                            className="relative flex flex-col gap-3.5 bg-white border border-gray-155 rounded-[28px] p-5 shadow-md w-full sm:w-[38%] min-h-[250px] overflow-hidden justify-center shrink-0"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
                             {[1, 2, 3, 4, 5].map((item) => (
                                 <div key={item} className="flex flex-row items-center justify-between w-full select-none">
                                     <div className="flex items-center gap-2.5">
@@ -150,17 +163,23 @@ export default function Section7() {
                             ))}
 
                             {/* Floating Magnifying Glass Overlay */}
-                            <div className="absolute top-[28%] right-[10%] w-24 h-24 select-none pointer-events-none z-30">
+                            <motion.div 
+                                className="absolute top-[28%] right-[10%] w-24 h-24 select-none pointer-events-none z-30"
+                                initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
+                                whileInView={{ opacity: 0.9, scale: 1, rotate: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8, delay: 0.6, type: "spring" }}
+                            >
                                 <div className="relative">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="#4a5568" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20 drop-shadow-md opacity-90">
                                         <circle cx="11" cy="11" r="8" />
                                         <line x1="21" y1="21" x2="16.65" y2="16.65" />
                                     </svg>
                                 </div>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

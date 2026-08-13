@@ -168,7 +168,7 @@ export default function Message({ onClose }: MessageProps) {
 
     return (
         <>
-            <header className="mx-auto h-[50px] w-[300px] rounded-t-2xl px-4 pt-4 flex flex-row items-center justify-between bg-[#02140b]">
+            <header className="mx-auto h-[50px] w-[300px] rounded-t-2xl px-5 pt-3.5 flex flex-row items-center justify-between bg-[#02140b] shrink-0">
                 <div className="flex flex-row items-center justify-between w-full pb-2 border-b border-white/5">
                     <h2 className="font-bold text-white text-sm text-left pl-2 flex items-center gap-2">
                         Messages
@@ -187,9 +187,9 @@ export default function Message({ onClose }: MessageProps) {
                 </div>
             </header>
 
-            <main className="bg-[#02140b] h-[550px] w-[300px] mx-auto flex flex-col justify-between overflow-hidden">
+            <main className="bg-[#02140b] flex-1 w-[300px] mx-auto flex flex-col justify-between overflow-hidden">
                 {/* Chat Feed */}
-                <div className="flex-1 overflow-y-auto px-4 py-3 flex flex-col gap-3 scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                <div className="flex-1 overflow-y-auto px-4 py-3 flex flex-col gap-3 custom-scrollbar">
                     {messages.map((msg) => (
                         <div
                             key={msg.id}

@@ -119,9 +119,9 @@ export default function Section4() {
                                 <motion.div
                                     variants={listItemVariants}
                                     key={index}
-                                    className={`flex flex-row items-center gap-x-4 w-full ${index === 0 ? "mb-6 pb-4 border-b border-gray-200" : "mb-5 last:mb-0"}`}
+                                    className={`flex flex-row items-center gap-x-4 w-full mb-5 last:mb-0`}
                                 >
-                                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${index === 0 ? "bg-gray-200" : "bg-red-50"}`}>
+                                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${index === 0 ? "transparent" : "bg-red-50"}`}>
                                         <left.icon size={16} className={index === 0 ? "text-gray-500" : "text-red-500"} />
                                     </div>
                                     <span className={`${index === 0 ? "text-gray-500 font-bold uppercase tracking-wider text-xs sm:text-sm" : "text-gray-700 font-medium text-sm sm:text-base"}`}>
@@ -138,7 +138,7 @@ export default function Section4() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6 }}
-                        className="flex flex-col items-start p-8 sm:p-12 bg-[#356221]/85 relative overflow-hidden"
+                        className="flex flex-col items-start p-8 sm:p-12 bg-[#356221]/60 relative overflow-hidden"
                     >
                         {/* Subtle background glow */}
                         <div className="absolute -right-24 -bottom-24 w-48 h-48 rounded-full bg-[#71EB34]/10 blur-3xl"></div>
@@ -154,12 +154,12 @@ export default function Section4() {
                                 <motion.div
                                     variants={listItemVariants}
                                     key={index}
-                                    className={`flex flex-row items-center gap-x-4 w-full ${index === 0 ? "mb-6 pb-4 border-b border-emerald-950/40" : "mb-5 last:mb-0"}`}
+                                    className={`flex flex-row items-center gap-x-4 w-full mb-5 last:mb-0`}
                                 >
-                                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${index === 0 ? "bg-[#71EB34]/20" : "bg-[#71EB34]/15"}`}>
-                                        <right.icon size={16} className="text-[#71EB34]" />
+                                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${index === 0 ? "transparent" : "bg-[#71EB34]/15"}`}>
+                                        <right.icon size={16} className="text-[#356221]" />
                                     </div>
-                                    <span className={`${index === 0 ? "text-[#71EB34] font-bold uppercase tracking-wider text-xs sm:text-sm" : "text-white font-medium text-sm sm:text-base"}`}>
+                                    <span className={`${index === 0 ? "text-[#356221] font-bold uppercase tracking-wider text-xs sm:text-sm" : "text-black font-medium text-sm sm:text-base"}`}>
                                         {right.data}
                                     </span>
                                 </motion.div>

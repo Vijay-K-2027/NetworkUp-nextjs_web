@@ -54,10 +54,10 @@ export default function SubscriptionLayout({ children }: { children: React.React
                     {/* Back Button */}
                     <Link
                         href="/homepage"
-                        className="flex items-center gap-2 text-[#d8f9a8] hover:text-white font-semibold text-sm transition-all duration-200 cursor-pointer bg-white/[0.03] hover:bg-white/[0.08] px-4 py-2 rounded-xl border border-white/[0.06]"
+                        className="flex items-center gap-1.5 sm:gap-2 text-[#d8f9a8] hover:text-white font-semibold text-sm transition-all duration-200 cursor-pointer bg-white/[0.03] hover:bg-white/[0.08] px-3 sm:px-4 py-2 rounded-xl border border-white/[0.06]"
                     >
                         <ArrowLeft size={16} strokeWidth={2.5} />
-                        <span>Back to Home</span>
+                        <span className="hidden sm:inline">Back to Home</span>
                     </Link>
                 </div>
             </header>

@@ -31,15 +31,15 @@ export default function Section8() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest bg-[#EAFCF7] p-1">
+                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest bg-[#EAFCF7] p-1.5 rounded w-fit">
                         Content Assistant
                     </span>
 
-                    <h2 className="text-3xl sm:text-4xl font-bold text-left text-gray-900 leading-tight tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-left text-gray-900 leading-tight tracking-tight">
                         Write Better Messages. Reply Smarter. Close Faster.
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-gray-700 leading-relaxed max-w-2xl">
+                    <p className="text-lg sm:text-xl text-left text-gray-550 leading-relaxed">
                         AI-powered content assistant helps you create personalized, relevant and high-converting messages in seconds.
                     </p>
 
@@ -49,14 +49,20 @@ export default function Section8() {
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                                     <Check size={25} className="stroke-[#71EB34] stroke-[1]" />
                                 </div>
-                                <span className="text-sm text-gray-600 font-bold">{data}</span>
+                                <span className="text-sm text-gray-700 font-bold text-left">{data}</span>
                             </div>
                         ))}
                     </div>
                 </motion.div>
 
                 {/* Column 2: Content Assistant Mockup Widget */}
-                <div className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0">
+                <motion.div 
+                    className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
                     <span className="text-xl font-extrabold text-slate-800 text-left">
                         Content Assistant
                     </span>
@@ -70,7 +76,14 @@ export default function Section8() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-stretch justify-between gap-6 w-full">
-                        <div className="flex flex-col gap-5 w-full sm:w-[48%] shrink-0 text-left">
+                        {/* Left Side: Parameters Form */}
+                        <motion.div 
+                            className="flex flex-col gap-5 w-full sm:w-[48%] shrink-0 text-left"
+                            initial={{ opacity: 0, x: -15 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.35 }}
+                        >
                             <div className="flex flex-col items-start gap-y-2">
                                 <span className="text-[11px] text-slate-400 font-extrabold uppercase tracking-wider">Lead Context</span>
                                 <div className="flex flex-col gap-2 p-5 border border-gray-200 rounded-2xl bg-white w-full shadow-sm text-left">
@@ -93,10 +106,16 @@ export default function Section8() {
                                 <span className="text-sm text-slate-900 font-bold">Generate Message</span>
                                 <Zap size={14} className="fill-slate-900 stroke-none" />
                             </button>
-                        </div>
+                        </motion.div>
 
                         {/* Right Side: Generated AI Draft Output Mockup */}
-                        <div className="flex flex-col gap-4 bg-white border border-gray-200 rounded-[24px] p-6 shadow-sm w-full sm:w-[48%] min-h-[300px] shrink-0 justify-between text-left">
+                        <motion.div 
+                            className="flex flex-col gap-4 bg-white border border-gray-200 rounded-[24px] p-6 shadow-sm w-full sm:w-[48%] min-h-[300px] shrink-0 justify-between text-left"
+                            initial={{ opacity: 0, x: 15 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.45 }}
+                        >
                             <div className="flex flex-col items-start w-full">
                                 <span className="text-xs sm:text-[13px] text-[#15803d] font-bold uppercase tracking-wider mb-3">AI Generated Message</span>
 
@@ -127,9 +146,9 @@ export default function Section8() {
                                     )}
                                 </button>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
