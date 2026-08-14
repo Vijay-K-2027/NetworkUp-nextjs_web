@@ -1,6 +1,6 @@
 import React from "react";
 import { ListChecks, Network, Zap, Sparkles, Clock, ShieldCheck, LucideUsers2, ArrowRight } from "lucide-react";
-import { CheckIcon } from "../assets/icons";
+import { CheckIcon } from "@/app/homepage/assets/icons";
 import Image from "next/image";
 
 const steps = [

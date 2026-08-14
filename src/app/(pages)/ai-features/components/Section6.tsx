@@ -1,4 +1,4 @@
-import Documentation from "../../Documentation";
+import Documentation from "@/app/homepage/Documentation";
 
 const section6Data = [
     {

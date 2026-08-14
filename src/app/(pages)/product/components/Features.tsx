@@ -3,8 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { cardVariants, containerVariants } from '../assets/icons'
-import { SmartProspectingIcon, RelationshipIntelIcon, UnifiedInboxIcon, CampaignBuilderIcon, CampaignAnalyticsIcon, LeadEnrichmentIcon, IntegrationsIcon, AccountProtectionIcon } from "../assets/icons";
+import { cardVariants, containerVariants } from '@/app/homepage/assets/icons'
+import { SmartProspectingIcon, RelationshipIntelIcon, UnifiedInboxIcon, CampaignBuilderIcon, CampaignAnalyticsIcon, LeadEnrichmentIcon, IntegrationsIcon, AccountProtectionIcon } from "@/app/homepage/assets/icons";
 import { BrainIcon, Database, UserSearch } from "lucide-react";
 import { BsInboxFill, BsMagic, BsShieldLock } from "react-icons/bs";
 import { CgInbox } from "react-icons/cg";

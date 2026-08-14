@@ -1,6 +1,6 @@
 "use client";
 
-import Documentation from "../Documentation";
+import Documentation from "@/app/homepage/Documentation";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 

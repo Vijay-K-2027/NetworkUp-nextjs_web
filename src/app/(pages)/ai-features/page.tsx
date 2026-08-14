@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     description: "Explore NetworkUp's smart prospecting, AI campaign builder, automated follow-ups, and real-time optimization features.",
     keywords: ["ai linkedin tool", "automated prospecting", "ai message builder", "smart follow-ups", "linkedin automation features"],
     alternates: {
-        canonical: "https://networkup.io/homepage/ai-features"
+        canonical: "https://networkup.io/ai-features"
     },
     openGraph: {
         title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
         description: "Explore NetworkUp's smart prospecting, AI campaign builder, automated follow-ups, and real-time optimization features.",
-        url: "https://networkup.io/homepage/ai-features",
+        url: "https://networkup.io/ai-features",
         siteName: "NetworkUp.io",
         locale: "en_US",
         type: "website",

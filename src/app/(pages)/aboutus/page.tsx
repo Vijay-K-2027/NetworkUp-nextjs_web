@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     description: "Meet the team and learn about the mission behind NetworkUp.io. We are building the future of AI-powered professional networking and outreach.",
     keywords: ["networkup story", "about networkup", "linkedin automation team", "ai outreach mission", "professional networking history"],
     alternates: {
-        canonical: "https://networkup.io/homepage/aboutUs"
+        canonical: "https://networkup.io/aboutus"
     },
     openGraph: {
         title: "About Us | NetworkUp.io",
         description: "Meet the team and learn about the mission behind NetworkUp.io. We are building the future of AI-powered professional networking and outreach.",
-        url: "https://networkup.io/homepage/aboutUs",
+        url: "https://networkup.io/aboutus",
         siteName: "NetworkUp.io",
         locale: "en_US",
         type: "website",

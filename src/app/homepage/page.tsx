@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function HomepageRedirectPage() {
-    redirect("/");
+    redirect("/product");
 }

@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     description: "Choose the perfect plan that scales with you. Clear and transparent pricing options for startups, professional teams, and enterprises.",
     keywords: ["networkup pricing", "linkedin tool cost", "saas pricing sales", "recruiting software pricing", "b2b outreach subscription"],
     alternates: {
-        canonical: "https://networkup.io/homepage/pricing"
+        canonical: "https://networkup.io/pricing"
     },
     openGraph: {
         title: "Pricing Plans & Packages | NetworkUp.io",
         description: "Choose the perfect plan that scales with you. Clear and transparent pricing options for startups, professional teams, and enterprises.",
-        url: "https://networkup.io/homepage/pricing",
+        url: "https://networkup.io/pricing",
         siteName: "NetworkUp.io",
         locale: "en_US",
         type: "website",

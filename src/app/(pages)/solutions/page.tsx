@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     description: "Scale your LinkedIn prospecting and relationship building. Specialized workflows for sales teams, recruiters, agencies, and startups to drive growth.",
     keywords: ["linkedin outreach", "lead generation", "sales prospecting", "agency growth", "recruiter automation", "startup networking", "b2b outreach"],
     alternates: {
-        canonical: "https://networkup.io/homepage/solutions"
+        canonical: "https://networkup.io/solutions"
     },
     openGraph: {
         title: "Outreach Solutions for Sales, Recruiters & Agencies | NetworkUp.io",
         description: "Scale your LinkedIn prospecting and relationship building. Specialized workflows for sales teams, recruiters, agencies, and startups to drive growth.",
-        url: "https://networkup.io/homepage/solutions",
+        url: "https://networkup.io/solutions",
         siteName: "NetworkUp.io",
         locale: "en_US",
         type: "website",

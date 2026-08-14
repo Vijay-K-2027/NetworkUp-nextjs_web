@@ -3,13 +3,13 @@
 import { useState } from "react";
 import { AlertTriangle, ArrowUpRight, Bell, Bot, Compass, HelpCircle, HelpCircleIcon, Inbox, LayoutDashboard, Megaphone, Search, Settings, ShieldCheck, Sparkles, UserCheck, Mail, UserPlus, Zap, ChevronLeft, ChevronRight, Plus, Upload, Briefcase, Landmark, ShoppingCart, GraduationCap, UserCircle2, LogOut, Rocket, PlugZap, Database, Microchip, UsersIcon, NetworkIcon, UserSearch, RocketIcon, MessagesSquare, Radar, ChartBar, Newspaper, Menu } from "lucide-react";
 import { motion } from "framer-motion";
-import { cardVariants, containerVariants } from "../assets/icons";
+import { cardVariants, containerVariants } from "@/app/homepage/assets/icons";
 import Image from "next/image"
 import { FaResearchgate, FaTools } from "react-icons/fa";
 import { GrTemplate } from "react-icons/gr";
 import { TbTemplate } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
-import { CampaignBuilderIcon } from "../assets/icons";
+import { CampaignBuilderIcon } from "@/app/homepage/assets/icons";
 import { MdReport } from "react-icons/md";
 
 const icons = {
