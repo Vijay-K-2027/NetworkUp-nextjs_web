@@ -8,7 +8,7 @@ import { useRouter, usePathname } from "next/navigation";
 
 
 const navItems = [
-    { label: "Product", id: "product", path: "/product" },
+    { label: "Product", id: "product", path: "/" },
     { label: "Solutions", id: "solutions", path: "/solutions" },
     { label: "AI Features", id: "workflow", path: "/ai-features" },
     { label: "Pricing", id: "pricing", path: "/pricing" },
@@ -48,7 +48,7 @@ export default function Navbar() {
 
                 {/* Left side: Logo and Desktop Navigation */}
                 <div className="flex items-center gap-6 lg:gap-12">
-                    <Link href="/product" className="flex items-center gap-2 lg:gap-3 flex-shrink-0">
+                    <Link href="/" className="flex items-center gap-2 lg:gap-3 flex-shrink-0">
                         <Image
                             src="/Logo.svg"
                             alt="Logo"
@@ -85,7 +85,7 @@ export default function Navbar() {
                 {/* Right side: Action Buttons & Mobile Menu Trigger */}
                 <div className="flex items-center gap-2 sm:gap-4">
                     <Link
-                        href="/homepage/login"
+                        href="/login"
                         className="hidden sm:inline-flex rounded-xl bg-lime-400 px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
                     >
                         Log In
@@ -144,7 +144,7 @@ export default function Navbar() {
                     {/* Compact Login/Signup inside Drawer for Mobile Screen Adjustments */}
                     <div className="border-t border-gray-100 pt-4 flex flex-col gap-2.5 sm:hidden">
                         <Link
-                            href="/homepage/login"
+                            href="/login"
                             onClick={() => setIsOpen(false)}
                             className="w-full text-center rounded-xl bg-lime-400 py-3 text-xs font-bold text-black shadow transition hover:bg-lime-500"
                         >
@@ -153,7 +153,7 @@ export default function Navbar() {
                         <button
                             onClick={() => {
                                 setIsOpen(false);
-                                router.push("/homepage/subscription");
+                                router.push("/subscription");
                             }}
                             className="w-full text-center rounded-xl bg-lime-400 py-3 text-xs font-bold text-black shadow transition hover:bg-lime-500"
                         >

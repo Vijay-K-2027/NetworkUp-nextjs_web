@@ -240,7 +240,7 @@ export default function Pricing() {
                             <button
                                 className={`w-full py-4 px-6 rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 ${plan.popular ? "bg-gradient-to-b from-white/80 to-[#76e11b] hover:bg-[#c7f701] text-[#031d10] hover:scale-[1.01]" : "bg-black border-1 border-zinc-200/50 text-white hover:bg-black-50 hover:-translate-y-1 hover:border-zinc-300"
                                     }`}
-                                onClick={() => router.push("/homepage/login")}
+                                onClick={() => router.push("/login")}
                             >
                                 {plan.buttonText}
                             </button>
