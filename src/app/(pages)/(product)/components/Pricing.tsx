@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import { Router, useRouter } from "next/router";
+import Link from "next/link";
 
 const plans = [
     {
@@ -134,7 +134,6 @@ const plans = [
 
 export default function Pricing() {
     const [billingType, setBillingType] = useState('monthly');
-    const router = useRouter();
 
     const switchBilling = () => {
         setBillingType(billingType === 'monthly' ? 'yearly' : 'monthly');
@@ -252,13 +251,13 @@ export default function Pricing() {
                             </div>
 
                             {/* Button */}
-                            <button
-                                onClick={() => router.push("/subscription")}
+                            <Link
+                                href="/subscription"
                                 className={`w-full py-4 px-6 rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 ${plan.popular ? "bg-gradient-to-b from-[#76e11b]/30 to-[#76e11b] hover:bg-[#68c617] text-[#031d10] shadow-[0_4px_12px_rgba(118,225,27,0.25)] hover:scale-[1.01]" : "bg-white border border-zinc-200 text-gray-800 hover:bg-zinc-50 hover:border-zinc-300"
                                     }`}
                             >
                                 {plan.buttonText}
-                            </button>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>
