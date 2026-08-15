@@ -31,7 +31,7 @@ export default function Hero() {
                 {/* CTA Buttons */}
                 <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
 
-                    <Link href="/homepage/subscription">
+                    <Link href="/subscription">
                         <div className="flex items-center gap-2 rounded-xl bg-lime-400 px-8 py-4 text-sm font-semibold text-black shadow-md transition hover:bg-lime-500">
                             Get Started Free
                             <ArrowRight size={18} strokeWidth={3} />
