@@ -15,29 +15,24 @@ const plans = [
                 name: "Account Management",
                 subFeatures: [
                     { text: "1 LinkedIn Account", enabled: true },
-                    { text: "500 Messages / month", enabled: true },
-                    { text: "Daily activity reports", enabled: true }
+                    { text: "1 Workspace", enabled: true },
+                    { text: "1 Active Campaign", enabled: true }
                 ]
             },
 
             {
-                name: "Automation Intelligence",
+                name: "Outreach",
                 subFeatures: [
-                    { text: "Basic Personalization", enabled: true },
+                    { text: "AI Outreach Writer", enabled: true },
+                    { text: "Multi-step Campaign Builder", enabled: true },
+                    { text: "Prospect Discovery", enabled: true },
                 ]
             },
 
             {
-                name: "Data & Integration",
+                name: "Platform",
                 subFeatures: [
-                    { text: "Basic Lead Database", enabled: true }
-                ]
-            },
-
-            {
-                name: "Support",
-                subFeatures: [
-                    { text: "Email Support", enabled: true }
+                    { text: "Basic Analytics", enabled: true }
                 ]
             }
         ],
@@ -53,34 +48,27 @@ const plans = [
             {
                 name: "Account Management",
                 subFeatures: [
-                    { text: "5 LinkedIn Accounts", enabled: true },
+                    { text: "3 LinkedIn Accounts", enabled: true },
                     { text: "Multi-workspace", enabled: true },
+                    { text: "Unlimited Campaigns", enabled: true },
                 ]
             },
 
             {
-                name: "Automation Intelligence",
+                name: "AI & Automation",
                 subFeatures: [
+                    { text: "AI Workspace", enabled: true },
                     { text: "Advanced AI Personalization", enabled: true },
-                    { text: "Sequence Branching", enabled: true },
-                    { text: "2-Variant A/B Testing", enabled: true }
+                    { text: "Sequence Branching", enabled: true }
                 ]
             },
 
             {
-                name: "Data & Integration",
+                name: "Platform",
                 subFeatures: [
-                    { text: "Full CRM Sync", enabled: true },
-                    { text: "Read-only API", enabled: true },
-                    { text: "Extended Database", enabled: true }
-                ]
-            },
-
-            {
-                name: "Support",
-                subFeatures: [
-                    { text: "Shared Success Manager", enabled: true },
-                    { text: "Email & Chat Support", enabled: true }
+                    { text: "Unified Inbox", enabled: true },
+                    { text: "Campaign Analytics", enabled: true },
+                    { text: "Integrations & API Access", enabled: true }
                 ]
             }
         ],
@@ -94,36 +82,28 @@ const plans = [
         features: [
 
             {
-                name: "Account Management",
+                name: "Organization",
                 subFeatures: [
-                    { text: "Custom Org Limits", enabled: true },
-                    { text: "SSo / SAML Setup", enabled: true },
+                    { text: "Unlimited LinkedIn Accounts", enabled: true },
+                    { text: "Unlimited Workspaces", enabled: true },
                 ]
             },
 
             {
-                name: "Automation Intelligence",
+                name: "Enterprise AI",
                 subFeatures: [
-                    { text: "Custom Logic Engine", enabled: true },
-                    { text: "Regional Compliance", enabled: true },
-                    { text: "Priority Execution", enabled: true }
+                    { text: "Custom AI Workflows", enabled: true },
+                    { text: "AI Health Monitoring", enabled: true },
+                    { text: "Custom Automation Logic", enabled: true }
                 ]
             },
 
             {
-                name: "Data & Integration",
+                name: "Security & Support",
                 subFeatures: [
-                    { text: "Custom Webhooks", enabled: true },
-                    { text: "On-prem Hosting Option", enabled: true },
-                    { text: "Audit Logging", enabled: true }
-                ]
-            },
-
-            {
-                name: "Support",
-                subFeatures: [
-                    { text: "24/7 Priority Support", enabled: true },
-                    { text: "Technical Onboarding", enabled: true }
+                    { text: "SSO / SAML Authentication", enabled: true },
+                    { text: "Audit Logs & Compliance", enabled: true },
+                    { text: "Dedicated Success Manager", enabled: true }
                 ]
             }
         ],
@@ -215,15 +195,14 @@ export default function Pricing() {
                                             ${`${billingType === "monthly" ? plan.price[0] : plan.price[1]}`}
                                         </span>
                                         <span className="text-black text-sm ml-2">
-                                            {`${billingType === "monthly" ? "/mo" : ""}`}
+                                            /mo
                                         </span>
                                     </div>
-                                    <div className={`text-sm text-black ${billingType === "monthly" ? "hidden" : "flex"}`}>billed annually per month</div>
                                 </div>
 
 
                                 {/* Features List */}
-                                <ul className="space-y-4 mb-10">
+                                <ul className="space-y-4 mb-5">
                                     {plan.features.map((feature, fIndex) => (
                                         <li
                                             key={fIndex}
@@ -241,7 +220,7 @@ export default function Pricing() {
                                                             }`}
                                                     >
                                                         <span><Check stroke="black" size={12} /></span>
-                                                        <span className="text-md text-black/80 tracking-tight">{subFeature.text}</span>
+                                                        <span className="text-md text-black/80 tracking-wide">{subFeature.text}</span>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -253,7 +232,7 @@ export default function Pricing() {
                             {/* Button */}
                             <Link
                                 href="/subscription"
-                                className={`w-full py-4 px-6 rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 ${plan.popular ? "bg-gradient-to-b from-[#76e11b]/30 to-[#76e11b] hover:bg-[#68c617] text-[#031d10] shadow-[0_4px_12px_rgba(118,225,27,0.25)] hover:scale-[1.01]" : "bg-white border border-zinc-200 text-gray-800 hover:bg-zinc-50 hover:border-zinc-300"
+                                className={`w-full text-center py-4 px-6 rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 ${plan.popular ? "bg-gradient-to-b from-[#76e11b]/30 to-[#76e11b] hover:bg-[#68c617] text-[#031d10] shadow-[0_4px_12px_rgba(118,225,27,0.25)] hover:scale-[1.01]" : "bg-white border border-zinc-200 text-gray-800 hover:bg-zinc-50 hover:border-zinc-300"
                                     }`}
                             >
                                 {plan.buttonText}

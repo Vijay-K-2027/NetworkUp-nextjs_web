@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 export default function Documentation({
     document,
@@ -85,10 +86,10 @@ export default function Documentation({
                                         </div>
                                         <button
                                             type="button"
-                                            className={`text-sm ${isOpen ? 'text-[#a3e635]' : 'text-gray-700/50'} transform scale-x-200 transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8`}
+                                            className={`text-sm ${isOpen ? 'text-[#a3e635]' : 'text-gray-700/50'} transform transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8`}
                                             aria-expanded={isOpen}
                                         >
-                                            V
+                                            <ChevronDown size={25} className={`${isOpen ? 'text-[#a3e635]' : 'text-gray-700/50'}`} />
                                         </button>
                                     </div>
 

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Check, Inbox, MessageSquareMore, RefreshCcw, UserPlus, UserRoundCheck } from "lucide-react";
+import { Check, Inbox, MessageSquareMore, RefreshCcw, Sparkles, UserPlus, UserRoundCheck } from "lucide-react";
 
 const features = [
     "If Connected: Checks if the lead is already in your network.",
@@ -15,22 +15,22 @@ const flowChart = [
     {
         icon: UserRoundCheck,
         title: "If Connected",
-        description: "Checks if the lead is already in your network."
+        description: "Checks if the lead is already in your LinkedIn network."
     },
     {
         icon: UserPlus,
         title: "Send Request",
-        description: "If not connected, automatically send a connection request."
+        description: "If not connected, automatically sends a connection request."
     },
     {
         icon: MessageSquareMore,
         title: "Send Message",
-        description: "Once they accept, automatically send message."
+        description: "After they accept, automatically sends a personalized message."
     },
     {
         icon: Inbox,
         title: "Unified Inbox",
-        description: "If they reply, it lands in your unified inbox."
+        description: "If they reply, the conversation moves to your unified inbox."
     },
 
 ]
@@ -77,7 +77,7 @@ export default function Section9() {
                 </motion.div>
 
                 {/* Column 2: How It Works Flowchart Block */}
-                <motion.div 
+                <motion.div
                     className="flex flex-col items-center justify-center w-full lg:max-w-[45%] border border-gray-200/85 bg-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 gap-y-6 shadow-lg"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -93,7 +93,7 @@ export default function Section9() {
                             const IconComponent = object.icon;
                             return (
                                 <React.Fragment key={index}>
-                                    <motion.div 
+                                    <motion.div
                                         className="flex flex-col items-center gap-y-2 text-center w-full sm:w-[22%]"
                                         initial={{ opacity: 0, scale: 0.92, y: 10 }}
                                         whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -107,7 +107,7 @@ export default function Section9() {
                                         <p className="text-[11px] sm:text-xs text-black/50 leading-snug px-0.5">{object.description}</p>
                                     </motion.div>
                                     {index !== flowChart.length - 1 && (
-                                        <motion.div 
+                                        <motion.div
                                             className="text-gray-300 text-2xl font-bold rotate-90 sm:rotate-0 my-1 sm:my-0 shrink-0 select-none"
                                             initial={{ opacity: 0, scale: 0.6 }}
                                             whileInView={{ opacity: 1, scale: 1 }}
@@ -123,9 +123,9 @@ export default function Section9() {
                     </div>
 
                     <div className="w-full bg-gray-100 rounded-xl border border-gray-200 px-5 py-3.5 flex flex-row items-start gap-x-3.5">
-                        <RefreshCcw size={20} className="stroke-[#356221] shrink-0 mt-0.5" />
-                        <p className="text-left text-xs text-gray-600 font-medium leading-relaxed">
-                            Runs automatically for every lead in your campaign sequence until they reply, you remove them, or sequence ends.
+                        <Sparkles size={20} className="stroke-[#71EB34] shrink-0 mt-0.5" />
+                        <p className="text-left text-sm font-bold text-gray-600 font-medium leading-relaxed">
+                            Runs automatically for every lead in your campaign sequence until they reply, you remove them, mark as "Wrong Person", or the sequence ends.
                         </p>
                     </div>
                 </motion.div>

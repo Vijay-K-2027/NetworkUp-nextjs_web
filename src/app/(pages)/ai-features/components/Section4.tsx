@@ -156,8 +156,8 @@ export default function Section4() {
                                     key={index}
                                     className={`flex flex-row items-center gap-x-4 w-full mb-5 last:mb-0`}
                                 >
-                                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${index === 0 ? "transparent" : "bg-[#71EB34]/15"}`}>
-                                        <right.icon size={16} className="text-[#356221]" />
+                                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center `}>
+                                        <right.icon size={25} className="text-[#356221]" />
                                     </div>
                                     <span className={`${index === 0 ? "text-[#356221] font-bold uppercase tracking-wider text-xs sm:text-sm" : "text-black font-medium text-sm sm:text-base"}`}>
                                         {right.data}

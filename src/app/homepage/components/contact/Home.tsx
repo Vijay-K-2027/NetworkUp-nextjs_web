@@ -221,10 +221,10 @@ export default function Home({ onClose }: HomeProps) {
                     <>
                         <div className="mt-5 flex flex-row items-center shrink-0 w-full">
                             <div className="flex flex-col items-start ml-2">
-                                <h1 className="text-white text-3xl font-bold w-[160px]">Hey there!👋</h1>
+                                <h1 className="text-white text-3xl font-bold w-[160px]">Hey there!</h1>
                                 <h3 className="text-gray-200/80 text-sm w-[150px] text-left">How can we help today?</h3>
                             </div>
-                            <div className="ml-auto border-[2px] border-[#02140b] rounded-full overflow-hidden shrink-0">
+                            <div className="ml-auto border-[2px] border-[#02140b] rounded-l-full overflow-hidden shrink-0">
                                 <Image src="/Ai-black.png" alt="AIPage" width={80} height={80} />
                             </div>
                         </div>

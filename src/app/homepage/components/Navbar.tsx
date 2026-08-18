@@ -44,7 +44,7 @@ export default function Navbar() {
                     </a>
                 </div>
             </div>
-            <div className="max-w-7xl mx-auto w-full flex h-20 items-center justify-between px-6 lg:px-8">
+            <div className="max-w-8xl mx-auto w-full flex h-20 items-center justify-between px-6 lg:px-8">
 
                 {/* Left side: Logo and Desktop Navigation */}
                 <div className="flex items-center gap-6 lg:gap-12">
@@ -69,7 +69,7 @@ export default function Navbar() {
                                     <li key={index} className="h-20 flex items-center">
                                         <Link
                                             href={item.path}
-                                            className={`text-sm lg:text-md font-semibold transition-all duration-200 pb-2 ${isActive
+                                            className={`text-[10px] lg:text-[15px] font-semibold transition-all duration-200 pb-2 ${isActive
                                                 ? "text-[#356221] border-b-2 border-[#76e11b]" : "text-gray-600 hover:text-[#76e11b] border-b-2 border-transparent"
                                                 }`}
                                         >
@@ -86,13 +86,13 @@ export default function Navbar() {
                 <div className="flex items-center gap-2 sm:gap-4">
                     <Link
                         href="/login"
-                        className="hidden sm:inline-flex rounded-xl bg-lime-400 px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
+                        className="hidden sm:inline-flex rounded-xl bg-lime-400 text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
                     >
                         Log In
                     </Link>
 
                     <button
-                        className="hidden sm:inline-flex rounded-xl bg-lime-400 px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
+                        className="hidden sm:inline-flex rounded-xl bg-lime-400 text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
                         onClick={() => router.push("/subscription")}
                     >
                         Get Started
@@ -105,7 +105,7 @@ export default function Navbar() {
                         }}
                     >
                         <Bot size={18} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2} />
-                        <span className="hidden xs:inline sm:inline">Ask AI</span>
+                        <span className="inline xs:hidden sm:hidden">Ask AI</span>
                     </button>
 
                     <button

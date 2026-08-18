@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Hero() {
     return (
         <section id="product" className="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,_rgba(222,250,208,1)_0%,_rgba(222,250,208,0.1)_700px,_rgba(222,250,208,0.2)_100%)]">
-            <div className="mx-auto flex max-w-7xl flex-col items-center px-6 py-25 text-center">
+            <div className="mx-auto flex max-w-7xl flex-col items-center px-6 pt-25 pb-15 text-center">
 
                 {/* Badge */}
                 <div className="w-350 mb-8 rounded-full border border-lime-200 bg-lime-100/30 px-6 py-2 text-sm font-medium text-black">
@@ -66,7 +66,7 @@ export default function Hero() {
                         />
                     </div>
 
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-black/60">
                         Trusted by{" "}
                         <span className="font-semibold">
                             25,000+

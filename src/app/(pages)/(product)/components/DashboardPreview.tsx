@@ -78,7 +78,7 @@ export default function DashboardPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="col-span-1 lg:col-span-7 bg-white h-[550px] sm:h-[650px] lg:h-full lg:max-h-[82vh] rounded-none border border-white/10 shadow-2xl flex flex-col md:flex-row overflow-hidden relative"
+            className="col-span-1 lg:col-span-7 bg-white h-[550px] sm:h-[650px] lg:h-full lg:max-h-[82vh] rounded-none shadow-2xl flex flex-col md:flex-row overflow-hidden relative"
           >
             {/* Sidebar Backdrop for Mobile */}
             {isSidebarOpen && (
@@ -89,10 +89,9 @@ export default function DashboardPreview() {
             )}
 
             {/* Sidebar */}
-            <aside className={`${
-              isSidebarOpen ? "flex absolute inset-y-0 left-0 z-50 w-52 shadow-2xl" : "hidden"
-            } md:relative md:flex md:w-50 bg-[#0c240f] text-white flex-col justify-between p-2.5 shrink-0 transition-all duration-300`}>
-              <div>
+            <aside className={`${isSidebarOpen ? "flex absolute inset-y-0 left-0 z-50 w-52 shadow-2xl h-full" : "hidden"
+              } md:relative md:flex md:w-50 bg-[#0c240f] text-white flex-col justify-between p-2.5 shrink-0 transition-all duration-300 h-full overflow-hidden`}>
+              <div className="flex-1 overflow-y-auto min-h-0 pr-1 select-none custom-scrollbar">
                 {/* Logo Section */}
                 <div className="flex items-center gap-1 mb-3.5 px-1">
                   <div className="bg-transparent p-0.5 rounded-lg text-black font-extrabold flex items-center justify-center">
@@ -214,9 +213,9 @@ export default function DashboardPreview() {
               {/* Top Navigation */}
               <header className="flex items-center justify-between gap-2 pb-1.5 border-b border-gray-200/50 w-full">
                 <div className="flex items-center gap-1.5 min-w-0">
-                  <Menu 
-                    size={16} 
-                    className="md:hidden text-gray-600 cursor-pointer shrink-0" 
+                  <Menu
+                    size={16}
+                    className="md:hidden text-gray-600 cursor-pointer shrink-0"
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                   />
                   <h2 className="font-extrabold text-xs sm:text-base truncate">Dashboard</h2>
@@ -330,16 +329,24 @@ export default function DashboardPreview() {
                       className="absolute top-7 left-[45%] -translate-x-1/2 bg-white/95 border border-zinc-100 rounded-xl shadow-md p-1.5 z-10 text-[8px] font-semibold text-zinc-700 space-y-0.5 w-32 backdrop-blur-sm"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="flex items-center gap-1"><span className="w-1 h-1 rounded-full bg-[#22c55e]"></span>Sent</span>
+                        <span className="flex items-center gap-1"><span className="w-1 h-1 rounded-full bg-[#22c55e]"></span>Connections Sent</span>
                         <span className="text-gray-500">— 96</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="flex items-center gap-1"><span className="w-1 h-1 rounded-full bg-[#15803d]"></span>Accepted</span>
+                        <span className="flex items-center gap-1"><span className="w-1 h-1 rounded-full bg-[#15803d]"></span>Connections Accepted</span>
                         <span className="text-gray-500">— 55</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="flex items-center gap-1"><span className="w-1 h-1 rounded-full bg-[#a3e635]"></span>Messages</span>
+                        <span className="flex items-center gap-1"><span className="w-1 h-1 rounded-full bg-[#a3e635]"></span>Messages Sent</span>
                         <span className="text-gray-500">— 42</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="flex items-center gap-1"><span className="w-1 h-1 rounded-full bg-[#a3e635]"></span>Replies Received</span>
+                        <span className="text-gray-500">— 13</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="flex items-center gap-1"><span className="w-1 h-1 rounded-full bg-[#a3e635]"></span>Meetings Booked</span>
+                        <span className="text-gray-500">— 4</span>
                       </div>
                     </motion.div>
 
@@ -720,7 +727,7 @@ export default function DashboardPreview() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="col-span-1 lg:col-span-5 h-auto lg:h-full lg:max-h-[82vh] rounded-3xl p-5 shadow-lg bg-gradient-to-br from-[#6CB531]/30 via-[#05230c] to-[#05230c] border border-[#defad0]/15 w-full flex flex-col justify-center min-h-0 overflow-hidden"
+            className="col-span-1 lg:col-span-5 h-auto lg:h-full lg:max-h-[82vh] rounded-xl p-5 shadow-lg bg-gradient-to-br from-[#6CB531]/30 via-[#05230c] to-[#05230c] border border-[#defad0]/15 w-full flex flex-col justify-center min-h-0 overflow-hidden"
           >
             <div className="w-full h-full flex flex-col justify-center py-2 min-h-0 overflow-hidden">
               <div className="flex flex-col items-center justify-center py-1.5 gap-1 shrink-0">

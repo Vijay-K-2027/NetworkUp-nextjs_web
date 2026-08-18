@@ -63,7 +63,7 @@ const features = [
 export default function Section9() {
     return (
         <section className="bg-[#fafcf7] w-full py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 w-full">
+            <div className="max-w-9xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 w-full">
 
                 {/* Column 1: Left Title & Description */}
                 <motion.div
@@ -78,9 +78,12 @@ export default function Section9() {
                     </span>
 
                     {/* Title */}
-                    <div className="flex flex-col gap-1.5">
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight">
-                            Organize, Manage & Segment All Your Leads in One Place
+                    <div className="flex flex-col text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight">
+                        <h2>
+                            Organize, Manage & Segment All
+                        </h2>
+                        <h2>
+                            Your Leads in One Place
                         </h2>
                     </div>
 
@@ -105,7 +108,7 @@ export default function Section9() {
                 </motion.div>
 
                 {/* Column 2: CRM Lead List Dashboard Mockup */}
-                <motion.div 
+                <motion.div
                     className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +131,7 @@ export default function Section9() {
                                 transition={{ duration: 0.4, delay: 0.3 + index * 0.08 }}
                             >
                                 <span className="text-slate-400 font-extrabold text-[10px] uppercase tracking-wider mb-1 text-left">{data.title}</span>
-                                <h3 className="font-black text-slate-800 text-lg sm:text-xl leading-none">{data.no}</h3>
+                                <h3 className="font-black text-slate-800 text-lg sm:text-xl leading-none text-center">{data.no}</h3>
                             </motion.div>
                         ))}
                     </div>
@@ -144,13 +147,13 @@ export default function Section9() {
 
                             {/* Filter */}
                             <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-extrabold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
-                                <Filter size={14} className="text-slate-400" />
+                                <Filter size={14} className="text-black" />
                                 <span>Filter</span>
                             </button>
 
                             {/* Tag */}
                             <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-extrabold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
-                                <Tag size={14} className="text-slate-400" />
+                                <Tag size={14} className="text-black" />
                                 <span>Tag</span>
                             </button>
 
@@ -172,7 +175,7 @@ export default function Section9() {
                     </div>
 
                     {/* CRM Table */}
-                    <motion.div 
+                    <motion.div
                         className="w-full overflow-x-auto border border-gray-200 rounded-2xl bg-white shadow-sm"
                         initial={{ opacity: 0, scale: 0.98 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -266,21 +269,21 @@ export default function Section9() {
 
                                             {/* Stage Badge */}
                                             <td className="px-5 py-4 whitespace-nowrap text-left">
-                                                <span className={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-extrabold border ${stageBadgeClass}`}>
+                                                <span className={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs border ${stageBadgeClass}`}>
                                                     {lead.stage}
                                                 </span>
                                             </td>
 
                                             {/* Tags Badge */}
                                             <td className="px-5 py-4 whitespace-nowrap text-left">
-                                                <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-extrabold border ${tagBadgeClass}`}>
+                                                <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[11px] border ${tagBadgeClass}`}>
                                                     {lead.tags}
                                                 </span>
                                             </td>
 
                                             {/* Added On */}
                                             <td className="px-5 py-4 whitespace-nowrap text-left">
-                                                <span className="text-xs font-bold text-slate-400">
+                                                <span className="text-xs text-slate-400">
                                                     {lead.added}
                                                 </span>
                                             </td>

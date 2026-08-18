@@ -68,7 +68,7 @@ export default function SplitFeatureSection({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-lg text-gray-500/70 leading-relaxed max-w-[600px] text-left"
+                className="text-lg text-black/60 leading-relaxed max-w-[600px] text-left"
             >
                 {description}
             </motion.p>
@@ -86,10 +86,10 @@ export default function SplitFeatureSection({
                         key={index}
                         className="flex flex-row items-center gap-x-3 py-1"
                     >
-                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#EAFCEB] flex items-center justify-center">
-                            <Check size={12} className="stroke-[#71EB34] stroke-[3]" />
+                        <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center">
+                            <Check size={18} className="stroke-[#71EB34] stroke-[3]" />
                         </div>
-                        <span className="text-base text-gray-700 font-medium">{data}</span>
+                        <span className="text-base text-black/80 font-bold">{data}</span>
                     </motion.div>
                 ))}
             </motion.div>

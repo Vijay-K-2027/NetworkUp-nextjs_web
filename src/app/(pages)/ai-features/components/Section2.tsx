@@ -21,7 +21,7 @@ export default function Section2() {
                         Intelligence Layer
                     </span>
 
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-tight w-full text-left">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black tracking-tight leading-tight w-full text-left">
                         Find prospects actually worth contacting
                     </h2>
 
@@ -41,8 +41,8 @@ export default function Section2() {
                         </div>
 
                         <div className="flex flex-row items-center gap-x-4 w-full p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-                            <div className="w-12 h-12 rounded-xl bg-rose-50 flex items-center justify-center shrink-0">
-                                <Radar size={22} className="text-rose-600" />
+                            <div className="w-12 h-12 rounded-xl bg-[#E7ACCF] flex items-center justify-center shrink-0">
+                                <Radar size={22} className="text-black/70" />
                             </div>
                             <div className="flex flex-col items-start text-left">
                                 <h3 className="font-extrabold text-gray-900 text-sm">Buying Signal Detection</h3>
@@ -54,14 +54,14 @@ export default function Section2() {
 
                 {/* Right Section */}
                 <motion.div
-                    className="w-full lg:max-w-[48%] bg-white border border-gray-200/80 p-6 sm:p-10 rounded-[32px] sm:rounded-[40px] flex flex-col gap-4 shadow-xl"
+                    className="w-full lg:max-w-[48%] bg-gray-600/20 border border-gray-200/80 p-4 sm:p-6 rounded-[32px] sm:rounded-[40px] flex flex-col gap-4 shadow-xl"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                     {/* Card 1 - Sarah Chen */}
-                    <div className="flex flex-row items-center justify-between p-4 bg-[#fafcf5] rounded-2xl border border-gray-100 w-full gap-4 hover:scale-[1.01] transition-transform duration-300">
+                    <div className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl border border-gray-100 w-full gap-4 hover:scale-[1.01] transition-transform duration-300">
                         <div className="flex items-center gap-x-3.5">
                             <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border border-gray-150">
                                 <Image
@@ -89,7 +89,7 @@ export default function Section2() {
                     </div>
 
                     {/* Card 2 - Marcus Thorne */}
-                    <div className="flex flex-row items-center justify-between p-4 bg-[#fafcf5] rounded-2xl border border-gray-100 w-full gap-4 hover:scale-[1.01] transition-transform duration-300">
+                    <div className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl border border-gray-100 w-full gap-4 hover:scale-[1.01] transition-transform duration-300">
                         <div className="flex items-center gap-x-3.5">
                             <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border border-gray-150">
                                 <Image

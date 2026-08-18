@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import { NotebookPen, Rocket, Search } from "lucide-react"
 import SplitFeatureSection from "../SplitFeatureSection"
+import Image from "next/image"
 
 const section3Data = [
     "Easy-to-use interface",
@@ -21,9 +22,13 @@ export default function Part2() {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col items-center justify-center gap-y-2"
             >
-                <div className="flex items-center justify-center p-4 rounded-xl shadow-md bg-gray-50/50">
-                    <Search size={20} />
-                </div>
+                <Image
+                    src="/solution/Search.png"
+                    alt="Find Leads"
+                    width={50}
+                    height={50}
+                    className="rounded-lg object-cover"
+                />
                 <h1 className="text-xs font-bold text-black">Find Leads</h1>
             </motion.div>
 
@@ -42,9 +47,13 @@ export default function Part2() {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col items-center justify-center gap-y-2"
             >
-                <div className="flex items-center justify-center p-4 rounded-xl shadow-md bg-gray-50/50">
-                    <NotebookPen size={20} />
-                </div>
+                <Image
+                    src="/solution/Notes.png"
+                    alt="Add to List"
+                    width={50}
+                    height={50}
+                    className="rounded-lg object-cover"
+                />
                 <h1 className="text-xs font-bold text-black">Add to List</h1>
             </motion.div>
 
@@ -63,9 +72,13 @@ export default function Part2() {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col items-center justify-center gap-y-2"
             >
-                <div className="flex items-center justify-center p-4 rounded-xl shadow-md bg-gray-50/50">
-                    <Rocket size={20} />
-                </div>
+                <Image
+                    src="/solution/Rocket.png"
+                    alt="Send Outreach"
+                    width={50}
+                    height={50}
+                    className="rounded-lg object-cover"
+                />
                 <h1 className="text-xs font-bold text-black">Send Outreach</h1>
             </motion.div>
         </div>

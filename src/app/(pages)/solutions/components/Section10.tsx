@@ -56,7 +56,7 @@ export default function Section10() {
                 </motion.div>
 
                 {/* Column 2: Safety & Compliance Stack Mockup */}
-                <motion.div 
+                <motion.div
                     className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function Section10() {
                     {/* Safety Stack List */}
                     <div className="flex flex-col gap-4.5 w-full text-left">
                         {/* Card 1: Connection Requests */}
-                        <motion.div 
+                        <motion.div
                             className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4"
                             initial={{ opacity: 0, y: 12 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -88,18 +88,14 @@ export default function Section10() {
                             </div>
 
                             <div className="flex flex-row items-center gap-12 sm:gap-32 shrink-0">
-                                <div className="flex flex-col items-end leading-tight">
-                                    <span className="font-black text-slate-800 text-xs sm:text-base">100</span>
-                                    <span className="text-[10px] sm:text-xs text-slate-400 font-bold mt-0.5">Per Week</span>
-                                </div>
-                                <div className="w-6 h-6 rounded-full bg-[#71EB34] text-white flex items-center justify-center text-[10px] font-black shadow-sm shrink-0">
+                                <div className="w-8 h-8 rounded-full bg-[#71EB34] text-white flex items-center justify-center text-[10px] font-black shadow-sm shrink-0">
                                     ✓
                                 </div>
                             </div>
                         </motion.div>
 
                         {/* Card 2: Actions Per Day */}
-                        <motion.div 
+                        <motion.div
                             className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4"
                             initial={{ opacity: 0, y: 12 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -117,18 +113,14 @@ export default function Section10() {
                             </div>
 
                             <div className="flex flex-row items-center gap-12 sm:gap-32 shrink-0">
-                                <div className="flex flex-col items-end leading-tight">
-                                    <span className="font-black text-slate-800 text-xs sm:text-base">50</span>
-                                    <span className="text-[10px] sm:text-xs text-slate-400 font-bold mt-0.5">Per Day</span>
-                                </div>
-                                <div className="w-6 h-6 rounded-full bg-[#71EB34] text-white flex items-center justify-center text-[10px] font-black shadow-sm shrink-0">
+                                <div className="w-8 h-8 rounded-full bg-[#71EB34] text-white flex items-center justify-center text-[10px] font-black shadow-sm shrink-0">
                                     ✓
                                 </div>
                             </div>
                         </motion.div>
 
                         {/* Card 3: Proxy Location */}
-                        <motion.div 
+                        <motion.div
                             className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4"
                             initial={{ opacity: 0, y: 12 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +143,7 @@ export default function Section10() {
                         </motion.div>
 
                         {/* Card 4: Status */}
-                        <motion.div 
+                        <motion.div
                             className="flex flex-row items-center justify-between p-4 bg-white rounded-2xl shadow-sm hover:scale-[1.01] transition-transform duration-300 w-full gap-4"
                             initial={{ opacity: 0, y: 12 }}
                             whileInView={{ opacity: 1, y: 0 }}

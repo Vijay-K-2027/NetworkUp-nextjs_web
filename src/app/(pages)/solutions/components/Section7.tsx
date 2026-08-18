@@ -60,7 +60,7 @@ export default function Section7() {
                         Find High-Quality Leads, Faster Than Ever
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-gray-550 leading-relaxed">
+                    <p className="text-lg sm:text-xl text-left text-black/60 leading-relaxed">
                         Extract targeted leads from LinkedIn, Sales Navigator, company pages, groups, events and more. Advanced filters help you find the right prospects in seconds.
                     </p>
 
@@ -77,7 +77,7 @@ export default function Section7() {
                 </motion.div>
 
                 {/* Column 2: Lead Extractor Mockup Widget */}
-                <motion.div 
+                <motion.div
                     className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/50 rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 gap-y-6 shrink-0 shadow-sm"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -103,8 +103,8 @@ export default function Section7() {
                                 const IconComponent = object.icon;
                                 const isJobTitle = object.title === "Job Title";
                                 return (
-                                    <motion.div 
-                                        key={index} 
+                                    <motion.div
+                                        key={index}
                                         className="flex flex-row items-center justify-between px-4 py-3 bg-white border border-gray-155 rounded-2xl shadow-sm w-full gap-2 hover:scale-[1.01] transition-transform duration-300"
                                         initial={{ opacity: 0, y: 10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
@@ -136,7 +136,7 @@ export default function Section7() {
                         </div>
 
                         {/* Right Side: Extraction Results List Card Mockup */}
-                        <motion.div 
+                        <motion.div
                             className="relative flex flex-col gap-3.5 bg-white border border-gray-155 rounded-[28px] p-5 shadow-md w-full sm:w-[38%] min-h-[250px] overflow-hidden justify-center shrink-0"
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -163,7 +163,7 @@ export default function Section7() {
                             ))}
 
                             {/* Floating Magnifying Glass Overlay */}
-                            <motion.div 
+                            <motion.div
                                 className="absolute top-[28%] right-[10%] w-24 h-24 select-none pointer-events-none z-30"
                                 initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
                                 whileInView={{ opacity: 0.9, scale: 1, rotate: 0 }}

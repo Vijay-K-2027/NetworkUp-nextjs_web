@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Check, Zap, RotateCw, Copy } from "lucide-react";
+import { Check, Zap, Copy, RefreshCcw } from "lucide-react";
 
 const features = [
     "AI Message Generator: Generate personalized messages that get replies.",
@@ -39,7 +39,7 @@ export default function Section8() {
                         Write Better Messages. Reply Smarter. Close Faster.
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-gray-550 leading-relaxed">
+                    <p className="text-lg sm:text-xl text-left text-black/60 leading-relaxed">
                         AI-powered content assistant helps you create personalized, relevant and high-converting messages in seconds.
                     </p>
 
@@ -56,7 +56,7 @@ export default function Section8() {
                 </motion.div>
 
                 {/* Column 2: Content Assistant Mockup Widget */}
-                <motion.div 
+                <motion.div
                     className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export default function Section8() {
 
                     <div className="flex flex-col sm:flex-row items-stretch justify-between gap-6 w-full">
                         {/* Left Side: Parameters Form */}
-                        <motion.div 
+                        <motion.div
                             className="flex flex-col gap-5 w-full sm:w-[48%] shrink-0 text-left"
                             initial={{ opacity: 0, x: -15 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -97,7 +97,7 @@ export default function Section8() {
 
                             <div className="flex flex-col items-start gap-y-2">
                                 <span className="text-xs sm:text-[13px] text-slate-800 font-bold">What would you like to say?</span>
-                                <div className="w-full bg-white border border-gray-200 rounded-2xl p-4 text-xs sm:text-[13px] text-slate-700 font-semibold leading-relaxed shadow-sm">
+                                <div className="w-full bg-white border border-gray-200 rounded-2xl p-4 text-xs sm:text-[13px] text-slate-700 leading-relaxed shadow-sm">
                                     Introduce my product for LinkedIn automation to help with outreach and lead generation.
                                 </div>
                             </div>
@@ -109,7 +109,7 @@ export default function Section8() {
                         </motion.div>
 
                         {/* Right Side: Generated AI Draft Output Mockup */}
-                        <motion.div 
+                        <motion.div
                             className="flex flex-col gap-4 bg-white border border-gray-200 rounded-[24px] p-6 shadow-sm w-full sm:w-[48%] min-h-[300px] shrink-0 justify-between text-left"
                             initial={{ opacity: 0, x: 15 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -119,7 +119,7 @@ export default function Section8() {
                             <div className="flex flex-col items-start w-full">
                                 <span className="text-xs sm:text-[13px] text-[#15803d] font-bold uppercase tracking-wider mb-3">AI Generated Message</span>
 
-                                <div className="text-xs sm:text-[13px] text-slate-700 leading-relaxed font-semibold pr-1">
+                                <div className="text-xs sm:text-[13px] text-slate-700 leading-relaxed pr-1">
                                     <p className="mb-4">Hi Liam,</p>
                                     <p className="mb-4">I came across your work at DevFlow and really liked how your team is scaling growth. We help SaaS teams automate LinkedIn outreach in a safe and personalized way to generate more conversations and qualified leads consistently.</p>
                                     <p className="mb-4">Would love to connect and see if it makes sense for your team.</p>
@@ -130,7 +130,7 @@ export default function Section8() {
 
                             <div className="flex flex-row items-center justify-end gap-x-4 pt-3 border-t border-gray-100 w-full">
                                 <button className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-700 transition-colors font-semibold cursor-pointer">
-                                    <RotateCw size={12} />
+                                    <RefreshCcw size={12} />
                                     <span>Regenerate</span>
                                 </button>
                                 <button

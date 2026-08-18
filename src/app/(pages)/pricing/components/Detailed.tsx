@@ -145,7 +145,7 @@ export default function Detailed() {
     let currentTopicGroup: string | null = null;
 
     return (
-        <section className="bg-[#f5f5dc]/30 py-20 px-4 sm:px-6 lg:px-[100px]">
+        <section className="bg-[#f5f5dc]/40 py-20 px-4 sm:px-6 lg:px-[100px]">
             <div className="w-full">
 
                 {/* Header Section */}
@@ -177,7 +177,7 @@ export default function Detailed() {
                             </div>
                             <div className="col-span-2 flex flex-col items-center justify-center py-6 px-4 gap-1 text-center">
                                 <span className="font-extrabold text-sm sm:text-base">Starter</span>
-                                <span className="text-[11px] sm:text-xs text-gray-400 font-semibold">$21/ mo</span>
+                                <span className="text-[11px] sm:text-xs text-black font-semibold">$21/ mo</span>
                             </div>
                             <div className="col-span-2 flex flex-col items-center justify-center py-6 px-4 gap-1 text-center bg-[#71EB34]/10 relative">
                                 <span className="font-extrabold text-sm sm:text-base text-black">Growth</span>
@@ -185,7 +185,7 @@ export default function Detailed() {
                             </div>
                             <div className="col-span-2 flex flex-col items-center justify-center py-6 px-4 gap-1 text-center">
                                 <span className="font-extrabold text-sm sm:text-base">Enterprise</span>
-                                <span className="text-[11px] sm:text-xs text-gray-400 font-semibold">$129/ mo</span>
+                                <span className="text-[11px] sm:text-xs text-black font-semibold">$129/ mo</span>
                             </div>
                         </div>
 
@@ -223,7 +223,7 @@ export default function Detailed() {
                                     >
 
                                         {/* Feature Name */}
-                                        <div className="col-span-6 flex items-center justify-start py-4 px-8 pl-8 lg:pl-25 text-left text-xs sm:text-sm font-semibold text-gray-700">
+                                        <div className="col-span-6 flex items-center justify-start py-4 px-8 pl-8 lg:pl-25 text-left text-xs sm:text-sm text-gray-700">
                                             {detail.feature}
                                         </div>
 
@@ -233,7 +233,7 @@ export default function Detailed() {
                                         </div>
 
                                         {/* Growth Col (Highlighted) */}
-                                        <div className="col-span-2 flex items-center justify-center py-4 px-4 text-center bg-[#71EB34]/10 font-extrabold text-black">
+                                        <div className="col-span-2 flex items-center justify-center py-4 px-4 text-center bg-[#71EB34]/10 text-black">
                                             {renderCell(detail.growth, detail.topic, true)}
                                         </div>
 

@@ -41,7 +41,7 @@ export default function Section3() {
                                 className="flex flex-row items-center gap-x-3 py-1"
                             >
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                                    <CircleCheck size={25} className="stroke-[#356221]/60 fill-[#356221]/30 stroke-[1]" />
+                                    <CircleCheck size={25} className="stroke-[#356221]/60 fill-[#71EB34]/30 stroke-[1]" />
                                 </div>
                                 <span className="text-base text-gray-700 font-medium">{data}</span>
                             </div>

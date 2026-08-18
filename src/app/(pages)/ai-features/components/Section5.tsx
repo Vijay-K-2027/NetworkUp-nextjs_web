@@ -10,7 +10,7 @@ export default function Section5() {
                 <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-12 lg:gap-16 w-full">
 
                     {/* Left Column: Information */}
-                    <motion.div 
+                    <motion.div
                         className="flex flex-col items-start justify-center w-full lg:max-w-[48%] gap-y-5"
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -27,15 +27,15 @@ export default function Section5() {
                             Stop digging through spreadsheets. Our AI surfaces the exact data points you need to make decisions.
                         </p>
                         <div className="inline-flex flex-wrap w-full max-w-[450px] gap-x-2 gap-y-3 py-3 text-xs sm:text-sm font-semibold text-gray-700">
-                            <span className="px-4 py-2 rounded-full border border-gray-200 bg-white shadow-sm">Vertical Benchmarking</span>
-                            <span className="px-4 py-2 rounded-full border border-gray-200 bg-white shadow-sm">Reply Sentiment Analysis</span>
-                            <span className="px-4 py-2 rounded-full border border-gray-200 bg-white shadow-sm">A/B Testing Reports</span>
-                            <span className="px-4 py-2 rounded-full border border-gray-200 bg-white shadow-sm">ROI Tracking</span>
+                            <span className="px-4 py-2 rounded-full border border-gray-200 bg-white shadow-sm hover:translate-y-[-1px] transition-all ease-in-out duration-200 cursor-pointer">Vertical Benchmarking</span>
+                            <span className="px-4 py-2 rounded-full border border-gray-200 bg-white shadow-sm hover:translate-y-[-1px] transition-all ease-in-out duration-200 cursor-pointer">Reply Sentiment Analysis</span>
+                            <span className="px-4 py-2 rounded-full border border-gray-200 bg-white shadow-sm hover:translate-y-[-1px] transition-all ease-in-out duration-200 cursor-pointer">A/B Testing Reports</span>
+                            <span className="px-4 py-2 rounded-full border border-gray-200 bg-white shadow-sm hover:translate-y-[-1px] transition-all ease-in-out duration-200 cursor-pointer">ROI Tracking</span>
                         </div>
                     </motion.div>
 
                     {/* Right Column: Interactive Card */}
-                    <motion.div 
+                    <motion.div
                         className="flex flex-col items-start justify-center gap-y-7 p-6 sm:p-10 shadow-xl rounded-[28px] sm:rounded-[36px] border-4 border-gray-200/60 bg-white w-full lg:max-w-[48%]"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}

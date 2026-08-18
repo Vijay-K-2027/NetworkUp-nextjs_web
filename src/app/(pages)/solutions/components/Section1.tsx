@@ -1,27 +1,27 @@
 "use client"
 import { motion } from "framer-motion"
-import { ChartColumnBigIcon, Inbox, Puzzle, Search } from "lucide-react"
+import { ChartColumnBigIcon, Inbox, UserSearch, Wand2 } from "lucide-react"
 
 const section1Data = [
     {
-        icon: Search,
+        icon: UserSearch,
         title: "Smart Prospecting",
-        description: "Find high-intent leads using advanced filters, keywords, company insights, and more."
-    },
-    {
-        icon: Puzzle,
-        title: "Campaign Builder",
-        description: "Create personalized multi-step sequences with delays, conditions, and dynamic variables."
+        description: "AI filters that identify high-intent leads based on real-time professional signals."
     },
     {
         icon: Inbox,
         title: "Unified Inbox",
-        description: "Manage all LinkedIn conversations in one place with notes, labels, and team collaboration."
+        description: "Manage every LinkedIn conversation across multiple accounts in one central view."
+    },
+    {
+        icon: Wand2,
+        title: "Campaign Builder",
+        description: "Drag-and-drop workflow sequences with intelligent branching logic and delays."
     },
     {
         icon: ChartColumnBigIcon,
-        title: "Analytics & Reports",
-        description: "Track performance, reply rates, acceptance rates, and meetings with powerful dashboards."
+        title: "Campaign Analytics",
+        description: "Deep-dive metrics on conversion rates, engagement, and team performance."
     }
 ]
 
@@ -79,7 +79,7 @@ export default function Section1() {
                                     <data.icon size={20} className="stroke-[#71EB34]" />
                                 </div>
                                 <h3 className="text-lg text-black font-bold text-left">{data.title}</h3>
-                                <p className="text-sm text-gray-500/80 text-left leading-relaxed">{data.description}</p>
+                                <p className="text-sm text-gray-500/80 text-left leading-relaxed w-[200px]">{data.description}</p>
                             </motion.div>
                         ))}
                     </motion.div>

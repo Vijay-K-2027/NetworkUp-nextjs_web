@@ -3,7 +3,9 @@ import Navbar from "@/app/homepage/components/Navbar";
 import CTABanner from "@/app/homepage/components/CTABanner";
 import Footer from "@/app/homepage/components/Footer";
 import Section1 from "./components/1-Section";
-
+import Section2 from "./components/2-Section";
+import Section3 from "./components/3-Section";
+import Section5 from "./components/5-Section";
 
 export const metadata: Metadata = {
     title: "About Us | NetworkUp.io",
@@ -47,6 +49,9 @@ export default function OverviewPage() {
         <>
             <Navbar />
             <Section1 />
+            <Section2 />
+            <Section3 />
+            <Section5 />
             <CTABanner />
             <Footer />
         </>
