@@ -13,11 +13,36 @@ import Document from "./components/Documentation";
 
 export const metadata: Metadata = {
     title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
-    description: "Automate your LinkedIn networking with precision. Reach the right decision-makers, find high-quality leads, and convert conversations into opportunities at scale using advanced AI.",
+    description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
+    keywords: ["linkedin outreach automation", "smart prospecting tool", "linkedin campaign builder", "unified inbox linkedin", "residential static proxy safety", "human-in-the-loop validation", "sales intelligence platform", "recruiter sourcing tool", "linkedin compliance safety limits"],
+    alternates: {
+        canonical: "https://www.networkup.io"
+    },
     openGraph: {
         title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
-        description: "Automate your LinkedIn networking with precision. Reach the right decision-makers, find high-quality leads, and convert conversations into opportunities at scale using advanced AI.",
-        url: "https://networkup.io/",
+        description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
+        url: "https://www.networkup.io",
+        siteName: "NetworkUp",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://www.networkup.io/og-home.jpg",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp AI Platform"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
+        description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
+        images: ["https://www.networkup.io/og-home.jpg"]
+    },
+    robots: {
+        index: true,
+        follow: true
     }
 };
 

@@ -28,6 +28,30 @@ const documents = [
     {
         "question": "Is my LinkedIn account safe while using NetworkUp.io?",
         "answer": "Yes. NetworkUp.io is designed with account safety in mind. It uses smart automation limits, activity controls, and intelligent scheduling to create natural outreach patterns while helping protect your LinkedIn account.",
+    },
+    {
+        "question": "Can I control how many actions my account performs?",
+        "answer": "Yes. You can set campaign activity limits and control how frequently actions are performed."
+    },
+    {
+        "question": "Does NetworkUp automatically send unlimited connection requests?",
+        "answer": "No. Activity is limited and paced to avoid excessive automated actions."
+    },
+    {
+        "question": "What happens when an account reaches its activity limit?",
+        "answer": "Automation can pause for that account, preventing additional campiagn and automation settings. You remain in control of what is enabled."
+    },
+    {
+        "question": "Does NetworkUp perform actions on my LinkedIn account without my control?",
+        "answer": "NetworkUp only performs actions configured through your campaigns and automation settings. You remain in control of wht is enabled."
+    },
+    {
+        "question": "Can NetworkUp guarantee that my LinkedIn account will never be restricted?",
+        "answer": "No platform should guarantee that. LinkedIn controls its own policies and enforcement. NetworkUp is designed to encourage responsible, controlled automation and reduce unnecessary risk."
+    },
+    {
+        "question": "Does NetworkUp use proxy or location management?",
+        "answer": "If proxy management is part of your implementation, NetworkUp can use stable session routing to maintain consistent account access. This should be configured carefully and transparently."
     }
 ];
 

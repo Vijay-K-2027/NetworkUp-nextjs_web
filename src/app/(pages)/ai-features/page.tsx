@@ -12,22 +12,21 @@ import Section9 from "./components/Section9";
 export const metadata: Metadata = {
     title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
     // description should be 120 - 150 words
-    description: "Explore NetworkUp's smart prospecting, AI campaign builder, automated follow-ups, and real-time optimization features.",
-    keywords: ["ai linkedin tool", "automated prospecting", "ai message builder", "smart follow-ups", "linkedin automation features"],
+    description: "Discover the AI outreach engine driving NetworkUp.io. Our AI Features page guides you through our Smart Prospecting tool with intent lead scoring to isolate high-value prospects. Leverage the AI Message Writer to draft personalized connection invites and InMails in seconds. Monitor campaign performance via our Analytics telemetry suite, featuring A/B testing reports, reply sentiment analysis, and vertical benchmarking. Maximize safety with the AI Health Center's real-time risk detection and safety limits compliance alerts. Experience our 24/7 Context-aware AI Help Desk for custom outreach optimizations, alongside Inbound Automation triggers that automatically sequence replies and manage DMs on autopilot to securely scale relationships without triggering robotic spam warning filters.",
+    keywords: ["ai linkedin tool", "automated prospecting", "ai message builder", "smart follow-ups", "linkedin automation features", "linkedin lead scoring", "reply sentiment analysis", "inbound automation", "ab testing linkedin", "outreach risk detection"],
     alternates: {
-        canonical: "https://networkup.io/ai-features"
+        canonical: "https://www.networkup.io/ai-features"
     },
     openGraph: {
         title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
-        description: "Explore NetworkUp's smart prospecting, AI campaign builder, automated follow-ups, and real-time optimization features.",
-        url: "https://networkup.io/ai-features",
-        siteName: "NetworkUp.io",
+        description: "Discover the AI outreach engine driving NetworkUp.io. Our AI Features page guides you through our Smart Prospecting tool with intent lead scoring to isolate high-value prospects. Leverage the AI Message Writer to draft personalized connection invites and InMails in seconds. Monitor campaign performance via our Analytics telemetry suite, featuring A/B testing reports, reply sentiment analysis, and vertical benchmarking. Maximize safety with the AI Health Center's real-time risk detection and safety limits compliance alerts. Experience our 24/7 Context-aware AI Help Desk for custom outreach optimizations, alongside Inbound Automation triggers that automatically sequence replies and manage DMs on autopilot to securely scale relationships without triggering robotic spam warning filters.",
+        url: "https://www.networkup.io/ai-features",
+        siteName: "NetworkUp",
         locale: "en_US",
         type: "website",
-        // Make sure to paste image in public
         images: [
             {
-                url: "https://networkup.io/og-features.png",
+                url: "https://www.networkup.io/og-features.jpg",
                 width: 1200,
                 height: 630,
                 alt: "AI Features NetworkUp"
@@ -37,8 +36,8 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
-        description: "Explore NetworkUp's smart prospecting, AI campaign builder, automated follow-ups, and real-time optimization features.",
-        images: ["https://networkup.io/og-features.png"]
+        description: "Discover the AI outreach engine driving NetworkUp.io. Our AI Features page guides you through our Smart Prospecting tool with intent lead scoring to isolate high-value prospects. Leverage the AI Message Writer to draft personalized connection invites and InMails in seconds. Monitor campaign performance via our Analytics telemetry suite, featuring A/B testing reports, reply sentiment analysis, and vertical benchmarking. Maximize safety with the AI Health Center's real-time risk detection and safety limits compliance alerts. Experience our 24/7 Context-aware AI Help Desk for custom outreach optimizations, alongside Inbound Automation triggers that automatically sequence replies and manage DMs on autopilot to securely scale relationships without triggering robotic spam warning filters.",
+        images: ["https://www.networkup.io/og-features.jpg"]
     },
     robots: {
         index: true,
