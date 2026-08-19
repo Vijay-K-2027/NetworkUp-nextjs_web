@@ -14,25 +14,25 @@ const plans = [
             {
                 name: "Account Management",
                 subFeatures: [
-                    { text: "1 LinkedIn Account", enabled: true },
-                    { text: "1 Workspace", enabled: true },
-                    { text: "1 Active Campaign", enabled: true }
+                    { text: "1 LinkedIn Account" },
+                    { text: "1 Workspace" },
+                    { text: "1 Active Campaign" }
                 ]
             },
 
             {
                 name: "Outreach",
                 subFeatures: [
-                    { text: "AI Outreach Writer", enabled: true },
-                    { text: "Multi-step Campaign Builder", enabled: true },
-                    { text: "Prospect Discovery", enabled: true },
+                    { text: "AI Outreach Writer" },
+                    { text: "Multi-step Campaign Builder" },
+                    { text: "Prospect Discovery" },
                 ]
             },
 
             {
                 name: "Platform",
                 subFeatures: [
-                    { text: "Basic Analytics", enabled: true }
+                    { text: "Basic Analytics" }
                 ]
             }
         ],
@@ -48,27 +48,27 @@ const plans = [
             {
                 name: "Account Management",
                 subFeatures: [
-                    { text: "3 LinkedIn Accounts", enabled: true },
-                    { text: "Multi-workspace", enabled: true },
-                    { text: "Unlimited Campaigns", enabled: true },
+                    { text: "3 LinkedIn Accounts" },
+                    { text: "Multi-workspace" },
+                    { text: "Unlimited Campaigns" },
                 ]
             },
 
             {
                 name: "AI & Automation",
                 subFeatures: [
-                    { text: "AI Workspace", enabled: true },
-                    { text: "Advanced AI Personalization", enabled: true },
-                    { text: "Sequence Branching", enabled: true }
+                    { text: "AI Workspace" },
+                    { text: "Advanced AI Personalization" },
+                    { text: "Sequence Branching" }
                 ]
             },
 
             {
                 name: "Platform",
                 subFeatures: [
-                    { text: "Unified Inbox", enabled: true },
-                    { text: "Campaign Analytics", enabled: true },
-                    { text: "Integrations & API Access", enabled: true }
+                    { text: "Unified Inbox" },
+                    { text: "Campaign Analytics" },
+                    { text: "Integrations & API Access" }
                 ]
             }
         ],
@@ -84,26 +84,26 @@ const plans = [
             {
                 name: "Organization",
                 subFeatures: [
-                    { text: "Unlimited LinkedIn Accounts", enabled: true },
-                    { text: "Unlimited Workspaces", enabled: true },
+                    { text: "Unlimited LinkedIn Accounts" },
+                    { text: "Unlimited Workspaces" },
                 ]
             },
 
             {
                 name: "Enterprise AI",
                 subFeatures: [
-                    { text: "Custom AI Workflows", enabled: true },
-                    { text: "AI Health Monitoring", enabled: true },
-                    { text: "Custom Automation Logic", enabled: true }
+                    { text: "Custom AI Workflows" },
+                    { text: "AI Health Monitoring" },
+                    { text: "Custom Automation Logic" }
                 ]
             },
 
             {
                 name: "Security & Support",
                 subFeatures: [
-                    { text: "SSO / SAML Authentication", enabled: true },
-                    { text: "Audit Logs & Compliance", enabled: true },
-                    { text: "Dedicated Success Manager", enabled: true }
+                    { text: "SSO / SAML Authentication" },
+                    { text: "Audit Logs & Compliance" },
+                    { text: "Dedicated Success Manager" }
                 ]
             }
         ],
@@ -216,8 +216,7 @@ export default function Pricing() {
                                                 {feature.subFeatures.map((subFeature, sfIndex) => (
                                                     <li
                                                         key={sfIndex}
-                                                        className={`flex items-center gap-2 text-sm ${plan.popular ? "font-[450]" : "font-medium"} tracking-wide ${subFeature.enabled ? "text-black/80" : "text-zinc-300"
-                                                            }`}
+                                                        className={`flex items-center gap-2 text-sm ${plan.popular ? "font-[450]" : "font-medium"} tracking-wide`}
                                                     >
                                                         <span><Check stroke="black" size={12} /></span>
                                                         <span className="text-md text-black/80 tracking-wide">{subFeature.text}</span>

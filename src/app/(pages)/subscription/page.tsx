@@ -15,26 +15,27 @@ const plans = [
             {
                 name: "Account Management",
                 subFeatures: [
-                    { text: "1 LinkedIn Account", enabled: true },
-                    { text: "500 Messages / month", enabled: true },
-                    { text: "Daily activity reports", enabled: true }
+                    { text: "1 LinkedIn Account" },
+                    { text: "1 Workspace" },
+                    { text: "1 Active Campaign" }
                 ]
             },
 
             {
-                name: "Automation Intelligence",
+                name: "Outreach",
                 subFeatures: [
-                    { text: "Basic Personalization", enabled: true },
+                    { text: "AI Outreach Writer" },
+                    { text: "Multi-step Campaign Builder" },
+                    { text: "Prospect Discovery" },
                 ]
             },
 
             {
-                name: "Data & Integration",
+                name: "Platform",
                 subFeatures: [
-                    { text: "Basic Lead Database", enabled: true }
+                    { text: "Basic Analytics" }
                 ]
-            },
-
+            }
         ],
         buttonText: "Get Started",
         popular: false
@@ -48,29 +49,29 @@ const plans = [
             {
                 name: "Account Management",
                 subFeatures: [
-                    { text: "5 LinkedIn Accounts", enabled: true },
-                    { text: "Multi-workspace", enabled: true },
+                    { text: "3 LinkedIn Accounts" },
+                    { text: "Multi-workspace" },
+                    { text: "Unlimited Campaigns" },
                 ]
             },
 
             {
-                name: "Automation Intelligence",
+                name: "AI & Automation",
                 subFeatures: [
-                    { text: "Advanced AI Personalization", enabled: true },
-                    { text: "Sequence Branching", enabled: true },
-                    { text: "2-Variant A/B Testing", enabled: true }
+                    { text: "AI Workspace" },
+                    { text: "Advanced AI Personalization" },
+                    { text: "Sequence Branching" }
                 ]
             },
 
             {
-                name: "Data & Integration",
+                name: "Platform",
                 subFeatures: [
-                    { text: "Full CRM Sync", enabled: true },
-                    { text: "Read-only API", enabled: true },
-                    { text: "Extended Database", enabled: true }
+                    { text: "Unified Inbox" },
+                    { text: "Campaign Analytics" },
+                    { text: "Integrations & API Access" }
                 ]
-            },
-
+            }
         ],
         buttonText: "Start Free Trial",
         popular: true
@@ -82,30 +83,30 @@ const plans = [
         features: [
 
             {
-                name: "Account Management",
+                name: "Organization",
                 subFeatures: [
-                    { text: "Custom Org Limits", enabled: true },
-                    { text: "SSo / SAML Setup", enabled: true },
+                    { text: "Unlimited LinkedIn Accounts" },
+                    { text: "Unlimited Workspaces" },
                 ]
             },
 
             {
-                name: "Automation Intelligence",
+                name: "Enterprise AI",
                 subFeatures: [
-                    { text: "Custom Logic Engine", enabled: true },
-                    { text: "Regional Compliance", enabled: true },
-                    { text: "Priority Execution", enabled: true }
+                    { text: "Custom AI Workflows" },
+                    { text: "AI Health Monitoring" },
+                    { text: "Custom Automation Logic" }
                 ]
             },
 
             {
-                name: "Data & Integration",
+                name: "Security & Support",
                 subFeatures: [
-                    { text: "Custom Webhooks", enabled: true },
-                    { text: "On-prem Hosting Option", enabled: true },
-                    { text: "Audit Logging", enabled: true }
+                    { text: "SSO / SAML Authentication" },
+                    { text: "Audit Logs & Compliance" },
+                    { text: "Dedicated Success Manager" }
                 ]
-            },
+            }
         ],
         buttonText: "Get Started",
         popular: false
@@ -223,8 +224,7 @@ export default function Pricing() {
                                                 {feature.subFeatures.map((subFeature, sfIndex) => (
                                                     <li
                                                         key={sfIndex}
-                                                        className={`flex items-center gap-2 text-sm ${plan.popular ? "font-[450]" : "font-medium"} tracking-wide ${subFeature.enabled ? "text-black/80" : "text-zinc-300"
-                                                            }`}
+                                                        className={`flex items-center gap-2 text-sm ${plan.popular ? "font-[450]" : "font-medium"} tracking-wide`}
                                                     >
                                                         <span><Check stroke="#D8F9A8" size={12} /></span>
                                                         <span className="text-md text-[#D8F9A8]/70">{subFeature.text}</span>
