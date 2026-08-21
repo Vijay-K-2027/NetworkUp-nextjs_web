@@ -296,6 +296,7 @@ export default function PromptAssistant() {
                                                     alt={model.name}
                                                     height={40}
                                                     width={40}
+                                                    style={{ height: "auto" }}
                                                 />
                                             </div>
                                         </div>
@@ -408,6 +409,7 @@ export default function PromptAssistant() {
                                             alt={modalModelName}
                                             width={24}
                                             height={24}
+                                            style={{ height: "auto" }}
                                         />
                                     </div>
                                     <h3 className="text-base font-bold">Redirection Helper</h3>

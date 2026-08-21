@@ -132,6 +132,7 @@ export default function Pricing() {
                         alt="Logo"
                         width={70}
                         height={70}
+                        style={{ height: "auto" }}
                     />
                     <h2 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
                         Choose the plan that <span className="text-[#76e11b]">scales</span> with you

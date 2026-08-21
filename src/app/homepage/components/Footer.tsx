@@ -48,6 +48,7 @@ export default function Footer() {
                                     alt="NetworkUp Logo"
                                     width={32}
                                     height={32}
+                                    style={{ height: "auto" }}
                                 />
                                 <span className="text-xl font-bold text-[#6CB531] font-[family-name:var(--font-comfortaa)]">
                                     NetworkUp<span className="font-normal">.io</span>

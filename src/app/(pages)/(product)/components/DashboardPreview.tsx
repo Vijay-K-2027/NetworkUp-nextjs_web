@@ -100,6 +100,7 @@ export default function DashboardPreview() {
                       alt="Logo"
                       width={12}
                       height={12}
+                      style={{ height: "auto" }}
                     />
                   </div>
                   <span className="text-sm font-bold font-[family-name:var(--font-comfortaa)] tracking-tight text-[#6CB531] flex items-center">

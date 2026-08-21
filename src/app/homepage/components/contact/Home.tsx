@@ -181,7 +181,7 @@ export default function Home({ onClose }: HomeProps) {
         <>
             <header className="mx-auto h-[50px] w-[300px] rounded-t-2xl px-5 pt-3.5 flex flex-row items-center justify-between bg-[#02140b] shrink-0">
                 <div className="flex flex-row items-center gap-x-2">
-                    <Image src="/Logo.svg" alt="Logo" width={24} height={24} />
+                    <Image src="/Logo.svg" alt="Logo" width={24} height={24} style={{ height: "auto" }} />
                     <h3 className="text-sm text-[#00d400]/70 font-semibold">NetworkUp.io</h3>
                 </div>
                 <div className="flex flex-row items-center gap-x-2">
@@ -225,7 +225,7 @@ export default function Home({ onClose }: HomeProps) {
                                 <h3 className="text-gray-200/80 text-sm w-[150px] text-left">How can we help today?</h3>
                             </div>
                             <div className="ml-auto border-[2px] border-[#02140b] rounded-l-full overflow-hidden shrink-0">
-                                <Image src="/Ai-black.png" alt="AIPage" width={80} height={80} />
+                                <Image src="/Ai-black.png" alt="AIPage" width={80} height={80} style={{ height: "auto" }} />
                             </div>
                         </div>
 
