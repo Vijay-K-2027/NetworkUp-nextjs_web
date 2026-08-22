@@ -11,7 +11,6 @@ import Section9 from "./components/Section9";
 
 export const metadata: Metadata = {
     title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
-    // description should be 120 - 150 words
     description: "Discover the AI outreach engine driving NetworkUp.io. Our AI Features page guides you through our Smart Prospecting tool with intent lead scoring to isolate high-value prospects. Leverage the AI Message Writer to draft personalized connection invites and InMails in seconds. Monitor campaign performance via our Analytics telemetry suite, featuring A/B testing reports, reply sentiment analysis, and vertical benchmarking. Maximize safety with the AI Health Center's real-time risk detection and safety limits compliance alerts. Experience our 24/7 Context-aware AI Help Desk for custom outreach optimizations, alongside Inbound Automation triggers that automatically sequence replies and manage DMs on autopilot to securely scale relationships without triggering robotic spam warning filters.",
     keywords: ["ai linkedin tool", "automated prospecting", "ai message builder", "smart follow-ups", "linkedin automation features", "linkedin lead scoring", "reply sentiment analysis", "inbound automation", "ab testing linkedin", "outreach risk detection"],
     alternates: {

@@ -57,6 +57,6 @@ const documents = [
 
 export default function Document() {
     return (
-        <Documentation document={documents} />
+        <Documentation items={documents} />
     )
 }

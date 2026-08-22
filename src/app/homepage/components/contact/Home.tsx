@@ -233,7 +233,7 @@ export default function Home({ onClose }: HomeProps) {
                             <div className="bg-white rounded-xl p-3 flex flex-row items-center justify-between shadow-md">
                                 <div className="text-left">
                                     <h2 className="text-black text-[14px] font-bold">Ask a question</h2>
-                                    <h4 className="text-gray-400 text-[11px] w-[140px] leading-tight">AI Agent and our team are here to help</h4>
+                                    <h4 className="text-gray-400 text-[9px] w-[140px] leading-tight">AI Agent and our team are here to help</h4>
                                 </div>
                                 <div className="flex flex-row -space-x-1.5">
                                     <div className="w-6 h-6 rounded-full border-2 border-white overflow-hidden shrink-0">

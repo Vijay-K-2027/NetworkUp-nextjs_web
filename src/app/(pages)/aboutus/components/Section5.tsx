@@ -25,6 +25,6 @@ const section5Data = [
 
 export default function Section5() {
     return (
-        <Documentation document={section5Data} />
+        <Documentation items={section5Data} />
     )
 }

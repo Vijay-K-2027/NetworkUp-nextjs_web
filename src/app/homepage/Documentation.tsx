@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 export default function Documentation({
-    document,
+    items,
 }: {
-    document: Array<{ question: string; answer: string }>
+    items: Array<{ question: string; answer: string }>
 }) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -17,7 +17,24 @@ export default function Documentation({
 
     return (
         <section className="w-full bg-[#defad0]/20 py-12 md:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-            <div className="mx-auto max-w-4xl"> {/* Switched to max-w-4xl for comfortable reading lengths */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": items.map(doc => ({
+                            "@type": "Question",
+                            "name": doc.question,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": doc.answer.replace(/<[^>]*>/g, '') // Strip HTML tags for structured text schema
+                            }
+                        }))
+                    })
+                }}
+            />
+            <div className="mx-auto max-w-4xl">
 
                 {/* Header */}
                 <div className="flex flex-col items-center justify-center text-center">
@@ -46,7 +63,6 @@ export default function Documentation({
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        // Fixed hardcoded w-[800px] to max-w-2xl and converted text-md to valid text-base/text-lg
                         className="text-[#06402B]/80 tracking-normal text-base sm:text-lg md:text-xl font-normal my-4 max-w-5xl px-4 leading-relaxed"
                     >
                         Everything you need to know about the most advanced AI-powered LinkedIn acceleration platform
@@ -60,7 +76,7 @@ export default function Documentation({
                         transition={{ duration: 0.5, delayChildren: 0.3 }}
                         className="mt-10 w-full w-2xl md:w-3xl lg:w-4xl xl:w-5xl 2xl:w-7xl space-y-4 flex flex-col items-center justify-center "
                     >
-                        {document.map((doc, index) => {
+                        {items.map((doc, index) => {
                             const isOpen = openIndex === index;
                             return (
                                 <div
@@ -80,9 +96,9 @@ export default function Documentation({
                                             >
                                                 {isOpen ? '−' : '＋'}
                                             </button>
-                                            <div className="text-base sm:text-xl font-bold text-black text-left pr-4 ">
+                                            <h3 className="text-base sm:text-xl font-bold text-black text-left pr-4 ">
                                                 {doc.question}
-                                            </div>
+                                            </h3>
                                         </div>
                                         <button
                                             type="button"
@@ -93,13 +109,18 @@ export default function Documentation({
                                         </button>
                                     </div>
 
-                                    {/* Content Area */}
-                                    {isOpen && (
-                                        <div
-                                            className="pl-10 w-full text-left text-md md:text-lg text-black/70 pt-3 border-t border-gray-300/50 mt-3 leading-relaxed tracking-[0.04rem]"
+                                    {/* Content Area - Kept in the DOM for Generative Engine search crawlers (GEO), hidden via CSS height transitions */}
+                                    <div
+                                        className={`w-full overflow-hidden transition-all duration-300 ease-in-out ${isOpen
+                                            ? "max-h-[1000px] opacity-100 mt-3 pt-3 border-t border-gray-300/50"
+                                            : "max-h-0 opacity-0 pointer-events-none"
+                                            }`}
+                                    >
+                                        <p
+                                            className="pl-10 w-full text-left text-md md:text-lg text-black/70 leading-relaxed tracking-[0.04rem]"
                                             dangerouslySetInnerHTML={{ __html: doc.answer }}
                                         />
-                                    )}
+                                    </div>
                                 </div>
                             );
                         })}

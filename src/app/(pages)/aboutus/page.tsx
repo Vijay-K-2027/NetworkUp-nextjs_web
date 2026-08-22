@@ -8,20 +8,16 @@ import Section5 from "./components/Section5";
 
 export const metadata: Metadata = {
     title: "About Us | NetworkUp.io",
-    // make a description of 120 - 150 words
-    description: "Learn the mission and story behind NetworkUp.io . Founded in 2019, WhiterApps has been pioneering digital productivity, launching workflow SaaS tools in 2021 and introducing NetworkUp.io in 2026. Today, we empower over 10,000 users across 120+ countries to scale LinkedIn relationships, with over 1 million connection requests initiated with 99.9% uptime. Guided by our core values—Customer First, Trust & Safety, constant Innovation, and Simplicity—we are building a compliant, secure, and human-centric LinkedIn outreach experience. Discover how our team prioritizes ethical growth and account protection to deliver advanced prospecting features that help professionals, recruiters, and sales agencies connect with decision-makers safely and efficiently.",
-    keywords: ["networkup story", "about networkup", "linkedin automation team", "ai outreach mission", "professional networking history"],
+    description: "Learn the mission behind NetworkUp.io by WhiterApps. Founded in 2019, WhiterApps has built productivity tools focused on workflow efficiency, introducing NetworkUp.io to redefine professional outreach through an uncompromising focus on account safety, privacy, and human-centric prospecting. Engineered with dedicated residential proxy pinning, intelligent rate-limit throttling, and localized browser execution, NetworkUp mirrors natural user behavior to protect profile integrity. Discover how our team prioritizes account security and reliable automation to help recruiters, sales teams, and agencies connect with decision-makers safely and efficiently.", keywords: ["networkup story", "about networkup", "linkedin automation team", "ai outreach mission", "professional networking history"],
     alternates: {
         canonical: "https://www.networkup.io/aboutus"
     },
     openGraph: {
         title: "About Us | NetworkUp.io",
-        description: "Learn the mission and story behind NetworkUp.io . Founded in 2019, WhiterApps has been pioneering digital productivity, launching workflow SaaS tools in 2021 and introducing NetworkUp.io in 2026. Today, we empower over 10,000 users across 120+ countries to scale LinkedIn relationships, with over 1 million connection requests initiated with 99.9% uptime. Guided by our core values—Customer First, Trust & Safety, constant Innovation, and Simplicity—we are building a compliant, secure, and human-centric LinkedIn outreach experience. Discover how our team prioritizes ethical growth and account protection to deliver advanced prospecting features that help professionals, recruiters, and sales agencies connect with decision-makers safely and efficiently.",
-        url: "https://www.networkup.io/aboutus",
+        description: "Learn the mission behind NetworkUp.io by WhiterApps. Founded in 2019, WhiterApps has built productivity tools focused on workflow efficiency, introducing NetworkUp.io to redefine professional outreach through an uncompromising focus on account safety, privacy, and human-centric prospecting. Engineered with dedicated residential proxy pinning, intelligent rate-limit throttling, and localized browser execution, NetworkUp mirrors natural user behavior to protect profile integrity. Discover how our team prioritizes account security and reliable automation to help recruiters, sales teams, and agencies connect with decision-makers safely and efficiently.", url: "https://www.networkup.io/aboutus",
         siteName: "NetworkUp",
         locale: "en_US",
         type: "website",
-        // Make sure to put images in public
         images: [
             {
                 url: "https://www.networkup.io/og-about.jpg",

@@ -25,7 +25,7 @@ const Pricingdocuments: Array<{ question: string; answer: string }> = [
 
 export default function Documents() {
     return (
-        <Documentation document={Pricingdocuments} />
+        <Documentation items={Pricingdocuments} />
     )
 }
 

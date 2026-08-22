@@ -247,8 +247,8 @@ export default function Message({ onClose }: MessageProps) {
     };
 
     const suggestions = [
-        "How do I connect a new LinkedIn account?",
-        "How do I create a new campaign?",
+        "Something isn't working (error, crash, feature broken)",
+        "How does the product work?",
         "How does billing and subscription work?"
     ];
 
@@ -284,7 +284,7 @@ export default function Message({ onClose }: MessageProps) {
                                 <img
                                     src="/AI-black.png"
                                     alt="AI Assistant"
-                                    className="w-6 h-6 rounded-l-full object-cover shrink-0 select-none"
+                                    className="w-8 h-8 m-2 rounded-l-full object-cover shrink-0 select-none"
                                 />
                             )}
                             <div className="flex flex-col gap-1">
@@ -306,7 +306,7 @@ export default function Message({ onClose }: MessageProps) {
                             <img
                                 src="/AI-black.png"
                                 alt="AI Assistant"
-                                className="w-6 h-6 rounded-l-full object-cover shrink-0 select-none"
+                                className="w-8 h-8 m-2 rounded-l-full object-cover shrink-0 select-none"
                             />
                             <div className="p-3 bg-white/10 border border-white/5 text-white rounded-2xl rounded-tl-none text-[11px] leading-relaxed">
                                 <span className="animate-pulse">Typing...</span>
@@ -317,14 +317,14 @@ export default function Message({ onClose }: MessageProps) {
                     {/* Suggestions Section */}
                     {messages.filter(m => m.sender === "user").length === 0 && !isTyping && (
                         <div className="flex flex-col gap-2 mt-4">
-                            <span className="text-gray-400 text-[10px] text-left font-bold uppercase tracking-wider pl-1 mb-1">
+                            <span className="text-[#71EB34] text-[10px] text-left font-bold uppercase tracking-wider pl-1 mb-1">
                                 + You can also ask
                             </span>
                             {suggestions.map((text, idx) => (
                                 <button
                                     key={idx}
                                     onClick={() => handleSend(text)}
-                                    className="w-full text-left bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5 text-[10px] font-semibold text-white hover:bg-white/10 hover:border-[#71EB34]/20 transition-all flex items-center justify-between cursor-pointer"
+                                    className="w-full text-left bg-[#71EB34]/5 border border-[#71EB34]/60 rounded-xl px-3.5 py-2.5 text-[12px] text-white hover:bg-white/10 hover:border-[#71EB34]/20 transition-all flex items-center justify-between cursor-pointer"
                                 >
                                     <span>{text}</span>
                                     <ChevronRight size={12} className="text-[#71EB34] shrink-0 ml-1.5" />
@@ -343,7 +343,7 @@ export default function Message({ onClose }: MessageProps) {
                             e.preventDefault();
                             handleSend(inputValue);
                         }}
-                        className="flex items-center bg-white/5 border border-white/10 rounded-2xl px-3 py-1.5 gap-2"
+                        className="flex items-center bg-white/5 border border-white/10 rounded-full px-3 py-1.5 gap-2"
                     >
                         <input
                             type="file"
@@ -372,7 +372,7 @@ export default function Message({ onClose }: MessageProps) {
                             disabled={socketStatus !== "connected"}
                             className="bg-[#71EB34] text-black h-7 w-7 flex items-center justify-center rounded-xl transition-transform hover:scale-105 shrink-0 cursor-pointer disabled:opacity-50 disabled:hover:scale-100"
                         >
-                            <Send size={12} />
+                            <Send size={12} fill="black" />
                         </button>
                     </form>
                 </div>
