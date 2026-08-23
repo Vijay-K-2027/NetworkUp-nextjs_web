@@ -21,7 +21,7 @@ export default function Section8() {
 
     return (
         <section className="bg-[#fafcf7] w-full py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 w-full">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 w-full">
 
                 {/* Column 1: Left Title & Description */}
                 <motion.div
@@ -31,15 +31,15 @@ export default function Section8() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest bg-[#EAFCF7] p-1.5 rounded w-fit">
+                    <span className="uppercase text-xs text-[#71EB34] font-bold bg-[#EAFCEB] p-1.5 rounded w-fit">
                         Content Assistant
                     </span>
 
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-left text-gray-900 leading-tight tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-left text-gray-900 leading-tight tracking-tight">
                         Write Better Messages. Reply Smarter. Close Faster.
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-black/60 leading-relaxed">
+                    <p className="text-md sm:text-lg text-left text-black/60 leading-relaxed">
                         AI-powered content assistant helps you create personalized, relevant and high-converting messages in seconds.
                     </p>
 
@@ -49,7 +49,7 @@ export default function Section8() {
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                                     <Check size={25} className="stroke-[#71EB34] stroke-[1]" />
                                 </div>
-                                <span className="text-sm text-gray-700 font-bold text-left">{data}</span>
+                                <span className="text-md text-gray-700 font-bold text-left">{data}</span>
                             </div>
                         ))}
                     </div>
@@ -57,19 +57,19 @@ export default function Section8() {
 
                 {/* Column 2: Content Assistant Mockup Widget */}
                 <motion.div
-                    className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
+                    className="flex flex-col items-start justify-start w-full lg:max-w-[50%] border border-gray-200 bg-gray-50 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <span className="text-xl font-extrabold text-slate-800 text-left">
+                    <span className="text-xl font-bold text-slate-800 text-left">
                         Content Assistant
                     </span>
 
                     {/* Tabs */}
                     <div className="flex flex-row items-center gap-x-6 border-b border-gray-100 w-full pb-1">
-                        <span className="text-sm text-slate-900 font-extrabold pb-2 border-b-2 border-[#71EB34] cursor-pointer select-none">Message</span>
+                        <span className="text-sm text-slate-900 font-bold pb-2 border-b-2 border-[#71EB34] cursor-pointer select-none">Message</span>
                         <span className="text-sm text-slate-400 font-bold pb-2 hover:text-slate-600 transition-colors cursor-pointer select-none">Follow-up</span>
                         <span className="text-sm text-slate-400 font-bold pb-2 hover:text-slate-600 transition-colors cursor-pointer select-none">Icebreaker</span>
                         <span className="text-sm text-slate-400 font-bold pb-2 hover:text-slate-600 transition-colors cursor-pointer select-none">InMail</span>
@@ -85,7 +85,7 @@ export default function Section8() {
                             transition={{ duration: 0.5, delay: 0.35 }}
                         >
                             <div className="flex flex-col items-start gap-y-2">
-                                <span className="text-[11px] text-slate-400 font-extrabold uppercase tracking-wider">Lead Context</span>
+                                <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Lead Context</span>
                                 <div className="flex flex-col gap-2 p-5 border border-gray-200 rounded-2xl bg-white w-full shadow-sm text-left">
                                     <p className="text-xs sm:text-[13px] font-semibold text-slate-800 leading-relaxed"><span className="text-slate-500 font-medium">Name:</span> Liam Anderson</p>
                                     <p className="text-xs sm:text-[13px] font-semibold text-slate-800 leading-relaxed"><span className="text-slate-500 font-medium">Title:</span> Growth Manager</p>

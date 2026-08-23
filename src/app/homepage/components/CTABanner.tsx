@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function CTABanner() {
     return (
@@ -37,9 +38,9 @@ export default function CTABanner() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="mb-16 lg:mb-0" /* Prevents crashing into the widget when stacked on mobile screens */
                 >
-                    <a href="#" className="inline-flex items-center justify-center bg-[#76e11b] hover:bg-[#68c617] text-[#031d10] font-extrabold text-sm sm:text-base py-4 px-10 rounded-2xl shadow-[0_10px_25px_rgba(118,225,27,0.3)] hover:scale-[1.03] transition-all duration-200">
+                    <Link href="/subscription" className="inline-flex items-center justify-center bg-[#76e11b] hover:bg-[#68c617] text-[#031d10] font-extrabold text-sm sm:text-base py-4 px-10 rounded-2xl shadow-[0_10px_25px_rgba(118,225,27,0.3)] hover:scale-[1.03] transition-all duration-200">
                         Start 14-Day Free Trial
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
         </section>

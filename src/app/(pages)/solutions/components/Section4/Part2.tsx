@@ -14,7 +14,7 @@ const section3Data = [
 
 export default function Part2() {
     const visualContent = (
-        <div className="w-full flex flex-row items-center justify-center py-6 bg-white rounded-2xl border border-gray-100 shadow-xl">
+        <div className="w-full flex flex-row items-center justify-center py-10 bg-gray-50 rounded-2xl">
             <motion.div
                 initial={{ opacity: 0, x: 25 }}
                 whileInView={{ opacity: 1, x: 0 }}

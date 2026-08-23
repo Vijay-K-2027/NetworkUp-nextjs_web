@@ -18,26 +18,26 @@ export default function Section10() {
 
                 {/* Column 1: Left Title & Description */}
                 <motion.div
-                    className="flex flex-col lg:max-w-[45%] items-start gap-y-6 w-full text-left"
+                    className="flex flex-col lg:max-w-[50%] items-start gap-y-6 w-full text-left"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest bg-[#EAFCF7] p-1.5 rounded w-fit">
+                    <span className="uppercase text-xs text-[#71EB34] font-bold bg-[#EAFCEB] p-1.5 rounded-md w-fit">
                         Safety & Compliance
                     </span>
 
                     {/* Title */}
                     <div className="flex flex-col gap-1.5">
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
                             Your Account Safety Is Our Priority
                         </h2>
                     </div>
 
                     {/* Description */}
                     <div>
-                        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        <p className="text-md sm:text-lg text-black/60 leading-relaxed">
                             NetworkUp.io is built to follow LinkedIn rules strictly. We use smart limits, secure proxies, and real human-like behavior to keep your account safe, warm, and compliant — always.
                         </p>
                     </div>
@@ -49,7 +49,7 @@ export default function Section10() {
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                                     <Check size={25} className="stroke-[#71EB34] stroke-[1]" />
                                 </div>
-                                <span className="text-sm text-gray-700 font-bold text-left">{data}</span>
+                                <span className="text-md text-gray-700 font-bold text-left">{data}</span>
                             </div>
                         ))}
                     </div>
@@ -57,13 +57,13 @@ export default function Section10() {
 
                 {/* Column 2: Safety & Compliance Stack Mockup */}
                 <motion.div
-                    className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
+                    className="flex flex-col items-start justify-start w-full lg:max-w-[50%] border border-gray-200 bg-gray-50 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <span className="text-xl font-extrabold text-slate-800 text-left">
+                    <span className="text-xl font-bold text-slate-800 text-left">
                         Account Safety Overview
                     </span>
 
@@ -82,8 +82,8 @@ export default function Section10() {
                                     <Users size={20} className="stroke-[2.2]" />
                                 </div>
                                 <div className="flex flex-col min-w-0 leading-tight">
-                                    <span className="font-extrabold text-xs sm:text-base text-slate-800">Connection Requests</span>
-                                    <span className="text-xs text-slate-400 font-bold mt-0.5">Weekly Limit</span>
+                                    <span className="font-bold text-xs sm:text-base text-slate-800">Connection Requests</span>
+                                    <span className="text-xs text-slate-400 mt-0.5">Weekly Limit</span>
                                 </div>
                             </div>
 
@@ -107,8 +107,8 @@ export default function Section10() {
                                     <Zap size={20} className="stroke-[2.2] fill-[#356221]" />
                                 </div>
                                 <div className="flex flex-col min-w-0 leading-tight">
-                                    <span className="font-extrabold text-xs sm:text-base text-slate-800">Actions Per Day</span>
-                                    <span className="text-xs text-slate-400 font-bold mt-0.5">Daily Limit</span>
+                                    <span className="font-bold text-xs sm:text-base text-slate-800">Actions Per Day</span>
+                                    <span className="text-xs text-slate-400 mt-0.5">Daily Limit</span>
                                 </div>
                             </div>
 
@@ -132,12 +132,12 @@ export default function Section10() {
                                     <MapPin size={20} className="stroke-[2.2]" />
                                 </div>
                                 <div className="flex flex-col min-w-0 leading-tight">
-                                    <span className="font-extrabold text-xs sm:text-base text-slate-800">Proxy Location</span>
-                                    <span className="text-xs text-slate-400 font-bold mt-0.5">United States (New York)</span>
+                                    <span className="font-bold text-xs sm:text-base text-slate-800">Proxy Location</span>
+                                    <span className="text-xs text-slate-400 mt-0.5">United States (New York)</span>
                                 </div>
                             </div>
 
-                            <div className="px-3 py-1 bg-[#eefce6] text-[#356221] border border-[#defad0] rounded-lg text-xs font-bold shrink-0">
+                            <div className="px-3 py-1 bg-[#eefce6]/60 text-[#356221] border border-[#defad0] rounded-lg text-xs font-bold shrink-0">
                                 Static IP
                             </div>
                         </motion.div>
@@ -155,12 +155,12 @@ export default function Section10() {
                                     <ShieldCheck size={20} className="stroke-[2.2]" />
                                 </div>
                                 <div className="flex flex-col min-w-0 leading-tight">
-                                    <span className="font-extrabold text-xs sm:text-base text-slate-800">Status</span>
-                                    <span className="text-xs text-slate-400 font-bold mt-0.5">All Systems Safe</span>
+                                    <span className="font-bold text-xs sm:text-base text-slate-800">Status</span>
+                                    <span className="text-xs text-slate-400 mt-0.5">All Systems Safe</span>
                                 </div>
                             </div>
 
-                            <div className="px-3 py-1 bg-[#eefce6] text-[#356221] border border-[#defad0] rounded-lg text-xs font-bold shrink-0">
+                            <div className="px-3 py-1 bg-[#eefce6]/60 text-[#356221] border border-[#defad0] rounded-lg text-xs font-bold shrink-0">
                                 Protected
                             </div>
                         </motion.div>

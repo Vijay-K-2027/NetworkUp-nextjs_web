@@ -63,22 +63,22 @@ const features = [
 export default function Section9() {
     return (
         <section className="bg-[#fafcf7] w-full py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-9xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 w-full">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16 w-full">
 
                 {/* Column 1: Left Title & Description */}
                 <motion.div
-                    className="flex flex-col lg:max-w-[45%] items-start gap-y-6 w-full text-left"
+                    className="flex flex-col lg:max-w-[50%] items-start gap-y-6 w-full text-left"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest bg-[#EAFCF7] p-1.5 rounded w-fit">
+                    <span className="uppercase text-xs text-[#71EB34] font-bold bg-[#EAFCEB] p-1.5 rounded w-fit">
                         Lead Database
                     </span>
 
                     {/* Title */}
-                    <div className="flex flex-col text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight">
+                    <div className="flex flex-col text-3xl sm:text-4xl font-bold text-gray-900 leading-tight tracking-tight">
                         <h2>
                             Organize, Manage & Segment All
                         </h2>
@@ -89,8 +89,11 @@ export default function Section9() {
 
                     {/* Description */}
                     <div>
-                        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                            Store, organize and manage all your leads with powerful filters, tags, notes and stages. Keep your pipeline clean, updated and actionable.
+                        <p className="text-md sm:text-lg text-black/60 leading-relaxed">
+                            Store, organize and manage all your leads with powerful filters, tags, notes.
+                        </p>
+                        <p className="text-md sm:text-lg text-black/60 leading-relaxed">
+                            and stages. Keep your pipeline clean, updated and actionable.
                         </p>
                     </div>
 
@@ -101,7 +104,7 @@ export default function Section9() {
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                                     <Check size={25} className="stroke-[#71EB34] stroke-[1]" />
                                 </div>
-                                <span className="text-sm text-gray-600 font-bold text-left">{data}</span>
+                                <span className="text-md text-gray-600 font-bold text-left">{data}</span>
                             </div>
                         ))}
                     </div>
@@ -109,7 +112,7 @@ export default function Section9() {
 
                 {/* Column 2: CRM Lead List Dashboard Mockup */}
                 <motion.div
-                    className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
+                    className="flex flex-col items-start justify-start w-full lg:max-w-[50%] border border-gray-200 bg-[#f8fafc]/30 rounded-[32px] sm:rounded-[40px] p-6 sm:p-8 gap-y-6 shadow-sm shrink-0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -124,13 +127,13 @@ export default function Section9() {
                         {dataMap.map((data, index) => (
                             <motion.div
                                 key={index}
-                                className="flex flex-col items-start bg-gray-100/50 rounded-2xl p-4.5 shadow-sm hover:-translate-y-0.5 transition-all duration-300 hover:shadow-md w-full"
+                                className="flex flex-col items-center bg-gray-100/50 rounded-2xl p-4.5 shadow-sm hover:-translate-y-0.5 transition-all duration-300 hover:shadow-md w-full"
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: 0.3 + index * 0.08 }}
                             >
-                                <span className="text-slate-400 font-extrabold text-[10px] uppercase tracking-wider mb-1 text-left">{data.title}</span>
+                                <span className="text-slate-400 font-bold text-[10px] mb-1 tracking-wide text-left">{data.title}</span>
                                 <h3 className="font-black text-slate-800 text-lg sm:text-xl leading-none text-center">{data.no}</h3>
                             </motion.div>
                         ))}
@@ -140,25 +143,25 @@ export default function Section9() {
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 w-full mt-2">
                         <div className="flex flex-wrap items-center gap-2.5">
                             {/* All Leads Dropdown */}
-                            <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-extrabold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
+                            <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
                                 <span>All Leads</span>
                                 <ChevronDown size={14} className="text-slate-400" />
                             </button>
 
                             {/* Filter */}
-                            <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-extrabold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
+                            <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
                                 <Filter size={14} className="text-black" />
                                 <span>Filter</span>
                             </button>
 
                             {/* Tag */}
-                            <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-extrabold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
+                            <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
                                 <Tag size={14} className="text-black" />
                                 <span>Tag</span>
                             </button>
 
                             {/* Options button */}
-                            <button className="w-9 h-9 bg-white border border-gray-200 rounded-xl text-slate-500 font-extrabold flex items-center justify-center cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none text-sm">
+                            <button className="w-9 h-9 bg-white border border-gray-200 rounded-xl text-slate-500 font-bold flex items-center justify-center cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none text-sm">
                                 ...
                             </button>
                         </div>
@@ -186,28 +189,28 @@ export default function Section9() {
                             {/* Table Header */}
                             <thead className="bg-slate-50/80 border-b border-gray-250/70">
                                 <tr>
-                                    <th className="px-5 py-3 text-left text-[10px] font-extrabold text-slate-400 tracking-wider uppercase cursor-pointer select-none hover:text-slate-600 transition-colors">
+                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase cursor-pointer select-none hover:text-slate-600 transition-colors">
                                         <span className="flex items-center gap-1">
                                             Name
                                             <ChevronDown size={12} className="text-slate-400" />
                                         </span>
                                     </th>
-                                    <th className="px-5 py-3 text-left text-[10px] font-extrabold text-slate-400 tracking-wider uppercase">
+                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase">
                                         Title
                                     </th>
-                                    <th className="px-5 py-3 text-left text-[10px] font-extrabold text-slate-400 tracking-wider uppercase">
+                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase">
                                         Company
                                     </th>
-                                    <th className="px-5 py-3 text-left text-[10px] font-extrabold text-slate-400 tracking-wider uppercase cursor-pointer select-none hover:text-slate-600 transition-colors">
+                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase cursor-pointer select-none hover:text-slate-600 transition-colors">
                                         <span className="flex items-center gap-1">
                                             Stage
                                             <ChevronDown size={12} className="text-slate-400" />
                                         </span>
                                     </th>
-                                    <th className="px-5 py-3 text-left text-[10px] font-extrabold text-slate-400 tracking-wider uppercase">
+                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase">
                                         Tags
                                     </th>
-                                    <th className="px-5 py-3 text-left text-[10px] font-extrabold text-slate-400 tracking-wider uppercase cursor-pointer select-none hover:text-slate-600 transition-colors">
+                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase cursor-pointer select-none hover:text-slate-600 transition-colors">
                                         <span className="flex items-center gap-1">
                                             Added On
                                             <ChevronDown size={12} className="text-slate-400" />

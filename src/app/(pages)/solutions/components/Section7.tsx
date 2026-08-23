@@ -52,15 +52,15 @@ export default function Section7() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest bg-[#EAFCF7] p-1.5 rounded w-fit">
+                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest bg-[#EAFCEB] p-1.5 rounded w-fit">
                         Lead Extractor
                     </span>
 
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-left text-gray-900 leading-tight tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-left text-gray-900 leading-tight tracking-tight">
                         Find High-Quality Leads, Faster Than Ever
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-black/60 leading-relaxed">
+                    <p className="text-md sm:text-lg text-left text-black/60">
                         Extract targeted leads from LinkedIn, Sales Navigator, company pages, groups, events and more. Advanced filters help you find the right prospects in seconds.
                     </p>
 
@@ -70,7 +70,7 @@ export default function Section7() {
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                                     <Check size={25} className="stroke-[#71EB34] stroke-[1]" />
                                 </div>
-                                <span className="text-sm text-gray-700 font-bold text-left">{data}</span>
+                                <span className="text-md text-gray-700 font-bold text-left">{data}</span>
                             </div>
                         ))}
                     </div>
@@ -78,22 +78,22 @@ export default function Section7() {
 
                 {/* Column 2: Lead Extractor Mockup Widget */}
                 <motion.div
-                    className="flex flex-col items-start justify-start w-full lg:max-w-[54%] border border-gray-200 bg-[#f8fafc]/50 rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 gap-y-6 shrink-0 shadow-sm"
+                    className="flex flex-col items-start justify-start w-full lg:max-w-[50%] border border-gray-200 bg-[#f8fafc]/50 rounded-[28px] sm:rounded-[36px] p-8 sm:p-12 gap-y-6 shrink-0 shadow-sm"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <span className="text-xl font-extrabold text-slate-800 text-left">
+                    <span className="text-xl font-bold text-slate-800 text-left">
                         Lead Extractor
                     </span>
 
                     {/* Tabs */}
                     <div className="flex flex-row items-center gap-x-6 border-b border-gray-100 w-full pb-1">
-                        <span className="text-sm text-slate-900 font-extrabold pb-2 border-b-2 border-[#71EB34] cursor-pointer select-none">Search</span>
-                        <span className="text-sm text-slate-400 font-extrabold pb-2 hover:text-slate-600 transition-colors cursor-pointer select-none">Company</span>
-                        <span className="text-sm text-slate-400 font-extrabold pb-2 hover:text-slate-600 transition-colors cursor-pointer select-none">Events</span>
-                        <span className="text-sm text-slate-400 font-extrabold pb-2 hover:text-slate-600 transition-colors cursor-pointer select-none">Posts</span>
+                        <span className="text-sm text-slate-900 font-bold pb-2 border-b-2 border-[#71EB34] cursor-pointer select-none">Search</span>
+                        <span className="text-sm text-slate-400 font-bold pb-2 hover:text-slate-600 transition-colors cursor-pointer select-none">Company</span>
+                        <span className="text-sm text-slate-400 font-bold pb-2 hover:text-slate-600 transition-colors cursor-pointer select-none">Events</span>
+                        <span className="text-sm text-slate-400 font-bold pb-2 hover:text-slate-600 transition-colors cursor-pointer select-none">Posts</span>
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-stretch justify-between gap-6 w-full">
@@ -115,16 +115,16 @@ export default function Section7() {
                                             <IconComponent size={18} className="text-slate-600 shrink-0" />
                                             <div className="flex flex-row items-center text-left flex-1 min-w-0">
                                                 {isJobTitle ? (
-                                                    <div className="flex flex-col text-[11px] text-slate-400 font-extrabold leading-none pr-3 w-[75px] sm:w-[85px] shrink-0">
+                                                    <div className="flex flex-col text-[11px] text-slate-400 font-bold leading-none pr-3 w-[75px] sm:w-[85px] shrink-0">
                                                         <span>Job</span>
                                                         <span>Title</span>
                                                     </div>
                                                 ) : (
-                                                    <span className="text-[11px] text-slate-400 font-extrabold pr-3 w-[75px] sm:w-[85px] shrink-0 text-left leading-none">
+                                                    <span className="text-[11px] text-slate-400 font-bold pr-3 w-[75px] sm:w-[85px] shrink-0 text-left leading-none">
                                                         {object.title}
                                                     </span>
                                                 )}
-                                                <span className="text-xs sm:text-[13px] font-extrabold text-slate-800 truncate flex-1 min-w-0">
+                                                <span className="text-xs sm:text-[13px] font-bold text-slate-800 truncate flex-1 min-w-0">
                                                     {object.description}
                                                 </span>
                                             </div>

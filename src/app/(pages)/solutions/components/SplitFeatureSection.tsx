@@ -44,13 +44,13 @@ export default function SplitFeatureSection({
     containerClass = "max-w-7xl mx-auto w-full"
 }: SplitFeatureSectionProps) {
     const textColumn = (
-        <div className="flex flex-1 flex-col items-start gap-y-4 ml-5">
+        <div className="flex flex-1 flex-col items-start gap-y-4">
             <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
-                className="text-xs font-extrabold tracking-wider px-3 py-1 bg-[#EAFCEB] text-[#71EB34] uppercase rounded-full"
+                className="text-xs font-bold tracking-wide px-3 py-1 bg-[#EAFCEB] text-[#71EB34] uppercase rounded-md"
             >
                 {badge}
             </motion.span>
@@ -59,7 +59,7 @@ export default function SplitFeatureSection({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-2xl sm:text-3xl lg:text-4xl text-black font-extrabold tracking-tight leading-tight mt-1"
+                className="text-xl sm:text-2xl lg:text-3xl text-black font-extrabold tracking-tighter mt-1"
             >
                 {title}
             </motion.h2>
@@ -68,7 +68,7 @@ export default function SplitFeatureSection({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-lg text-black/60 leading-relaxed max-w-[600px] text-left"
+                className="w-full text-lg text-black/50 max-w-[600px] text-left"
             >
                 {description}
             </motion.p>
@@ -102,7 +102,7 @@ export default function SplitFeatureSection({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="flex-1 w-full max-w-2xl bg-gray-50/50 p-6 sm:p-8 rounded-3xl border border-gray-100 flex items-center justify-center shadow-inner"
+            className="flex-1 w-full max-w-2xl rounded-xl border border-gray-100 flex items-center justify-center shadow-inner"
         >
             {visualContent}
         </motion.div>
@@ -111,7 +111,7 @@ export default function SplitFeatureSection({
     return (
         <section className={sectionBg}>
             <div className={containerClass}>
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+                <div className="flex flex-col lg:flex-row items-center justify-center rounded-md gap-12 lg:gap-16">
                     {visualPosition === "left" ? (
                         <>
                             {visualColumn}

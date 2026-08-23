@@ -56,8 +56,8 @@ export default function Navbar() {
                             height={38}
                             style={{ height: "auto" }}
                         />
-                        <span className="text-xl lg:text-2xl font-bold font-[family-name:var(--font-comfortaa)] text-[#6CB531]">
-                            NetworkUp<span className="text-zinc-500 font-base font-normal tracking-tight">.io</span>
+                        <span className="text-xl lg:text-2xl font-bold font-[family-name:var(--font-comfortaa)] scale-105 text-[#6CB531]">
+                            NetworkUp<span className="text-[#6CB531] font-base font-normal tracking-tight">.io</span>
                         </span>
                     </Link>
 
@@ -69,8 +69,8 @@ export default function Navbar() {
                                     <li key={index} className="h-20 flex items-center">
                                         <Link
                                             href={item.path}
-                                            className={`text-[10px] lg:text-[15px] font-semibold transition-all duration-200 pb-2 ${isActive
-                                                ? "text-[#356221] border-b-2 border-[#76e11b]" : "text-gray-600 hover:text-[#76e11b] border-b-2 border-transparent"
+                                            className={`text-[10px] lg:text-[15px] font-bold transition-all duration-200 pb-0.5 ${isActive
+                                                ? "text-[#76e11b] border-b-2 border-black/60" : "text-gray-600 hover:text-[#356221] border-b-2 border-transparent"
                                                 }`}
                                         >
                                             {item.label}
@@ -86,17 +86,17 @@ export default function Navbar() {
                 <div className="flex items-center gap-2 sm:gap-4">
                     <Link
                         href="/login"
-                        className="hidden sm:inline-flex rounded-xl bg-lime-400 text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
+                        className="hidden sm:inline-flex rounded-xl bg-white text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-bold text-black border border-black shadow transition hover:bg-lime-500 hover:border-none"
                     >
-                        Log In
+                        Login
                     </Link>
 
-                    <button
+                    <Link
                         className="hidden sm:inline-flex rounded-xl bg-lime-400 text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
-                        onClick={() => router.push("/subscription")}
+                        href="/subscription"
                     >
-                        Get Started
-                    </button>
+                        Start Free Trial
+                    </Link>
 
                     <button
                         className="flex flex-row gap-1.5 sm:gap-2 items-center rounded-xl px-3 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-black shadow transition hover:bg-gray-100 cursor-pointer"
@@ -105,7 +105,7 @@ export default function Navbar() {
                         }}
                     >
                         <Bot size={18} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2} />
-                        <span className="inline xs:hidden sm:hidden">Ask AI</span>
+                        <span className="hidden xs:hidden sm:inline">Ask AI</span>
                     </button>
 
                     <button

@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 import { motion } from "framer-motion"
-import { Check, Mail, CornerUpLeft, UserCheck } from "lucide-react"
+import { Check, Mail, CornerUpLeft, UserCheck, UsersIcon } from "lucide-react"
 import SplitFeatureSection from "./SplitFeatureSection"
 
 const section2Data = [
@@ -46,10 +46,10 @@ export default function Section2() {
                     </div>
                     <div className="flex flex-col min-w-0 leading-tight">
                         <span className="font-extrabold text-xs sm:text-sm text-slate-800">Sarah Johnson</span>
-                        <span className="text-[11px] sm:text-xs text-slate-400 font-semibold mt-0.5">Sales Director at HealthTech Inc.</span>
+                        <span className="text-[11px] sm:text-xs text-slate-400 mt-0.5">Sales Director at HealthTech Inc.</span>
                         <div className="flex items-center gap-1.5 mt-2">
                             <Check size={14} className="text-[#71EB34] stroke-[3.5]" />
-                            <span className="text-[11px] sm:text-xs font-black text-[#71EB34]">Connection Request Sent</span>
+                            <span className="text-[11px] sm:text-xs font-bold text-[#71EB34]">Connection Request Sent</span>
                         </div>
                     </div>
                 </div>
@@ -60,8 +60,8 @@ export default function Section2() {
                         <span className="text-[11px] font-bold text-slate-400">Day 1</span>
                         <span className="text-[9px] text-slate-400 font-semibold mt-0.5">May 7, 2025</span>
                     </div>
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-xl text-[10px] sm:text-xs font-extrabold border bg-[#eefce6] text-[#356221] border-[#defad0] mt-0.5 sm:mt-2.5 shadow-sm select-none gap-1.5">
-                        <UserCheck size={14} className="stroke-[2.5]" />
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] sm:text-xs font-bold border bg-[#EAFCEB] text-[#356221] border-[#defad0] select-none gap-1.5">
+                        <UsersIcon size={14} className="fill-[#356221] stroke-[2.5]" />
                         Accepted
                     </span>
                 </div>
@@ -86,10 +86,10 @@ export default function Section2() {
                     </div>
                     <div className="flex flex-col min-w-0 leading-tight">
                         <span className="font-extrabold text-xs sm:text-sm text-slate-800">Michael Chen</span>
-                        <span className="text-[11px] sm:text-xs text-slate-400 font-semibold mt-0.5">VP of Sales at FinTech Labs</span>
+                        <span className="text-[11px] sm:text-xs text-slate-400 mt-0.5">VP of Sales at FinTech Labs</span>
                         <div className="flex items-center gap-1.5 mt-2">
                             <Mail size={14} className="text-[#3b82f6] stroke-[2.5]" />
-                            <span className="text-[11px] sm:text-xs font-black text-[#3b82f6]">Follow-up Message Scheduled</span>
+                            <span className="text-[11px] sm:text-xs font-black tracking-tight text-[#3b82f6]">Follow-up Message Scheduled</span>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@ export default function Section2() {
                         <span className="text-[11px] font-bold text-slate-400">Day 2</span>
                         <span className="text-[9px] text-slate-400 font-semibold mt-0.5">May 8, 2025</span>
                     </div>
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-xl text-[10px] sm:text-xs font-extrabold border bg-[#eaf4fe] text-[#2b6cb0] border-[#d2e4f6] mt-0.5 sm:mt-2.5 shadow-sm select-none gap-1.5">
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] sm:text-xs font-extrabold border bg-[#eaf4fe] text-[#2b6cb0] border-[#d2e4f6] select-none gap-1.5">
                         <CornerUpLeft size={14} className="stroke-[2.5]" />
                         Replied
                     </span>

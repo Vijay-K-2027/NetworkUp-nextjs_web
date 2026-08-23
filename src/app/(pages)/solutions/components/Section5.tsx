@@ -107,7 +107,7 @@ export default function Section5() {
             visualContent={visualContent}
             visualPosition="right"
             sectionBg="bg-[#fafcf7] py-10"
-            containerClass="w-full max-w-7xl bg-white rounded-b-xl mx-auto -mt-10 py-10 lg:py-20 px-6 sm:px-10 border border-gray-100 "
+            containerClass="w-full max-w-7xl bg-gray-50 rounded-b-xl mx-auto -mt-10 py-10 lg:py-20 px-6 sm:px-10 border border-gray-100 "
         />
     )
 }

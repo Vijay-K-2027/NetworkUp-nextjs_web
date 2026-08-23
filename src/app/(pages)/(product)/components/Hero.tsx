@@ -13,7 +13,7 @@ export default function Hero() {
                 </div>
 
                 {/* Heading */}
-                <h1 className=" max-w-8xl text-4xl font-bold leading-tight tracking-tight text-gray-900 lg:text-7xl">
+                <h1 className=" max-w-8xl text-4xl font-bold leading-tight tracking-tight text-gray-900 lg:text-[65px]">
                     Build meaningful{" "}
                     <span className="text-lime-500">
                         connections.
@@ -22,7 +22,7 @@ export default function Hero() {
                 </h1>
 
                 {/* Description */}
-                <p className="mt-8 max-w-8xl text-xl leading-8 text-gray-600">
+                <p className="mt-8 max-w-9xl text-[21px] text-[#356221]">
                     Automate your LinkedIn networking with precision.
                     Reach the right decision-makers and convert
                     conversations into opportunities at scale.
@@ -38,10 +38,12 @@ export default function Hero() {
                         </div>
                     </Link>
 
-                    <button className="flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-bold text-gray-700 transition hover:bg-gray-100">
+                    <Link href="/sunscription"
+                        className="flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-bold text-gray-700 transition hover:bg-gray-100"
+                    >
                         <PlayCircle size={18} strokeWidth={3} />
                         Watch Demo
-                    </button>
+                    </Link>
 
                 </div>
 
@@ -67,11 +69,7 @@ export default function Hero() {
                     </div>
 
                     <p className="text-sm text-black/60">
-                        Trusted by{" "}
-                        <span className="font-semibold">
-                            25,000+
-                        </span>{" "}
-                        top revenue teams
+                        Trusted by 25,000+ top revenue teams
                     </p>
                 </div>
             </div>
