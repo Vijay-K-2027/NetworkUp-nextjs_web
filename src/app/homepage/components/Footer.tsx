@@ -13,7 +13,7 @@ const models = [
     { name: "Facebook", icon: "/facebook.svg" },
 ];
 
-const productLinks = ["Features", "Outreach", "Inbox", "Lead Finder", "Campaigns", "Roadmap"];
+const productLinks = ["Features", "Outreach", "Inbox", "Lead Finder", "Campaigns"];
 const solutionsLinks = ["For Sales Teams", "For Agencies", "For Recruiters", "For Startups", "For Marketing Teams"];
 const resourcesLinks = ["Blog", "Help Center", "Guides", "API Documentation", "Video Tutorials"];
 const compareLinks = ["Waalaxy", "Dripify", "Expandi", "Apollo.io", "Sales Navigator"];

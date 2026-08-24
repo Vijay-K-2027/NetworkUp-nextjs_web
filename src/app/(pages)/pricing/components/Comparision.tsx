@@ -91,7 +91,7 @@ export default function Comparision() {
         <section className="w-full bg-[#fafcf7] py-16 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-7xl">
                 {/* Header Section */}
-                <motion.div 
+                <motion.div
                     className="flex flex-col items-center justify-center gap-4 mb-14 text-center"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -101,16 +101,16 @@ export default function Comparision() {
                     <span className="uppercase text-lime-700/80 tracking-widest font-extrabold text-xs">
                         alternatives
                     </span>
-                    <h2 className="text-gray-900 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-tight">
+                    <h2 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight max-w-7xl leading-tight">
                         How NetworkUp compares to other LinkedIn automation tools
                     </h2>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-2xl leading-relaxed">
+                    <p className="mt-3 text-gray-600 text-base sm:text-lg max-w-3xl leading-relaxed">
                         Most tools send messages from the cloud. NetworkUp is a local agent that finds, scores and reaches your buyers from your own machine.
                     </p>
                 </motion.div>
 
                 {/* Table Container */}
-                <motion.div 
+                <motion.div
                     className="w-full bg-[#0c1017] rounded-3xl border border-zinc-800/80 shadow-2xl p-6 overflow-x-auto scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-track-transparent"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -147,8 +147,8 @@ export default function Comparision() {
                             {comparisons.map((row, index) => {
                                 const isLast = index === comparisons.length - 1;
                                 return (
-                                    <motion.div 
-                                        key={index} 
+                                    <motion.div
+                                        key={index}
                                         className="flex flex-row items-center border-b border-zinc-850 last:border-0 hover:bg-white/[0.02] transition-colors"
                                         initial={{ opacity: 0, x: -10 }}
                                         whileInView={{ opacity: 1, x: 0 }}

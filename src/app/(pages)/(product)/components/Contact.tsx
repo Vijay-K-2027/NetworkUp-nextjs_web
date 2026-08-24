@@ -1,6 +1,5 @@
 import React from "react";
-import { ListChecks, Network, Zap, Sparkles, Clock, ShieldCheck, LucideUsers2, ArrowRight } from "lucide-react";
-import { CheckIcon } from "@/app/homepage/assets/icons";
+import { ListChecks, Network, Zap, Sparkles, Clock, ShieldCheck, LucideUsers2, ArrowRight, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -187,17 +186,17 @@ export default function Contact() {
                                 </Link>
                             </div>
 
-                            <ul className="space-y-3.5 border-t border-white/10 pt-6 mt-8">
+                            <ul className="space-y-3.5 pt-6 mt-8">
                                 <li className="flex items-center gap-2.5 text-xs sm:text-sm font-normal tracking-wide text-emerald-50 text-left">
-                                    <CheckIcon />
+                                    <CheckCircle2 size={20} className="stroke-[#71EB34]" />
                                     <span>GDPR & SOC2 Type II Complaint</span>
                                 </li>
                                 <li className="flex items-center gap-2.5 text-xs sm:text-sm font-normal tracking-wide text-emerald-50 text-left">
-                                    <CheckIcon />
+                                    <CheckCircle2 size={20} className="stroke-[#71EB34]" />
                                     <span>Dedicated Account Manager</span>
                                 </li>
                                 <li className="flex items-center gap-2.5 text-xs sm:text-sm font-normal tracking-wide text-emerald-50 text-left">
-                                    <CheckIcon />
+                                    <CheckCircle2 size={20} className="stroke-[#71EB34]" />
                                     <span>Custom CRM Integrations</span>
                                 </li>
                             </ul>

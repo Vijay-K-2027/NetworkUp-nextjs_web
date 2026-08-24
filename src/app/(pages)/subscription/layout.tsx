@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import { headers } from "next/headers";
 
 export const metadata: Metadata = {
     title: "Choose Your Subscription Plan | NetworkUp.io",
@@ -39,7 +40,23 @@ export const metadata: Metadata = {
     }
 };
 
-export default function SubscriptionLayout({ children }: { children: React.ReactNode }) {
+export default async function SubscriptionLayout({ children }: { children: React.ReactNode }) {
+    const headersList = await headers();
+    const referer = headersList.get("referer");
+    let backHref = "/pricing"; // Default fallback
+
+    if (referer) {
+        try {
+            const refererUrl = new URL(referer);
+            const host = headersList.get("host") || "";
+            if (refererUrl.host === host) {
+                backHref = refererUrl.pathname + refererUrl.search;
+            }
+        } catch (e) {
+            // URL parse failure fallback
+        }
+    }
+
     return (
         <div className="relative min-h-screen bg-black">
             {/* Persistent Top Navbar */}
@@ -53,11 +70,11 @@ export default function SubscriptionLayout({ children }: { children: React.React
 
                     {/* Back Button */}
                     <Link
-                        href="/"
+                        href={backHref}
                         className="flex items-center gap-1.5 sm:gap-2 text-[#d8f9a8] hover:text-white font-semibold text-sm transition-all duration-200 cursor-pointer bg-white/[0.03] hover:bg-white/[0.08] px-3 sm:px-4 py-2 rounded-xl border border-white/[0.06]"
                     >
                         <ArrowLeft size={16} strokeWidth={2.5} />
-                        <span className="hidden sm:inline">Back to Home</span>
+                        <span className="hidden sm:inline">Back</span>
                     </Link>
                 </div>
             </header>

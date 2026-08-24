@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 const plans = [
     {
@@ -228,12 +229,13 @@ export default function Price() {
                             </div>
 
                             {/* Button */}
-                            <button
-                                className={`w-full py-4 px-6 text-center rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 ${plan.popular ? "bg-gradient-to-b from-[#76e11b]/30 to-[#76e11b] hover:bg-[#68c617] text-[#031d10] shadow-[0_4px_12px_rgba(118,225,27,0.25)] hover:scale-[1.01]" : "bg-white border border-zinc-200 text-gray-800 hover:bg-zinc-50 hover:border-zinc-300"
+                            <Link
+                                href="/subscription"
+                                className={`w-full py-4 px-6 text-center rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 ${plan.popular ? "bg-gradient-to-b from-[#76e11b]/30 to-[#76e11b] hover:bg-[#68c617] text-[#031d10] shadow-[0_4px_12px_rgba(118,225,27,0.25)] hover:scale-[1.01]" : "bg-white border border-black text-black hover:bg-zinc-50 hover:border-zinc-300"
                                     }`}
                             >
                                 {plan.buttonText}
-                            </button>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>

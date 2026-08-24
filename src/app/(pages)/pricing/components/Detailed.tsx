@@ -207,7 +207,7 @@ export default function Detailed() {
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5 }}
                                         >
-                                            <div className="col-span-12 py-3 px-8 pl-8 lg:pl-25 text-[11px] font-extrabold text-[#356221] tracking-wider uppercase text-left">
+                                            <div className="col-span-12 py-3 px-8 pl-8 lg:pl-25 text-[14px] font-bold text-black uppercase text-left">
                                                 {detail.topic}
                                             </div>
                                         </motion.div>

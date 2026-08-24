@@ -92,7 +92,7 @@ export default function Navbar() {
                     </Link>
 
                     <Link
-                        className="hidden sm:inline-flex rounded-xl bg-lime-400 text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
+                        className="hidden sm:inline-flex rounded-xl bg-gradient-to-b from-[#71EB34] to-[#68c617] text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
                         href="/subscription"
                     >
                         Start Free Trial

@@ -106,8 +106,8 @@ export default function Part1() {
             features={Part1Data}
             visualContent={visualContent}
             visualPosition="left"
-            sectionBg="bg-white py-10 rounded-t-xl"
-            containerClass="max-w-7xl mx-auto w-full"
+            sectionBg="bg-white py-10 rounded-t-xl px-5"
+            containerClass="max-w-7xl mx-auto w-full gap-12 sm:gap-16"
         />
     )
 }

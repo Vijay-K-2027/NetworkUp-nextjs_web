@@ -112,12 +112,12 @@ export default function Documentation({
                                     {/* Content Area - Kept in the DOM for Generative Engine search crawlers (GEO), hidden via CSS height transitions */}
                                     <div
                                         className={`w-full overflow-hidden transition-all duration-300 ease-in-out ${isOpen
-                                            ? "max-h-[1000px] opacity-100 mt-3 pt-3 border-t border-gray-300/50"
+                                            ? "max-h-[1000px] opacity-100 mt-3 pt-3"
                                             : "max-h-0 opacity-0 pointer-events-none"
                                             }`}
                                     >
                                         <p
-                                            className="pl-10 w-full text-left text-md md:text-lg text-black/70 leading-relaxed tracking-[0.04rem]"
+                                            className="pl-10 w-full text-left text-md md:text-lg text-black leading-relaxed tracking-[0.04rem]"
                                             dangerouslySetInnerHTML={{ __html: doc.answer }}
                                         />
                                     </div>

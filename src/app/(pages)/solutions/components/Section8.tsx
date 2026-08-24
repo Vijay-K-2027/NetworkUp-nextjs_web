@@ -102,10 +102,10 @@ export default function Section8() {
                                 </div>
                             </div>
 
-                            <button className="w-full bg-[#82f041] hover:bg-[#72df32] active:scale-[0.99] flex flex-row items-center justify-center gap-2 rounded-xl py-3 px-4 shadow-sm transition-all duration-200 cursor-pointer">
+                            <div className="w-full bg-[#82f041] hover:bg-[#72df32] active:scale-[0.99] flex flex-row items-center justify-center gap-2 rounded-xl py-3 px-4 shadow-sm transition-all duration-200 ">
                                 <span className="text-sm text-slate-900 font-bold">Generate Message</span>
                                 <Zap size={14} className="fill-slate-900 stroke-none" />
-                            </button>
+                            </div>
                         </motion.div>
 
                         {/* Right Side: Generated AI Draft Output Mockup */}
@@ -129,13 +129,13 @@ export default function Section8() {
                             </div>
 
                             <div className="flex flex-row items-center justify-end gap-x-4 pt-3 border-t border-gray-100 w-full">
-                                <button className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-700 transition-colors font-semibold cursor-pointer">
+                                <div className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-700 transition-colors font-semibold">
                                     <RefreshCcw size={12} />
                                     <span>Regenerate</span>
-                                </button>
-                                <button
+                                </div>
+                                <div
                                     onClick={handleCopy}
-                                    className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-700 transition-colors font-semibold cursor-pointer relative"
+                                    className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-700 transition-colors font-semibold relative"
                                 >
                                     <Copy size={12} />
                                     <span>Copy</span>
@@ -144,7 +144,7 @@ export default function Section8() {
                                             Copied
                                         </span>
                                     )}
-                                </button>
+                                </div>
                             </div>
                         </motion.div>
                     </div>

@@ -47,9 +47,9 @@ export default function Section2() {
                     <div className="flex flex-col items-start gap-y-6">
                         <span className="text-[#356221] uppercase text-xs sm:text-sm font-extrabold tracking-wider">Our Story ——</span>
                         <div className="flex flex-col text-left">
-                            <h2 className="text-[#356221] text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none">From an idea to a</h2>
-                            <h2 className="text-[#356221] text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none mt-1">platform</h2>
-                            <h2 className="text-[#356221] text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none mt-1">trusted by thousands</h2>
+                            <h2 className="text-[#356221] text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-none">From an idea to a</h2>
+                            <h2 className="text-[#356221] text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-none mt-1">platform</h2>
+                            <h2 className="text-[#356221] text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-none mt-1">trusted by thousands</h2>
                         </div>
                         <div className="flex flex-col gap-y-4 text-black/80 text-lg sm:text-xl leading-relaxed text-left mt-4">
                             <p>WhiterApps was founded with a simple belief — software should empower people and businesses, not complicate their lives.</p>
@@ -68,7 +68,7 @@ export default function Section2() {
                             whileInView={{ scaleY: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 1.2, ease: "easeInOut" }}
-                            className="absolute left-[50px] top-6 bottom-6 w-[2.5px] bg-[#71eb34] origin-top"
+                            className="absolute left-[50px] top-6 bottom-6 w-[2.5px] bg-[#7fff00] origin-top"
                         />
 
                         {timelineItems.map((item, index) => {
@@ -82,7 +82,7 @@ export default function Section2() {
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         viewport={{ once: true, margin: "-80px" }}
                                         transition={{ type: "spring", stiffness: 120, delay: index * 0.15 }}
-                                        className="absolute left-15 top-0 w-14 h-14 rounded-full bg-black shadow-[0_0_5px_2px_rgba(113,235,52,1)] flex items-center justify-center z-10 shrink-0"
+                                        className="absolute left-15 top-0 w-14 h-14 rounded-full bg-black border-2 border-[#7fff00] flex items-center justify-center z-10 shrink-0"
                                     >
                                         <IconComponent size={22} className="text-[#356221] stroke-[2]" />
                                     </motion.div>

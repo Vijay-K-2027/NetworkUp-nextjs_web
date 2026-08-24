@@ -143,27 +143,27 @@ export default function Section9() {
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 w-full mt-2">
                         <div className="flex flex-wrap items-center gap-2.5">
                             {/* All Leads Dropdown */}
-                            <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
+                            <div className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 shadow-sm hover:bg-slate-100 transition-colors select-none">
                                 <span>All Leads</span>
                                 <ChevronDown size={14} className="text-slate-400" />
-                            </button>
+                            </div>
 
                             {/* Filter */}
-                            <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
+                            <div className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 shadow-sm hover:bg-slate-100 transition-colors select-none">
                                 <Filter size={14} className="text-black" />
                                 <span>Filter</span>
-                            </button>
+                            </div>
 
                             {/* Tag */}
-                            <button className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none">
+                            <div className="px-3.5 py-2 bg-white border border-gray-200 rounded-xl text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 shadow-sm hover:bg-slate-100 transition-colors select-none">
                                 <Tag size={14} className="text-black" />
                                 <span>Tag</span>
-                            </button>
+                            </div>
 
                             {/* Options button */}
-                            <button className="w-9 h-9 bg-white border border-gray-200 rounded-xl text-slate-500 font-bold flex items-center justify-center cursor-pointer shadow-sm hover:bg-slate-50 transition-colors select-none text-sm">
+                            <div className="w-9 h-9 bg-white border border-gray-200 rounded-xl text-slate-500 font-bold flex items-center justify-center shadow-sm hover:bg-slate-100 transition-colors select-none text-sm">
                                 ...
-                            </button>
+                            </div>
                         </div>
 
                         {/* Search input */}
@@ -189,7 +189,7 @@ export default function Section9() {
                             {/* Table Header */}
                             <thead className="bg-slate-50/80 border-b border-gray-250/70">
                                 <tr>
-                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase cursor-pointer select-none hover:text-slate-600 transition-colors">
+                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase select-none hover:text-slate-600 transition-colors">
                                         <span className="flex items-center gap-1">
                                             Name
                                             <ChevronDown size={12} className="text-slate-400" />
@@ -201,7 +201,7 @@ export default function Section9() {
                                     <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase">
                                         Company
                                     </th>
-                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase cursor-pointer select-none hover:text-slate-600 transition-colors">
+                                    <th className="px-5 py-3 text-left text-[10px] font-bold text-slate-400 tracking-wider uppercase select-none hover:text-slate-600 transition-colors">
                                         <span className="flex items-center gap-1">
                                             Stage
                                             <ChevronDown size={12} className="text-slate-400" />

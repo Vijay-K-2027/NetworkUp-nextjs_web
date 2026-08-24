@@ -54,7 +54,7 @@ export default function Section2() {
 
                 {/* Right Section */}
                 <motion.div
-                    className="w-full lg:max-w-[48%] bg-gray-600/20 border border-gray-200/80 p-4 sm:p-6 rounded-[32px] sm:rounded-[40px] flex flex-col gap-4 shadow-xl"
+                    className="w-full lg:max-w-[48%] bg-gray-600/10 border border-gray-200/80 p-4 sm:p-6 rounded-[32px] sm:rounded-[40px] flex flex-col gap-4 shadow-xl"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}

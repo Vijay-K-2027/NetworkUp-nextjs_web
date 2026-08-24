@@ -12,13 +12,13 @@ export default function Section1() {
 
                     {/* Badge */}
                     <motion.div
-                        className="flex flex-row items-center gap-x-2 rounded-full bg-[#356221]/20 px-5 py-1"
+                        className="flex flex-row items-center gap-x-2 rounded-full bg-[#ecf6ec] px-5 py-1"
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
                         <Sparkles size={12} fill="#356221" stroke="#356221" />
-                        <h3 className="uppercase text-[12px] sm:text-[14px] text-[#356221] font-bold tracking-wider">
+                        <h3 className="uppercase text-[12px] sm:text-[14px] text-[#356221]/70 font-bold tracking-wider">
                             NEXT-GEN INTELLIGENCE
                         </h3>
                     </motion.div>
@@ -26,7 +26,7 @@ export default function Section1() {
                     {/* Content */}
                     <div className="my-5 w-full flex flex-col items-center">
                         <motion.h1
-                            className="text-3xl sm:text-4xl lg:text-5xl text-black/80 font-bold max-w-[700px] w-full text-center mb-5 tracking-tight leading-tight px-2"
+                            className="text-4xl sm:text-5xl lg:text-6xl text-black/80 font-bold max-w-[800px] w-full text-center mb-5 tracking-tightpx-2"
                             initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.15 }}
@@ -35,7 +35,7 @@ export default function Section1() {
                         </motion.h1>
 
                         <motion.p
-                            className="text-sm sm:text-base md:text-lg text-gray-650 max-w-[600px] w-full text-center px-4 leading-relaxed"
+                            className="text-sm sm:text-base md:text-lg text-black/70 max-w-[600px] w-full text-center px-4 leading-relaxed"
                             initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.3 }}

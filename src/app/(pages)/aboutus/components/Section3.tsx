@@ -75,7 +75,7 @@ export default function Section3() {
                                 variants={cardVariants}
                                 className="p-6 bg-gradient-to-b from-lime-700 to-black flex flex-col items-start gap-y-4 border border-transparent hover:border-lime-200/50 hover:bg-white rounded-2xl hover:shadow-md hover:scale-102 transition-all duration-300"
                             >
-                                <div className="p-2 w-15 h-15 rounded-full bg-transparent flex items-center justify-center shadow-[0_0_10px_3px_#A3E635]">
+                                <div className="p-2 w-15 h-15 rounded-full bg-transparent flex items-center justify-center shadow-[0_0_7px_3px_#A3E635]">
                                     <data.icon size={30} className="stroke-lime-400" />
                                 </div>
                                 <h3 className="text-xl text-white font-bold text-left">{data.title}</h3>

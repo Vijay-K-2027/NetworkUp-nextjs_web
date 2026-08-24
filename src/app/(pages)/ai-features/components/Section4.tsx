@@ -98,7 +98,7 @@ export default function Section4() {
                 </motion.div>
 
                 {/* Comparison Box */}
-                <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl w-full border border-gray-100 rounded-[32px] overflow-hidden shadow-xl bg-white">
+                <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl w-full border border-gray-100 rounded-[32px] overflow-hidden shadow-xl bg-white">
 
                     {/* Left Column (Without NetworkUp AI) */}
                     <motion.div
