@@ -2,17 +2,37 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowRightIcon } from "lucide-react";
-import { CheckIcon, Star } from "lucide-react";
+import { ArrowRightIcon, ChartNoAxesCombined, MessageCircleMoreIcon, Search, SendIcon } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import Aipage from "./contact/Aipage";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+
 
 const models = [
-    { name: "LinkedIn", icon: "/linkedin.svg" },
-    { name: "Instagram", icon: "/instagram.svg" },
-    { name: "Facebook", icon: "/facebook.svg" },
+    { name: "LinkedIn", icon: "/footer/linkedin.svg" },
+    { name: "Instagram", icon: "/footer/instagram.svg" },
+    { name: "Facebook", icon: "/footer/facebook.svg" },
 ];
 
+const flowChart = [
+    {
+        icon: Search,
+        title: "Find Leads",
+    },
+    {
+        icon: SendIcon,
+        title: "Create Campaigns",
+    },
+    {
+        icon: MessageCircleMoreIcon,
+        title: "Start Conversations",
+    },
+    {
+        icon: ChartNoAxesCombined,
+        title: "Drive Growth",
+    }
+]
 const productLinks = ["Features", "Outreach", "Inbox", "Lead Finder", "Campaigns"];
 const solutionsLinks = ["For Sales Teams", "For Agencies", "For Recruiters", "For Startups", "For Marketing Teams"];
 const resourcesLinks = ["Blog", "Help Center", "Guides", "API Documentation", "Video Tutorials"];
@@ -42,7 +62,7 @@ export default function Footer() {
                     <div className="md:col-span-1 lg:col-span-4 flex flex-col justify-between ">
                         <div>
                             {/* Logo */}
-                            <div className="flex items-center gap-2.5 mb-6">
+                            <div className="flex items-center gap-4 mb-6">
                                 <Image
                                     src="/Logo.svg"
                                     alt="NetworkUp Logo"
@@ -50,12 +70,12 @@ export default function Footer() {
                                     height={32}
                                     style={{ height: "auto" }}
                                 />
-                                <span className="text-xl font-bold text-[#6CB531] font-[family-name:var(--font-comfortaa)]">
+                                <span className="text-xl font-bold text-[#6CB531] font-[family-name:var(--font-comfortaa)] scale-120">
                                     NetworkUp<span className="font-normal">.io</span>
                                 </span>
                             </div>
 
-                            <p className="text-gray-500 text-sm leading-relaxed mb-8 max-w-xs">
+                            <p className="text-gray-500 text-xs leading-relaxed mb-8 max-w-xs">
                                 Find the right people, automate outreach, manage conversations, and turn connections into opportunities.
                             </p>
 
@@ -64,14 +84,41 @@ export default function Footer() {
                                 <h4 className="text-[10px] font-extrabold text-[#76e11b] tracking-wide uppercase mb-4">
                                     Stay Updated With Growth Insights
                                 </h4>
-                                <div className="flex flex-row justify-between w-full max-w-[340px]">
-                                    <div className=" max-w-[290px] w-full flex items-center mb-4">
-                                        <input type="email" placeholder="Enter your email" className="w-full bg-zinc-100 border border-zinc-200 rounded-lg px-3 py-2 pr-12 text-sm outline-none focus:border-[#76e11b] focus:ring-1 focus:ring-[#76e11b]/20" />
-                                    </div>
-                                    <button className="bg-[#76e11b] hover:bg-[#68c617] text-[#031d10] h-9.5 w-9.5 rounded-lg flex items-center justify-center shadow-sm transition-transform">
-                                        <ArrowRightIcon size={16} />
-                                    </button>
+                                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 w-full py-2">
+                                    {flowChart.map((object, index) => {
+                                        const IconComponent = object.icon;
+                                        return (
+                                            <React.Fragment key={index}>
+                                                <motion.div
+                                                    className="flex flex-col items-center gap-y-2 text-center w-full sm:w-[22%]"
+                                                    initial={{ opacity: 0, scale: 0.92, y: 10 }}
+                                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.4, delay: 0.25 + index * 0.2 }}
+                                                >
+                                                    <div className="w-12 h-12 flex items-center justify-center shrink-0">
+                                                        <IconComponent size={22} className="stroke-[#356221]" />
+                                                    </div>
+                                                    <h4 className="text-xs sm:text-sm text-black leading-tight">{object.title}</h4>
+                                                </motion.div>
+                                                {index !== flowChart.length - 1 && (
+                                                    <motion.div
+                                                        className="text-[#71EB34] text-2xl font-bold rotate-90 sm:rotate-0 my-1 sm:my-0 shrink-0 select-none"
+                                                        initial={{ opacity: 0, scale: 0.6 }}
+                                                        whileInView={{ opacity: 1, scale: 1 }}
+                                                        viewport={{ once: true }}
+                                                        transition={{ duration: 0.3, delay: 0.25 + index * 0.2 + 0.1 }}
+                                                    >
+                                                        →
+                                                    </motion.div>
+                                                )}
+                                            </React.Fragment>
+                                        );
+                                    })}
                                 </div>
+                                <Link href="/subscription" className="w-full my-3 inline-flex items-center justify-center bg-gradient-to-b from-[#7fff00] to-[#71EB34] hover:bg-[#68c617] text-[#031d10] font-bold text-sm sm:text-base py-3 px-10 rounded-2xl hover:scale-[1.03] transition-all duration-200">
+                                    Start Free Trial ➜
+                                </Link>
 
 
                                 {/* Checklist */}
@@ -92,7 +139,7 @@ export default function Footer() {
                         {/* Social Links */}
                         <div className="flex items-center gap-3">
                             {models.map((model, index) => (
-                                <button key={index} className="flex h-9 w-9 items-center justify-center rounded-full bg-white hover:opacity-90 hover:-translate-y-1 shadow-sm transition-all">
+                                <button key={index} className="flex h-9 w-9 items-center justify-center rounded-xl border border-black bg-white hover:opacity-90 hover:-translate-y-1 shadow-sm transition-all">
                                     <Image src={model.icon} alt={`${model.name} Icon`} width={24} height={24} />
                                 </button>
                             ))}
