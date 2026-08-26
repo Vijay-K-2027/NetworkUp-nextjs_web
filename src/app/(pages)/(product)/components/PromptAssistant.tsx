@@ -26,37 +26,37 @@ const UNIFIED_PROMPT = "Provide a comprehensive explanation of NetworkUp.io , it
 const models = [
     {
         name: "ChatGPT",
-        icon: "/chatgpt-icon.svg",
+        icon: "/product/ai-tools/chatgpt-icon.svg",
         url: "https://chatgpt.com/",
         prompt: UNIFIED_PROMPT
     },
     {
         name: "Claude",
-        icon: "/claude-ai-icon.svg",
+        icon: "/product/ai-tools/claude-ai-icon.svg",
         url: "https://claude.ai/",
         prompt: UNIFIED_PROMPT
     },
     {
         name: "Grok",
-        icon: "/grok-icon.svg",
+        icon: "/product/ai-tools/grok-icon.svg",
         url: "https://grok.com/",
         prompt: UNIFIED_PROMPT
     },
     {
         name: "Gemini",
-        icon: "/google-gemini-icon.svg",
+        icon: "/product/ai-tools/google-gemini-icon.svg",
         url: "https://gemini.google.com/",
         prompt: UNIFIED_PROMPT
     },
     {
         name: "Perplexity",
-        icon: "/perplexity-ai-icon.svg",
+        icon: "/product/ai-tools/perplexity-ai-icon.svg",
         url: "https://www.perplexity.ai/",
         prompt: UNIFIED_PROMPT
     },
     {
         name: "NotebookLM",
-        icon: "/notebook-lm-dark.svg",
+        icon: "/product/ai-tools/notebook-lm-dark.svg",
         url: "https://gemini.google.com/notebooks/create",
         prompt: UNIFIED_PROMPT
     }
@@ -405,7 +405,7 @@ export default function PromptAssistant() {
                                 <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-white/[0.08]">
                                     <div className="relative w-8 h-8 rounded-lg overflow-hidden bg-white/[0.06] flex items-center justify-center p-1 border border-white/[0.08]">
                                         <Image
-                                            src={models.find(m => m.name === modalModelName)?.icon || "/Logo.svg"}
+                                            src={models.find(m => m.name === modalModelName)?.icon || "/brand/Logo.svg"}
                                             alt={modalModelName}
                                             width={24}
                                             height={24}

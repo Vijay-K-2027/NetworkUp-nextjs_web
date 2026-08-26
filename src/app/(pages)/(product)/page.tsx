@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://www.networkup.io/og-home.jpg",
+                url: "https://www.networkup.io/seo/og-home.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp AI Platform"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
         description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
-        images: ["https://www.networkup.io/og-home.jpg"]
+        images: ["https://www.networkup.io/seo/og-home.jpg"]
     },
     robots: {
         index: true,

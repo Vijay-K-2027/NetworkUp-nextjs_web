@@ -166,7 +166,7 @@ export default function Contact() {
                             </div>
                         </div>
                         <Image
-                            src="/Contact-Img.png"
+                            src="/product/contact/Contact-Img.png"
                             alt="Contact"
                             width={600}
                             height={600}

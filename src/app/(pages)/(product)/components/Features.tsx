@@ -4,13 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { cardVariants, containerVariants } from '@/app/homepage/assets/icons'
-import { SmartProspectingIcon, RelationshipIntelIcon, UnifiedInboxIcon, CampaignBuilderIcon, CampaignAnalyticsIcon, LeadEnrichmentIcon, IntegrationsIcon, AccountProtectionIcon } from "@/app/homepage/assets/icons";
+import { UnifiedInboxIcon, CampaignAnalyticsIcon, IntegrationsIcon } from "@/app/homepage/assets/icons";
 import { BrainIcon, Database, UserSearch } from "lucide-react";
-import { BsInboxFill, BsMagic, BsShieldLock } from "react-icons/bs";
-import { CgInbox } from "react-icons/cg";
-import { FaInbox, FaMagic } from "react-icons/fa";
-import { GrIntegration } from "react-icons/gr";
-import { GiRelationshipBounds } from "react-icons/gi";
+import { BsShieldLock } from "react-icons/bs";
+import { FaMagic } from "react-icons/fa";
 
 const features = [
     {
@@ -19,7 +16,7 @@ const features = [
         description: "AI filters that identify high-intent leads based on real-time professional signals."
     },
     {
-        icon: UnifiedInboxIcon,
+        icon: "/product/feature/Inbox.png",
         title: "Unified Inbox",
         description: "Manage every LinkedIn conversation across multiple accounts in one central view."
     },
@@ -29,12 +26,12 @@ const features = [
         description: "Drag-and-drop workflow sequences with intelligent branching logic and delays."
     },
     {
-        icon: CampaignAnalyticsIcon,
+        icon: "/product/feature/BarChart.png",
         title: "Campaign Analytics",
         description: "Deep-dive metrics on conversion rates, engagement, and team performance."
     },
     {
-        icon: BrainIcon,
+        icon: "/product/feature/Relationship.png",
         title: "Relationship Intel",
         description: "Contextual insights about your leads before you ever hit send."
     },
@@ -44,12 +41,12 @@ const features = [
         description: "Automatically verify emails and phone numbers for your ideal targets."
     },
     {
-        icon: IntegrationsIcon,
+        icon: "/product/feature/Integration.png",
         title: "Integrations",
         description: "Native sync with HubSpot, Salesforce, and 2,000+ apps via Zapier."
     },
     {
-        icon: BsShieldLock,
+        icon: "/product/feature/Security.png",
         title: "Account Protection",
         description: "Proprietary safety systems to keep your LinkedIn account secure and active."
     }
@@ -79,7 +76,8 @@ export default function Features() {
                     viewport={{ once: true, margin: "-100px" }}
                 >
                     {features.map((feature, index) => {
-                        const Icon = feature.icon;
+                        const iconVal = feature.icon;
+                        const isStringIcon = typeof iconVal === "string";
                         return (
                             <motion.div
                                 key={index}
@@ -90,8 +88,19 @@ export default function Features() {
                                 <div className="absolute inset-0 pointer-events-none rounded-[1rem] border-2 border-[#defad0] [mask-image:linear-gradient(to_top_left,_black_50%,_transparent_50%)]"></div>
 
                                 <div className="flex items-center justify-start mb-6">
-                                    <div className="transition-transform duration-300 group-hover:scale-110">
-                                        <Icon size={30} color="green" />
+                                    <div className="transition-transform duration-300 group-hover:scale-110 h-[30px] flex items-center">
+                                        {isStringIcon ? (
+                                            <img
+                                                src={iconVal as string}
+                                                alt={feature.title}
+                                                className="w-[45px] h-[45px] object-contain"
+                                            />
+                                        ) : (
+                                            (() => {
+                                                const IconComponent = iconVal as React.ComponentType<{ size?: number; color?: string }>;
+                                                return <IconComponent size={30} color="green" />;
+                                            })()
+                                        )}
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 tracking-tight mb-3">

@@ -50,7 +50,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-6 lg:gap-12">
                     <Link href="/" className="flex items-center gap-2 lg:gap-3 flex-shrink-0">
                         <Image
-                            src="/Logo.svg"
+                            src="/brand/Logo.svg"
                             alt="Logo"
                             width={38}
                             height={38}

@@ -14,7 +14,7 @@ export default function Aipage({ onClose }: AipageProps) {
     return (
         <>
             {
-                activeTab === "Home" ? <Home onClose={onClose} /> : <Message onClose={onClose} />
+                activeTab === "Home" ? <Home onClose={onClose} onNavigateToChat={() => setActiveTab("Message")} /> : <Message onClose={onClose} onNavigateToHome={() => setActiveTab("Home")} />
             }
             <Footer activeTab={activeTab} setActiveTab={setActiveTab} />
         </>

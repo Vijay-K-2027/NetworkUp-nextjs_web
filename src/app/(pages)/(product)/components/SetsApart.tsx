@@ -2,26 +2,27 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Sparkles, Brain, Network, TrendingUp } from "lucide-react";
+import { Sparkles, Brain, ChartNoAxesCombined } from "lucide-react";
+import { IntegrationsIcon } from "@/app/homepage/assets/icons";
 
 const items = [
     {
-        icon: Sparkles,
+        icon: "/product/feature/Sparkles.png",
         title: "AI Campaign Optimizer",
         description: "Analyzes campaigns before launch and recommends improvements to maximize acceptance and reply rates using deep semantic modeling."
     },
     {
-        icon: Brain,
+        icon: "/product/feature/Relation.png",
         title: "Relationship Intelligence",
         description: "Understands prospect engagement, predicts buying intent and recommends the best next action based on historical patterns."
     },
     {
-        icon: Network,
+        icon: "/product/feature/Integrate.png",
         title: "Opportunity Center",
         description: "Automatically surfaces the highest-value prospects, ideal outreach windows and hidden sales opportunities across your entire funnel."
     },
     {
-        icon: TrendingUp,
+        icon: "/product/feature/IncreaseTrend.png",
         title: "Campaign Simulator",
         description: "Predict campaign performance before launch using AI insights and historical outreach data to ensure ROI on every single send."
     }
@@ -58,7 +59,8 @@ export default function SetsApart() {
                     {/* The 2x2 Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 lg:gap-x-16 lg:gap-y-16">
                         {items.map((item, index) => {
-                            const IconComponent = item.icon;
+                            const iconVal = item.icon;
+                            const isStringIcon = typeof iconVal === "string";
                             return (
                                 <motion.div
                                     key={index}
@@ -70,8 +72,19 @@ export default function SetsApart() {
                                     className="flex flex-col sm:flex-row min-h-[270px] gap-5 items-start p-8 md:p-10 bg-white rounded-[2.25rem] border border-zinc-200/40 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.02)] transition-shadow duration-300 hover:shadow-[0_15px_35px_-8px_rgba(53,98,33,0.07)] group">
 
                                     {/* Lime green background Icon Block */}
-                                    <div className="flex my-10 h-15 w-15 shrink-0 items-center justify-center rounded-2xl bg-[#76e11b] text-white shadow-[0_4px_12px_rgbs(118,225,27,0.25)] transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105">
-                                        <IconComponent size={22} strokeWidth={2.5} className="stroke-[#356221]" />
+                                    <div className={`flex my-10 h-15 w-15 shrink-0 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105 overflow-hidden ${isStringIcon ? "" : "bg-[#76e11b] text-white shadow-[0_4px_12px_rgba(118,225,27,0.25)]"}`}>
+                                        {isStringIcon ? (
+                                            <img
+                                                src={iconVal as string}
+                                                alt={item.title}
+                                                className="w-full h-full object-cover rounded-2xl"
+                                            />
+                                        ) : (
+                                            (() => {
+                                                const IconComponent = iconVal as React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }>;
+                                                return <IconComponent size={22} strokeWidth={2.5} className="stroke-[#356221]" />;
+                                            })()
+                                        )}
                                     </div>
 
                                     {/* Text content block */}

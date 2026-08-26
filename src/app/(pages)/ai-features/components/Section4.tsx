@@ -78,7 +78,7 @@ const listItemVariants = {
 
 export default function Section4() {
     return (
-        <section className="bg-[#fafcf7] py-20 px-6 lg:px-8 overflow-hidden">
+        <section className="bg-gray-50 py-20 px-6 lg:px-8 overflow-hidden">
             <div className="max-w-7xl mx-auto w-full flex flex-col items-center gap-y-12 lg:gap-y-16">
 
                 {/* Title and Header */}
@@ -138,7 +138,7 @@ export default function Section4() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6 }}
-                        className="flex flex-col items-start p-8 sm:p-12 bg-[#356221]/60 relative overflow-hidden"
+                        className="flex flex-col items-start p-8 sm:p-12 bg-[#356221]/40 relative overflow-hidden"
                     >
                         {/* Subtle background glow */}
                         <div className="absolute -right-24 -bottom-24 w-48 h-48 rounded-full bg-[#71EB34]/10 blur-3xl"></div>

@@ -96,7 +96,7 @@ export default function DashboardPreview() {
                 <div className="flex items-center gap-1 mb-3.5 px-1">
                   <div className="bg-transparent p-0.5 rounded-lg text-black font-extrabold flex items-center justify-center">
                     <Image
-                      src="/Logo.svg"
+                      src="/brand/Logo.svg"
                       alt="Logo"
                       width={12}
                       height={12}
@@ -741,7 +741,7 @@ export default function DashboardPreview() {
                   }}
                   className="w-14 h-14 rounded-full bg-[#cefad0] flex items-center justify-center mx-auto mb-2 shadow-md shrink-0"
                 >
-                  <Image src="/robot.png" alt="robot" width={28} height={28} className="stroke-[black]/50" />
+                  <Image src="/product/dashboard/robot.png" alt="robot" width={28} height={28} className="stroke-[black]/50" />
                 </motion.div>
                 <h2 className="font-bold text-white text-lg text-center mb-0.5 leading-tight">Ask NetworkUp.io Anything</h2>
                 <h4 className="text-gray-300/60 text-[10.5px] text-center max-w-[320px] mx-auto mb-3 leading-tight">Generate leads, optimize campaigns, or research any target account in seconds.</h4>
@@ -765,7 +765,7 @@ export default function DashboardPreview() {
                       <div className="absolute inset-0 pointer-events-none rounded-2xl border border-[#defad0]/20 [mask-image:linear-gradient(to_top_left,_black_50%,_transparent_50%)]"></div>
 
                       <div className="flex items-center justify-start mb-1.5 shrink-0">
-                        <div className="transition-transform duration-300 group-hover:scale-110">
+                        <div className="transition-transform duration-300 group-hover:scale-110 bg-white/5 rounded-md p-1">
                           <Icon size={18} className="text-lime-400" stroke="lime" />
                         </div>
                       </div>

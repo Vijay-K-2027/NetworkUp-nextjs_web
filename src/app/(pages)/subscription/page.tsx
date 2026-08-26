@@ -128,7 +128,7 @@ export default function Pricing() {
                 {/* Header */}
                 <div className="flex flex-col items-center text-center mb-20">
                     <Image
-                        src="/Logo.svg"
+                        src="/brand/Logo.svg"
                         alt="Logo"
                         width={70}
                         height={70}

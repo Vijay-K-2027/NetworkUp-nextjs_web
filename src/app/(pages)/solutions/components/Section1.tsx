@@ -67,19 +67,28 @@ export default function Section1() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-50px" }}
-                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full p-4"
                     >
                         {section1Data.map((data, index) => (
                             <motion.div
                                 key={index}
                                 variants={cardVariants}
-                                className="p-6 bg-gray-50/50 flex flex-col items-start gap-y-4 border border-transparent hover:border-lime-200/50 hover:bg-white rounded-2xl hover:shadow-md hover:scale-102 transition-all duration-300"
+                                className="relative pl-2 pb-2 flex flex-col h-full"
                             >
-                                <div className="p-2.5 rounded-xl flex items-center justify-center">
-                                    <data.icon size={20} className="stroke-[#356221]" />
+                                {/* Left Vertical Line */}
+                                <div className="absolute my-4 left-2 top-0 bottom-3 w-[1.5px] bg-[#87e637]/60" />
+
+                                {/* Card Content */}
+                                <div className="bg-gradient-to-bl from-[#87e637]/10 to-white flex-1 flex flex-col items-start gap-y-4 p-5 border border-transparent hover:border-lime-200/50 hover:bg-white rounded-2xl transition-all duration-300">
+                                    <div className="p-2.5 flex items-center justify-center">
+                                        <data.icon size={20} className="stroke-[#356221]" />
+                                    </div>
+                                    <h3 className="text-lg text-black font-bold text-left">{data.title}</h3>
+                                    <p className="text-sm text-gray-600 text-left leading-relaxed">{data.description}</p>
                                 </div>
-                                <h3 className="text-lg text-black font-bold text-left">{data.title}</h3>
-                                <p className="text-sm text-gray-500/80 text-left leading-relaxed w-[200px]">{data.description}</p>
+
+                                {/* Bottom Horizontal Line */}
+                                <div className="absolute mx-4 bottom-2 left-2 right-0 h-[1.5px] bg-[#87e637]/60" />
                             </motion.div>
                         ))}
                     </motion.div>

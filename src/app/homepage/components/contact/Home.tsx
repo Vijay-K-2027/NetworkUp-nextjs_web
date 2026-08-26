@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Search, SquarePen, Users, Zap, RefreshCw, Lock, ChevronRight, ArrowLeft, ArrowRight, ShieldCheck, Check, X } from "lucide-react";
 import Image from "next/image";
@@ -32,36 +34,34 @@ const faqs = [
 
 interface HomeProps {
     onClose?: () => void;
+    onNavigateToChat?: () => void;
 }
 
-export default function Home({ onClose }: HomeProps) {
+export default function Home({ onClose, onNavigateToChat }: HomeProps) {
     const [selectedFaqIndex, setSelectedFaqIndex] = useState<number | null>(null);
 
     const renderFaqDetail = () => {
         if (selectedFaqIndex === 0) {
             return (
-                <div className="flex flex-col gap-y-4 text-left w-full px-2">
-                    <div className="bg-[#71EB34] text-black font-bold text-xs py-2 px-3 rounded-lg w-fit">
-                        How do I create a campaign?
-                    </div>
+                <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
                     <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
                         Creating a campaign only takes a few minutes. Follow these steps:
                     </p>
                     <div className="flex flex-col gap-y-2.5 mt-2">
-                        <div className="flex items-center gap-3 p-3 bg-white/5 border border-white/[0.04] rounded-xl">
-                            <span className="bg-white/10 border border-white/20 text-[#71EB34] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">01</span>
+                        <div className="flex items-center gap-3 p-3 bg-[#1f1f1f] rounded-xl">
+                            <span className="bg-[#71EB34]/15 text-[#71EB34] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">01</span>
                             <span className="text-white text-xs font-medium">Go to Campaign Builder</span>
                         </div>
-                        <div className="flex items-center gap-3 p-3 bg-white/5 border border-white/[0.04] rounded-xl">
-                            <span className="bg-white/10 border border-white/20 text-[#71EB34] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">02</span>
+                        <div className="flex items-center gap-3 p-3 bg-[#1f1f1f] rounded-xl">
+                            <span className="bg-[#71EB34]/15 text-[#71EB34] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">02</span>
                             <span className="text-white text-xs font-medium">Click New Campaign</span>
                         </div>
-                        <div className="flex items-center gap-3 p-3 bg-white/5 border border-white/[0.04] rounded-xl">
-                            <span className="bg-white/10 border border-white/20 text-[#71EB34] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">03</span>
+                        <div className="flex items-center gap-3 p-3 bg-[#1f1f1f] rounded-xl">
+                            <span className="bg-[#71EB34]/15 text-[#71EB34] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">03</span>
                             <span className="text-white text-xs font-medium">Import or choose your lead list</span>
                         </div>
                     </div>
-                    <span className="text-[#71EB34] text-[10px] font-extrabold tracking-wider uppercase mt-3">
+                    <span className="text-[#71EB34] text-[9px] font-extrabold tracking-wider uppercase mt-3">
                         READY FOR LAUNCH SEQUENCE
                     </span>
                 </div>
@@ -70,49 +70,37 @@ export default function Home({ onClose }: HomeProps) {
 
         if (selectedFaqIndex === 1) {
             return (
-                <div className="flex flex-col gap-y-4 text-left w-full px-2">
-                    <div className="bg-[#71EB34] text-black font-bold text-xs py-2 px-3 rounded-lg w-fit">
-                        How do I connect my LinkedIn account?
-                    </div>
-                    <span className="text-[#71EB34] text-[10px] font-extrabold tracking-wider uppercase">
-                        ⚡ QUICK SETUP
+                <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
+                    <span className="text-[#71EB34] text-[10px] font-bold tracking-wider uppercase flex items-center gap-1.5">
+                        🔗 QUICK SETUP
                     </span>
                     <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-                        Open <strong className="text-white font-semibold">Settings → LinkedIn Accounts</strong>. Click <strong className="text-[#71EB34] font-semibold">Connect Account</strong> and follow the OAuth authorization flow.
+                        Open <span className="text-[#71EB34] font-semibold">Settings → LinkedIn Accounts</span>. Click <span className="text-[#71EB34] font-semibold underline cursor-pointer">Connect Account</span> and follow the OAuth authorization flow.
                     </p>
-                    <div className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-xl mt-2 hover:bg-white/10 transition-colors cursor-pointer">
-                        <span className="text-white text-xs font-medium flex items-center gap-2">
-                            🔑 Secure Sign-in Required
-                        </span>
-                        <ChevronRight size={14} className="text-gray-400" />
-                    </div>
                 </div>
             )
         }
 
         if (selectedFaqIndex === 2) {
             return (
-                <div className="flex flex-col gap-y-4 text-left w-full px-2">
-                    <div className="bg-[#71EB34] text-black font-bold text-xs py-2 px-3 rounded-lg w-fit">
-                        How does AI personalization work?
-                    </div>
+                <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
                     <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
                         Our neural engine scrapes real-time data to craft hyper-relevant hooks based on:
                     </p>
                     <div className="grid grid-cols-2 gap-2 mt-2">
-                        <div className="bg-white/5 border border-white/5 rounded-xl p-2.5 flex flex-col items-start gap-1">
+                        <div className="bg-[#1f1f1f] rounded-xl p-3 flex flex-col items-start gap-1">
                             <span className="text-zinc-500 text-[8px] font-bold uppercase tracking-wider">TARGET DATA</span>
                             <span className="text-white text-xs font-semibold">Job Title</span>
                         </div>
-                        <div className="bg-white/5 border border-white/5 rounded-xl p-2.5 flex flex-col items-start gap-1">
+                        <div className="bg-[#1f1f1f] rounded-xl p-3 flex flex-col items-start gap-1">
                             <span className="text-zinc-500 text-[8px] font-bold uppercase tracking-wider">SIGNAL</span>
                             <span className="text-white text-xs font-semibold">Recent Activity</span>
                         </div>
-                        <div className="bg-white/5 border border-white/5 rounded-xl p-2.5 flex flex-col items-start gap-1">
+                        <div className="bg-[#1f1f1f] rounded-xl p-3 flex flex-col items-start gap-1">
                             <span className="text-zinc-500 text-[8px] font-bold uppercase tracking-wider">CONTEXT</span>
                             <span className="text-white text-xs font-semibold">Mutual Conn.</span>
                         </div>
-                        <div className="bg-white/5 border border-white/5 rounded-xl p-2.5 flex flex-col items-start gap-1">
+                        <div className="bg-[#1f1f1f] rounded-xl p-3 flex flex-col items-start gap-1">
                             <span className="text-zinc-500 text-[8px] font-bold uppercase tracking-wider">FIRMOGRAPHIC</span>
                             <span className="text-white text-xs font-semibold">Company Info</span>
                         </div>
@@ -123,22 +111,19 @@ export default function Home({ onClose }: HomeProps) {
 
         if (selectedFaqIndex === 3) {
             return (
-                <div className="flex flex-col gap-y-4 text-left w-full px-2">
-                    <div className="bg-[#71EB34] text-black font-bold text-xs py-2 px-3 rounded-lg w-fit">
-                        Can I integrate with CRM?
-                    </div>
+                <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
                     <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
                         Seamlessly sync data to your workflow:
                     </p>
                     <div className="flex flex-wrap gap-2 mt-2">
-                        <span className="bg-white/5 text-zinc-300 border border-white/10 text-xs px-2.5 py-1 rounded-full">HubSpot</span>
-                        <span className="bg-white/5 text-zinc-300 border border-white/10 text-xs px-2.5 py-1 rounded-full">Salesforce</span>
-                        <span className="bg-white/5 text-zinc-300 border border-white/10 text-xs px-2.5 py-1 rounded-full">Pipedrive</span>
-                        <span className="bg-[#71EB34] text-black font-semibold text-xs px-2.5 py-1 rounded-full">Zapier</span>
+                        <span className="bg-[#383838] text-white font-medium text-xs px-3 py-1 rounded-xl">HubSpot</span>
+                        <span className="bg-[#383838] text-white font-medium text-xs px-3 py-1 rounded-xl">Salesforce</span>
+                        <span className="bg-[#383838] text-white font-medium text-xs px-3 py-1 rounded-xl">Pipedrive</span>
+                        <span className="bg-[#243e12]/80 text-[#71EB34] font-semibold text-xs px-3 py-1 rounded-xl">Zapier</span>
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#71EB34] hover:text-white cursor-pointer mt-4 transition-colors">
+                    <div className="flex items-center justify-between text-xs font-bold text-[#71EB34] hover:text-white cursor-pointer mt-4 border-t border-white/5 pt-3 transition-colors">
                         <span>Go to Integrations</span>
-                        <ArrowRight size={14} />
+                        <ArrowRight size={14} className="text-[#71EB34]" />
                     </div>
                 </div>
             )
@@ -146,27 +131,24 @@ export default function Home({ onClose }: HomeProps) {
 
         if (selectedFaqIndex === 4) {
             return (
-                <div className="flex flex-col gap-y-4 text-left w-full px-2">
-                    <div className="bg-[#71EB34] text-black font-bold text-xs py-2 px-3 rounded-lg w-fit">
-                        Is my account safe?
-                    </div>
-                    <span className="text-[#71EB34] text-xs font-extrabold tracking-wide uppercase flex items-center gap-1.5">
-                        <ShieldCheck size={16} /> PROTOCOL SECURED
+                <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
+                    <span className="text-[#71EB34] text-xs font-bold tracking-wide uppercase flex items-center gap-1.5">
+                        <ShieldCheck size={16} className="text-[#71EB34]" /> PROTOCOL SECURED
                     </span>
                     <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
                         We maintain account health via:
                     </p>
-                    <ul className="flex flex-col gap-y-2 mt-2 pl-1">
-                        <li className="flex items-center gap-2 text-xs text-white">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#71EB34]"></span>
+                    <ul className="flex flex-col gap-y-3 mt-2 pl-0.5">
+                        <li className="flex items-center gap-2.5 text-xs text-white">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#71EB34] shrink-0 mt-1.5"></span>
                             Human-like activity patterns
                         </li>
-                        <li className="flex items-center gap-2 text-xs text-white">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#71EB34]"></span>
+                        <li className="flex items-center gap-2.5 text-xs text-white">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#71EB34] shrink-0 mt-1.5"></span>
                             Randomized message delays
                         </li>
-                        <li className="flex items-center gap-2 text-xs text-white">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#71EB34]"></span>
+                        <li className="flex items-center gap-2.5 text-xs text-white">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#71EB34] shrink-0 mt-1.5"></span>
                             Safety limit thresholds
                         </li>
                     </ul>
@@ -181,7 +163,7 @@ export default function Home({ onClose }: HomeProps) {
         <>
             <header className="mx-auto h-[50px] w-[300px] rounded-t-2xl px-5 pt-3.5 flex flex-row items-center justify-between bg-[#02140b] shrink-0">
                 <div className="flex flex-row items-center gap-x-2">
-                    <Image src="/Logo.svg" alt="Logo" width={24} height={24} style={{ height: "auto" }} />
+                    <Image src="/brand/Logo.svg" alt="Logo" width={24} height={24} style={{ height: "auto" }} />
                     <h3 className="text-sm text-[#00d400]/70 font-semibold">NetworkUp.io</h3>
                 </div>
                 <div className="flex flex-row items-center gap-x-2">
@@ -194,6 +176,11 @@ export default function Home({ onClose }: HomeProps) {
                         <img
                             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&fit=crop&q=80"
                             alt="Representative Headshot 2"
+                            className="w-5 h-5 object-cover rounded-full border border-white/10"
+                        />
+                        <img
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&fit=crop&q=80"
+                            alt="Representative Headshot 3"
                             className="w-5 h-5 object-cover rounded-full border border-white/10"
                         />
                     </div>
@@ -221,7 +208,7 @@ export default function Home({ onClose }: HomeProps) {
                     <>
                         <div className="mt-5 flex flex-row items-center shrink-0 w-full">
                             <div className="flex flex-col items-start ml-2">
-                                <h1 className="text-white text-3xl font-bold w-[160px]">Hey there!</h1>
+                                <h1 className="text-white text-3xl font-bold w-[160px] text-left">Hey there!</h1>
                                 <h3 className="text-gray-200/80 text-sm w-[150px] text-left">How can we help today?</h3>
                             </div>
                             <div className="ml-auto border-[2px] border-[#02140b] rounded-l-full overflow-hidden shrink-0">
@@ -265,11 +252,13 @@ export default function Home({ onClose }: HomeProps) {
                         </div>
 
                         <div className="shrink-0 w-full">
-                            <div className="flex flex-row items-center bg-white/10 border border-white/5 rounded-2xl px-3 py-1.5">
-                                <input
-                                    placeholder="Search for help"
-                                    className="bg-transparent text-white text-xs placeholder-white/40 py-1 w-full focus:outline-none text-left"
-                                />
+                            <div
+                                onClick={onNavigateToChat}
+                                className="flex flex-row items-center bg-white/10 border border-white/5 rounded-2xl px-3 py-1.5 cursor-pointer hover:bg-white/15 transition-colors"
+                            >
+                                <span className="text-white/40 text-xs text-left py-1 w-full select-none">
+                                    Search for help
+                                </span>
                                 <Search size={16} stroke="#2cff05" className="shrink-0 ml-2" />
                             </div>
                         </div>
@@ -303,7 +292,10 @@ export default function Home({ onClose }: HomeProps) {
                             })}
                         </div>
 
-                        <div className="rounded-full py-1.5 shrink-0 text-center w-full border border-white/5 bg-white/[0.02]">
+                        <div
+                            onClick={onNavigateToChat}
+                            className="rounded-full py-1.5 shrink-0 text-center w-full border border-white/5 bg-white/[0.02] cursor-pointer hover:bg-white/5 transition-all"
+                        >
                             <h3 className="text-lime-400 text-[10px] font-semibold tracking-wide">Still need help? Contact our support team →</h3>
                         </div>
                     </>

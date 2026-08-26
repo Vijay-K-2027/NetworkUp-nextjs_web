@@ -25,7 +25,7 @@ export default function CTABanner() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-zinc-300 text-base sm:text-lg leading-relaxed max-w-xl mb-12 font-medium"
+                    className="text-white/60 text-base sm:text-lg leading-relaxed max-w-xl mb-12 font-medium"
                 >
                     Join the high-performance revenue teams scaling their outreach with NetworkUp.io. No credit card required.
                 </motion.p>

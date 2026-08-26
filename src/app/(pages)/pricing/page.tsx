@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://www.networkup.io/og-pricing.jpg",
+                url: "https://www.networkup.io/seo/og-pricing.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp Pricing Plans"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Pricing Plans & Packages | NetworkUp.io",
         description: "Compare NetworkUp.io pricing packages and find the perfect plan to scale your LinkedIn outreach. We offer clear, transparent pricing tiers (Starter, Growth, and Enterprise) designed for individuals, sales teams, agencies, and recruiting companies. Read our detailed feature comparison to see how NetworkUp compares to traditional outreach tools in cost-efficiency, safety proxy routing, daily connection capacities, and overall lead generation ROI. Review our pricing comparison chart to evaluate tool features across all pricing plans, and check our comprehensive documentation FAQ to resolve questions about subscriptions, billing cycles, team add-ons, and refund policies. Start driving pipeline growth safely and compare the value of our compliant automation features today.",
-        images: ["https://www.networkup.io/og-pricing.jpg"]
+        images: ["https://www.networkup.io/seo/og-pricing.jpg"]
     },
     robots: {
         index: true,
@@ -46,7 +46,7 @@ export default function PricingSection() {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "NetworkUp Subscription Plans",
-        "image": "https://www.networkup.io/og-pricing.jpg",
+        "image": "https://www.networkup.io/seo/og-pricing.jpg",
         "description": "Choose from NetworkUp's flexible LinkedIn outreach automation subscription packages starting at $21/mo. Compare plans including Starter, Growth, and Enterprise.",
         "offers": {
             "@type": "AggregateOffer",

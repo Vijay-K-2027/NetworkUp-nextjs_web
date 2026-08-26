@@ -17,26 +17,26 @@ const models = [
 
 const flowChart = [
     {
-        icon: Search,
+        icon: "/footer/Search.png",
         title: "Find Leads",
     },
     {
-        icon: SendIcon,
+        icon: "/footer/Send.png",
         title: "Create Campaigns",
     },
     {
-        icon: MessageCircleMoreIcon,
+        icon: "/footer/Message.png",
         title: "Start Conversations",
     },
     {
-        icon: ChartNoAxesCombined,
+        icon: "/footer/BarGraph.png",
         title: "Drive Growth",
     }
 ]
 const productLinks = ["Features", "Outreach", "Inbox", "Lead Finder", "Campaigns"];
 const solutionsLinks = ["For Sales Teams", "For Agencies", "For Recruiters", "For Startups", "For Marketing Teams"];
-const resourcesLinks = ["Blog", "Help Center", "Guides", "API Documentation", "Video Tutorials"];
-const compareLinks = ["Waalaxy", "Dripify", "Expandi", "Apollo.io", "Sales Navigator"];
+const resourcesLinks = ["Blog", "Help Center", "Guides", "API Documentation"];
+const compareLinks = ["Waalaxy", "Dripify", "Expandi", "Apollo.io"];
 const companyLinks = ["About Us", "Privacy Policy", "Terms of Service", "Contact Us"];
 const checklistItems = ["Product updates", "Growth strategies"];
 
@@ -64,7 +64,7 @@ export default function Footer() {
                             {/* Logo */}
                             <div className="flex items-center gap-4 mb-6">
                                 <Image
-                                    src="/Logo.svg"
+                                    src="/brand/Logo.svg"
                                     alt="NetworkUp Logo"
                                     width={32}
                                     height={32}
@@ -97,7 +97,13 @@ export default function Footer() {
                                                     transition={{ duration: 0.4, delay: 0.25 + index * 0.2 }}
                                                 >
                                                     <div className="w-12 h-12 flex items-center justify-center shrink-0">
-                                                        <IconComponent size={22} className="stroke-[#356221]" />
+                                                        <Image
+                                                            src={IconComponent}
+                                                            alt="Icon"
+                                                            width={32}
+                                                            height={32}
+                                                            className="object-contain w-full h-full"
+                                                        />
                                                     </div>
                                                     <h4 className="text-xs sm:text-sm text-black leading-tight">{object.title}</h4>
                                                 </motion.div>
@@ -263,7 +269,7 @@ export default function Footer() {
                             onClick={() => setIsSidebarOpen(true)}
                         >
                             <Image
-                                src="/AI-panel.png"
+                                src="/footer/AI-panel.png"
                                 alt="AI Panel"
                                 width={125}
                                 height={125}
