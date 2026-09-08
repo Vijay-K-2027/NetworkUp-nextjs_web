@@ -9,10 +9,54 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 
+const productLinks = [
+    { name: "Features", href: "/product/features" },
+    { name: "Outreach", href: "/product/outreach" },
+    { name: "Convobox", href: "/product/convobox" },
+    { name: "Lead Finder", href: "/product/lead" },
+    { name: "Campaigns", href: "/product/campaigns" },
+];
+
+const solutionsLinks = [
+    { name: "For Sales Teams", href: "/solutions" },
+    { name: "For Agencies", href: "/solutions" },
+    { name: "For Recruiters", href: "/solutions" },
+    { name: "For Startups", href: "/solutions" },
+    { name: "For Marketing Teams", href: "/solutions" },
+];
+
+const resourcesLinks = [
+    { name: "Blog", href: "#" },
+    { name: "Help Center", href: "#" },
+    { name: "Guides", href: "#" },
+    { name: "API Documentation", href: "#" },
+];
+
+const compareLinks = [
+    { name: "Sendpilot", href: "/compare/sendpilot" },
+    { name: "Waalaxy", href: "/compare/waalaxy" },
+    { name: "Heyreach", href: "/compare/heyreach" },
+    { name: "Dripify", href: "/compare/dripify" },
+    { name: "Expandi", href: "/compare/expandi" },
+    { name: "Reachy", href: "/compare/reachy" },
+    { name: "Apollo.io", href: "/compare/apollo" },
+    { name: "Lemlist", href: "/compare/lemlist" },
+    { name: "Sales Navigator", href: "/compare/sales-navigator" },
+];
+
+const companyLinks = [
+    { name: "About Us", href: "/aboutus" },
+    { name: "Privacy Policy", href: "#" },
+    { name: "Terms of Service", href: "#" },
+    { name: "Contact Us", href: "#" },
+];
+
+const checklistItems = ["Product updates", "Growth strategies"];
+
 const models = [
-    { name: "LinkedIn", icon: "/footer/linkedin.svg" },
-    { name: "Instagram", icon: "/footer/instagram.svg" },
-    { name: "Facebook", icon: "/footer/facebook.svg" },
+    { name: "LinkedIn", icon: "/footer/linkedin.svg", href: "https://www.linkedin.com/company/networkup-io/about/?viewAsMember=true" },
+    { name: "Instagram", icon: "/footer/instagram.svg", href: "https://www.instagram.com/networkup.io/" },
+    { name: "Facebook", icon: "/footer/facebook.svg", href: "https://www.facebook.com/profile.php?id=61593428116471" },
 ];
 
 const flowChart = [
@@ -32,13 +76,7 @@ const flowChart = [
         icon: "/footer/BarGraph.png",
         title: "Drive Growth",
     }
-]
-const productLinks = ["Features", "Outreach", "Inbox", "Lead Finder", "Campaigns"];
-const solutionsLinks = ["For Sales Teams", "For Agencies", "For Recruiters", "For Startups", "For Marketing Teams"];
-const resourcesLinks = ["Blog", "Help Center", "Guides", "API Documentation"];
-const compareLinks = ["Waalaxy", "Dripify", "Expandi", "Apollo.io"];
-const companyLinks = ["About Us", "Privacy Policy", "Terms of Service", "Contact Us"];
-const checklistItems = ["Product updates", "Growth strategies"];
+];
 
 export default function Footer() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -59,7 +97,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-12 mb-10">
 
                     {/* Left Column: Brand Info & Newsletter */}
-                    <div className="md:col-span-1 lg:col-span-4 flex flex-col justify-between ">
+                    <div className="md:col-span-1 lg:col-span-4 flex flex-col justify-between">
                         <div>
                             {/* Logo */}
                             <div className="flex items-center gap-4 mb-6">
@@ -70,7 +108,7 @@ export default function Footer() {
                                     height={32}
                                     style={{ height: "auto" }}
                                 />
-                                <span className="text-xl font-bold text-[#6CB531] font-[family-name:var(--font-comfortaa)] scale-120">
+                                <span className="text-xl font-bold text-[#689e24] font-[family-name:var(--font-comfortaa)] scale-120">
                                     NetworkUp<span className="font-normal">.io</span>
                                 </span>
                             </div>
@@ -81,22 +119,22 @@ export default function Footer() {
 
                             {/* Newsletter */}
                             <div className="mb-8">
-                                <h4 className="text-[10px] font-extrabold text-[#76e11b] tracking-wide uppercase mb-4">
+                                <h4 className="text-[10px] font-bold text-[#71d400] tracking-wider uppercase mb-4">
                                     Stay Updated With Growth Insights
                                 </h4>
-                                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 w-full py-2">
+                                <div className="flex flex-row items-center justify-between gap-1 sm:gap-2.5 w-full py-2">
                                     {flowChart.map((object, index) => {
                                         const IconComponent = object.icon;
                                         return (
                                             <React.Fragment key={index}>
                                                 <motion.div
-                                                    className="flex flex-col items-center gap-y-2 text-center w-full sm:w-[22%]"
+                                                    className="flex flex-col items-center gap-y-1.5 sm:gap-y-2 text-center w-[22%] pl-0"
                                                     initial={{ opacity: 0, scale: 0.92, y: 10 }}
                                                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                                     viewport={{ once: true }}
                                                     transition={{ duration: 0.4, delay: 0.25 + index * 0.2 }}
                                                 >
-                                                    <div className="w-12 h-12 flex items-center justify-center shrink-0">
+                                                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 flex items-center justify-center shrink-0 bg-transparent border-0 p-0 shadow-none">
                                                         <Image
                                                             src={IconComponent}
                                                             alt="Icon"
@@ -105,11 +143,11 @@ export default function Footer() {
                                                             className="object-contain w-full h-full"
                                                         />
                                                     </div>
-                                                    <h4 className="text-xs sm:text-sm text-black leading-tight">{object.title}</h4>
+                                                    <h4 className="text-[9px] sm:text-xs text-black font-semibold lg:font-normal leading-tight">{object.title}</h4>
                                                 </motion.div>
                                                 {index !== flowChart.length - 1 && (
                                                     <motion.div
-                                                        className="text-[#71EB34] text-2xl font-bold rotate-90 sm:rotate-0 my-1 sm:my-0 shrink-0 select-none"
+                                                        className="text-[#71EB34] text-sm sm:text-lg lg:text-xl font-bold my-0 shrink-0 select-none"
                                                         initial={{ opacity: 0, scale: 0.6 }}
                                                         whileInView={{ opacity: 1, scale: 1 }}
                                                         viewport={{ once: true }}
@@ -122,10 +160,9 @@ export default function Footer() {
                                         );
                                     })}
                                 </div>
-                                <Link href="/subscription" className="w-full my-3 inline-flex items-center justify-center bg-gradient-to-b from-[#7fff00] to-[#71EB34] hover:bg-[#68c617] text-[#031d10] font-bold text-sm sm:text-base py-3 px-10 rounded-2xl hover:scale-[1.03] transition-all duration-200">
+                                <Link href="/subscription" className="w-full my-3 inline-flex items-center justify-center bg-gradient-to-b from-[#b6ff80] to-[#7ceb2a] text-[#000000] font-bold text-sm sm:text-base py-3 px-10 rounded-2xl hover:scale-[1.03] transition-all duration-200">
                                     Start Free Trial ➜
                                 </Link>
-
 
                                 {/* Checklist */}
                                 <div className="flex flex-col gap-2">
@@ -145,9 +182,15 @@ export default function Footer() {
                         {/* Social Links */}
                         <div className="flex items-center gap-3">
                             {models.map((model, index) => (
-                                <button key={index} className="flex h-9 w-9 items-center justify-center rounded-xl border border-black bg-white hover:opacity-90 hover:-translate-y-1 shadow-sm transition-all">
+                                <a
+                                    key={index}
+                                    href={model.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex h-9 w-9 items-center justify-center rounded-xl border border-black bg-white hover:opacity-90 hover:-translate-y-1 shadow-sm transition-all"
+                                >
                                     <Image src={model.icon} alt={`${model.name} Icon`} width={24} height={24} />
-                                </button>
+                                </a>
                             ))}
                         </div>
                     </div>
@@ -159,9 +202,11 @@ export default function Footer() {
                                 Product
                             </h5>
                             <ul className="space-y-3.5 text-sm font-medium text-black/80">
-                                {productLinks.map((label) => (
-                                    <li key={label}>
-                                        <a href="#" className="hover:text-green-600 transition-colors">{label}</a>
+                                {productLinks.map((item) => (
+                                    <li key={item.name}>
+                                        <Link href={item.href} className="hover:text-green-600 transition-colors">
+                                            {item.name}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -173,9 +218,11 @@ export default function Footer() {
                                 Solutions
                             </h5>
                             <ul className="space-y-3.5 text-sm font-medium text-black/80">
-                                {solutionsLinks.map((label) => (
-                                    <li key={label}>
-                                        <a href="#" className="hover:text-green-600 transition-colors">{label}</a>
+                                {solutionsLinks.map((item) => (
+                                    <li key={item.name}>
+                                        <Link href={item.href} className="hover:text-green-600 transition-colors">
+                                            {item.name}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -187,9 +234,11 @@ export default function Footer() {
                                 Resources
                             </h5>
                             <ul className="space-y-3.5 text-sm font-medium text-black/80">
-                                {resourcesLinks.map((label) => (
-                                    <li key={label}>
-                                        <a href="#" className="hover:text-green-600 transition-colors">{label}</a>
+                                {resourcesLinks.map((item) => (
+                                    <li key={item.name}>
+                                        <Link href={item.href} className="hover:text-green-600 transition-colors">
+                                            {item.name}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -202,17 +251,17 @@ export default function Footer() {
                             </h5>
                             <ul className="space-y-3.5 text-[15px] font-medium text-black/80 break-words">
                                 {compareLinks.map((item) => (
-                                    <li key={item}>
-                                        <a href="#" className="hover:text-green-600 transition-colors block">
-                                            NetworkUp.io vs {item}
-                                        </a>
+                                    <li key={item.name}>
+                                        <Link href={item.href} className="hover:text-green-600 transition-colors block">
+                                            NetworkUp.io vs {item.name}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
-                            <a href="#" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#356221] hover:text-[#76e11b] mt-5 transition-colors">
-                                <span>See all comparisions</span>
+                            <Link href="/pricing" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#4C5246] hover:text-[#356221] mt-5 transition-colors">
+                                <span>NetworkUp vs All</span>
                                 <ArrowRightIcon size={14} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -223,15 +272,18 @@ export default function Footer() {
                                 Company
                             </h5>
                             <ul className="space-y-3.5 text-sm font-medium text-black/80">
-                                {companyLinks.map((label) => (
-                                    <li key={label}>
-                                        <a href="#" className="hover:text-green-600 transition-colors">{label}</a>
+                                {companyLinks.map((item) => (
+                                    <li key={item.name}>
+                                        <Link href={item.href} className="hover:text-green-600 transition-colors">
+                                            {item.name}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                     </div>
                 </div>
+
                 <div className="border-t border-zinc-200/60 pt-6 mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <div className="text-md font-medium text-gray-400 tracking-wide text-center">
                         &copy; 2026 NetworkUp.io. All rights reserved.

@@ -59,7 +59,7 @@ export default function SplitFeatureSection({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-xl sm:text-2xl lg:text-3xl text-black font-extrabold tracking-tighter mt-1"
+                className="text-xl sm:text-2xl lg:text-3xl text-black font-bold tracking-tighter mt-1"
             >
                 {title}
             </motion.h2>

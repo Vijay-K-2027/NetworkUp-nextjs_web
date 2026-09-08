@@ -117,82 +117,90 @@ export default function Comparision() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <div className="min-w-[1190px] flex flex-col">
-
+                    <table className="min-w-[1190px] w-full text-left border-collapse table-fixed select-none">
                         {/* Table Header Row */}
-                        <div className="flex flex-row items-center border-b border-zinc-800/80 pb-4 mb-2">
-                            {/* Features Column Header */}
-                            <div className="w-[280px] flex items-center gap-2.5 pl-4 shrink-0">
-                                <Star size={16} className="text-[#76e11b] fill-[#76e11b]/20" />
-                                <span className="text-[#76e11b] font-extrabold text-xs tracking-wider uppercase">Features</span>
-                            </div>
+                        <thead className="border-b border-zinc-800/80">
+                            <tr>
+                                {/* Features Column Header */}
+                                <th className="w-[280px] pl-4 py-4 shrink-0 text-left align-middle font-normal">
+                                    <div className="flex items-center gap-2.5">
+                                        <Star size={16} className="text-[#76e11b] fill-[#76e11b]/20" />
+                                        <span className="text-[#76e11b] font-extrabold text-xs tracking-wider uppercase">Features</span>
+                                    </div>
+                                </th>
 
-                            {/* NetworkUp Column Header */}
-                            <div className="w-[160px] flex flex-col items-center justify-center py-4 border-t border-x border-[#76e11b]/30 bg-[#76e11b]/[0.03] rounded-t-2xl shrink-0">
-                                <span className="text-[#76e11b] font-bold text-xs tracking-widest">NETWORKUP.IO</span>
-                            </div>
+                                {/* NetworkUp Column Header */}
+                                <th className="w-[160px] py-4 border-t border-x border-[#76e11b]/30 bg-[#76e11b]/[0.03] rounded-t-2xl shrink-0 text-center align-middle font-normal">
+                                    <span className="text-[#76e11b] font-bold text-xs tracking-widest block">NETWORKUP.IO</span>
+                                </th>
 
-                            {/* Competitor Column Headers */}
-                            {headings.map((comp) => (
-                                <div key={comp} className="w-[110px] text-center shrink-0 flex items-center justify-center px-2">
-                                    <span className="text-zinc-500 font-extrabold text-[10px] sm:text-xs tracking-wider uppercase leading-tight">
-                                        {comp}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
+                                {/* Competitor Column Headers */}
+                                {headings.map((comp) => (
+                                    <th key={comp} className="w-[110px] text-center shrink-0 px-2 py-4 align-middle font-normal">
+                                        <span className="text-zinc-500 font-extrabold text-[10px] sm:text-xs tracking-wider uppercase leading-tight block">
+                                            {comp}
+                                        </span>
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
 
                         {/* Table Body Rows */}
-                        <div className="flex flex-col">
+                        <tbody className="divide-y divide-zinc-850">
                             {comparisons.map((row, index) => {
                                 const isLast = index === comparisons.length - 1;
                                 return (
-                                    <motion.div
+                                    <motion.tr
                                         key={index}
-                                        className="flex flex-row items-center border-b border-zinc-850 last:border-0 hover:bg-white/[0.02] transition-colors"
+                                        className="hover:bg-white/[0.02] transition-colors"
                                         initial={{ opacity: 0, x: -10 }}
                                         whileInView={{ opacity: 1, x: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.4, delay: Math.min(index * 0.04, 0.4) }}
                                     >
                                         {/* Feature Name */}
-                                        <div className="w-[280px] flex items-center gap-3 pl-4 py-4 shrink-0">
-                                            <row.icon size={16} className="text-[#76e11b]/80" />
-                                            <span className="text-zinc-200 text-sm font-semibold tracking-wide">{row.feature}</span>
-                                        </div>
+                                        <td className="w-[280px] pl-4 py-4 shrink-0 align-middle">
+                                            <div className="flex items-center gap-3">
+                                                <row.icon size={16} className="text-[#76e11b]/80 animate-pulse" />
+                                                <span className="text-zinc-200 text-sm font-semibold tracking-wide">{row.feature}</span>
+                                            </div>
+                                        </td>
 
                                         {/* NetworkUp Value */}
-                                        <div className={`w-[160px] flex items-center justify-center py-4 border-x border-[#76e11b]/30 bg-[#76e11b]/[0.03] shrink-0 ${isLast ? "border-b rounded-b-2xl" : ""}`}>
-                                            {row.networkUp === "Yes" ? (
-                                                <Check size={20} className="text-[#76e11b] stroke-[3]" />
-                                            ) : (
-                                                <span className="text-[#76e11b] text-sm font-bold">{row.networkUp}</span>
-                                            )}
-                                        </div>
+                                        <td className={`w-[160px] py-4 border-x border-[#76e11b]/30 bg-[#76e11b]/[0.03] shrink-0 align-middle text-center ${isLast ? "border-b rounded-b-2xl" : ""}`}>
+                                            <div className="flex items-center justify-center">
+                                                {row.networkUp === "Yes" ? (
+                                                    <Check size={20} className="text-[#76e11b] stroke-[3]" />
+                                                ) : (
+                                                    <span className="text-[#76e11b] text-sm font-bold">{row.networkUp}</span>
+                                                )}
+                                            </div>
+                                        </td>
 
                                         {/* Competitor Values */}
                                         {row.values.map((val, idx) => (
-                                            <div key={idx} className="w-[110px] flex items-center justify-center shrink-0 py-4">
-                                                {(() => {
-                                                    if (val === "Yes") {
-                                                        return <Check size={18} className="text-lime-400/90 stroke-[2.5]" />;
-                                                    }
-                                                    if (val === "No") {
-                                                        return <span className="text-white/80 font-semibold text-lg select-none">—</span>;
-                                                    }
-                                                    if (val === "Partial") {
-                                                        return <span className="text-white/80 font-bold text-md select-none">~</span>;
-                                                    }
-                                                    return <span className="text-zinc-400 text-sm font-medium">{val}</span>;
-                                                })()}
-                                            </div>
+                                            <td key={idx} className="w-[110px] shrink-0 py-4 align-middle text-center">
+                                                <div className="flex items-center justify-center">
+                                                    {(() => {
+                                                        if (val === "Yes") {
+                                                            return <Check size={18} className="text-lime-400/90 stroke-[2.5]" />;
+                                                        }
+                                                        if (val === "No") {
+                                                            return <span className="text-white/80 font-semibold text-lg select-none">—</span>;
+                                                        }
+                                                        if (val === "Partial") {
+                                                            return <span className="text-white/80 font-bold text-md select-none">~</span>;
+                                                        }
+                                                        return <span className="text-zinc-400 text-sm font-medium">{val}</span>;
+                                                    })()}
+                                                </div>
+                                            </td>
                                         ))}
-                                    </motion.div>
+                                    </motion.tr>
                                 );
                             })}
-                        </div>
-
-                    </div>
+                        </tbody>
+                    </table>
                 </motion.div>
 
                 {/* Table Legend */}

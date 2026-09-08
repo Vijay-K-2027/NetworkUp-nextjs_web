@@ -1,16 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { AlertTriangle, ArrowUpRight, Bell, Bot, Compass, HelpCircle, HelpCircleIcon, Inbox, LayoutDashboard, Megaphone, Search, Settings, ShieldCheck, Sparkles, UserCheck, Mail, UserPlus, Zap, ChevronLeft, ChevronRight, Plus, Upload, Briefcase, Landmark, ShoppingCart, GraduationCap, UserCircle2, LogOut, Rocket, PlugZap, Database, Microchip, UsersIcon, NetworkIcon, UserSearch, RocketIcon, MessagesSquare, Radar, ChartBar, Newspaper, Menu } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, Bell, Bot, Compass, HelpCircle, HelpCircleIcon, Inbox, LayoutDashboard, Megaphone, Search, Settings, ShieldCheck, Sparkles, UserCheck, Mail, TerminalSquare, ChevronLeft, ChevronRight, Briefcase, Landmark, ShoppingCart, GraduationCap, UserCircle2, LogOut, Rocket, PlugZap, Database, Microchip, UserSearch, RocketIcon, MessagesSquare, Radar, ChartBar, Newspaper, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { cardVariants, containerVariants } from "@/app/homepage/assets/icons";
 import Image from "next/image"
-import { FaResearchgate, FaTools } from "react-icons/fa";
-import { GrTemplate } from "react-icons/gr";
-import { TbTemplate } from "react-icons/tb";
-import { BiUser } from "react-icons/bi";
-import { CampaignBuilderIcon } from "@/app/homepage/assets/icons";
-import { MdReport } from "react-icons/md";
+import { FaTools } from "react-icons/fa";
+
 
 const icons = {
   LayoutDashboard,
@@ -78,34 +74,43 @@ export default function DashboardPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="col-span-1 lg:col-span-7 bg-white h-[550px] sm:h-[650px] lg:h-full lg:max-h-[82vh] rounded-none shadow-2xl flex flex-col md:flex-row overflow-hidden relative"
+            className="col-span-1 lg:col-span-7 bg-white h-[550px] sm:h-[650px] lg:h-full lg:max-h-[82vh] rounded-none shadow-2xl flex flex-col lg:flex-row overflow-hidden relative z-10"
           >
-            {/* Sidebar Backdrop for Mobile */}
+            {/* Sidebar Backdrop contained within Mockup Card */}
             {isSidebarOpen && (
               <div
-                className="absolute inset-0 bg-black/60 z-40 md:hidden"
+                className="absolute inset-0 bg-black/60 z-30 lg:hidden"
                 onClick={() => setIsSidebarOpen(false)}
               />
             )}
 
-            {/* Sidebar */}
-            <aside className={`${isSidebarOpen ? "flex absolute inset-y-0 left-0 z-50 w-52 shadow-2xl h-full" : "hidden"
-              } md:relative md:flex md:w-50 bg-[#0c240f] text-white flex-col justify-between p-2.5 shrink-0 transition-all duration-300 h-full overflow-hidden`}>
+            {/* Sidebar contained strictly inside Mockup Card */}
+            <aside className={`${isSidebarOpen ? "flex absolute inset-y-0 left-0 z-40 w-52 sm:w-56 shadow-2xl h-full" : "hidden"
+              } lg:relative lg:flex lg:w-50 bg-[#0c240f] text-white flex-col justify-between p-2.5 shrink-0 transition-all duration-300 h-full max-h-full overflow-hidden`}>
               <div className="flex-1 overflow-y-auto min-h-0 pr-1 select-none custom-scrollbar">
                 {/* Logo Section */}
-                <div className="flex items-center gap-1 mb-3.5 px-1">
-                  <div className="bg-transparent p-0.5 rounded-lg text-black font-extrabold flex items-center justify-center">
-                    <Image
-                      src="/brand/Logo.svg"
-                      alt="Logo"
-                      width={12}
-                      height={12}
-                      style={{ height: "auto" }}
-                    />
+                <div className="flex items-center justify-between gap-1 mb-3.5 px-1 shrink-0">
+                  <div className="flex items-center gap-1">
+                    <div className="bg-transparent p-0.5 rounded-lg text-black font-extrabold flex items-center justify-center">
+                      <Image
+                        src="/brand/Logo.svg"
+                        alt="Logo"
+                        width={12}
+                        height={12}
+                        style={{ height: "auto" }}
+                      />
+                    </div>
+                    <span className="text-sm font-bold font-[family-name:var(--font-comfortaa)] tracking-tight text-[#6CB531] flex items-center">
+                      NetworkUp<span className="text-lime-400 font-normal tracking-[0.5px]">.io</span>
+                    </span>
                   </div>
-                  <span className="text-sm font-bold font-[family-name:var(--font-comfortaa)] tracking-tight text-[#6CB531] flex items-center">
-                    NetworkUp<span className="text-lime-400 font-normal tracking-[0.5px]">.io</span>
-                  </span>
+                  <button
+                    onClick={() => setIsSidebarOpen(false)}
+                    className="lg:hidden text-gray-400 hover:text-white p-1 rounded-md transition-colors"
+                    aria-label="Close sidebar"
+                  >
+                    <X size={15} />
+                  </button>
                 </div>
 
                 {/* Sidebar Links */}
@@ -117,22 +122,18 @@ export default function DashboardPreview() {
                   </button>
                   <button className="w-full flex items-start justify-between gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <div className="flex items-center gap-2">
-                      <Inbox size={13} className="text-gray-400" />
-                      <span>Inbox</span>
+                      <Mail size={13} className="text-gray-400" />
+                      <span>ConvoBox</span>
                     </div>
                     <span className="bg-lime-400/30 text-lime-300 text-[8px] px-1.5 py-0.5 -mt-0.5 rounded-full">24</span>
                   </button>
                   <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
-                    <BiUser size={13} className="text-gray-400" />
-                    Leads
+                    <UserSearch size={13} className="text-gray-400" />
+                    Lead Finder
                   </button>
                   <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <Compass size={13} className="text-gray-400" />
                     Discover
-                  </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
-                    <NetworkIcon size={13} className="text-gray-400" />
-                    Network
                   </button>
 
                   <div className="h-1.5" />
@@ -143,15 +144,11 @@ export default function DashboardPreview() {
                   </button>
                   <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <FaTools size={13} className="text-gray-400" />
-                    Campaign Builder
+                    Ai Content Studio
                   </button>
                   <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
-                    <TbTemplate size={13} className="text-gray-400" />
-                    Templates
-                  </button>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
-                    <GrTemplate size={13} className="text-gray-400" />
-                    Automation Logs
+                    <TerminalSquare size={13} className="text-gray-400" />
+                    EngagementAutomation
                   </button>
 
                   <div className="h-1.5" />
@@ -169,10 +166,6 @@ export default function DashboardPreview() {
 
                   <div className="h-1.5" />
                   <div className="uppercase text-[9px] text-gray-300/50 pl-2" >Administration</div>
-                  <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
-                    <UsersIcon size={13} className="text-gray-400" />
-                    Community
-                  </button>
                   <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-xs font-medium transition-all text-gray-300 hover:bg-white/5 hover:text-white" onClick={() => setIsSidebarOpen(false)}>
                     <Microchip size={13} className="text-gray-400" />
                     Integration
@@ -193,7 +186,7 @@ export default function DashboardPreview() {
               </div>
 
               {/* Sidebar Bottom */}
-              <div className="pt-2 border-t border-white/10 mt-2 md:mt-0">
+              <div className="pt-2 border-t border-white/10 mt-2 shrink-0">
                 <button className="w-full flex items-center gap-2 px-2 py-1 rounded-lg text-[10px] font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all">
                   <UserCircle2 size={16} className="text-white shrink-0" />
                   <div className="flex flex-col items-start min-w-0">
@@ -216,7 +209,7 @@ export default function DashboardPreview() {
                 <div className="flex items-center gap-1.5 min-w-0">
                   <Menu
                     size={16}
-                    className="md:hidden text-gray-600 cursor-pointer shrink-0"
+                    className="lg:hidden text-gray-600 cursor-pointer shrink-0"
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                   />
                   <h2 className="font-extrabold text-xs sm:text-base truncate">Dashboard</h2>

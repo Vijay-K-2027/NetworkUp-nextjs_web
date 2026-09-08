@@ -167,7 +167,7 @@ export default function Price() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.15 }}
                             whileHover={{ y: -8 }}
-                            className={`relative h-fit flex flex-col justify-between p-8 sm:p-10 rounded-[2.25rem] bg-white transition-all duration-300 ${plan.popular ? "border-2 border-[#76e11b] shadow-[0_0_50px_10px_rgba(118,225,27,0.2)]" : "border border-zinc-200/60 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.01)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.04)]"
+                            className={`relative h-fit flex flex-col justify-between p-8 sm:p-10 rounded-[2.25rem] bg-white transition-all duration-300 hover:border-[#71EB34] ${plan.popular ? "border-2 border-[#76e11b] shadow-[0_0_50px_10px_rgba(118,225,27,0.2)] hover:border-[#71EB34]" : "border-2 border-zinc-200/60 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.01)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.04)] hover:border-[#71EB34]"
                                 }`}
                         >
                             {/* Popular Badge */}

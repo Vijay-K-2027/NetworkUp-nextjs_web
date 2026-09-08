@@ -22,15 +22,68 @@ export default function Documentation({
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        "mainEntity": items.map(doc => ({
-                            "@type": "Question",
-                            "name": doc.question,
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": doc.answer.replace(/<[^>]*>/g, '') // Strip HTML tags for structured text schema
+                        "@graph": [
+                            {
+                                "@type": "FAQPage",
+                                "mainEntity": items.map(doc => ({
+                                    "@type": "Question",
+                                    "name": doc.question,
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": doc.answer.replace(/<[^>]*>/g, '') // Strip HTML tags for structured text schema
+                                    }
+                                }))
+                            },
+                            {
+                                "@type": "HowTo",
+                                "name": "How to Safely Warm Up a LinkedIn Account with NetworkUp",
+                                "description": "Step-by-step guide to safely warming up automated LinkedIn profiles using proxy location pinning and activity throttling.",
+                                "step": [
+                                    {
+                                        "@type": "HowToStep",
+                                        "name": "Connect Profile",
+                                        "text": "Link your professional LinkedIn account with the NetworkUp platform session manager."
+                                    },
+                                    {
+                                        "@type": "HowToStep",
+                                        "name": "Pin Proxy Location",
+                                        "text": "Configure geographic boundaries to lock your automation session to a static residential proxy."
+                                    },
+                                    {
+                                        "@type": "HowToStep",
+                                        "name": "Initiate Warm-up Schedule",
+                                        "text": "Start the automated activity schedule at low volumes of 5-10 actions per day."
+                                    },
+                                    {
+                                        "@type": "HowToStep",
+                                        "name": "Graduate to Campaigns",
+                                        "text": "Run full automated campaign outreach workflows capped strictly at the 50 actions per day safety limit."
+                                    }
+                                ]
+                            },
+                            {
+                                "@type": "DefinedTermSet",
+                                "@id": "https://networkup.io/terms-glossary",
+                                "name": "NetworkUp Core Technical Terminology Glossary",
+                                "hasDefinedTerm": [
+                                    {
+                                        "@type": "DefinedTerm",
+                                        "name": "Proxy Pinning",
+                                        "description": "Technique that binds an automation session to a stable, unchanging residential proxy matching the account holder's home coordinates."
+                                    },
+                                    {
+                                        "@type": "DefinedTerm",
+                                        "name": "Rate-Limit Throttling",
+                                        "description": "The practice of limiting connection requests and messages to strict maximum safety ceilings (100 connection requests per week, 50 actions per day)."
+                                    },
+                                    {
+                                        "@type": "DefinedTerm",
+                                        "name": "Local Browser Emulation",
+                                        "description": "Running automated interactions inside localized sessions with natural delays, coordinate scrolling, and click variations to mimic real human usage."
+                                    }
+                                ]
                             }
-                        }))
+                        ]
                     })
                 }}
             />

@@ -140,11 +140,9 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
             time: currentTime
         };
 
-        // Render user message instantly
         setMessages(prev => [...prev, userMsg]);
         setInputValue("");
 
-        // Show typing indicator
         setIsTyping(true);
 
         // Detect if the sent text is one of our standard FAQ questions

@@ -64,7 +64,7 @@ export default function Section8() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     <span className="text-xl font-bold text-slate-800 text-left">
-                        Content Assistant
+                        AI Content Studio
                     </span>
 
                     {/* Tabs */}
@@ -87,17 +87,17 @@ export default function Section8() {
                             <div className="flex flex-col items-start gap-y-2">
                                 <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Lead Context</span>
                                 <div className="flex flex-col gap-2 p-5 border border-gray-200 rounded-2xl bg-white w-full shadow-sm text-left">
-                                    <p className="text-xs sm:text-[13px] font-semibold text-slate-800 leading-relaxed"><span className="text-slate-500 font-medium">Name:</span> Liam Anderson</p>
-                                    <p className="text-xs sm:text-[13px] font-semibold text-slate-800 leading-relaxed"><span className="text-slate-500 font-medium">Title:</span> Growth Manager</p>
-                                    <p className="text-xs sm:text-[13px] font-semibold text-slate-800 leading-relaxed"><span className="text-slate-500 font-medium">Company:</span> DevFlow</p>
-                                    <p className="text-xs sm:text-[13px] font-semibold text-slate-800 leading-relaxed"><span className="text-slate-500 font-medium">Industry:</span> SaaS</p>
-                                    <p className="text-xs sm:text-[13px] font-semibold text-slate-800 leading-relaxed"><span className="text-slate-500 font-medium">Location:</span> San Francisco, USA</p>
+                                    <p className="text-sm sm:text-md  text-black leading-relaxed">Name: Liam Anderson</p>
+                                    <p className="text-sm sm:text-md  text-black leading-relaxed">Title: Growth Manager</p>
+                                    <p className="text-sm sm:text-md  text-black leading-relaxed">Company: DevFlow</p>
+                                    <p className="text-sm sm:text-md  text-black leading-relaxed">Industry: SaaS</p>
+                                    <p className="text-sm sm:text-md  text-black leading-relaxed">Location: San Francisco, USA</p>
                                 </div>
                             </div>
 
                             <div className="flex flex-col items-start gap-y-2">
                                 <span className="text-xs sm:text-[13px] text-slate-800 font-bold">What would you like to say?</span>
-                                <div className="w-full bg-white border border-gray-200 rounded-2xl p-4 text-xs sm:text-[13px] text-slate-700 leading-relaxed shadow-sm">
+                                <div className="w-full bg-white border border-gray-200 rounded-2xl p-4 text-xs sm:text-sm text-black/80 leading-relaxed shadow-sm">
                                     Introduce my product for LinkedIn automation to help with outreach and lead generation.
                                 </div>
                             </div>
@@ -119,7 +119,7 @@ export default function Section8() {
                             <div className="flex flex-col items-start w-full">
                                 <span className="text-xs sm:text-[13px] text-[#15803d] font-bold uppercase tracking-wider mb-3">AI Generated Message</span>
 
-                                <div className="text-xs sm:text-[13px] text-slate-700 leading-relaxed pr-1">
+                                <div className="text-xs sm:text-sm text-black/90 leading-relaxed pr-1">
                                     <p className="mb-4">Hi Liam,</p>
                                     <p className="mb-4">I came across your work at DevFlow and really liked how your team is scaling growth. We help SaaS teams automate LinkedIn outreach in a safe and personalized way to generate more conversations and qualified leads consistently.</p>
                                     <p className="mb-4">Would love to connect and see if it makes sense for your team.</p>

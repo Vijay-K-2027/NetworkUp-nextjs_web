@@ -61,7 +61,7 @@ export default function Navbar() {
                         </span>
                     </Link>
 
-                    <nav className="hidden md:flex">
+                    <nav className="hidden lg:flex">
                         <ul className="flex items-center gap-4 lg:gap-8 text-sm lg:text-md font-medium text-gray-600">
                             {navItems.map((item, index) => {
                                 const isActive = pathname === item.path;
@@ -92,25 +92,15 @@ export default function Navbar() {
                     </Link>
 
                     <Link
-                        className="hidden sm:inline-flex rounded-xl bg-gradient-to-b from-[#71EB34] to-[#68c617] text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
+                        className="hidden sm:inline-flex rounded-xl bg-gradient-to-b from-[#CAFF95] to-[#71E300] text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
                         href="/subscription"
                     >
                         Start Free Trial
                     </Link>
 
                     <button
-                        className="flex flex-row gap-1.5 sm:gap-2 items-center rounded-xl px-3 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-black shadow transition hover:bg-gray-100 cursor-pointer"
-                        onClick={() => {
-                            window.dispatchEvent(new CustomEvent("toggle-ask-ai"));
-                        }}
-                    >
-                        <Bot size={18} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2} />
-                        <span className="hidden xs:hidden sm:inline">Ask AI</span>
-                    </button>
-
-                    <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="flex md:hidden h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl border border-gray-200 hover:bg-gray-50 text-gray-700"
+                        className="flex lg:hidden h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl border border-gray-200 hover:bg-gray-50 text-gray-700"
                         aria-label="Toggle Menu"
                     >
                         {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -120,7 +110,7 @@ export default function Navbar() {
 
             {/* Mobile Dropdown Drawer */}
             {isOpen && (
-                <div className="md:hidden border-t border-gray-200 bg-white px-6 py-5 shadow-inner">
+                <div className="lg:hidden border-t border-gray-200 bg-white px-6 py-5 shadow-inner">
                     <nav className="mb-5">
                         <ul className="flex flex-col gap-4 text-base font-medium text-gray-600">
                             {navItems.map((item, index) => {

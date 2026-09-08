@@ -2,10 +2,15 @@ import { Metadata } from "next";
 import Navbar from "@/app/homepage/components/Navbar";
 import CTABanner from "@/app/homepage/components/CTABanner";
 import Footer from "@/app/homepage/components/Footer";
-import Section1 from "./components/1-Section";
-import Section2 from "./components/2-Section";
-import Section3 from "./components/3-Section";
-import Section5 from "./components/5-Section";
+import Section1 from "./components/Section1";
+import Section2 from "./components/Section2";
+import Section3 from "./components/Section3";
+import Section4 from "./components/Section4";
+import Section5 from "./components/Section5";
+import Section6 from "./components/Section6";
+import Section7 from "./components/Section7";
+import Section8 from "./components/Section8";
+
 
 export const metadata: Metadata = {
     title: "About Us | NetworkUp.io",
@@ -48,10 +53,16 @@ export default function OverviewPage() {
     return (
         <>
             <Navbar />
-            <Section1 />
-            <Section2 />
-            <Section3 />
-            <Section5 />
+            <div className="bg-[#f7f9fb]">
+                <Section1 />
+                <Section2 />
+                <Section3 />
+                <Section4 />
+                <Section5 />
+                <Section6 />
+                <Section7 />
+                <Section8 />
+            </div>
             <CTABanner />
             <Footer />
         </>

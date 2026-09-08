@@ -101,12 +101,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NetworkUp",
+    "url": "https://networkup.io",
+    "logo": "https://networkup.io/brand/Logo.svg",
+    "sameAs": [
+      "https://www.linkedin.com/company/networkup",
+      "https://twitter.com/networkup_io",
+      "https://github.com/networkup-io",
+      "https://www.crunchbase.com/organization/networkup"
+    ]
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${neueMontreal.variable} ${comfortaa.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
         {children}
       </body>
     </html>
