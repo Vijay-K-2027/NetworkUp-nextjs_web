@@ -38,7 +38,7 @@ export default function Hero() {
                         </div>
                     </Link>
 
-                    <Link href="/sunscription"
+                    <Link href="/subscription"
                         className="flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-bold text-gray-700 transition hover:bg-gray-100"
                     >
                         <PlayCircle size={18} strokeWidth={3} />

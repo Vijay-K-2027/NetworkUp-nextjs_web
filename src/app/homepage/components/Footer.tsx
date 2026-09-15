@@ -26,10 +26,10 @@ const solutionsLinks = [
 ];
 
 const resourcesLinks = [
-    { name: "Blog", href: "#" },
-    { name: "Help Center", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "API Documentation", href: "#" },
+    { name: "Blog", href: "/resources/blog" },
+    { name: "Help Center", href: "/resources/help-center" },
+    { name: "Guides", href: "/resources/product-manual" },
+    { name: "API Documentation", href: "/resources/api-documentation" },
 ];
 
 const compareLinks = [
@@ -258,7 +258,7 @@ export default function Footer() {
                                     </li>
                                 ))}
                             </ul>
-                            <Link href="/pricing" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#4C5246] hover:text-[#356221] mt-5 transition-colors">
+                            <Link href="/compare/compare-all" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#4C5246] hover:text-[#356221] mt-5 transition-colors">
                                 <span>NetworkUp vs All</span>
                                 <ArrowRightIcon size={14} />
                             </Link>
