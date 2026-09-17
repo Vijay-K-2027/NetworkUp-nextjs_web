@@ -18,11 +18,11 @@ const productLinks = [
 ];
 
 const solutionsLinks = [
-    { name: "For Sales Teams", href: "/solutions" },
-    { name: "For Agencies", href: "/solutions" },
-    { name: "For Recruiters", href: "/solutions" },
-    { name: "For Startups", href: "/solutions" },
-    { name: "For Marketing Teams", href: "/solutions" },
+    { name: "For Sales Teams", href: "/solutions/sales-team" },
+    { name: "For Agencies", href: "/solutions/agencies" },
+    { name: "For Recruiters", href: "/solutions/recruiters" },
+    { name: "For Startups", href: "/solutions/startups" },
+    { name: "For Marketing Teams", href: "/solutions/marketing-team" },
 ];
 
 const resourcesLinks = [
@@ -48,7 +48,7 @@ const companyLinks = [
     { name: "About Us", href: "/aboutus" },
     { name: "Privacy Policy", href: "#" },
     { name: "Terms of Service", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Contact Us", href: "/company/contact-us" },
 ];
 
 const checklistItems = ["Product updates", "Growth strategies"];
