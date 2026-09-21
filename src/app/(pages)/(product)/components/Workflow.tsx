@@ -24,7 +24,7 @@ export default function Workflow() {
     ];
 
     return (
-        <section id="workflow" className="w-full bg-gradient-to-r from-[#001800] to-[#002000] py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section id="workflow" className="w-full bg-[#012301] py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
             <div className="mx-auto max-w-7xl">
                 {/* Kept standard grid-cols-12 system but divided sections evenly */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -33,10 +33,10 @@ export default function Workflow() {
                     <div className="lg:col-span-6 flex flex-col justify-center w-full">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-3">
                             Master the workflow.<br />
-                            <span className="text-[#a3e635]">Win the market.</span>
+                            <span className="text-[#71e300]">Win the market.</span>
                         </h2>
 
-                        <p className="text-zinc-300 text-base sm:text-lg tracking-wider mt-4 max-w-xl">
+                        <p className="text-[#e6e0e9] text-base sm:text-lg tracking-wider mt-4 max-w-xl">
                             Our unified platform orchestrates every stage of the funnel, from first contact to closed-won deals.
                         </p>
 
@@ -49,15 +49,15 @@ export default function Workflow() {
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.15, duration: 0.5 }}
                                     whileHover={{ scale: 1.02 }}
-                                    className="flex items-start gap-4 p-5 sm:p-6 bg-white/[0.08] border border-white/[0.06] rounded-2xl transition-all duration-300 hover:bg-white/[0.15] hover:border-[#a3e635]/20 group w-full">
-                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#a3e635] text-sm font-extrabold text-[#031d10] shadow-[0_0_15px_rgba(163,230,53,0.3)] transition-transform duration-300 group-hover:scale-110">
+                                    className="flex items-start gap-4 p-5 sm:p-6 bg-white/5 border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white/[0.15] hover:border-[#a3e635]/20 group w-full">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#71e300] text-sm font-extrabold text-[#041c11] shadow-[0_0_15px_rgba(163,230,53,0.3)] transition-transform duration-300 group-hover:scale-110">
                                         {step.number}
                                     </div>
                                     <div className="w-full">
                                         <h3 className="text-base sm:text-lg font-bold text-white mb-1 tracking-wide">
                                             {step.title}
                                         </h3>
-                                        <p className="text-zinc-300 text-sm sm:text-base tracking-wide">
+                                        <p className="text-[#e6e0e9] text-sm sm:text-base tracking-wide">
                                             {step.description}
                                         </p>
                                     </div>

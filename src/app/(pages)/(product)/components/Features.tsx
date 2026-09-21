@@ -59,10 +59,10 @@ export default function Features() {
             <div className="mx-auto max-w-7xl">
                 {/* Header Section */}
                 <div className="text-center mb-15">
-                    <h4 className="text-xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                    <h4 className="text-xl font-bold tracking-tight text-[#1d1b20] sm:text-3xl">
                         Precision tools for modern sellers
                     </h4>
-                    <p className="mt-3 text-xl leading-8 text-gray-600 max-w-2xl mx-auto">
+                    <p className="mt-3 text-xl leading-8 text-[#263b00] max-w-2xl mx-auto">
                         Everything you need to automate your outbound without sacrificing the human touch.
                     </p>
                 </div>
@@ -83,9 +83,9 @@ export default function Features() {
                                 key={index}
                                 variants={cardVariants}
                                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                                className="flex flex-col bg-white p-8 rounded-[1rem] border-2 border-[#defad0]/20 shadow-[inset_2px_0_0_0_rgba(222,250,208,1),_inset_0_-2px_0_0_rgba(222,250,208,1)] transition-shadow duration-300 hover:shadow-[0_12px_30px_-8px_rgba(53,98,33,0.08)] group"
+                                className="flex flex-col bg-gradient-to-tr from-white via-white via-[#f3ffe3]/60 to-[#e7ffca]/60 p-8 rounded-[1rem] border-2 border-[#defad0]/20 shadow-[inset_2px_0_0_0_rgba(222,250,208,1),_inset_0_-2px_0_0_rgba(222,250,208,1)] transition-shadow duration-300 hover:shadow-[0_12px_30px_-8px_rgba(53,98,33,0.08)] group"
                             >
-                                <div className="absolute inset-0 pointer-events-none rounded-[1rem] border-2 border-[#defad0] [mask-image:linear-gradient(to_top_left,_black_50%,_transparent_50%)]"></div>
+                                <div className="absolute inset-0 pointer-events-none rounded-[1rem] border-2 border-[#baff67] [mask-image:linear-gradient(to_top_left,_black_50%,_transparent_50%)]"></div>
 
                                 <div className="flex items-center justify-start mb-6">
                                     <div className="transition-transform duration-300 group-hover:scale-110 h-[30px] flex items-center">
@@ -98,15 +98,15 @@ export default function Features() {
                                         ) : (
                                             (() => {
                                                 const IconComponent = iconVal as React.ComponentType<{ size?: number; color?: string }>;
-                                                return <IconComponent size={30} color="green" />;
+                                                return <IconComponent size={30} color="#316b00" />;
                                             })()
                                         )}
                                     </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 tracking-tight mb-3">
+                                <h3 className="text-xl font-bold text-[#191c1e] tracking-tight mb-3">
                                     {feature.title}
                                 </h3>
-                                <p className="text-[16px] leading-[1.6] text-gray-500 font-normal">
+                                <p className="text-[16px] leading-[1.6] text-[#3f4a36] font-normal">
                                     {feature.description}
                                 </p>
                             </motion.div>

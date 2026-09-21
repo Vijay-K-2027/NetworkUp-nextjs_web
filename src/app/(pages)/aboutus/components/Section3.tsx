@@ -57,7 +57,7 @@ export default function Section3() {
                         transition={{ duration: 0.5 }}
                         className="text-left w-full gap-y-3 flex flex-col"
                     >
-                        <h1 className="uppercase text-md text-[#356221]/70 font-bold leading-wider tracking-wide">What Drives Us ———</h1>
+                        <h1 className="uppercase text-md text-[#5a9300]/70 font-bold leading-wider tracking-wide">What Drives Us ———</h1>
                         <p className="text-black text-3xl sm:text-4xl lg:text-5xl font-bold max-w-lg">Our values shape everything we do</p>
                     </motion.div>
 
@@ -73,13 +73,13 @@ export default function Section3() {
                             <motion.div
                                 key={index}
                                 variants={cardVariants}
-                                className="p-6 bg-gradient-to-b from-lime-700 to-black flex flex-col items-start gap-y-4 border border-transparent hover:border-lime-200/50 hover:bg-white rounded-2xl hover:shadow-md hover:scale-102 transition-all duration-300"
+                                className="p-6 bg-gradient-to-b from-lime-900 to-black flex flex-col items-start gap-y-4 border border-transparent hover:border-lime-200/50 hover:bg-white rounded-2xl hover:shadow-md hover:scale-102 transition-all duration-300"
                             >
-                                <div className="p-2 w-15 h-15 rounded-full bg-white/5 flex items-center justify-center shadow-[0_0_7px_3px_#A3E635]">
-                                    <data.icon size={30} className="stroke-lime-300" />
+                                <div className="p-2 w-15 h-15 rounded-full bg-[#a3ff12]/10 border border-[#a3ff12]/30 flex items-center justify-center shadow-[0_0_7px_3px_#A3E635]">
+                                    <data.icon size={30} className="stroke-[#a3ff12]" />
                                 </div>
                                 <h3 className="text-xl text-white font-bold text-left">{data.title}</h3>
-                                <p className="text-lg text-white/60 text-left leading-relaxed tracking-tight">{data.description}</p>
+                                <p className="text-lg text-[#9ca3af] text-left leading-relaxed tracking-tight">{data.description}</p>
                             </motion.div>
                         ))}
                     </motion.div>

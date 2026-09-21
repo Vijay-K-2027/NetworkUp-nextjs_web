@@ -36,7 +36,7 @@ export default function Section4() {
 
                         {/* Subheading Badge */}
                         <motion.p
-                            className="text-[#356221]/80 uppercase text-xs sm:text-sm font-bold tracking-wider"
+                            className="text-[#609d00] uppercase text-xs sm:text-sm font-bold tracking-wider"
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -56,7 +56,7 @@ export default function Section4() {
                             >
                                 <h1 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">Empower more people to</h1>
                                 <h2 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">build</h2>
-                                <h3 className="text-3xl sm:text-4xl md:text-5xl text-lime-700 font-bold w-full">meaningful connections</h3>
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl text-[#609d00] font-bold w-full">meaningful connections</h3>
                                 <h4 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">and</h4>
                                 <h5 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">unlock new</h5>
                                 <h6 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">opportunities.</h6>
@@ -70,7 +70,7 @@ export default function Section4() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.3 }}
                             >
-                                <h1 className="text-xl sm:text-2xl text-[#356221]/80 text-left leading-relaxed">
+                                <h1 className="text-xl sm:text-2xl text-[#316b00] text-left leading-relaxed">
                                     LinkedIn is full of opportunities. Our mission is to help you reach the right people, start the right conversations, and grow your business — the smart way.
                                 </h1>
                             </motion.div>
@@ -89,12 +89,12 @@ export default function Section4() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.35 + index * 0.12 }}
                         >
-                            <div className="w-12 h-12 sm:w-15 sm:h-15 bg-[#f5f5dc] rounded-full flex items-center justify-center shrink-0">
-                                <data.icon className="w-5 h-5 sm:w-6 sm:h-6 text-lime-700" />
+                            <div className="w-12 h-12 sm:w-15 sm:h-15 bg-[#a3ff12]/10 rounded-full flex items-center justify-center shrink-0">
+                                <data.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#609b00]" />
                             </div>
                             <div className="flex flex-col gap-0.5 items-start">
-                                <h1 className="text-lime-700/90 text-2xl sm:text-3xl font-bold leading-snug">{data.quantity}</h1>
-                                <p className="text-black/90 text-xs sm:text-sm leading-snug">{data.description}</p>
+                                <h1 className="text-[#609d00] text-2xl sm:text-3xl font-bold leading-snug">{data.quantity}</h1>
+                                <p className="text-black text-xs sm:text-sm leading-snug">{data.description}</p>
                             </div>
                         </motion.div>
                     ))}

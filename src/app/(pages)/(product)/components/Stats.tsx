@@ -24,10 +24,10 @@ export default function Stats() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="flex flex-col items-center justify-center"
                         >
-                            <span className="text-3xl sm:text-5xl lg:text-6xl font-normal text-gray-900 tracking-tight mb-5">
+                            <span className="text-3xl sm:text-5xl lg:text-6xl font-normal text-[#041c11] tracking-tight mb-5">
                                 {stat.value}
                             </span>
-                            <span className="text-gray-500 text-sm sm:text-base font-medium tracking-wide">
+                            <span className="text-[#494551] text-sm sm:text-base font-medium tracking-wide">
                                 {stat.label}
                             </span>
                         </motion.div>

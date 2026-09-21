@@ -125,15 +125,15 @@ export default function Pricing() {
 
                 {/* Header */}
                 <div className="flex flex-col items-center text-center mb-20">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight mb-4">
                         Architected for high-growth teams
                     </h2>
-                    <p className="text-gray-500 text-sm sm:text-base sm:w-[550px] leading-relaxed">
-                        Choose the tier that matches your scale. Precision-engineered for high-performance LinkedIn networking.
+                    <p className="text-[#253a00] text-sm sm:text-base leading-relaxed">
+                        Choose the tier that matches your scale. Precision-engineered for high-<br />performance LinkedIn networking.
                     </p>
 
                     <div className="flex flex-row items-center mt-5 gap-3">
-                        <span className="text-black/80 font-bold text-sm sm:text-base leading-relaxed">Monthly</span>
+                        <span className="text-black font-medium text-sm sm:text-base leading-relaxed">Monthly</span>
                         <span>
                             <label className="relative inline-block w-[50px] h-[26px] cursor-pointer">
                                 <input
@@ -143,16 +143,16 @@ export default function Pricing() {
                                     className="sr-only peer"
                                     onClick={switchBilling}
                                 />
-                                <span className="absolute inset-0 bg-[#ccc] rounded-[34px] transition-all duration-300 
-                                    peer-checked:bg-[#76e11b]
+                                <span className="absolute inset-0 bg-[#e5ffc4] rounded-[34px] transition-all duration-300 border border-[#678c32]
+                                    peer-checked:bg-[#e5ffc4]
                                     peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-[#0056b3] peer-focus-visible:outline-offset-2
-                                    before:absolute before:content-[''] before:h-5 before:w-5 before:left-[3px] before:bottom-[3px] before:bg-white before:rounded-full before:transition-all before:duration-300
+                                    before:absolute before:content-[''] before:h-5 before:w-5 before:left-[3px] before:bottom-[3px] before:bg-[#678c32] before:rounded-full before:transition-all before:duration-300
                                     peer-checked:before:translate-x-[24px]"
                                 />
                             </label>
                         </span>
-                        <span className="text-black/80 text-sm sm:text-base font-bold leading-relaxed">Yearly</span>
-                        <span className="text-[#76e11b] text-sm md:text-md font-bold leading-relaxed">(20% OFF)</span>
+                        <span className="text-[#253a00] text-sm sm:text-base font-bold leading-relaxed">Yearly</span>
+                        <span className="text-[#689e24] text-sm md:text-md font-bold leading-relaxed">(20% OFF)</span>
                     </div>
 
                 </div>
@@ -167,12 +167,12 @@ export default function Pricing() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.15 }}
                             whileHover={{ y: -8 }}
-                            className={`relative h-fit flex flex-col justify-between p-8 sm:p-10 rounded-[2.25rem] bg-white transition-all duration-300 hover:border-[#71EB34] ${plan.popular ? "border-2 border-[#76e11b] shadow-[0_0_50px_10px_rgba(118,225,27,0.2)] hover:border-[#71EB34]" : "border-2 border-zinc-200/60 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.01)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.04)] hover:border-[#71EB34]"
+                            className={`relative h-fit flex flex-col justify-between p-8 sm:p-10 rounded-[2.25rem] bg-[#fafff6] transition-all duration-300 hover:border-[#71EB34] ${plan.popular ? "border-2 border-[#6ba00f] shadow-[0_0_50px_10px_rgba(118,225,27,0.2)] hover:border-[#71EB34]" : "border-2 border-zinc-[#b4b4b4] shadow-[0_4px_25px_-5px_rgba(0,0,0,0.01)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.04)] hover:border-[#71EB34]"
                                 }`}
                         >
                             {/* Popular Badge */}
                             {plan.popular && (
-                                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#76e11b] text-[#031d10] font-bold text-[10px] sm:text-[11px] tracking-wider uppercase py-1.5 px-4 rounded-full shadow-[0_4px_10px_rgba(118,225,27,0.3)]">
+                                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#bef264] text-[#365314] font-bold text-[10px] sm:text-[11px] tracking-wider uppercase py-1.5 px-4 rounded-full shadow-[0_4px_10px_rgba(118,225,27,0.3)]">
                                     Most Popular
                                 </span>
                             )}
@@ -180,21 +180,21 @@ export default function Pricing() {
                             <div>
                                 {/* Header Info */}
                                 <div className="mb-8">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-1.5 tracking-tight">
+                                    <h3 className="text-xl font-bold text-[#1a1a1a] mb-1.5 tracking-tight">
                                         {plan.name}
                                     </h3>
-                                    <p className="text-black/80 text-sm leading-relaxed">
+                                    <p className="text-[#1a1a1a] text-sm leading-relaxed">
                                         {plan.subtitle}
                                     </p>
                                 </div>
 
                                 {/* Price */}
                                 <div className="flex flex-col mb-10 gap-1">
-                                    <div className="flex items-baseline text-gray-900">
+                                    <div className="flex items-baseline text-[#1a1a1a]">
                                         <span className="text-4xl sm:text-5xl font-bold tracking-tight">
                                             ${`${billingType === "monthly" ? plan.price[0] : plan.price[1]}`}
                                         </span>
-                                        <span className="text-black text-sm ml-2">
+                                        <span className="text-[#1a1a1a] text-sm ml-2">
                                             /mo
                                         </span>
                                     </div>
@@ -209,8 +209,8 @@ export default function Pricing() {
                                             className={`flex flex-col items-start gap-3 text-sm ${plan.popular ? "font-[550]" : "font-medium"} tracking-wide
                                                 }`}
                                         >
-                                            <h3 className="text-md font-bold text-black/80 uppercase tracking-tight">{feature.name}</h3>
-                                            <hr className="border-gray-300/30 w-[80%] text-center" />
+                                            <h3 className="text-md font-bold text-black uppercase tracking-tight">{feature.name}</h3>
+                                            <hr className={`${plan.popular ? "border-[#9fff00]/20" : "border-[#1c2f00]/30"} w-[80%] text-center`} />
 
                                             <ul className="space-y-2 ml-4">
                                                 {feature.subFeatures.map((subFeature, sfIndex) => (
@@ -219,7 +219,7 @@ export default function Pricing() {
                                                         className={`flex items-center gap-2 text-sm ${plan.popular ? "font-[450]" : "font-medium"} tracking-wide`}
                                                     >
                                                         <span><Check stroke="black" size={12} /></span>
-                                                        <span className="text-md text-black/80 tracking-wide">{subFeature.text}</span>
+                                                        <span className="text-md text-[#161d1f] tracking-wide">{subFeature.text}</span>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -231,7 +231,7 @@ export default function Pricing() {
                             {/* Button */}
                             <Link
                                 href="/subscription"
-                                className={`w-full text-center py-4 px-6 rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 ${plan.popular ? "bg-gradient-to-b from-[#76e11b]/30 to-[#76e11b] hover:bg-[#68c617] text-[#031d10] shadow-[0_4px_12px_rgba(118,225,27,0.25)] hover:scale-[1.01]" : "bg-white border border-black text-gray-800 hover:bg-zinc-50 hover:border-zinc-300"
+                                className={`w-full text-center py-4 px-6 rounded-2xl font-bold text-sm tracking-wide transition-all duration-200 ${plan.popular ? "bg-gradient-to-b from-[#e2f7c1] to-[#8bdd0a] hover:bg-[#68c617] text-[#031d10] shadow-[0_4px_12px_rgba(118,225,27,0.25)] hover:scale-[1.01]" : "bg-white border border-[#7d7d7d] text-[#1f1f1f] hover:bg-zinc-50 hover:border-zinc-300"
                                     }`}
                             >
                                 {plan.buttonText}
@@ -239,7 +239,7 @@ export default function Pricing() {
                         </motion.div>
                     ))}
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     )
 }

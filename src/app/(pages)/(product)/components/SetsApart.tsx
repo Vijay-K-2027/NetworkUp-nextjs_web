@@ -36,15 +36,15 @@ export default function SetsApart() {
                 {/* Header */}
                 <div className="flex flex-col items-center text-center -mt-10 mb-20">
                     {/* Tiny Pill Badge */}
-                    <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#00ab41]/20 text-[#356221] text-xs font-bold border border-[#dce6d5] uppercase tracking-wider mb-6">
+                    <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#d0eac9] text-[#364333] text-xs font-bold border border-[#dce6d5] uppercase tracking-wider mb-6">
                         <span>Why Network.Up.io</span>
                     </div>
 
-                    <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl text-gray-900 tracking-tight leading-normal mb-6">
+                    <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl text-[#191c1e] tracking-tight leading-normal mb-6">
                         What Sets NetworkUp.io Apart
                     </h2>
 
-                    <p className="text-black/80 text-lg md:text-xl tracking-wide leading-normal max-w-3xl">
+                    <p className="text-[#263b00] text-lg md:text-xl tracking-wide leading-normal max-w-3xl">
                         Our proprietary AI engine doesn't just manage outreach—it builds relationships. {" "} By analyzing millions of data points across your network, we identify high-intent {" "}opportunities that traditional CRM tools simply miss.
                     </p>
                 </div>
@@ -69,10 +69,10 @@ export default function SetsApart() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: index * 0.1 }}
                                     whileHover={{ y: -4 }}
-                                    className="flex flex-col sm:flex-row min-h-[270px] gap-5 items-start p-8 md:p-10 bg-white rounded-[2.25rem] border border-zinc-200/40 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.02)] transition-shadow duration-300 hover:shadow-[0_15px_35px_-8px_rgba(53,98,33,0.07)] group">
+                                    className="flex flex-col sm:flex-row min-h-[270px] gap-5 items-start p-8 md:p-10 bg-white rounded-[2.25rem] border border-[#e8ecef] shadow-[0_4px_25px_-5px_rgba(0,0,0,0.02)] transition-shadow duration-300 hover:shadow-[0_15px_35px_-8px_rgba(53,98,33,0.07)] group">
 
                                     {/* Lime green background Icon Block */}
-                                    <div className={`flex my-10 h-15 w-15 shrink-0 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105 overflow-hidden ${isStringIcon ? "" : "bg-[#76e11b] text-white shadow-[0_4px_12px_rgba(118,225,27,0.25)]"}`}>
+                                    <div className={`flex my-10 h-15 w-15 shrink-0 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105 overflow-hidden ${isStringIcon ? "" : "bg-gradient-to-b from-[#bcff8b] to-[#7ceb2a] text-white shadow-[0_4px_12px_rgba(118,225,27,0.25)]"}`}>
                                         {isStringIcon ? (
                                             <img
                                                 src={iconVal as string}
@@ -82,17 +82,17 @@ export default function SetsApart() {
                                         ) : (
                                             (() => {
                                                 const IconComponent = iconVal as React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }>;
-                                                return <IconComponent size={22} strokeWidth={2.5} className="stroke-[#356221]" />;
+                                                return <IconComponent size={22} strokeWidth={2.5} className="stroke-[#2e6600]" />;
                                             })()
                                         )}
                                     </div>
 
                                     {/* Text content block */}
                                     <div>
-                                        <h3 className="text-2xl font-bold text-gray-900 mb-2.5 tracking-tight group-hover:text-[#356221] transition-colors duration-200">
+                                        <h3 className="text-2xl font-bold text-[#191c1e] mb-2.5 tracking-tight group-hover:text-[#356221] transition-colors duration-200">
                                             {item.title}
                                         </h3>
-                                        <p className="text-lg leading-relaxed text-gray-700 font-normal">
+                                        <p className="text-lg leading-relaxed text-[#3f4a36] font-normal">
                                             {item.description}
                                         </p>
                                     </div>

@@ -8,10 +8,10 @@ export default function Teams() {
         <>
             <br />
             <br />
-            <hr className="border-black/10 border-1" />
+            <hr className="border-[#c9d2c4] border-1" />
             <div className="bg-[#ffffff] flex flex-col gap-10 items-center justify-center mx-7 my-15 overflow-hidden">
                 <div
-                    className="bg-[#ffffff] text-md text-black/80 uppercase tracking-wider font-semibold"
+                    className="bg-[#ffffff] text-md text-[#1f1f1f] uppercase tracking-wider font-semibold"
                 >
                     Built for modern growth teams
                 </div>

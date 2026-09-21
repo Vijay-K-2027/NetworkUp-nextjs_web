@@ -96,7 +96,7 @@ export default function Documentation({
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        className="text-[#06402B]/80 uppercase tracking-wide text-sm sm:text-base font-medium my-2"
+                        className="text-[#304f00] uppercase tracking-wide text-sm sm:text-base font-medium my-2"
                     >
                         Documentation & Support
                     </motion.h5>
@@ -106,9 +106,9 @@ export default function Documentation({
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        className="text-black tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold px-2"
+                        className="text-[#191c1e] tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold px-2"
                     >
-                        Technical Clarity <span className="text-[#a3e635]">Demystified</span>
+                        Technical Clarity <span className="text-[#78e02b]">Demystified</span>
                     </motion.h2>
 
                     <motion.p
@@ -116,9 +116,9 @@ export default function Documentation({
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        className="text-[#06402B]/80 tracking-normal text-base sm:text-lg md:text-xl font-normal my-4 max-w-5xl px-4 leading-relaxed"
+                        className="text-[#263b00] tracking-normal text-base sm:text-lg md:text-xl font-normal my-4 px-4 leading-relaxed"
                     >
-                        Everything you need to know about the most advanced AI-powered LinkedIn acceleration platform
+                        Everything you need to know about the most advanced AI-powered LinkedIn acceleration <br />platform
                     </motion.p>
 
                     {/* Accordion Wrapper Container */}
@@ -134,7 +134,7 @@ export default function Documentation({
                             return (
                                 <div
                                     key={index}
-                                    className={`w-full bg-white flex flex-col items-start justify-start border-1 hover:scale-101 transition-colors duration-300 ${isOpen ? 'border-[#faf5dc]' : 'border-none'} rounded-3xl p-4 sm:p-5`}
+                                    className={`w-full bg-white flex flex-col items-start justify-start border-1 hover:scale-101 transition-colors duration-300 ${isOpen ? 'border-[#a3e635]/40' : 'border-none'} rounded-3xl p-4 sm:p-5`}
                                 >
                                     {/* Made entire row clickable for better mobile UX */}
                                     <div
@@ -144,7 +144,7 @@ export default function Documentation({
                                         <div className="flex flex-row items-center gap-x-3">
                                             <button
                                                 type="button"
-                                                className={`text-xl sm:text-2xl ${isOpen ? 'text-[#f5f5dc]' : 'text-[#71EB34]'} font-bold rounded-full ${isOpen ? 'bg-[#71EB34]' : 'bg-[#f5f5dc]/80'} transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8`}
+                                                className={`text-xl sm:text-2xl ${isOpen ? 'text-[#f7fee7]' : 'text-[#a3e635]'} font-bold rounded-full ${isOpen ? 'bg-[#a3e635]' : 'bg-[#f7fee7]'} transition-colors duration-200 flex items-center justify-center shrink-0 w-8 h-8`}
                                                 aria-expanded={isOpen}
                                             >
                                                 {isOpen ? '−' : '＋'}
@@ -155,7 +155,7 @@ export default function Documentation({
                                         </div>
                                         <button
                                             type="button"
-                                            className={`text-sm ${isOpen ? 'text-[#a3e635]' : 'text-gray-700/50'} transform transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8`}
+                                            className={`text-sm ${isOpen ? 'text-[#a3e635]' : 'text-[#9ca3af]'} transform transition-colors duration-200 group-hover:text-[#004900]/60 flex items-center justify-center shrink-0 w-8 h-8`}
                                             aria-expanded={isOpen}
                                         >
                                             <ChevronDown size={25} className={`${isOpen ? 'text-[#a3e635]' : 'text-gray-700/50'}`} />
@@ -170,7 +170,7 @@ export default function Documentation({
                                             }`}
                                     >
                                         <p
-                                            className="pl-10 w-full text-left text-md md:text-lg text-black leading-relaxed tracking-[0.04rem]"
+                                            className="pl-10 w-full text-left text-md md:text-lg text-[#363636] leading-relaxed tracking-[0.04rem]"
                                             dangerouslySetInnerHTML={{ __html: doc.answer }}
                                         />
                                     </div>

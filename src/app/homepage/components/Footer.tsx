@@ -113,8 +113,8 @@ export default function Footer() {
                                 </span>
                             </div>
 
-                            <p className="text-gray-500 text-xs leading-relaxed mb-8 max-w-xs">
-                                Find the right people, automate outreach, manage conversations, and turn connections into opportunities.
+                            <p className="text-[#21262d] text-xs leading-relaxed mb-8">
+                                Find the right people, automate outreach, manage <br />conversations, and turn connections into opportunities.
                             </p>
 
                             {/* Newsletter */}
@@ -143,7 +143,7 @@ export default function Footer() {
                                                             className="object-contain w-full h-full"
                                                         />
                                                     </div>
-                                                    <h4 className="text-[9px] sm:text-xs text-black font-semibold lg:font-normal leading-tight">{object.title}</h4>
+                                                    <h4 className="text-[9px] sm:text-xs text-[#6b7280] font-semibold lg:font-normal leading-tight">{object.title}</h4>
                                                 </motion.div>
                                                 {index !== flowChart.length - 1 && (
                                                     <motion.div
@@ -167,13 +167,13 @@ export default function Footer() {
                                 {/* Checklist */}
                                 <div className="flex flex-col gap-2">
                                     {checklistItems.map((item) => (
-                                        <div key={item} className="flex items-center gap-2 text-xs text-black">
-                                            <CheckIcon size={16} stroke="#76e11b" />
+                                        <div key={item} className="flex items-center gap-2 text-xs text-[#21262d]">
+                                            <CheckIcon size={16} stroke="#71d400" />
                                             <span>{item}</span>
                                         </div>
                                     ))}
                                 </div>
-                                <span className="text-[10px] text-black font-medium block mt-3">
+                                <span className="text-[10px] text-[#4c5246] font-medium block mt-3">
                                     No spam. Unsubscribe anytime.
                                 </span>
                             </div>
@@ -198,10 +198,10 @@ export default function Footer() {
                     <div className="md:col-span-2 lg:col-span-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-5 gap-8">
                         {/* Column 1: Product */}
                         <div>
-                            <h5 className="text-md font-extrabold text-[#356221]/80 tracking-normal mb-5">
+                            <h5 className="text-md font-extrabold text-[#3e7300] tracking-normal mb-5">
                                 Product
                             </h5>
-                            <ul className="space-y-3.5 text-sm font-medium text-black/80">
+                            <ul className="space-y-3.5 text-sm font-medium text-[#060c00]">
                                 {productLinks.map((item) => (
                                     <li key={item.name}>
                                         <Link href={item.href} className="hover:text-green-600 transition-colors">
@@ -214,10 +214,10 @@ export default function Footer() {
 
                         {/* Column 2: Solutions */}
                         <div>
-                            <h5 className="text-md font-extrabold text-[#356221]/80 tracking-normal mb-5">
+                            <h5 className="text-md font-extrabold text-[#3e7300] tracking-normal mb-5">
                                 Solutions
                             </h5>
-                            <ul className="space-y-3.5 text-sm font-medium text-black/80">
+                            <ul className="space-y-3.5 text-sm font-medium text-[#060c00]">
                                 {solutionsLinks.map((item) => (
                                     <li key={item.name}>
                                         <Link href={item.href} className="hover:text-green-600 transition-colors">
@@ -230,10 +230,10 @@ export default function Footer() {
 
                         {/* Column 3: Resources */}
                         <div>
-                            <h5 className="text-md font-extrabold text-[#356221]/80 tracking-normal mb-5">
+                            <h5 className="text-md font-extrabold text-[#3e7300] tracking-normal mb-5">
                                 Resources
                             </h5>
-                            <ul className="space-y-3.5 text-sm font-medium text-black/80">
+                            <ul className="space-y-3.5 text-sm font-medium text-[#060c00]">
                                 {resourcesLinks.map((item) => (
                                     <li key={item.name}>
                                         <Link href={item.href} className="hover:text-green-600 transition-colors">
@@ -246,10 +246,10 @@ export default function Footer() {
 
                         {/* Column 4: Compare */}
                         <div className="col-span-1 sm:col-span-1 md:col-span-2">
-                            <h5 className="text-md font-extrabold text-[#356221]/80 tracking-normal mb-5">
+                            <h5 className="text-md font-extrabold text-[#3e7300] tracking-normal mb-5">
                                 Compare
                             </h5>
-                            <ul className="space-y-3.5 text-[15px] font-medium text-black/80 break-words">
+                            <ul className="space-y-3.5 text-[15px] font-medium text-[#060c00] break-words">
                                 {compareLinks.map((item) => (
                                     <li key={item.name}>
                                         <Link href={item.href} className="hover:text-green-600 transition-colors block">
@@ -268,10 +268,10 @@ export default function Footer() {
                     {/* Column 5: Company & AI Widget inside Sitemap Container */}
                     <div className="md:col-span-3 lg:col-span-2 flex flex-col sm:flex-row lg:flex-col gap-15 w-full">
                         <div className="flex-1">
-                            <h5 className="text-md font-extrabold text-[#356221]/80 tracking-normal mb-5">
+                            <h5 className="text-md font-extrabold text-[#3e7300] tracking-normal mb-5">
                                 Company
                             </h5>
-                            <ul className="space-y-3.5 text-sm font-medium text-black/80">
+                            <ul className="space-y-3.5 text-sm font-medium text-[#060c00]">
                                 {companyLinks.map((item) => (
                                     <li key={item.name}>
                                         <Link href={item.href} className="hover:text-green-600 transition-colors">
@@ -285,7 +285,7 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-zinc-200/60 pt-6 mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <div className="text-md font-medium text-gray-400 tracking-wide text-center">
+                    <div className="text-md font-medium text-[#4c5246] tracking-wide text-center">
                         &copy; 2026 NetworkUp.io. All rights reserved.
                     </div>
                 </div>

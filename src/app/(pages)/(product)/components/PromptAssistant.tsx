@@ -256,24 +256,24 @@ export default function PromptAssistant() {
     };
 
     return (
-        <section className="w-full bg-gradient-to-r from-[#002800] to-[#003000] text-white overflow-hidden border-b border-zinc-800/40">
+        <section className="w-full bg-gradient-to-r from-[#000000] via-[#012201] via-[#003813] to-[#153c13] text-white overflow-hidden border-b border-zinc-800/40">
             <div className="w-full">
                 <div className="flex flex-col lg:flex-row items-stretch">
 
                     {/* Left Column */}
                     <div className="w-full lg:w-1/2 px-6 sm:px-12 lg:pl-20 lg:pr-10 py-12 flex flex-col justify-center">
                         {/* Pill Badge */}
-                        <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-lime-500/10 text-lime-400 text-xs font-bold border border-lime-500/20 tracking-wide mb-6 w-fit">
+                        <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#9ffb06]/10 text-[#7ceb2a] text-xs font-bold border border-[#9ffb06]/20 tracking-wide mb-6 w-fit">
                             <span><Sparkles size={12} /></span>
                             <span>AI Prompt Assistant</span>
                         </div>
 
-                        <h3 className="text-4xl sm:text-5xl tracking-tight text-white mb-6">
+                        <h3 className="text-4xl sm:text-5xl tracking-tight text-[#e3e2e2] mb-6">
                             Ask anything about<br />
-                            <span className="text-[#a3e635]">NetworkUp.io</span>
+                            <span className="text-[#7ceb2a]">NetworkUp.io</span>
                         </h3>
 
-                        <p className="text-[#feeae0]/70 text-lg tracking-wider leading-relaxed max-w-xl mb-12">
+                        <p className="text-[#c0caae] text-lg tracking-wider leading-relaxed max-w-xl mb-12">
                             Get instant answers, features, use cases, and best practices using your favorite AI models.
                         </p>
 
@@ -316,13 +316,13 @@ export default function PromptAssistant() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="w-full h-full bg-[#031d10] border-t lg:border-t-0 lg:border-l border-white/[0.06] p-8 sm:p-12 lg:p-16 shadow-[5px_5px_50px_12px_rgba(26,36,33,0.8)] flex flex-col jitems-center justify-center"
+                            className="w-full h-full bg-[#0e2300] border-t lg:border-t-0 lg:border-l border-[#2a2a2a] p-8 sm:p-12 lg:p-16 shadow-[5px_5px_50px_12px_rgba(26,36,33,0.8)] flex flex-col jitems-center justify-center"
                         >
                             <div>
                                 {/* Search Prompt Box */}
-                                <div className="relative flex items-center bg-[#356221]/30 border border-white/[0.08] rounded-2xl p-4 gap-3 shadow-inner">
+                                <div className="relative flex items-center bg-[#354124]/30 border border-[#414a34]/30 rounded-2xl p-4 gap-3 shadow-inner">
                                     <svg
-                                        className="w-5 h-5 text-[#feeae0]/70 shrink-0"
+                                        className="w-5 h-5 text-[#c0caae]/70 shrink-0"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         stroke="currentColor"
@@ -333,14 +333,14 @@ export default function PromptAssistant() {
                                     </svg>
                                     <textarea
                                         rows={2}
-                                        className="text-zinc-200 text-sm leading-[1.4] flex-1 min-w-0 pl-1 pr-12 focus:ring-0 focus:outline-none bg-transparent resize-none font-medium"
+                                        className="text-[#8f9686] text-sm leading-[1.4] flex-1 min-w-0 pl-1 pr-12 focus:ring-0 focus:outline-none bg-transparent resize-none font-medium"
                                         value={prompt}
                                         placeholder={placeholders[selectedModel] || "Ask Anything"}
                                         onChange={(e) => setPrompt(e.target.value)}
                                     />
                                     <button
                                         onClick={handleSend}
-                                        className="absolute right-3 bg-[#a3e635] text-[#031d10] h-10 w-10 flex items-center justify-center rounded-xl shadow-[0_4px_12px_rgba(163,230,53,0.3)] transition-transform duration-200 hover:scale-105 cursor-pointer"
+                                        className="absolute right-3 bg-[#7ceb2a] text-[#447000] h-10 w-10 flex items-center justify-center rounded-xl shadow-[0_4px_12px_rgba(163,230,53,0.3)] transition-transform duration-200 hover:scale-105 cursor-pointer"
                                     >
                                         <Send size={15} strokeWidth={3} />
                                     </button>
@@ -349,7 +349,7 @@ export default function PromptAssistant() {
 
                             {/* Popular Prompts */}
                             <div className="mt-8">
-                                <h4 className="text-sm font-bold text-[#feeae0]/70 tracking-wide mb-4">
+                                <h4 className="text-sm font-bold text-[#c0caae] tracking-wide mb-4">
                                     Popular prompts
                                 </h4>
                                 <div className="flex flex-wrap gap-2 w-full sm:max-w-[500px]">
@@ -358,7 +358,7 @@ export default function PromptAssistant() {
                                             key={index}
                                             whileHover={{ x: 4, scale: 1.01 }}
                                             onClick={() => handleClick(promptText)}
-                                            className="text-xs sm:text-sm text-[#feeae0]/70 bg-white/[0.03] border border-white/[0.06] rounded-full px-5 py-2 hover:bg-white/[0.06] hover:border-lime-500/20 transition-all duration-200 cursor-pointer flex items-center justify-between max-w-full text-left font-semibold"
+                                            className="text-xs sm:text-sm text-[#e3e2e2] bg-white/5 border border-[#414a34]/20 rounded-full px-5 py-2 hover:bg-white/[0.06] hover:border-lime-500/20 transition-all duration-200 cursor-pointer flex items-center justify-between max-w-full text-left font-semibold"
                                         >
                                             <span className="font-medium tracking-wide">{promptText}</span>
                                         </motion.button>

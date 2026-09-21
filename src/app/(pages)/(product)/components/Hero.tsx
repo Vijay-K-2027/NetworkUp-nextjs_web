@@ -7,22 +7,22 @@ export default function Hero() {
             <div className="mx-auto flex max-w-7xl flex-col items-center px-6 pt-25 pb-15 text-center">
 
                 {/* Badge */}
-                <div className="w-350 mb-8 rounded-full border border-lime-200 bg-lime-100/30 px-6 py-2 text-sm font-medium text-black">
-                    <span className="mr-2 text-lime-500">●</span>
+                <div className="w-350 mb-8 rounded-full border border-[#71e300]/20 bg-[#71e300]/10 px-6 py-2 text-sm font-medium text-[#041c11]">
+                    <span className="mr-2 text-[#71e300]">●</span>
                     AI-Powered LinkedIn Growth Platform
                 </div>
 
                 {/* Heading */}
-                <h1 className=" max-w-8xl text-4xl font-bold leading-tight tracking-tight text-gray-900 lg:text-[65px]">
+                <h1 className=" max-w-8xl text-4xl font-bold leading-tight tracking-tight text-[#1d1b20] lg:text-[65px]">
                     Build meaningful{" "}
-                    <span className="text-lime-500">
+                    <span className="text-[#78e02b]">
                         connections.
                     </span>{" "}
                     Drive measurable growth.
                 </h1>
 
                 {/* Description */}
-                <p className="mt-8 max-w-9xl text-[21px] text-[#356221]">
+                <p className="mt-8 max-w-9xl text-[21px] text-[#263b00]">
                     Automate your LinkedIn networking with precision.
                     Reach the right decision-makers and convert
                     conversations into opportunities at scale.
@@ -32,14 +32,14 @@ export default function Hero() {
                 <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
 
                     <Link href="/subscription">
-                        <div className="flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#a8f460] to-[#68c617] px-8 py-4 text-sm font-semibold text-black shadow-md transition hover:bg-lime-500">
+                        <div className="flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#caff95] to-[#71e300] px-8 py-4 text-sm font-semibold text-[#041c11] shadow-md transition hover:bg-lime-500">
                             Get Started Free
                             <ArrowRight size={18} strokeWidth={3} />
                         </div>
                     </Link>
 
                     <Link href="/subscription"
-                        className="flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 text-sm font-bold text-gray-700 transition hover:bg-gray-100"
+                        className="flex items-center gap-2 rounded-xl border border-[#c9d2c4] bg-white px-8 py-4 text-sm font-bold text-[#1d1b20] transition hover:bg-gray-100"
                     >
                         <PlayCircle size={18} strokeWidth={3} />
                         Watch Demo

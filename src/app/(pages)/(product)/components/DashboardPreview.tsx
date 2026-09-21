@@ -721,7 +721,7 @@ export default function DashboardPreview() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="col-span-1 lg:col-span-5 h-auto lg:h-full lg:max-h-[82vh] rounded-xl p-5 shadow-lg bg-gradient-to-br from-[#6CB531]/30 via-[#05230c] to-[#05230c] border border-[#defad0]/15 w-full flex flex-col justify-center min-h-0 overflow-hidden"
+            className="col-span-1 lg:col-span-5 h-auto lg:h-full lg:max-h-[82vh] rounded-xl p-5 shadow-lg bg-gradient-to-br from-[#6CB531]/30 via-[#05230c] to-[#05230c] border border-[#cef7b0] w-full flex flex-col justify-center min-h-0 overflow-hidden"
           >
             <div className="w-full h-full flex flex-col justify-center py-2 min-h-0 overflow-hidden">
               <div className="flex flex-col items-center justify-center py-1.5 gap-1 shrink-0">
@@ -732,12 +732,12 @@ export default function DashboardPreview() {
                     duration: 3,
                     ease: "easeInOut"
                   }}
-                  className="w-14 h-14 rounded-full bg-[#cefad0] flex items-center justify-center mx-auto mb-2 shadow-md shrink-0"
+                  className="w-14 h-14 rounded-full bg-[#b0d297] flex items-center justify-center mx-auto mb-2 shadow-md shrink-0"
                 >
                   <Image src="/product/dashboard/robot.png" alt="robot" width={28} height={28} className="stroke-[black]/50" />
                 </motion.div>
                 <h2 className="font-bold text-white text-lg text-center mb-0.5 leading-tight">Ask NetworkUp.io Anything</h2>
-                <h4 className="text-gray-300/60 text-[10.5px] text-center max-w-[320px] mx-auto mb-3 leading-tight">Generate leads, optimize campaigns, or research any target account in seconds.</h4>
+                <h4 className="text-[#71946b] text-[10.5px] text-center max-w-[320px] mx-auto mb-3 leading-tight">Generate leads, optimize campaigns, or research any target account in seconds.</h4>
               </div>
               <motion.div
                 className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mt-1.5"
@@ -753,19 +753,19 @@ export default function DashboardPreview() {
                       key={index}
                       variants={cardVariants}
                       whileHover={{ y: -3, transition: { duration: 0.2 } }}
-                      className="flex flex-col bg-white/5 p-3.5 rounded-2xl border-0.5 border-[#defad0]/10 shadow-[inset_1.5px_0_0_0_rgba(222,250,208,0.3),_inset_0_-1.5px_0_0_rgba(222,250,208,0.3)] hover:bg-[#05210c] transition-all duration-300 group relative"
+                      className="flex flex-col bg-white/5 p-3.5 rounded-2xl border-0.5 border-[#a1b5a1]/30 shadow-[inset_1.5px_0_0_0_rgba(222,250,208,0.3),_inset_0_-1.5px_0_0_rgba(222,250,208,0.3)] hover:bg-[#05210c] transition-all duration-300 group relative"
                     >
                       <div className="absolute inset-0 pointer-events-none rounded-2xl border border-[#defad0]/20 [mask-image:linear-gradient(to_top_left,_black_50%,_transparent_50%)]"></div>
 
                       <div className="flex items-center justify-start mb-1.5 shrink-0">
-                        <div className="transition-transform duration-300 group-hover:scale-110 bg-white/5 rounded-md p-1">
-                          <Icon size={18} className="text-lime-400" stroke="lime" />
+                        <div className="transition-transform duration-300 group-hover:scale-110 bg-[#316b00]/20 rounded-md p-1">
+                          <Icon size={18} className="text-[#8dfd3d]" stroke="lime" />
                         </div>
                       </div>
                       <h3 className="text-[11px] font-bold text-white tracking-tight mb-1 truncate">
                         {feature.title}
                       </h3>
-                      <p className="text-[9px] leading-tight text-gray-400 font-normal">
+                      <p className="text-[9px] leading-tight text-[#ffffff]/50 font-normal">
                         {feature.description}
                       </p>
                     </motion.div>
