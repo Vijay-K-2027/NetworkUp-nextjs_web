@@ -129,11 +129,11 @@ export default function Detailed() {
     const renderCell = (val: string, topic: string, isGrowth: boolean = false) => {
         if (val === "Yes") {
             return (
-                <CircleCheck size={25} className="fill-green-500 stroke-[#f5f5dc] shrink-0" />
+                <CircleCheck size={25} className="fill-[#22c55e] stroke-[#b7f865] shrink-0" />
             );
         }
         if (val === "No") {
-            return <X size={25} className="stroke-red-400 stroke-[2] shrink-0" />;
+            return <X size={25} className="stroke-[#ef4444] stroke-[2] shrink-0" />;
         }
         return (
             <span className={`text-xs sm:text-sm ${isGrowth ? "text-black font-extrabold" : "text-gray-600 font-medium"}`}>
@@ -145,7 +145,7 @@ export default function Detailed() {
     let currentTopicGroup: string | null = null;
 
     return (
-        <section className="bg-[#f5f5dc]/40 py-20 px-4 sm:px-6 lg:px-[100px]">
+        <section className="bg-[#e5f689]/10 py-20 px-4 sm:px-6 lg:px-[100px]">
             <div className="w-full">
 
                 {/* Header Section */}
@@ -156,8 +156,8 @@ export default function Detailed() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-black text-center tracking-tight">Detailed Breakdown</h2>
-                    <p className="text-base sm:text-lg text-gray-500 text-center max-w-2xl">Compare core features across our top plans.</p>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-[#0f172a] text-center tracking-tight">Detailed Breakdown</h2>
+                    <p className="text-base sm:text-lg text-[#475569] text-center max-w-2xl">Compare core features across our top plans.</p>
                 </motion.div>
 
                 {/* Table Container */}
@@ -171,21 +171,21 @@ export default function Detailed() {
                     <div className="min-w-[800px] flex flex-col bg-transparent">
 
                         {/* Table Header Row */}
-                        <div className="grid grid-cols-12 items-stretch font-bold text-sm sm:text-base text-black bg-transparent">
-                            <div className="col-span-6 flex items-center justify-start py-6 px-8 pl-8 lg:pl-25 text-black font-extrabold">
+                        <div className="grid grid-cols-12 items-stretch font-bold text-sm sm:text-base text-[#181c20] bg-transparent">
+                            <div className="col-span-6 flex items-center justify-start py-6 px-8 pl-8 lg:pl-25 font-bold">
                                 Feature
                             </div>
                             <div className="col-span-2 flex flex-col items-center justify-center py-6 px-4 gap-1 text-center">
-                                <span className="font-extrabold text-sm sm:text-base">Starter</span>
-                                <span className="text-[11px] sm:text-xs text-black font-semibold">$21/ mo</span>
+                                <span className="font-semibold text-sm sm:text-base">Starter</span>
+                                <span className="text-[11px] sm:text-xs font-semibold">$21/ mo</span>
                             </div>
                             <div className="col-span-2 flex flex-col items-center justify-center py-6 px-4 gap-1 text-center bg-[#71EB34]/10 relative">
-                                <span className="font-extrabold text-sm sm:text-base text-black">Growth</span>
-                                <span className="text-[11px] sm:text-xs text-[#356221] font-extrabold">$59/ mo</span>
+                                <span className="font-semibold text-sm sm:text-base text-black">Growth</span>
+                                <span className="text-[11px] sm:text-xs font-semibold">$59/ mo</span>
                             </div>
                             <div className="col-span-2 flex flex-col items-center justify-center py-6 px-4 gap-1 text-center">
-                                <span className="font-extrabold text-sm sm:text-base">Enterprise</span>
-                                <span className="text-[11px] sm:text-xs text-black font-semibold">$129/ mo</span>
+                                <span className="font-semibold text-sm sm:text-base">Enterprise</span>
+                                <span className="text-[11px] sm:text-xs font-semibold">$129/ mo</span>
                             </div>
                         </div>
 
@@ -201,13 +201,13 @@ export default function Detailed() {
                                     {/* Topic Header Row */}
                                     {isNewTopic && (
                                         <motion.div
-                                            className="grid grid-cols-12 bg-[#71EB34]/15"
+                                            className="grid grid-cols-12 bg-[#b7f865]/30"
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5 }}
                                         >
-                                            <div className="col-span-12 py-3 px-8 pl-8 lg:pl-25 text-[14px] font-bold text-black uppercase text-left">
+                                            <div className="col-span-12 py-3 px-8 pl-8 lg:pl-25 text-[14px] font-bold text-[#26282d] uppercase text-left">
                                                 {detail.topic}
                                             </div>
                                         </motion.div>
@@ -215,7 +215,7 @@ export default function Detailed() {
 
                                     {/* Feature Row */}
                                     <motion.div
-                                        className="grid grid-cols-12 items-stretch hover:bg-[#71EB34]/5 transition-colors duration-150"
+                                        className="grid grid-cols-12 items-stretch hover:bg-[#71EB34]/5 border border-[#f1f5f9] transition-colors duration-150"
                                         initial={{ opacity: 0, y: 10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
@@ -233,7 +233,7 @@ export default function Detailed() {
                                         </div>
 
                                         {/* Growth Col (Highlighted) */}
-                                        <div className="col-span-2 flex items-center justify-center py-4 px-4 text-center bg-[#71EB34]/10 text-black">
+                                        <div className="col-span-2 flex items-center justify-center py-4 px-4 text-center bg-[#a3e635]/5 border-x border-[#a3e635]/10 text-black">
                                             {renderCell(detail.growth, detail.topic, true)}
                                         </div>
 

@@ -31,7 +31,7 @@ export default function Section3() {
     };
 
     return (
-        <section className="w-full bg-[#fafcf7] py-12 md:py-18 px-4 sm:px-6 lg:px-8">
+        <section className="w-full bg-[#fcfff7] py-12 md:py-18 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full">
 
                 {/* Left Section - AI Message Writer Card Mockup */}
@@ -42,18 +42,18 @@ export default function Section3() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <div className="bg-white rounded-[24px] p-6 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 w-full">
+                    <div className="bg-white rounded-[24px] p-6 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-[#e2e8f0] w-full">
                         {/* Header */}
                         <div className="flex flex-row items-center justify-between w-full mb-6">
-                            <h3 className="font-bold text-gray-900 text-lg">AI Message Writer</h3>
+                            <h3 className="font-bold text-[#0f172a] text-lg">AI Message Writer</h3>
                             <div className="flex gap-x-1.5">
-                                <div className="w-3 h-3 rounded-full bg-slate-200"></div>
-                                <div className="w-3 h-3 rounded-full bg-slate-200"></div>
-                                <div className="w-3 h-3 rounded-full bg-slate-200"></div>
+                                <div className="w-3 h-3 rounded-full bg-[#e2e8f0]"></div>
+                                <div className="w-3 h-3 rounded-full bg-[#e2e8f0]"></div>
+                                <div className="w-3 h-3 rounded-full bg-[#e2e8f0]"></div>
                             </div>
                         </div>
 
-                        <hr className="border-gray-100/80 mb-6" />
+                        <hr className="border-[#f1f5f9] mb-6" />
 
                         {/* Controls */}
                         <div className="grid grid-cols-2 gap-4 mb-6">
@@ -130,15 +130,15 @@ export default function Section3() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <span className="uppercase text-xs text-[#71EB34] font-bold tracking-widest">
+                    <span className="uppercase text-xs text-[#316b--] font-bold tracking-widest">
                         AI Message Writer
                     </span>
 
-                    <h2 className="text-4xl sm:text-5xl font-bold text-left text-gray-900 leading-tight tracking-tight">
+                    <h2 className="text-4xl sm:text-5xl font-bold text-left text-[#0f172a] leading-tight tracking-tight">
                         Write personalized outreach in seconds
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-[#555555] leading-relaxed max-w-2xl">
+                    <p className="text-lg sm:text-xl text-left text-[#475569] leading-relaxed max-w-2xl">
                         Generate LinkedIn connection requests, follow-up messages, and InMails using AI that knows your prospects, context, and tone.
                     </p>
 
@@ -151,9 +151,9 @@ export default function Section3() {
                                 className="flex flex-row items-center gap-x-3 py-1"
                             >
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                                    <CircleCheck size={25} fill="#71EB34" className="stroke-black stroke-[1]" />
+                                    <CircleCheck size={25} fill="#71e300" className="stroke-black stroke-[1]" />
                                 </div>
-                                <span className="text-base text-gray-700 font-medium">{data}</span>
+                                <span className="text-base text-[#334155] font-medium">{data}</span>
                             </div>
                         ))}
                     </div>

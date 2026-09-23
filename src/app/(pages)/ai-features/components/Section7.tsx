@@ -11,7 +11,7 @@ export default function Section3() {
     ]
 
     return (
-        <section className="w-full bg-[#fafcf7] py-12 md:py-18 px-4 sm:px-6 lg:px-8">
+        <section className="w-full bg-[#fcfff7] py-12 md:py-18 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full">
                 <motion.div
                     className="flex flex-col lg:max-w-[40%] items-start gap-y-6 w-full"
@@ -20,15 +20,15 @@ export default function Section3() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <span className="uppercase text-xs text-[#356221] font-bold tracking-widest">
+                    <span className="uppercase text-xs text-[#316b00] font-bold tracking-widest">
                         AI Help Desk
                     </span>
 
-                    <h2 className="text-3xl sm:text-4xl font-bold text-left text-gray-900 leading-tight tracking-tight">
-                        Your AI assistant is <span className="text-[#356221] ">always available</span>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-left text-[#0b1c30] leading-tight tracking-tight">
+                        Your AI assistant is <span className="text-[#316b00] ">always available</span>
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-left text-[#555555] leading-relaxed max-w-2xl">
+                    <p className="text-lg sm:text-xl text-left text-[#404a39] leading-relaxed max-w-2xl">
                         Get instant answers and expert guidance on every aspect of your outreach strategy. Our AI Help Desk is deeply integrated with your data to provide context-aware support 24/7.
                     </p>
 
@@ -41,16 +41,16 @@ export default function Section3() {
                                 className="flex flex-row items-center gap-x-3 py-1"
                             >
                                 <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                                    <CircleCheck size={25} className="stroke-[#356221]/60 fill-[#71EB34]/30 stroke-[1]" />
+                                    <CircleCheck size={25} className="stroke-[#6bcb3d] fill-[#6bcb3d]/20 stroke-[1]" />
                                 </div>
-                                <span className="text-base text-gray-700 font-medium">{data}</span>
+                                <span className="text-base text-[#0b1c30] font-medium">{data}</span>
                             </div>
                         ))}
                     </div>
                 </motion.div>
                 {/* Right Section - AI Message Writer Card Mockup */}
                 <motion.div
-                    className="w-full lg:max-w-[580px] rounded-[32px] overflow-hidden border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] bg-white"
+                    className="w-full lg:max-w-[580px] rounded-[32px] overflow-hidden border border-[#bfcab4]/30 shadow-[0_8px_30px_rgba(0,0,0,0.04)] bg-white"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -60,14 +60,14 @@ export default function Section3() {
                     <div className="flex flex-row items-center justify-between px-6 py-4 border-b border-gray-100 bg-white">
                         <div className="flex items-center gap-3">
                             {/* Avatar */}
-                            <div className="w-10 h-10 rounded-full bg-[#1b5e20] text-white flex items-center justify-center shrink-0 shadow-inner">
+                            <div className="w-10 h-10 rounded-full bg-[#276c00] text-white flex items-center justify-center shrink-0 shadow-inner">
                                 <Rocket size={20} className="stroke-[2]" />
                             </div>
                             {/* Info */}
                             <div className="flex flex-col items-start leading-tight">
-                                <h4 className="font-extrabold text-gray-800 text-sm">NetworkUp AI</h4>
-                                <span className="flex items-center gap-1 text-[11px] text-gray-400 font-semibold mt-0.5">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                                <h4 className="font-bold text-[#0b1c30] text-sm">NetworkUp AI</h4>
+                                <span className="flex items-center gap-1 text-[11px] text-[#404a39] font-semibold mt-0.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#6bcb3d] animate-pulse" />
                                     Online
                                 </span>
                             </div>
@@ -83,21 +83,21 @@ export default function Section3() {
                         <div className="flex flex-col gap-4">
                             {/* Message 1: System Welcome */}
                             <div className="flex items-start gap-2.5 max-w-[85%] self-start">
-                                <div className="w-8 h-8 rounded-full bg-[#1b5e20] text-white flex items-center justify-center shrink-0">
+                                <div className="w-8 h-8 rounded-full bg-[#276c00] text-white flex items-center justify-center shrink-0">
                                     <Rocket size={14} />
                                 </div>
-                                <div className="bg-white border border-gray-100 text-slate-800 text-xs sm:text-sm p-3.5 rounded-2xl rounded-tl-none text-left leading-relaxed shadow-sm">
+                                <div className="bg-white border border-[#bfcab4]/20 text-[#0b1c30] text-xs sm:text-sm p-3.5 rounded-2xl rounded-tl-none text-left leading-relaxed shadow-sm">
                                     Hi there! I'm your AI assistant. How can I help optimize your outreach today?
                                 </div>
                             </div>
 
                             {/* Suggestion Chips */}
                             <div className="flex flex-row flex-wrap gap-2.5 pl-10.5">
-                                <button className="bg-[#eefce6] text-[#356221] text-xs font-semibold px-4 py-2 rounded-full border border-[#defad0] hover:bg-[#defad0] transition-colors cursor-pointer flex items-center gap-1.5">
-                                    <span className="text-[#356221]">📈</span> Optimize Campaign
+                                <button className="bg-[#e5eeff] text-[#0b1c30] text-xs font-semibold px-4 py-2 rounded-full border border-[#defad0] hover:bg-[#defad0] transition-colors cursor-pointer flex items-center gap-1.5">
+                                    <span className="text-[#0b1c30]">📈</span> Optimize Campaign
                                 </button>
-                                <button className="bg-[#eefce6] text-[#356221] text-xs font-semibold px-4 py-2 rounded-full border border-[#defad0] hover:bg-[#defad0] transition-colors cursor-pointer flex items-center gap-1.5">
-                                    <span className="text-[#356221]">🔌</span> Fix Integration
+                                <button className="bg-[#e5eeff] text-[#0b1c30] text-xs font-semibold px-4 py-2 rounded-full border border-[#defad0] hover:bg-[#defad0] transition-colors cursor-pointer flex items-center gap-1.5">
+                                    <span className="text-[#0b1c30]">🔌</span> Fix Integration
                                 </button>
                             </div>
 
@@ -110,20 +110,20 @@ export default function Section3() {
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="bg-[#2e7d32] text-white text-xs sm:text-sm p-3.5 rounded-2xl rounded-tr-none text-left leading-relaxed shadow-sm">
+                                <div className="bg-[#276c00] text-white text-xs sm:text-sm p-3.5 rounded-2xl rounded-tr-none text-left leading-relaxed shadow-sm">
                                     My open rates dropped on the 'Q3 Enterprise' sequence.
                                 </div>
                             </div>
 
                             {/* Message 3: Typing Indicator */}
                             <div className="flex items-start gap-2.5 max-w-[85%] self-start mt-2">
-                                <div className="w-8 h-8 rounded-full bg-[#1b5e20] text-white flex items-center justify-center shrink-0">
+                                <div className="w-8 h-8 rounded-full bg-[#276c00] text-white flex items-center justify-center shrink-0">
                                     <Rocket size={14} />
                                 </div>
-                                <div className="bg-white border border-gray-100 text-gray-400 text-xs sm:text-sm py-3 px-4 rounded-2xl rounded-tl-none flex items-center gap-1 shadow-sm">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style={{ animationDelay: '0ms' }} />
-                                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style={{ animationDelay: '150ms' }} />
-                                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-bounce" style={{ animationDelay: '300ms' }} />
+                                <div className="bg-white border border-[#bfcab4]/20 text-gray-400 text-xs sm:text-sm py-3 px-4 rounded-2xl rounded-tl-none flex items-center gap-1 shadow-sm">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#bfcab4] animate-bounce" style={{ animationDelay: '0ms' }} />
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#bfcab4] animate-bounce" style={{ animationDelay: '150ms' }} />
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#bfcab4] animate-bounce" style={{ animationDelay: '300ms' }} />
                                 </div>
                             </div>
                         </div>
@@ -132,15 +132,15 @@ export default function Section3() {
                     {/* Chat Input Footer */}
                     <div className="p-4 border-t border-gray-100 bg-white">
                         <div className="flex items-center bg-gray-50 border border-gray-200 rounded-2xl px-4 py-2 gap-3">
-                            <button className="text-gray-400 hover:text-gray-700 transition-colors cursor-pointer shrink-0">
+                            <button className="text-[#404a39] hover:text-gray-700 transition-colors cursor-pointer shrink-0">
                                 <Paperclip size={18} />
                             </button>
                             <input
                                 placeholder="Ask anything about your account..."
                                 disabled
-                                className="bg-transparent text-gray-700 text-xs sm:text-sm placeholder-gray-400 py-1 w-full focus:outline-none text-left cursor-not-allowed select-none"
+                                className="bg-transparent text-[#404a39]/50 text-xs sm:text-sm placeholder-gray-400 py-1 w-full focus:outline-none text-left cursor-not-allowed select-none"
                             />
-                            <button className="bg-[#1b5e20] text-white h-8 w-8 flex items-center justify-center rounded-xl transition-transform hover:scale-105 shrink-0 cursor-not-allowed">
+                            <button className="bg-[#276c00] text-white h-8 w-8 flex items-center justify-center rounded-xl transition-transform hover:scale-105 shrink-0 cursor-not-allowed">
                                 <Send size={12} className="fill-white" />
                             </button>
                         </div>

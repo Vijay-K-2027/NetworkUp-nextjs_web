@@ -98,13 +98,13 @@ export default function Comparision() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <span className="uppercase text-lime-700/80 tracking-widest font-extrabold text-xs">
+                    <span className="uppercase text-[#5e9600] tracking-widest font-extrabold text-xs">
                         alternatives
                     </span>
-                    <h2 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight max-w-7xl leading-tight">
+                    <h2 className="text-black text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight max-w-7xl leading-tight">
                         How NetworkUp compares to other LinkedIn automation tools
                     </h2>
-                    <p className="mt-3 text-gray-600 text-base sm:text-lg max-w-3xl leading-relaxed">
+                    <p className="mt-3 text-[#223500] text-base sm:text-lg max-w-3xl leading-relaxed">
                         Most tools send messages from the cloud. NetworkUp is a local agent that finds, scores and reaches your buyers from your own machine.
                     </p>
                 </motion.div>
@@ -117,27 +117,27 @@ export default function Comparision() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <table className="min-w-[1190px] w-full text-left border-collapse table-fixed select-none">
+                    <table className="min-w-[1190px] w-full text-left border-separate border-spacing-0 table-fixed select-none">
                         {/* Table Header Row */}
-                        <thead className="border-b border-zinc-800/80">
+                        <thead>
                             <tr>
                                 {/* Features Column Header */}
-                                <th className="w-[280px] pl-4 py-4 shrink-0 text-left align-middle font-normal">
+                                <th className="w-[280px] pl-4 py-4 shrink-0 text-left align-middle font-normal border-b border-zinc-800/80">
                                     <div className="flex items-center gap-2.5">
-                                        <Star size={16} className="text-[#76e11b] fill-[#76e11b]/20" />
-                                        <span className="text-[#76e11b] font-extrabold text-xs tracking-wider uppercase">Features</span>
+                                        <Star size={16} className="text-[#7ceb2a] " />
+                                        <span className="text-[#7ceb2a] font-bold text-xs tracking-wider uppercase">Features</span>
                                     </div>
                                 </th>
 
                                 {/* NetworkUp Column Header */}
-                                <th className="w-[160px] py-4 border-t border-x border-[#76e11b]/30 bg-[#76e11b]/[0.03] rounded-t-2xl shrink-0 text-center align-middle font-normal">
-                                    <span className="text-[#76e11b] font-bold text-xs tracking-widest block">NETWORKUP.IO</span>
+                                <th className="w-[160px] py-4 rounded-t-2xl sm:rounded-t-3xl border-t border-x border-[#7ceb2a] bg-[#7ceb2a]/5 shrink-0 text-center align-middle font-normal">
+                                    <span className="text-[#7ceb2a] font-bold text-xs tracking-widest block">NETWORKUP.IO</span>
                                 </th>
 
                                 {/* Competitor Column Headers */}
                                 {headings.map((comp) => (
-                                    <th key={comp} className="w-[110px] text-center shrink-0 px-2 py-4 align-middle font-normal">
-                                        <span className="text-zinc-500 font-extrabold text-[10px] sm:text-xs tracking-wider uppercase leading-tight block">
+                                    <th key={comp} className="w-[110px] text-center shrink-0 px-2 py-4 align-middle font-normal border-b border-zinc-800/80">
+                                        <span className="text-[#9ca3af] font-bold text-[10px] sm:text-xs tracking-wider uppercase leading-tight block">
                                             {comp}
                                         </span>
                                     </th>
@@ -146,7 +146,7 @@ export default function Comparision() {
                         </thead>
 
                         {/* Table Body Rows */}
-                        <tbody className="divide-y divide-zinc-850">
+                        <tbody>
                             {comparisons.map((row, index) => {
                                 const isLast = index === comparisons.length - 1;
                                 return (
@@ -159,39 +159,39 @@ export default function Comparision() {
                                         transition={{ duration: 0.4, delay: Math.min(index * 0.04, 0.4) }}
                                     >
                                         {/* Feature Name */}
-                                        <td className="w-[280px] pl-4 py-4 shrink-0 align-middle">
+                                        <td className={`w-[280px] pl-4 py-4 shrink-0 align-middle ${isLast ? "" : "border-b border-zinc-800/50"}`}>
                                             <div className="flex items-center gap-3">
-                                                <row.icon size={16} className="text-[#76e11b]/80 animate-pulse" />
-                                                <span className="text-zinc-200 text-sm font-semibold tracking-wide">{row.feature}</span>
+                                                <row.icon size={16} className="text-[#7ceb2a] animate-pulse" />
+                                                <span className="text-white text-sm font-semibold tracking-wide">{row.feature}</span>
                                             </div>
                                         </td>
 
                                         {/* NetworkUp Value */}
-                                        <td className={`w-[160px] py-4 border-x border-[#76e11b]/30 bg-[#76e11b]/[0.03] shrink-0 align-middle text-center ${isLast ? "border-b rounded-b-2xl" : ""}`}>
+                                        <td className={`w-[160px] py-4 border-x border-[#7ceb2a] bg-[#7ceb2a]/5 shrink-0 align-middle text-center ${isLast ? "border-b rounded-b-2xl sm:rounded-b-3xl" : ""}`}>
                                             <div className="flex items-center justify-center">
                                                 {row.networkUp === "Yes" ? (
-                                                    <Check size={20} className="text-[#76e11b] stroke-[3]" />
+                                                    <Check size={20} className="text-[#7ceb2a] stroke-[3]" />
                                                 ) : (
-                                                    <span className="text-[#76e11b] text-sm font-bold">{row.networkUp}</span>
+                                                    <span className="text-[#7ceb2a] text-sm font-bold">{row.networkUp}</span>
                                                 )}
                                             </div>
                                         </td>
 
                                         {/* Competitor Values */}
                                         {row.values.map((val, idx) => (
-                                            <td key={idx} className="w-[110px] shrink-0 py-4 align-middle text-center">
+                                            <td key={idx} className={`w-[110px] shrink-0 py-4 align-middle text-center ${isLast ? "" : "border-b border-zinc-800/50"}`}>
                                                 <div className="flex items-center justify-center">
                                                     {(() => {
                                                         if (val === "Yes") {
-                                                            return <Check size={18} className="text-lime-400/90 stroke-[2.5]" />;
+                                                            return <Check size={18} className="text-[#7ceb2a] stroke-[2.5]" />;
                                                         }
                                                         if (val === "No") {
-                                                            return <span className="text-white/80 font-semibold text-lg select-none">—</span>;
+                                                            return <span className="text-[#9ca3af] font-semibold text-lg select-none">—</span>;
                                                         }
                                                         if (val === "Partial") {
-                                                            return <span className="text-white/80 font-bold text-md select-none">~</span>;
+                                                            return <span className="text-[#9ca3af] font-bold text-md select-none">~</span>;
                                                         }
-                                                        return <span className="text-zinc-400 text-sm font-medium">{val}</span>;
+                                                        return <span className="text-[#9ca3af] text-sm font-medium">{val}</span>;
                                                     })()}
                                                 </div>
                                             </td>
@@ -204,19 +204,19 @@ export default function Comparision() {
                 </motion.div>
 
                 {/* Table Legend */}
-                <div className="flex flex-row flex-wrap items-center justify-between gap-x-10 gap-y-3 w-full max-w-4xl mx-auto mt-10 text-zinc-500 text-xs sm:text-sm font-semibold">
+                <div className="flex flex-row flex-wrap items-center justify-between gap-x-10 gap-y-3 w-full max-w-4xl mx-auto mt-10 text-[#243800] text-xs sm:text-sm font-semibold">
                     <span className="flex items-center gap-1.5">
-                        <Check size={16} className="text-[#76e11b]" /> included
+                        <Check size={16} className="text-[#243800]" /> included
                     </span>
                     <span className="flex items-center gap-1.5">
-                        <span className="text-black/80 text-lg font-bold">—</span> not available
+                        <span className="text-[#243800] text-lg font-bold">—</span> not available
                     </span>
                     <span className="flex items-center gap-1.5">
-                        <span className="text-black/80 text-md font-bold">~</span> partial or paid add-on
+                        <span className="text-[#243800] text-md font-bold">~</span> partial or paid add-on
                     </span>
                 </div>
 
-                <div className="text-center text-[10px] sm:text-xs text-zinc-500/80 font-medium mt-6">
+                <div className="text-center text-[10px] sm:text-xs text-[#243800] font-medium mt-6">
                     Based on public pricing pages, July 2024. Click a competitor's name for the full comparison.
                 </div>
             </div>

@@ -50,7 +50,7 @@ export default function SplitFeatureSection({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
-                className="text-xs font-bold tracking-wide px-3 py-1 bg-[#EAFCEB] text-[#71EB34] uppercase rounded-md"
+                className="text-xs font-bold tracking-wide px-3 py-1 bg-[#7ceb2a]/10 text-[#7ceb2a] uppercase rounded-md"
             >
                 {badge}
             </motion.span>
@@ -59,7 +59,7 @@ export default function SplitFeatureSection({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-xl sm:text-2xl lg:text-3xl text-black font-bold tracking-tighter mt-1"
+                className="text-xl sm:text-2xl lg:text-3xl text-[#111827] font-bold tracking-tighter mt-1"
             >
                 {title}
             </motion.h2>
@@ -68,7 +68,7 @@ export default function SplitFeatureSection({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="w-full text-lg text-black/50 max-w-[600px] text-left"
+                className="w-full text-lg text-[#6b7280] max-w-[600px] text-left"
             >
                 {description}
             </motion.p>
@@ -87,9 +87,9 @@ export default function SplitFeatureSection({
                         className="flex flex-row items-center gap-x-3 py-1"
                     >
                         <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center">
-                            <Check size={18} className="stroke-[#71EB34] stroke-[3]" />
+                            <Check size={18} className="stroke-[#7ceb2a] stroke-[3]" />
                         </div>
-                        <span className="text-base text-black/80 font-bold">{data}</span>
+                        <span className="text-base text-[#111827] font-bold">{data}</span>
                     </motion.div>
                 ))}
             </motion.div>
