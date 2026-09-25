@@ -70,7 +70,7 @@ export default function Section9() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     <Image
-                        src="/product/db.png"
+                        src="/product/Db.png"
                         alt="Lead Database"
                         width={1200}
                         height={900}

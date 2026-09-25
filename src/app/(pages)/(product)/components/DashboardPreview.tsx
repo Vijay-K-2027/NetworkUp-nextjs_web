@@ -721,7 +721,7 @@ export default function DashboardPreview() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="col-span-1 lg:col-span-5 h-auto lg:h-full lg:max-h-[82vh] rounded-xl p-5 shadow-lg bg-gradient-to-br from-[#6CB531]/30 via-[#05230c] to-[#05230c] border border-[#cef7b0] w-full flex flex-col justify-center min-h-0 overflow-hidden"
+            className="col-span-1 lg:col-span-5 h-auto lg:h-full lg:max-h-[82vh] rounded-xl p-5 shadow-lg bg-gradient-to-br from-[#6CB531]/30 via-[#05230c] to-[#05230c] border border-[#cef7b0]/40 w-full flex flex-col justify-center min-h-0 overflow-hidden"
           >
             <div className="w-full h-full flex flex-col justify-center py-2 min-h-0 overflow-hidden">
               <div className="flex flex-col items-center justify-center py-1.5 gap-1 shrink-0">
@@ -753,9 +753,9 @@ export default function DashboardPreview() {
                       key={index}
                       variants={cardVariants}
                       whileHover={{ y: -3, transition: { duration: 0.2 } }}
-                      className="flex flex-col bg-white/5 p-3.5 rounded-2xl border-0.5 border-[#a1b5a1]/30 shadow-[inset_1.5px_0_0_0_rgba(222,250,208,0.3),_inset_0_-1.5px_0_0_rgba(222,250,208,0.3)] hover:bg-[#05210c] transition-all duration-300 group relative"
+                      className="flex flex-col bg-white/5 p-3.5 rounded-2xl border border-[#a1b5a1]/10 shadow-[inset_1.5px_0_0_0_rgba(222,250,208,0.2),_inset_0_-1.5px_0_0_rgba(222,250,208,0.2)] hover:bg-[#05210c] transition-all duration-300 group relative"
                     >
-                      <div className="absolute inset-0 pointer-events-none rounded-2xl border border-[#defad0]/20 [mask-image:linear-gradient(to_top_left,_black_50%,_transparent_50%)]"></div>
+                      <div className="absolute inset-0 pointer-events-none rounded-2xl border border-[#defad0]/5 [mask-image:linear-gradient(to_top_left,_black_40%,_transparent_30%)]"></div>
 
                       <div className="flex items-center justify-start mb-1.5 shrink-0">
                         <div className="transition-transform duration-300 group-hover:scale-110 bg-[#316b00]/20 rounded-md p-1">
