@@ -28,7 +28,7 @@ const solutionsLinks = [
 const resourcesLinks = [
     { name: "Blog", href: "/resources/blog" },
     { name: "Help Center", href: "/resources/help-center" },
-    { name: "Guides", href: "/resources/product-manual" },
+    { name: "Guides", href: "/resources/guides" },
     { name: "API Documentation", href: "/resources/api-documentation" },
 ];
 
@@ -46,8 +46,8 @@ const compareLinks = [
 
 const companyLinks = [
     { name: "About Us", href: "/aboutus" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
+    { name: "Privacy Policy", href: "/company/privacy-policy" },
+    { name: "Terms of Service", href: "/company/terms-and-conditions" },
     { name: "Contact Us", href: "/company/contact-us" },
 ];
 

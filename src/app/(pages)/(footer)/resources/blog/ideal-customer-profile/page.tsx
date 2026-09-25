@@ -11,12 +11,13 @@ import {
     Radio,
     CircleX,
     CircleCheck,
+    TrendingUp,
 } from "lucide-react";
 
 export default function IdealCustomerProfileArticlePage() {
     return (
         <div className="w-full bg-[#f7f9fb] min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
-            <div className="bg-white w-full max-w-9xl mx-auto p-5">
+            <div className="bg-white w-full max-w-9xl mx-auto rounded-xl p-5">
                 {/* 1. BREADCRUMB */}
                 <nav className="flex items-center gap-2 text-xs sm:text-sm text-[#414a37] mb-6 sm:mb-8">
                     <Link
@@ -89,31 +90,31 @@ export default function IdealCustomerProfileArticlePage() {
                     <p className="text-sm sm:text-lg text-[#181d13] tracking-[0.3px] leading-relaxed">
                         Every minute your sales team spends talking to an unqualified lead is revenue left on the table. In modern B2B SaaS, casting a wide net is a fast track to high churn, bloated customer acquisition costs (CAC), and burned-out reps.
                     </p>
-                    <p className="text-sm sm:text-lg text-[#181d13] tracking-[0.3px] leading-relaxed">
+                    <p className="text-sm sm:text-lg text-[#414a37] tracking-[0.3px] leading-relaxed">
                         The antidote isn't more cold emails or higher ad spend, it is precision. An Ideal Customer Profile (ICP) acts as the architectural blueprint for your entire go-to-market engine. When built correctly, it aligns marketing, sales, and product around the accounts that convert fastest, stay longest, and expand highest.
                     </p>
                 </div>
 
                 {/* 4. SECTION: WHAT IS AN ICP? */}
-                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4 border-t border-[#f3f4f6]">
+                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4 ">
                     <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-[#181d13] tracking-tight">
                         What is an ICP?
                     </h2>
-                    <p className="mt-3 text-sm sm:text-lg text-[#181d13] leading-relaxed">
+                    <p className="mt-3 text-sm sm:text-lg text-[#414a37] leading-relaxed">
                         An Ideal Customer Profile (ICP) is a hypothetical description of the company type that derives the most value from your product - and, in return, provides the highest lifetime value <br />(LTV) to your business. Unlike buyer personas, which focus on the individual user, an ICP defines the macro organizational charateristics.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                         {/* Too Broad */}
-                        <div className="bg-[#f1f6e4] border border-[#8f8f8f]/15 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between">
+                        <div className="bg-[#ffffff] border border-[#c0cab2]/30 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center gap-2 mb-3">
-                                    <CircleX size={20} className="text-[#dc2626]" />
+                                    <CircleX size={20} className="text-[#ba1a1a]" />
                                     <span className="text-lg sm:text-xl font-bold text-[#181d13]">
                                         Too Broad
                                     </span>
                                 </div>
-                                <div className="space-y-2 text-xs sm:text-sm text-[#4b5563] font-medium leading-relaxed pl-1">
+                                <div className="space-y-2 text-xs sm:text-sm text-[#414a37] font-medium leading-relaxed pl-1">
                                     <p>• &ldquo;All B2B companies with 10-500 employees&rdquo;</p>
                                     <p>• Low conversion rates across campaigns</p>
                                     <p>• Unpredictable sales cycles</p>
@@ -122,7 +123,7 @@ export default function IdealCustomerProfileArticlePage() {
                         </div>
 
                         {/* More Effective */}
-                        <div className="bg-[#f1f6e4] border border-[#8f8f8f]/15 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between">
+                        <div className="bg-gradient-to-b from-[#7ccb2a]/5 to-[#7ccb2a]/0 border border-[#3a6a00]/40 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center gap-2 mb-3">
                                     <CircleCheck size={25} className="text-[#3a6a00]" />
@@ -130,7 +131,7 @@ export default function IdealCustomerProfileArticlePage() {
                                         More Effective
                                     </span>
                                 </div>
-                                <div className="space-y-2 text-xs sm:text-sm text-[#181d13] font-medium leading-relaxed pl-1">
+                                <div className="space-y-2 text-xs sm:text-sm text-[#414a37] font-medium leading-relaxed pl-1">
                                     <p>• Series B/C Fintechs using AWS & Kubernetes</p>
                                     <p>• 50-200 engineering headcount</p>
                                     <p>• 3x faster sales velocity & high retention</p>
@@ -141,40 +142,40 @@ export default function IdealCustomerProfileArticlePage() {
                 </div>
 
                 {/* 5. SECTION: ICP VS. BUYER PERSONA */}
-                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4 border-t border-[#f3f4f6]">
+                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4">
                     <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-[#181d13] tracking-tight">
                         ICP vs. Buyer Persona: Knowing the Difference
                     </h2>
-                    <p className="mt-3 text-sm sm:text-lg text-[#181d13] leading-relaxed">
+                    <p className="mt-3 text-sm sm:text-lg text-[#414a37] leading-relaxed">
                         A common mistake is treating ICP and buyer personas as interchangeable. They serve completely different functions in <br />your outreach strategy.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                         {/* Ideal Customer Profile (ICP) */}
-                        <div className="bg-[#f1f6e4] border border-[#8f8f8f]/15 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between">
+                        <div className="bg-[#f1f6e4] rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between">
                             <div>
-                                <span className="inline-block bg-[#7ccb2a]/20 text-[#2b5100] font-bold text-[10px] tracking-wider px-2.5 py-1 rounded-md uppercase mb-3">
+                                <span className="inline-block text-[#3a6a00] font-bold text-[10px] tracking-wider px-2.5 py-1 rounded-md uppercase mb-3">
                                     MACRO LEVEL
                                 </span>
                                 <h3 className="text-base sm:text-lg font-bold text-[#181d13] mb-2">
                                     Ideal Customer Profile (ICP)
                                 </h3>
-                                <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
+                                <p className="text-xs sm:text-sm text-[#414a37] leading-relaxed">
                                     Focuses on the company. Industry, revenue size, <br />tech stack, geography, compliance needs, and <br />growth rate.
                                 </p>
                             </div>
                         </div>
 
                         {/* Buyer Persona */}
-                        <div className="bg-[#f1f6e4] border border-[#8f8f8f]/15 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between">
+                        <div className="bg-[#f1f6e4] rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between">
                             <div>
-                                <span className="inline-block bg-[#7ccb2a]/20 text-[#2b5100] font-bold text-[10px] tracking-wider px-2.5 py-1 rounded-md uppercase mb-3">
+                                <span className="inline-block text-[#3a6a00] font-bold text-[10px] tracking-wider px-2.5 py-1 rounded-md uppercase mb-3">
                                     MICRO LEVEL
                                 </span>
                                 <h3 className="text-base sm:text-lg font-bold text-[#181d13] mb-2">
                                     Buyer Persona
                                 </h3>
-                                <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
+                                <p className="text-xs sm:text-sm text-[#414a37] leading-relaxed">
                                     Focuses on the human. Job title, daily pain points, <br />KPIs, personal objections, and buying committee <br />role.
                                 </p>
                             </div>
@@ -183,75 +184,77 @@ export default function IdealCustomerProfileArticlePage() {
                 </div>
 
                 {/* 6. SECTION: KEY COMPONENTS OF A HIGH-CONVERTING ICP */}
-                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4 border-t border-[#f3f4f6]">
+                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4">
                     <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-[#181d13] tracking-tight">
                         Key Components of a High-Converting ICP
                     </h2>
-                    <p className="mt-3 text-sm sm:text-lg text-[#181d13] leading-relaxed">
+                    <p className="mt-3 text-sm sm:text-lg text-[#414a37] leading-relaxed">
                         To make your ICP actionable for sales and marketing automation, it must be built on quantifiable pillars.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                         {/* Firmographics */}
-                        <div className="bg-white border border-[#c0caae]/40 rounded-2xl p-5 sm:p-6 shadow-xs">
-                            <div className="w-8 h-8 rounded-lg bg-[#3a6a00]/10 flex items-center justify-center text-[#3a6a00] mb-3">
+                        <div className="bg-white border border-[#c0caae]/30 rounded-2xl p-5 sm:p-6 shadow-xs">
+                            <div className="w-8 h-8 rounded-lg bg-[#7ccb2a]/30 flex items-center justify-center text-[#3a6a00] mb-3">
                                 <Building2 className="w-4 h-4 text-[#3a6a00]" />
                             </div>
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13]">
                                 Firmographics
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] mt-1.5 leading-relaxed">
+                            <p className="text-xs sm:text-sm text-[#414a37] mt-1.5 leading-relaxed">
                                 Company size, annual recurring revenue (ARR), <br />employee count, and geographical headquarters.
                             </p>
                         </div>
 
                         {/* Technographics */}
-                        <div className="bg-white border border-[#c0caae]/40 rounded-2xl p-5 sm:p-6 shadow-xs">
-                            <div className="w-8 h-8 rounded-lg bg-[#3a6a00]/10 flex items-center justify-center text-[#3a6a00] mb-3">
+                        <div className="bg-white border border-[#c0caae]/30 rounded-2xl p-5 sm:p-6 shadow-xs">
+                            <div className="w-8 h-8 rounded-lg bg-[#7ccb2a]/30 flex items-center justify-center text-[#3a6a00] mb-3">
+                                {/* Use the image from public/footer/resources/blog/server.png instead of icon */}
                                 <Laptop className="w-4 h-4 text-[#3a6a00]" />
                             </div>
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13]">
                                 Technographics
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] mt-1.5 leading-relaxed">
-                                Infrastructure software, cloud providers, APIs, and legacy systems currently in use.
+                            <p className="text-xs sm:text-sm text-[#414a37] mt-1.5 leading-relaxed">
+                                Infrastructure software, cloud providers, APIs, and <br />legacy systems currently in use.
                             </p>
                         </div>
 
                         {/* Trigger Events */}
-                        <div className="bg-white border border-[#c0caae]/40 rounded-2xl p-5 sm:p-6 shadow-xs">
-                            <div className="w-8 h-8 rounded-lg bg-[#3a6a00]/10 flex items-center justify-center text-[#3a6a00] mb-3">
-                                <Zap className="w-4 h-4 text-[#3a6a00]" />
+                        <div className="bg-white border border-[#c0caae]/30 rounded-2xl p-5 sm:p-6 shadow-xs">
+                            <div className="w-8 h-8 rounded-lg bg-[#7ccb2a]/30 flex items-center justify-center text-[#3a6a00] mb-3">
+                                <TrendingUp className="w-4 h-4 text-[#3a6a00]" />
                             </div>
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13]">
                                 Trigger Events
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] mt-1.5 leading-relaxed">
-                                Leadership changes, recent funding rounds, geographic expansion, or regulatory shifts.
+                            <p className="text-xs sm:text-sm text-[#414a37] mt-1.5 leading-relaxed">
+                                Leadership changes, recent funding rounds, <br />geographic expansion, or regulatory shifts.
                             </p>
                         </div>
 
                         {/* Behavioral Intent */}
-                        <div className="bg-white border border-[#c0caae]/40 rounded-2xl p-5 sm:p-6 shadow-xs">
-                            <div className="w-8 h-8 rounded-lg bg-[#3a6a00]/10 flex items-center justify-center text-[#3a6a00] mb-3">
+                        <div className="bg-white border border-[#c0caae]/30 rounded-2xl p-5 sm:p-6 shadow-xs">
+                            <div className="w-8 h-8 rounded-lg bg-[#7ccb2a]/30 flex items-center justify-center text-[#3a6a00] mb-3">
+                                {/* Use the image from public/footer/resources/blog/personnel.png instead of icon */}
                                 <Radio className="w-4 h-4 text-[#3a6a00]" />
                             </div>
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13]">
                                 Behavioral Intent
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] mt-1.5 leading-relaxed">
-                                Active search queries, content downloads, and peer review site engagement spikes.
+                            <p className="text-xs sm:text-sm text-[#414a37] mt-1.5 leading-relaxed">
+                                Active search queries, content downloads, and <br />peer review site engagement spikes.
                             </p>
                         </div>
                     </div>
                 </div>
 
                 {/* 7. SECTION: HOW TO BUILD YOUR ICP: A 9-STEP FRAMEWORK */}
-                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4 border-t border-[#f3f4f6]">
+                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4">
                     <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-[#181d13] tracking-tight">
                         How to Build Your ICP: A 9-Step Framework
                     </h2>
-                    <p className="mt-3 text-sm sm:text-lg text-[#181d13] leading-relaxed">
+                    <p className="mt-3 text-sm sm:text-lg text-[#414a37] leading-relaxed">
                         Follow this sequential roadmap to transition from gut-feeling guesswork to an empirical targeting engine.
                     </p>
 
@@ -315,7 +318,7 @@ export default function IdealCustomerProfileArticlePage() {
                             <div key={step.number} className="relative">
                                 {/* Header: Badge + Title */}
                                 <div className="flex items-center gap-3">
-                                    <span className="w-6 h-6 rounded-full bg-[#2b5100] text-white text-[11px] font-bold flex items-center justify-center shrink-0 z-10">
+                                    <span className="w-6 h-6 rounded-full bg-[#3a6a00] text-white text-[11px] font-bold flex items-center justify-center shrink-0 z-10">
                                         {step.number}
                                     </span>
                                     <h3 className="text-sm sm:text-base md:text-lg font-bold text-[#181d13]">
@@ -327,10 +330,10 @@ export default function IdealCustomerProfileArticlePage() {
                                 <div
                                     className={`ml-3 pl-6 ${idx === arr.length - 1
                                         ? "pb-0 border-l-0"
-                                        : "pb-6 border-l border-gray-200"
+                                        : "pb-6 border-l border-[#3a6a00]/30"
                                         } pt-1.5`}
                                 >
-                                    <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
+                                    <p className="text-xs sm:text-sm text-[#414a37] leading-relaxed">
                                         {step.description}
                                     </p>
                                 </div>
@@ -340,18 +343,18 @@ export default function IdealCustomerProfileArticlePage() {
                 </div>
 
                 {/* 8. SECTION: FIT VS. ENGAGEMENT MATRIX */}
-                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4 border-t border-[#f3f4f6]">
+                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4">
                     <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-[#181d13] tracking-tight">
                         Fit vs. Engagement Matrix
                     </h2>
-                    <p className="mt-3 text-sm sm:text-lg text-[#181d13] leading-relaxed">
+                    <p className="mt-3 text-sm sm:text-lg text-[#414a37] leading-relaxed">
                         Not every prospect requires the same outreach approach. Use this matrix to prioritize your accounts based on ICP fit and engagement signals:
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 bg-[#f4ffd9] rounded-2xl p-5">
                         {/* High Fit · Low Engagement */}
-                        <div className="bg-[#f1f6e4] rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center justify-center shadow-xs">
-                            <span className="text-xs text-[#717a65] font-semibold mb-1">
+                        <div className="bg-[#e5eed3] rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center justify-center shadow-xs">
+                            <span className="text-xs text-[#3a6a00] font-semibold mb-1">
                                 High Fit / Low Engagement
                             </span>
                             <div className="text-sm sm:text-base font-bold text-[#181d13]">
@@ -360,8 +363,8 @@ export default function IdealCustomerProfileArticlePage() {
                         </div>
 
                         {/* High Fit · High Engagement */}
-                        <div className="bg-[#2b5100] rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center justify-center shadow-xs text-white">
-                            <span className="text-xs text-[#b8f47c] font-semibold mb-1">
+                        <div className="bg-[#3a6a00] rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center justify-center shadow-xs text-white">
+                            <span className="text-xs text-[#a6f955] font-semibold mb-1">
                                 High Fit / High Engagement
                             </span>
                             <div className="text-sm sm:text-base font-bold text-white">
@@ -370,7 +373,7 @@ export default function IdealCustomerProfileArticlePage() {
                         </div>
 
                         {/* Low Fit · Low Engagement */}
-                        <div className="bg-[#f1f6e4] rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center justify-center shadow-xs">
+                        <div className="bg-[#e5eed3] rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center justify-center shadow-xs">
                             <span className="text-xs text-[#717a65] font-semibold mb-1">
                                 Low Fit / Low Engagement
                             </span>
@@ -380,7 +383,7 @@ export default function IdealCustomerProfileArticlePage() {
                         </div>
 
                         {/* Low Fit · High Engagement */}
-                        <div className="bg-[#f1f6e4] rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center justify-center shadow-xs">
+                        <div className="bg-[#e5eed3] rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center justify-center shadow-xs">
                             <span className="text-xs text-[#717a65] font-semibold mb-1">
                                 Low Fit / High Engagement
                             </span>
@@ -392,7 +395,7 @@ export default function IdealCustomerProfileArticlePage() {
                 </div>
 
                 {/* 9. SECTION: COMMON ICP MISTAKES TO AVOID */}
-                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4 border-t border-[#f3f4f6]">
+                <div className="mt-6 sm:mt-8 flex flex-col gap-y-2 pt-4">
                     <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-[#181d13] tracking-tight">
                         Common ICP Mistakes to Avoid
                     </h2>
@@ -406,8 +409,8 @@ export default function IdealCustomerProfileArticlePage() {
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13] mb-1.5">
                                 Building the ICP in a Silo
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
-                                Creating an ICP without interviewing customer success and sales reps leads to unrealistic assumptions.
+                            <p className="text-xs sm:text-sm text-[#414a37] leading-relaxed">
+                                Creating an ICP without interviewing customer success and <br />sales reps leads to unrealistic assumptions.
                             </p>
                         </div>
 
@@ -419,8 +422,8 @@ export default function IdealCustomerProfileArticlePage() {
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13] mb-1.5">
                                 Targeting Everyone
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
-                                Saying &ldquo;anyone who needs software&rdquo; means your messaging resonates with no one.
+                            <p className="text-xs sm:text-sm text-[#414a37] leading-relaxed">
+                                Saying &ldquo;anyone who needs software&rdquo; means your messaging <br />resonates with no one.
                             </p>
                         </div>
 
@@ -432,8 +435,8 @@ export default function IdealCustomerProfileArticlePage() {
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13] mb-1.5">
                                 Ignoring Negative Churn Signals
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
-                                Failing to analyze which customer segments churn the fastest when defining parameters.
+                            <p className="text-xs sm:text-sm text-[#414a37] leading-relaxed">
+                                Failing to analyze which customer segments churn the <br />fastest when defining parameters.
                             </p>
                         </div>
 
@@ -445,8 +448,8 @@ export default function IdealCustomerProfileArticlePage() {
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13] mb-1.5">
                                 Never Updating the ICP
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
-                                Treating your ICP as a one-time PDF document instead of a living, breathing CRM filter.
+                            <p className="text-xs sm:text-sm text-[#414a37] leading-relaxed">
+                                Treating your ICP as a one-time PDF document instead of a <br />living, breathing CRM filter.
                             </p>
                         </div>
 
@@ -458,8 +461,8 @@ export default function IdealCustomerProfileArticlePage() {
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13] mb-1.5">
                                 Confusing Persona with ICP
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
-                                Targeting job titles instead of company-level revenue and technological compatibility.
+                            <p className="text-xs sm:text-sm text-[#414a37] leading-relaxed">
+                                Targeting job titles instead of company-level revenue and <br />technological compatibility.
                             </p>
                         </div>
 
@@ -471,8 +474,8 @@ export default function IdealCustomerProfileArticlePage() {
                             <h3 className="text-sm sm:text-base font-bold text-[#181d13] mb-1.5">
                                 Disregarding Regional Nuance
                             </h3>
-                            <p className="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
-                                Assuming compliance and tech stacks are identical across North America and EMEA markets.
+                            <p className="text-xs sm:text-sm text-[#414a37] leading-relaxed">
+                                Assuming compliance and tech stacks are identical across <br />North America and EMEA markets.
                             </p>
                         </div>
                     </div>
@@ -483,7 +486,7 @@ export default function IdealCustomerProfileArticlePage() {
                     <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-[#181d13] tracking-tight">
                         Final Thoughts
                     </h2>
-                    <p className="mt-3 text-sm sm:text-lg text-[#181d13] leading-relaxed">
+                    <p className="mt-3 text-sm sm:text-lg text-[#414a37] leading-relaxed">
                         Building an Ideal Customer Profile is the single highest-leverage exercise your revenue leadership team can undertake. <br className="hidden sm:inline" />
                         By narrowing your focus to accounts that genuinely match your product&apos;s superpower, you transform sales from a <br className="hidden sm:inline" />
                         numbers game into a predictable science.

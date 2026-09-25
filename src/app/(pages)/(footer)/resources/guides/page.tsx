@@ -31,8 +31,8 @@ export default function ProductManualPage() {
             <section className="w-full bg-[#081f04] py-14 sm:py-20 md:py-28 px-4 sm:px-6 lg:px-8 border-b border-[#1b380d] relative overflow-hidden">
                 <div className="max-w-7xl mx-auto relative overflow-hidden flex flex-col items-center text-center">
                     {/* Gradient Glow Effect */}
-                    <div className="absolute -top-1/2 left-1/4 -translate-x-1/2 w-full h-[800px] bg-radial-gradient from-[#84cc16] via-[#84cc16]/30 to-transparent pointer-events-none" />
-                    
+                    <div className="absolute -top-1/2 left-1/4 -translate-x-1/2 w-full h-[800px] bg-radial-gradient from-[#84cc16] via-[#84cc16]/70 to-transparent pointer-events-none" />
+
                     {/* Badge */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -84,7 +84,7 @@ export default function ProductManualPage() {
                         <div className="flex items-center gap-3 sm:gap-5 mb-3 sm:mb-4">
                             <div className="relative flex items-center justify-center shrink-0">
                                 <div className="absolute inset-0 bg-[#416900]/10 blur-xl rounded-full scale-125 pointer-events-none" />
-                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 tracking-tighter select-none">
+                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 [text-shadow:0_0_7px_rgba(65,105,0,0.1)] tracking-tighter select-none">
                                     01
                                 </span>
                             </div>
@@ -144,7 +144,7 @@ export default function ProductManualPage() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-60px" }}
-                    className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-10 items-center"
+                    className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center"
                 >
                     {/* Left Visual (Enclosed container) */}
                     <div className="lg:col-span-6 order-2 lg:order-1 flex items-center justify-center">
@@ -161,11 +161,11 @@ export default function ProductManualPage() {
                     </div>
 
                     {/* Right Info */}
-                    <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
+                    <div className="lg:pl-10 lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
                         <div className="flex items-center gap-3 sm:gap-5 mb-3 sm:mb-4">
                             <div className="relative flex items-center justify-center shrink-0">
                                 <div className="absolute inset-0 bg-[#416900]/10 blur-xl rounded-full scale-125 pointer-events-none" />
-                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 tracking-tighter select-none">
+                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 [text-shadow:0_0_7px_rgba(65,105,0,0.1)] tracking-tighter select-none">
                                     02
                                 </span>
                             </div>
@@ -218,7 +218,7 @@ export default function ProductManualPage() {
                         <div className="flex items-center gap-3 sm:gap-5 mb-3 sm:mb-4">
                             <div className="relative flex items-center justify-center shrink-0">
                                 <div className="absolute inset-0 bg-[#416900]/10 blur-xl rounded-full scale-125 pointer-events-none" />
-                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 tracking-tighter select-none">
+                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 [text-shadow:0_0_7px_rgba(65,105,0,0.1)] tracking-tighter select-none">
                                     03
                                 </span>
                             </div>
@@ -301,11 +301,11 @@ export default function ProductManualPage() {
                     </div>
 
                     {/* Right Info */}
-                    <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
+                    <div className="lg:pl-10 lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
                         <div className="flex items-center gap-3 sm:gap-5 mb-3 sm:mb-4">
                             <div className="relative flex items-center justify-center shrink-0">
                                 <div className="absolute inset-0 bg-[#416900]/10 blur-xl rounded-full scale-125 pointer-events-none" />
-                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 tracking-tighter select-none">
+                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 [text-shadow:0_0_7px_rgba(65,105,0,0.1)] tracking-tighter select-none">
                                     04
                                 </span>
                             </div>
@@ -360,7 +360,7 @@ export default function ProductManualPage() {
                         <div className="flex items-center gap-3 sm:gap-5 mb-3 sm:mb-4">
                             <div className="relative flex items-center justify-center shrink-0">
                                 <div className="absolute inset-0 bg-[#416900]/10 blur-xl rounded-full scale-125 pointer-events-none" />
-                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 tracking-tighter select-none">
+                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 [text-shadow:0_0_7px_rgba(65,105,0,0.1)] tracking-tighter select-none">
                                     05
                                 </span>
                             </div>
@@ -432,11 +432,11 @@ export default function ProductManualPage() {
                     </div>
 
                     {/* Right Info */}
-                    <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
+                    <div className="lg:pl-10 lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
                         <div className="flex items-center gap-3 sm:gap-5 mb-3 sm:mb-4">
                             <div className="relative flex items-center justify-center shrink-0">
                                 <div className="absolute inset-0 bg-[#416900]/10 blur-xl rounded-full scale-125 pointer-events-none" />
-                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 tracking-tighter select-none">
+                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 [text-shadow:0_0_7px_rgba(65,105,0,0.1)] tracking-tighter select-none">
                                     06
                                 </span>
                             </div>
@@ -483,7 +483,7 @@ export default function ProductManualPage() {
                         <div className="flex items-center gap-3 sm:gap-5 mb-3 sm:mb-4">
                             <div className="relative flex items-center justify-center shrink-0">
                                 <div className="absolute inset-0 bg-[#416900]/10 blur-xl rounded-full scale-125 pointer-events-none" />
-                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 tracking-tighter select-none">
+                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 [text-shadow:0_0_7px_rgba(65,105,0,0.1)] tracking-tighter select-none">
                                     07
                                 </span>
                             </div>
@@ -563,11 +563,11 @@ export default function ProductManualPage() {
                     </div>
 
                     {/* Right Info */}
-                    <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
+                    <div className="lg:pl-10 lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
                         <div className="flex items-center gap-3 sm:gap-5 mb-3 sm:mb-4">
                             <div className="relative flex items-center justify-center shrink-0">
                                 <div className="absolute inset-0 bg-[#416900]/10 blur-xl rounded-full scale-125 pointer-events-none" />
-                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 tracking-tighter select-none">
+                                <span className="relative text-6xl sm:text-7xl lg:text-8xl font-black text-[#416900]/10 [text-shadow:0_0_7px_rgba(65,105,0,0.1)] tracking-tighter select-none">
                                     08
                                 </span>
                             </div>

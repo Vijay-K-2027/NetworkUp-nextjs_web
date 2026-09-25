@@ -55,7 +55,7 @@ const features = [
 
 export default function Features() {
     return (
-        <section id="features" className="w-full bg-[radial-gradient(circle_at_bottom_right,_rgba(222,250,208,1)_0%,_rgba(222,250,208,0.2)_300px,_rgba(222,250,208,0.2)_100%)] py-20 px-6 lg:px-8">
+        <section id="features" className="w-full bg-white bg-[radial-gradient(circle_at_bottom_right,_rgba(222,250,208,1)_0%,_rgba(222,250,208,0.2)_300px,_rgba(222,250,208,0.2)_100%)] py-20 px-6 lg:px-8">
             <div className="mx-auto max-w-7xl">
                 {/* Header Section */}
                 <div className="text-center mb-15">

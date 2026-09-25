@@ -85,7 +85,7 @@ export default function Navbar() {
                 {/* Right side: Action Buttons & Mobile Menu Trigger */}
                 <div className="flex items-center gap-2 sm:gap-4">
                     <Link
-                        href="/login"
+                        href="https://app.networkup.io/#/login"
                         className="hidden sm:inline-flex rounded-xl bg-white text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-bold text-black border border-black shadow transition hover:bg-lime-500 hover:border-none"
                     >
                         Login

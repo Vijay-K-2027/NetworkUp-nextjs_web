@@ -138,7 +138,7 @@ export default function Section4() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6 }}
-                        className="flex flex-col items-start p-8 sm:p-12 bg-[#316b00]/5 relative overflow-hidden"
+                        className="flex flex-col items-start p-8 sm:p-12 bg-[#316b00]/30 relative overflow-hidden"
                     >
                         {/* Subtle background glow */}
                         <div className="absolute -right-24 -bottom-24 w-48 h-48 rounded-full bg-[#71EB34]/10 blur-3xl"></div>

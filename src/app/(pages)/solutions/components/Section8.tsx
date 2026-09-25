@@ -22,7 +22,7 @@ export default function Section8() {
 
     return (
         <section className="w-full py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-[1500px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12 xl:gap-16 w-full">
+            <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12 xl:gap-16 w-full">
 
                 {/* Column 1: Left Title & Description (50% Flex) */}
                 <motion.div
@@ -43,7 +43,7 @@ export default function Section8() {
                         Content Assistant
                     </motion.span>
 
-                    <h2 className="text-4xl sm:text-5xl font-bold text-left text-[#1f2937] leading-tight tracking-tighter">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-left text-[#1f2937] leading-tight tracking-tighter">
                         Write Better Messages. Reply Smarter. Close Faster.
                     </h2>
 

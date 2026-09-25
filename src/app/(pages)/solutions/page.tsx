@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 
 export default function Solutions() {
     return (
-        <>
+        <div className="bg-[#fafcf7]">
             <Section1 />
             <Section2 />
             <Section3 />
@@ -61,6 +61,6 @@ export default function Solutions() {
             <Part1 />
             <Section10 />
             <Section6 />
-        </>
+        </div>
     )
 }

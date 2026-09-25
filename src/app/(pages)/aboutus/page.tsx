@@ -43,10 +43,10 @@ export default function OverviewPage() {
     return (
         <>
             <div className="w-full max-w-9xl bg-[#fafcf7] mx-auto">
-                <div className="flex flex-col items-center justify-center py-10 mt-5 gap-y-3 ">
+                <div className="flex flex-col items-center justify-center py-10 gap-y-3 ">
                     <h4 className="uppercase text-[#71EB34] text-xl text-center font-bold">Our Story</h4>
-                    <h2 className="text-2xl sm:text-3xl max-w-[400px] w-full text-center font-extrabold tracking-tighter -mt-2 px-4">How it all started </h2>
-                    <h3 className="w-full text-center text-md sm:text-lg text-gray-500 px-4">A journey driven by a simple belief — outreach should be human, not manual.</h3>
+                    <h2 className="text-2xl sm:text-3xl max-w-[400px] w-full text-center font-bold text-[#0A0C10] tracking-tighter -mt-2 px-4">How it all started </h2>
+                    <h3 className="w-full text-center text-md sm:text-lg text-[#6B7280] px-4">A journey driven by a simple belief — outreach should be human, not manual.</h3>
                 </div>
             </div>
             <Section1 />
@@ -55,8 +55,8 @@ export default function OverviewPage() {
             <Section4 />
             <Section5 />
             <section className="w-full max-w-9xl bg-[#fafcf7] mx-auto mb-5 text-center">
-                <h1 className="text-lg tracking-wide text-black/80">NetworkUp.io is <span className="text-[#99CC33]">our flagship product,</span> built with the experience, technology, and values</h1>
-                <h2 className="text-lg tracking-wide text-black/80">we've gained while building products that customers love.</h2>
+                <h1 className="text-lg tracking-wide text-[#183000]">NetworkUp.io is <span className="text-[#7fd000]">our flagship product,</span> built with the experience, technology, and values</h1>
+                <h2 className="text-lg tracking-wide text-[#183000]">we've gained while building products that customers love.</h2>
             </section>
         </>
     )

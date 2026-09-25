@@ -16,7 +16,7 @@ export default function Documentation({
     };
 
     return (
-        <section className="w-full bg-[#defad0]/20 py-12 md:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="w-full bg-[#fafcf7] py-12 md:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{

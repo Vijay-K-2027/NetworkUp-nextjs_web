@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Hero() {
     return (
-        <section id="product" className="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,_rgba(222,250,208,1)_0%,_rgba(222,250,208,0.1)_700px,_rgba(222,250,208,0.2)_100%)]">
-            <div className="mx-auto flex max-w-7xl flex-col items-center px-6 pt-25 pb-15 text-center">
+        <section id="product" className="relative overflow-hidden bg-white">
+            <div className="mx-auto bg-[radial-gradient(circle_at_top_right,_rgba(222,250,208,1)_0%,_rgba(222,250,208,0.1)_700px,_rgba(222,250,208,0.2)_100%)] flex flex-col items-center px-6 pt-25 pb-15 text-center">
 
                 {/* Badge */}
                 <div className="w-350 mb-8 rounded-full border border-[#71e300]/20 bg-[#71e300]/10 px-6 py-2 text-sm font-medium text-[#041c11]">
@@ -13,7 +13,7 @@ export default function Hero() {
                 </div>
 
                 {/* Heading */}
-                <h1 className=" max-w-8xl text-4xl font-bold leading-tight tracking-tight text-[#1d1b20] lg:text-[65px]">
+                <h1 className=" max-w-7xl text-4xl font-bold leading-tight tracking-tight text-[#1d1b20] lg:text-[65px]">
                     Build meaningful{" "}
                     <span className="text-[#78e02b]">
                         connections.
@@ -22,7 +22,7 @@ export default function Hero() {
                 </h1>
 
                 {/* Description */}
-                <p className="mt-8 max-w-9xl text-[21px] text-[#263b00]">
+                <p className="mt-8 max-w-[1250px] text-[21px] text-[#263b00]">
                     Automate your LinkedIn networking with precision.
                     Reach the right decision-makers and convert
                     conversations into opportunities at scale.
@@ -68,7 +68,7 @@ export default function Hero() {
                         />
                     </div>
 
-                    <p className="text-sm text-black/60">
+                    <p className="text-sm text-[#1d1b20]">
                         Trusted by 25,000+ top revenue teams
                     </p>
                 </div>

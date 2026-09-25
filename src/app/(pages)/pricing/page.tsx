@@ -105,7 +105,7 @@ export default function PricingSection() {
     };
 
     return (
-        <>
+        <div className="bg-[#fafcf7]">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
@@ -118,6 +118,6 @@ export default function PricingSection() {
             <Price />
             <Detailed />
             <Documentations />
-        </>
+        </div>
     );
 }

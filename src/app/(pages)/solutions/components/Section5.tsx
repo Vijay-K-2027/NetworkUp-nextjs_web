@@ -20,7 +20,7 @@ export default function Section5() {
             className="w-full rounded-2xl bg-[white] border border-[#f3f4f6] p-6 sm:p-8 shadow-xl flex flex-col items-stretch"
         >
             <div className="flex flex-row items-center justify-between w-full pb-4 border-b border-gray-100">
-                <h4 className="text-lg font-bold text-[#111827">Campaign Analytics</h4>
+                <h4 className="text-lg font-bold text-[#111827]">Campaign Analytics</h4>
                 <div className="flex flex-row items-center gap-x-4">
                     <div className="flex items-center gap-x-1.5">
                         <span className="w-2.5 h-2.5 rounded-full bg-[#7ceb2a]"></span>
@@ -53,7 +53,7 @@ export default function Section5() {
                         whileInView={{ scaleY: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="w-full max-w-[80px] bg-gray-[#f3f4f6] hover:bg-gray-200/80 transition-colors rounded-t-lg origin-bottom"
+                        className="w-full max-w-[80px] bg-[#f3f4f6] hover:bg-gray-200/80 transition-colors rounded-t-lg origin-bottom"
                         style={{ height: '96px' }}
                     />
                     <span className="text-[10px] sm:text-xs font-semibold text-[#9ca3af] text-center">May 5</span>

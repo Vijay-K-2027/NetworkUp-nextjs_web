@@ -66,7 +66,7 @@ export default function ProductPage() {
     };
 
     return (
-        <>
+        <div className="bg-[#fafcf7]">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -82,6 +82,6 @@ export default function ProductPage() {
             <Pricing />
             <Contact />
             <Document />
-        </>
+        </div>
     );
 }
