@@ -101,7 +101,7 @@ export default function Section1Template(props: Section1TemplateProps) {
 
         rightContent,
 
-        containerClass = "max-w-9xl mx-auto px-10 space-y-8 sm:space-y-10",
+        containerClass = "max-w-9xl mx-auto lg:px-10 space-y-4 sm:space-y-6",
         sectionClass,
     } = props;
 
@@ -118,7 +118,7 @@ export default function Section1Template(props: Section1TemplateProps) {
             <div className={containerClass}>
 
                 {/* TOP ROW: BREADCRUMB + NOTICE */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-5 pl-5 sm:gap-4">
                     <nav className="flex items-center gap-1.5 text-xs sm:text-sm text-[#43483e]">
                         <Link
                             href={breadcrumbCategoryHref || "/solutions"}
@@ -142,7 +142,7 @@ export default function Section1Template(props: Section1TemplateProps) {
 
                 {/* 2-COLUMN HERO GRID */}
                 <div className={`${isRecruiter ? "bg-[#eff4ff]" : "bg-[#fbfdfa]"
-                    } grid grid-cols-1 lg:grid-cols-12 gap-x-5 items-center px-5 rounded-2xl`}>
+                    } grid grid-cols-1 lg:grid-cols-12 gap-x-5 gap-y-10 items-center px-5 py-10 rounded-2xl`}>
 
                     {/* LEFT COLUMN: HERO COPY & CTAS */}
                     <motion.div

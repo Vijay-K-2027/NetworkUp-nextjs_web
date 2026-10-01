@@ -144,7 +144,7 @@ export default function Section3Template(props: Section3TemplateProps) {
                                                 {card.advantageTitle}
                                             </strong>
                                         )}
-                                        <span className="font-medium text-[#43483e]">
+                                        <span className="font-bold text-[#43483e]">
                                             {card.advantageDescription}
                                         </span>
                                     </p>

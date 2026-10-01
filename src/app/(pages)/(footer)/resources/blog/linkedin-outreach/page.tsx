@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,6 +12,41 @@ import {
     CircleCheck,
     UserSearch,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "How AI is Changing LinkedIn Outreach in 2027 | NetworkUp Blog",
+    description: "Explore how artificial intelligence is transforming B2B prospecting, personalization, buying signal detection, and sequence automation on LinkedIn.",
+    keywords: ["ai linkedin outreach", "future of linkedin automation", "b2b sales ai trends", "ai prospecting tools", "smart outreach automation"],
+    alternates: {
+        canonical: "https://networkup.io/resources/blog/linkedin-outreach"
+    },
+    openGraph: {
+        title: "How AI is Changing LinkedIn Outreach in 2027 | NetworkUp Blog",
+        description: "Explore how artificial intelligence is transforming B2B prospecting, personalization, buying signal detection, and sequence automation on LinkedIn.",
+        url: "https://networkup.io/resources/blog/linkedin-outreach",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/footer/resources/blog/Article1.png",
+                width: 1200,
+                height: 630,
+                alt: "How AI is Changing LinkedIn Outreach"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "How AI is Changing LinkedIn Outreach in 2027",
+        description: "Explore how AI is transforming prospecting, personalization and outreach.",
+        images: ["https://networkup.io/footer/resources/blog/Article1.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 export default function LinkedInOutreachArticlePage() {
     return (

@@ -1,10 +1,44 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
+
+export const metadata: Metadata = {
+    title: "API & Integrations Support | NetworkUp Help Center",
+    description: "Learn how to generate API keys, configure OAuth 2.0 authentication, listen to webhook events, and integrate NetworkUp with HubSpot, Salesforce, and custom CRMs.",
+    keywords: ["api key setup", "webhook integration", "crm sync help", "api authentication", "rest api troubleshooting"],
+    alternates: {
+        canonical: "https://networkup.io/resources/help-center/api-integrations"
+    },
+    openGraph: {
+        title: "API & Integrations Support | NetworkUp Help Center",
+        description: "Learn how to generate API keys, configure OAuth 2.0 authentication, listen to webhook events, and integrate NetworkUp with HubSpot, Salesforce, and custom CRMs.",
+        url: "https://networkup.io/resources/help-center/api-integrations",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "API & Integrations Support"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "API & Integrations Support | NetworkUp",
+        description: "Connect NetworkUp to your tech stack using webhooks and REST endpoints.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const apiIntegrationsItems: DocItem[] = [
     {

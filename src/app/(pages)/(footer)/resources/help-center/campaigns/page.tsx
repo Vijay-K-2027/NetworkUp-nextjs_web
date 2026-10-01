@@ -1,10 +1,44 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
+
+export const metadata: Metadata = {
+    title: "Campaigns Support & Setup Guide | NetworkUp Help Center",
+    description: "Learn how to build multi-step LinkedIn sequences, set up conditional branching workflows, schedule sending hours, and optimize campaign performance with AI.",
+    keywords: ["linkedin campaigns guide", "multi-step sequences tutorial", "conditional workflows", "campaign scheduling", "outreach optimization"],
+    alternates: {
+        canonical: "https://networkup.io/resources/help-center/campaigns"
+    },
+    openGraph: {
+        title: "Campaigns Support & Setup Guide | NetworkUp Help Center",
+        description: "Learn how to build multi-step LinkedIn sequences, set up conditional branching workflows, schedule sending hours, and optimize campaign performance with AI.",
+        url: "https://networkup.io/resources/help-center/campaigns",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "Campaigns Setup Guide"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Campaigns Setup Guide | NetworkUp",
+        description: "Create, manage, and optimize automated outreach campaigns.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const campaignsItems: DocItem[] = [
     {

@@ -6,10 +6,44 @@ import Section4Template, { RepProfileItem } from "../templates/section4";
 import Section213Template, { ExecutionFeatureCard } from "../templates/section213";
 import Section313Template, { GovernanceCardItem, GovernanceStatItem } from "../templates/section313";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
     title: "NetworkUp for Agencies | Multi-Client LinkedIn Lead Generation",
     description:
-        "Help your agency manage client campaigns, coordinate outreach, personalize messages with AI, and track performance from one connected workspace.",
+        "Help your agency manage client campaigns, coordinate outreach, personalize messages with AI, and track performance from one connected workspace with isolated client environments and white-label reporting.",
+    keywords: ["linkedin outreach for agencies", "multi client lead generation", "white label linkedin automation", "agency fleet management", "client workspace isolation", "networkup for agencies"],
+    alternates: {
+        canonical: "https://networkup.io/solutions/agencies"
+    },
+    openGraph: {
+        title: "NetworkUp for Agencies | Multi-Client LinkedIn Lead Generation",
+        description:
+            "Help your agency manage client campaigns, coordinate outreach, personalize messages with AI, and track performance from one connected workspace with isolated client environments and white-label reporting.",
+        url: "https://networkup.io/solutions/agencies",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp for Agencies"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NetworkUp for Agencies | Multi-Client LinkedIn Lead Generation",
+        description:
+            "Help your agency manage client campaigns, coordinate outreach, personalize messages with AI, and track performance from one connected workspace.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
 };
 
 const agencyComparisonCards: ComparisonCardItem[] = [

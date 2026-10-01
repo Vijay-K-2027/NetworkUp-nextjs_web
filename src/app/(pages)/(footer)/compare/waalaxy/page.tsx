@@ -1,5 +1,41 @@
 import React from "react";
+import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
+
+export const metadata: Metadata = {
+    title: "NetworkUp vs Waalaxy | Top LinkedIn Automation Alternative Comparison",
+    description: "Compare NetworkUp vs Waalaxy. See why modern growth teams switch to NetworkUp for advanced AI ICP scoring, predictive campaign simulation, and intelligent multi-account scaling.",
+    keywords: ["networkup vs waalaxy", "waalaxy alternative", "waalaxy competitors", "best waalaxy alternative 2026", "waalaxy vs networkup", "cloud linkedin automation tool"],
+    alternates: {
+        canonical: "https://networkup.io/compare/waalaxy"
+    },
+    openGraph: {
+        title: "NetworkUp vs Waalaxy | Top LinkedIn Automation Alternative Comparison",
+        description: "Compare NetworkUp vs Waalaxy. See why modern growth teams switch to NetworkUp for advanced AI ICP scoring, predictive campaign simulation, and intelligent multi-account scaling.",
+        url: "https://networkup.io/compare/waalaxy",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp vs Waalaxy Comparison"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NetworkUp vs Waalaxy | Top LinkedIn Automation Alternative",
+        description: "Compare NetworkUp vs Waalaxy for automated LinkedIn prospecting and lead outreach.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const waalaxyOverlap: OverlapItems = {
     left: [

@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -12,6 +11,41 @@ import {
     Copy,
     ShieldCheck,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "How AI Personalization Can 3x Your Reply Rates | NetworkUp Blog",
+    description: "Learn how to use AI personalization to write hyper-relevant LinkedIn messages that feel human, avoid spam filters, and 3x your reply rates.",
+    keywords: ["ai personalization linkedin", "linkedin message personalization", "improve reply rates", "ai outreach messaging", "b2b sales personalization"],
+    alternates: {
+        canonical: "https://networkup.io/resources/blog/ai-personalization"
+    },
+    openGraph: {
+        title: "How AI Personalization Can 3x Your Reply Rates | NetworkUp Blog",
+        description: "Learn how to use AI personalization to write hyper-relevant LinkedIn messages that feel human, avoid spam filters, and 3x your reply rates.",
+        url: "https://networkup.io/resources/blog/ai-personalization",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/footer/resources/blog/Article4.png",
+                width: 1200,
+                height: 630,
+                alt: "How AI Personalization Can 3x Your Reply Rates"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "How AI Personalization Can 3x Your Reply Rates",
+        description: "Use AI to write personalized messages that feel human and drive replies.",
+        images: ["https://networkup.io/footer/resources/blog/Article4.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 export default function AIPersonalizationArticlePage() {
     return (

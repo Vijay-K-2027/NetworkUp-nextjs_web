@@ -1,5 +1,41 @@
 import React from "react";
+import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
+
+export const metadata: Metadata = {
+    title: "NetworkUp vs Sendpilot | Next-Gen LinkedIn Automation Comparison",
+    description: "Compare NetworkUp vs Sendpilot. Discover why teams choose NetworkUp for deeper AI ICP scoring, predictive campaign simulation, and intelligent unified inbox management.",
+    keywords: ["networkup vs sendpilot", "sendpilot alternative", "sendpilot competitors", "best sendpilot alternative", "linkedin automation tools comparison", "sendpilot vs networkup"],
+    alternates: {
+        canonical: "https://networkup.io/compare/sendpilot"
+    },
+    openGraph: {
+        title: "NetworkUp vs Sendpilot | Next-Gen LinkedIn Automation Comparison",
+        description: "Compare NetworkUp vs Sendpilot. Discover why teams choose NetworkUp for deeper AI ICP scoring, predictive campaign simulation, and intelligent unified inbox management.",
+        url: "https://networkup.io/compare/sendpilot",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp vs Sendpilot Comparison"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NetworkUp vs Sendpilot | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp vs Sendpilot for automated LinkedIn outreach sequences.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const sendpilotOverlap: OverlapItems = {
     left: [

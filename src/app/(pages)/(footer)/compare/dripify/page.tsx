@@ -1,5 +1,41 @@
 import React from "react";
+import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
+
+export const metadata: Metadata = {
+    title: "NetworkUp vs Dripify | Smart LinkedIn Automation Platform Comparison",
+    description: "Compare NetworkUp vs Dripify. Discover why NetworkUp's AI conversation analysis, predictive ICP scoring, and real-time buying signals outperform basic LinkedIn drip sequences.",
+    keywords: ["networkup vs dripify", "dripify alternative", "dripify competitors", "best dripify alternative", "linkedin drip automation", "dripify vs networkup"],
+    alternates: {
+        canonical: "https://networkup.io/compare/dripify"
+    },
+    openGraph: {
+        title: "NetworkUp vs Dripify | Smart LinkedIn Automation Platform Comparison",
+        description: "Compare NetworkUp vs Dripify. Discover why NetworkUp's AI conversation analysis, predictive ICP scoring, and real-time buying signals outperform basic LinkedIn drip sequences.",
+        url: "https://networkup.io/compare/dripify",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp vs Dripify Comparison"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NetworkUp vs Dripify | Smart LinkedIn Automation Comparison",
+        description: "Compare NetworkUp vs Dripify for LinkedIn prospecting and automated outreach.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const dripifyOverlap: OverlapItems = {
     left: [

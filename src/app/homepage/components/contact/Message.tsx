@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, ReactNode } from "react";
 import {
     Send, ChevronRight, X, ArrowRight, ShieldCheck, Zap, ChevronLeft,
     Wrench, HelpCircle, CreditCard, MoreHorizontal, FileText, Settings, Mail, Headphones, Check, RefreshCw
@@ -16,6 +16,320 @@ interface ChatMessage {
 interface MessageProps {
     onClose?: () => void;
     onNavigateToHome?: () => void;
+}
+
+interface Block {
+    type: "paragraph" | "ordered-list" | "unordered-list" | "heading" | "code";
+    items?: { num?: string; text: string }[];
+    lines?: string[];
+    text?: string;
+    level?: number;
+    code?: string;
+    lang?: string;
+}
+
+function parseInline(text: string): ReactNode[] {
+    if (!text) return [];
+
+    // Match patterns:
+    // 1: Markdown link: [text](url)
+    // 4: Bold: **text** or __text__
+    // 7: Inline code: `code`
+    // 9: Italic: *text* or _text_
+    // 12: Raw URL: https?://...
+    const pattern = /(\[(.*?)\]\((https?:\/\/[^\s)]+)\))|(\*\*(.*?)\*\*|__(.*?)__)|(`(.*?)`)|(\*([^*\n]+)\*|_([^_\n]+)_)|(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/g;
+
+    const nodes: ReactNode[] = [];
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+
+    while ((match = pattern.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            nodes.push(text.slice(lastIndex, match.index));
+        }
+
+        const [
+            fullMatch,
+            linkMatch, linkText, linkUrl,
+            boldMatch, boldText1, boldText2,
+            codeMatch, codeText,
+            italicMatch, italicText1, italicText2,
+            rawUrl
+        ] = match;
+
+        const key = `inline-${match.index}-${fullMatch.slice(0, 8)}`;
+
+        if (linkMatch) {
+            nodes.push(
+                <a
+                    key={key}
+                    href={linkUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#71EB34] underline hover:text-[#8ee51d] transition-colors break-all"
+                >
+                    {linkText}
+                </a>
+            );
+        } else if (boldMatch) {
+            const content = boldText1 || boldText2 || "";
+            nodes.push(
+                <strong key={key} className="font-semibold text-white">
+                    {content}
+                </strong>
+            );
+        } else if (codeMatch) {
+            nodes.push(
+                <code
+                    key={key}
+                    className="bg-black/40 text-[#71EB34] px-1 py-0.5 rounded text-[10px] font-mono border border-white/10"
+                >
+                    {codeText}
+                </code>
+            );
+        } else if (italicMatch) {
+            const content = italicText1 || italicText2 || "";
+            nodes.push(
+                <em key={key} className="italic text-white/90">
+                    {content}
+                </em>
+            );
+        } else if (rawUrl) {
+            nodes.push(
+                <a
+                    key={key}
+                    href={rawUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#71EB34] underline hover:text-[#8ee51d] transition-colors break-all"
+                >
+                    {rawUrl}
+                </a>
+            );
+        }
+
+        lastIndex = pattern.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+        nodes.push(text.slice(lastIndex));
+    }
+
+    return nodes;
+}
+
+function parseBlocks(raw: string): Block[] {
+    if (!raw) return [];
+    const lines = raw.split("\n");
+    const blocks: Block[] = [];
+    let currentOrderedList: { num: string; text: string }[] | null = null;
+    let currentUnorderedList: { text: string }[] | null = null;
+    let currentCode: { lang: string; lines: string[] } | null = null;
+    let currentParagraphLines: string[] = [];
+
+    const flushParagraph = () => {
+        if (currentParagraphLines.length > 0) {
+            blocks.push({
+                type: "paragraph",
+                lines: [...currentParagraphLines]
+            });
+            currentParagraphLines = [];
+        }
+    };
+
+    const flushLists = () => {
+        if (currentOrderedList && currentOrderedList.length > 0) {
+            blocks.push({ type: "ordered-list", items: currentOrderedList });
+            currentOrderedList = null;
+        }
+        if (currentUnorderedList && currentUnorderedList.length > 0) {
+            blocks.push({ type: "unordered-list", items: currentUnorderedList });
+            currentUnorderedList = null;
+        }
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const trimmed = line.trim();
+
+        // Code block start/end
+        if (trimmed.startsWith("```")) {
+            if (currentCode) {
+                blocks.push({
+                    type: "code",
+                    code: currentCode.lines.join("\n"),
+                    lang: currentCode.lang
+                });
+                currentCode = null;
+            } else {
+                flushParagraph();
+                flushLists();
+                currentCode = {
+                    lang: trimmed.slice(3).trim(),
+                    lines: []
+                };
+            }
+            continue;
+        }
+
+        if (currentCode) {
+            currentCode.lines.push(line);
+            continue;
+        }
+
+        // Blank line separates paragraphs and lists
+        if (!trimmed) {
+            flushParagraph();
+            flushLists();
+            continue;
+        }
+
+        // Heading (#, ##, ###)
+        const headingMatch = trimmed.match(/^(#{1,4})\s+(.+)$/);
+        if (headingMatch) {
+            flushParagraph();
+            flushLists();
+            blocks.push({
+                type: "heading",
+                level: headingMatch[1].length,
+                text: headingMatch[2]
+            });
+            continue;
+        }
+
+        // Ordered list item (e.g. "1. " or "1) ")
+        const orderedMatch = trimmed.match(/^(\d+)[.)]\s+(.+)$/);
+        if (orderedMatch) {
+            flushParagraph();
+            if (currentUnorderedList) flushLists();
+            if (!currentOrderedList) {
+                currentOrderedList = [];
+            }
+            currentOrderedList.push({
+                num: orderedMatch[1],
+                text: orderedMatch[2]
+            });
+            continue;
+        }
+
+        // Unordered list item (e.g. "- " or "* " or "• ")
+        const unorderedMatch = trimmed.match(/^[-*•]\s+(.+)$/);
+        if (unorderedMatch) {
+            flushParagraph();
+            if (currentOrderedList) flushLists();
+            if (!currentUnorderedList) {
+                currentUnorderedList = [];
+            }
+            currentUnorderedList.push({
+                text: unorderedMatch[1]
+            });
+            continue;
+        }
+
+        // Otherwise, regular paragraph line
+        flushLists();
+        currentParagraphLines.push(trimmed);
+    }
+
+    flushParagraph();
+    flushLists();
+
+    if (currentCode) {
+        blocks.push({
+            type: "code",
+            code: currentCode.lines.join("\n"),
+            lang: currentCode.lang
+        });
+    }
+
+    return blocks;
+}
+
+function FormattedMessage({ content }: { content: string }) {
+    if (!content) return null;
+    const blocks = parseBlocks(content);
+
+    return (
+        <div className="flex flex-col gap-2.5 text-left text-white/90 text-[11px] leading-relaxed">
+            {blocks.map((block, idx) => {
+                if (block.type === "heading") {
+                    if (block.level === 1 || block.level === 2) {
+                        return (
+                            <h3 key={idx} className="font-bold text-white text-xs mt-1 mb-0.5">
+                                {parseInline(block.text || "")}
+                            </h3>
+                        );
+                    }
+                    return (
+                        <h4 key={idx} className="font-bold text-[#71EB34] text-[11px] mt-0.5 mb-0.5">
+                            {parseInline(block.text || "")}
+                        </h4>
+                    );
+                }
+
+                if (block.type === "ordered-list") {
+                    return (
+                        <ol key={idx} className="flex flex-col gap-2 my-0.5 pl-0 list-none">
+                            {block.items?.map((item, itemIdx) => (
+                                <li key={itemIdx} className="flex items-start gap-2">
+                                    <span className="font-bold text-[#71EB34] text-[11px] leading-relaxed shrink-0 select-none">
+                                        {item.num}.
+                                    </span>
+                                    <div className="flex-1 text-[11px] leading-relaxed text-white/90">
+                                        {parseInline(item.text)}
+                                    </div>
+                                </li>
+                            ))}
+                        </ol>
+                    );
+                }
+
+                if (block.type === "unordered-list") {
+                    return (
+                        <ul key={idx} className="flex flex-col gap-1.5 my-0.5 pl-0 list-none">
+                            {block.items?.map((item, itemIdx) => (
+                                <li key={itemIdx} className="flex items-start gap-2">
+                                    <span className="text-[#71EB34] text-[10px] leading-relaxed shrink-0 select-none">
+                                        •
+                                    </span>
+                                    <div className="flex-1 text-[11px] leading-relaxed text-white/90">
+                                        {parseInline(item.text)}
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    );
+                }
+
+                if (block.type === "code") {
+                    return (
+                        <div
+                            key={idx}
+                            className="my-1 rounded-xl bg-black/50 border border-white/10 p-2.5 font-mono text-[10px] text-[#71EB34] overflow-x-auto leading-relaxed"
+                        >
+                            {block.lang && (
+                                <div className="text-[9px] uppercase tracking-wider text-gray-400 font-sans mb-1 select-none">
+                                    {block.lang}
+                                </div>
+                            )}
+                            <pre className="whitespace-pre-wrap">{block.code}</pre>
+                        </div>
+                    );
+                }
+
+                // Paragraph block
+                return (
+                    <div key={idx} className="flex flex-col gap-1">
+                        {block.lines?.map((line, lineIdx) => (
+                            <p key={lineIdx} className="text-[11px] leading-relaxed text-white/90">
+                                {parseInline(line)}
+                            </p>
+                        ))}
+                    </div>
+                );
+            })}
+        </div>
+    );
 }
 
 const DEFAULT_MESSAGES: ChatMessage[] = [
@@ -205,7 +519,8 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
                 const systemMsg: ChatMessage = {
                     id: generateUniqueId(),
                     sender: "system",
-                    text: data.response || "No response generated."
+                    text: data.response || "No response generated.",
+                    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
                 };
                 setMessages(prev => [...prev, systemMsg]);
             } else {
@@ -216,7 +531,8 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
             const systemMsg: ChatMessage = {
                 id: generateUniqueId(),
                 sender: "system",
-                text: "Sorry, I am having trouble connecting to the network right now. Please check your connection and try again."
+                text: "Sorry, I am having trouble connecting to the network right now. Please check your connection and try again.",
+                time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
             };
             setMessages(prev => [...prev, systemMsg]);
         }
@@ -530,16 +846,18 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
                                 />
                             )}
                             <div className={`flex flex-col gap-1 ${msg.customType ? "w-full" : ""}`}>
-                                <div className={`p-4 rounded-2xl text-[11px] leading-relaxed text-left whitespace-pre-line ${msg.sender === "user"
-                                    ? "bg-[#8ee51d] text-black font-bold rounded-tr-none w-fit self-end px-4 py-2.5 text-xs shadow-sm"
+                                <div className={`rounded-2xl text-[11px] leading-relaxed text-left ${msg.sender === "user"
+                                    ? "bg-[#8ee51d] text-black font-bold rounded-tr-none w-fit self-end px-4 py-2.5 text-xs shadow-sm whitespace-pre-wrap break-words"
                                     : msg.customType
-                                        ? "bg-[#282828] text-white rounded-2xl border border-white/5 w-full shadow-md"
-                                        : "bg-white/10 text-white rounded-tl-none border border-white/5 w-full"
+                                        ? "p-4 bg-[#282828] text-white rounded-2xl border border-white/5 w-full shadow-md"
+                                        : "p-3.5 sm:p-4 bg-white/10 text-white rounded-tl-none border border-white/5 w-full"
                                     }`}>
                                     {msg.customType ? (
                                         renderCustomMessage(msg.customType)
-                                    ) : (
+                                    ) : msg.sender === "user" ? (
                                         msg.text
+                                    ) : (
+                                        <FormattedMessage content={msg.text} />
                                     )}
                                 </div>
                                 {msg.time && (

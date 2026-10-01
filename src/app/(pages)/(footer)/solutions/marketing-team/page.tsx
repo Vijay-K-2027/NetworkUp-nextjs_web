@@ -7,10 +7,44 @@ import Section45Template from "../templates/section45";
 import Section3245Template, { EnterpriseReadinessCard } from "../templates/section3245";
 import { RefreshCw, Lock, Target, Users } from "lucide-react";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
     title: "NetworkUp for Marketing Teams | LinkedIn ABM & Demand Generation",
     description:
         "Help marketing teams discover in-market prospects, personalize LinkedIn outreach, coordinate account-based campaigns, and turn engagement into measurable pipeline.",
+    keywords: ["linkedin abm platform", "account based marketing linkedin", "demand generation outreach", "b2b marketing automation", "lead intent prospecting", "networkup for marketing"],
+    alternates: {
+        canonical: "https://networkup.io/solutions/marketing-team"
+    },
+    openGraph: {
+        title: "NetworkUp for Marketing Teams | LinkedIn ABM & Demand Generation",
+        description:
+            "Help marketing teams discover in-market prospects, personalize LinkedIn outreach, coordinate account-based campaigns, and turn engagement into measurable pipeline.",
+        url: "https://networkup.io/solutions/marketing-team",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp for Marketing Teams"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NetworkUp for Marketing Teams | LinkedIn ABM & Demand Generation",
+        description:
+            "Help marketing teams discover in-market prospects, personalize LinkedIn outreach, coordinate account-based campaigns, and turn engagement into measurable pipeline.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
 };
 
 const marketingComparisonCards: ComparisonCardItem[] = [

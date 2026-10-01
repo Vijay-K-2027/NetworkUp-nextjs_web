@@ -8,15 +8,15 @@ import Section3 from "./components/Section3";
 import Section4 from "./components/Section4";
 
 export const metadata: Metadata = {
-    title: "Campaigns | 10x Your LinkedIn Outbound | NetworkUp.io",
-    description: "Build outreach campaigns that work while you focus on the conversation. Automated LinkedIn connection requests, follow-ups, and engagement at scale.",
-    keywords: ["networkup campaigns", "linkedin campaigns", "automated outreach", "outbound engine", "connection requests", "lead generation"],
+    title: "Campaigns | Multi-Step LinkedIn Outreach Builder | NetworkUp.io",
+    description: "Build high-converting LinkedIn outreach campaigns that work while you sleep. Design branching sequences, set smart delays, A/B test copy, and scale outbound safely.",
+    keywords: ["networkup campaigns", "linkedin campaigns", "automated outreach engine", "drip campaigns linkedin", "connection request sequences", "b2b campaign builder"],
     alternates: {
         canonical: "https://networkup.io/product/campaigns"
     },
     openGraph: {
-        title: "Campaigns | 10x Your LinkedIn Outbound | NetworkUp.io",
-        description: "Build outreach campaigns that work while you focus on the conversation. Automated LinkedIn connection requests, follow-ups, and engagement at scale.",
+        title: "Campaigns | Multi-Step LinkedIn Outreach Builder | NetworkUp.io",
+        description: "Build high-converting LinkedIn outreach campaigns that work while you sleep. Design branching sequences, set smart delays, A/B test copy, and scale outbound safely.",
         url: "https://networkup.io/product/campaigns",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
                 url: "https://networkup.io/og-about.png",
                 width: 1200,
                 height: 630,
-                alt: "Campaigns - NetworkUp"
+                alt: "NetworkUp Multi-Step Campaign Builder"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Campaigns | 10x Your LinkedIn Outbound | NetworkUp.io",
-        description: "Build outreach campaigns that work while you focus on the conversation. Automated LinkedIn connection requests, follow-ups, and engagement at scale.",
+        title: "Campaigns | Multi-Step LinkedIn Outreach Builder | NetworkUp.io",
+        description: "Build high-converting LinkedIn outreach campaigns that work while you sleep. Design branching sequences, set smart delays, A/B test copy, and scale outbound safely.",
         images: ["https://networkup.io/og-about.png"]
     },
     robots: {

@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -18,6 +17,41 @@ import {
     Handshake,
     FoldVertical,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "15 LinkedIn Connection Message Templates That Actually Work | NetworkUp Blog",
+    description: "Copy, personalize, and test 15 high-converting LinkedIn connection request templates tailored for sales reps, recruiters, founders, and agency operators.",
+    keywords: ["linkedin connection message templates", "linkedin connection note", "how to connect on linkedin", "cold outreach templates", "linkedin message examples"],
+    alternates: {
+        canonical: "https://networkup.io/resources/blog/linkedin-connection-message"
+    },
+    openGraph: {
+        title: "15 LinkedIn Connection Message Templates That Actually Work | NetworkUp Blog",
+        description: "Copy, personalize, and test 15 high-converting LinkedIn connection request templates tailored for sales reps, recruiters, founders, and agency operators.",
+        url: "https://networkup.io/resources/blog/linkedin-connection-message",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/footer/resources/blog/Article2.png",
+                width: 1200,
+                height: 630,
+                alt: "15 LinkedIn Connection Message Templates"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "15 LinkedIn Connection Message Templates That Actually Work",
+        description: "Copy, personalize and start more conversations that convert.",
+        images: ["https://networkup.io/footer/resources/blog/Article2.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 export default function LinkedInConnectionMessageArticlePage() {
     return (

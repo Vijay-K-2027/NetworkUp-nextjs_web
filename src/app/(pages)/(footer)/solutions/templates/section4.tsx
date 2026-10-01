@@ -164,7 +164,7 @@ export default function Section4Template(props: Section4TemplateProps) {
                                     {checklist.map((item, idx) => (
                                         <div
                                             key={idx}
-                                            className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#000400]"
+                                            className="flex items-center gap-2.5 text-xs sm:text-sm font-normal text-[#000400]"
                                         >
                                             <CircleCheck className="w-4 h-4 text-[#416900] shrink-0 stroke-[2]" />
                                             <span>{item}</span>

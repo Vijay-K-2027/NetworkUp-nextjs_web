@@ -1,10 +1,44 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
+
+export const metadata: Metadata = {
+    title: "Frequently Asked Questions (FAQs) | NetworkUp Help Center",
+    description: "Find answers to frequently asked questions about NetworkUp features, LinkedIn safety, AI message writing, CRM integrations, and pricing plans.",
+    keywords: ["networkup faqs", "frequently asked questions", "is networkup safe for linkedin", "linkedin automation questions", "networkup pricing faqs"],
+    alternates: {
+        canonical: "https://networkup.io/resources/help-center/faqs"
+    },
+    openGraph: {
+        title: "Frequently Asked Questions (FAQs) | NetworkUp Help Center",
+        description: "Find answers to frequently asked questions about NetworkUp features, LinkedIn safety, AI message writing, CRM integrations, and pricing plans.",
+        url: "https://networkup.io/resources/help-center/faqs",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp FAQs"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Frequently Asked Questions | NetworkUp",
+        description: "Answers to common questions about NetworkUp, campaigns, and account setup.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const faqsItems: DocItem[] = [
     {

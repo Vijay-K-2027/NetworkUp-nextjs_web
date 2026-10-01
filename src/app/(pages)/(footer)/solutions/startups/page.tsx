@@ -6,10 +6,44 @@ import Section124Template, { SourcingFeatureItem, SourcingCampaignCard } from ".
 import Section3245Template, { EnterpriseReadinessCard } from "../templates/section3245";
 import { Users, Radio, Inbox, SlidersHorizontal, Laptop, Award, Shield, BadgeCheck } from "lucide-react";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
     title: "NetworkUp for Startups | Founder-Led LinkedIn Outbound & Pipeline",
     description:
         "Help founders and lean GTM teams discover the right prospects, personalize outreach with AI, automate follow-ups, and build a repeatable B2B pipeline without adding unnecessary manual work.",
+    keywords: ["linkedin outreach for startups", "founder led sales outbound", "startup lead generation", "lean gtm prospecting", "b2b pipeline builder", "networkup for startups"],
+    alternates: {
+        canonical: "https://networkup.io/solutions/startups"
+    },
+    openGraph: {
+        title: "NetworkUp for Startups | Founder-Led LinkedIn Outbound & Pipeline",
+        description:
+            "Help founders and lean GTM teams discover the right prospects, personalize outreach with AI, automate follow-ups, and build a repeatable B2B pipeline without adding unnecessary manual work.",
+        url: "https://networkup.io/solutions/startups",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp for Startups"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NetworkUp for Startups | Founder-Led LinkedIn Outbound & Pipeline",
+        description:
+            "Help founders and lean GTM teams discover the right prospects, personalize outreach with AI, automate follow-ups, and build a repeatable B2B pipeline without adding unnecessary manual work.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
 };
 
 const startupComparisonCards: ComparisonCardItem[] = [

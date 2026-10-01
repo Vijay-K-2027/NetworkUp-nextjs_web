@@ -11,16 +11,16 @@ import Section6 from "./components/Section6";
 
 
 export const metadata: Metadata = {
-    title: "Lead Finder | NetworkUp.io",
-    description: "Meet the team and learn about the mission behind NetworkUp.io. We are building the future of AI-powered professional networking and outreach.",
-    keywords: ["networkup story", "about networkup", "linkedin automation team", "ai outreach mission", "professional networking history"],
+    title: "Lead Finder | AI-Powered B2B Prospect Discovery | NetworkUp.io",
+    description: "Discover high-intent decision-makers and build verified prospect lists with NetworkUp's AI Lead Finder. Filter by seniority, industry, tech stack, and intent signals before launching outreach.",
+    keywords: ["linkedin lead finder", "b2b prospect discovery", "lead enrichment", "icp lead scoring", "sales prospecting tool", "networkup lead finder"],
     alternates: {
-        canonical: "https://networkup.io/aboutus"
+        canonical: "https://networkup.io/product/lead"
     },
     openGraph: {
-        title: "About Us | NetworkUp.io",
-        description: "Meet the team and learn about the mission behind NetworkUp.io. We are building the future of AI-powered professional networking and outreach.",
-        url: "https://networkup.io/aboutus",
+        title: "Lead Finder | AI-Powered B2B Prospect Discovery | NetworkUp.io",
+        description: "Discover high-intent decision-makers and build verified prospect lists with NetworkUp's AI Lead Finder. Filter by seniority, industry, tech stack, and intent signals before launching outreach.",
+        url: "https://networkup.io/product/lead",
         siteName: "NetworkUp.io",
         locale: "en_US",
         type: "website",
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
                 url: "https://networkup.io/og-about.png",
                 width: 1200,
                 height: 630,
-                alt: "About NetworkUp"
+                alt: "NetworkUp AI Lead Finder"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "About Us | NetworkUp.io",
-        description: "Meet the team and learn about the mission behind NetworkUp.io. We are building the future of AI-powered professional networking and outreach.",
+        title: "Lead Finder | AI-Powered B2B Prospect Discovery | NetworkUp.io",
+        description: "Discover high-intent decision-makers and build verified prospect lists with NetworkUp's AI Lead Finder. Filter by seniority, industry, tech stack, and intent signals before launching outreach.",
         images: ["https://networkup.io/og-about.png"]
     },
     robots: {

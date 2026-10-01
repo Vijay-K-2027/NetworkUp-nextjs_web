@@ -1,5 +1,41 @@
 import React from "react";
+import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
+
+export const metadata: Metadata = {
+    title: "NetworkUp vs Reachy.ai | AI LinkedIn Outreach & Prospecting Comparison",
+    description: "Compare NetworkUp vs Reachy. Discover why NetworkUp's end-to-end LinkedIn automation, unified inbox, and predictive campaign simulation provide unmatched pipeline growth.",
+    keywords: ["networkup vs reachy", "reachy ai alternative", "reachy competitors", "best reachy alternative", "ai outreach reachy vs networkup", "linkedin prospecting tool"],
+    alternates: {
+        canonical: "https://networkup.io/compare/reachy"
+    },
+    openGraph: {
+        title: "NetworkUp vs Reachy.ai | AI LinkedIn Outreach & Prospecting Comparison",
+        description: "Compare NetworkUp vs Reachy. Discover why NetworkUp's end-to-end LinkedIn automation, unified inbox, and predictive campaign simulation provide unmatched pipeline growth.",
+        url: "https://networkup.io/compare/reachy",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp vs Reachy Comparison"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NetworkUp vs Reachy.ai | AI LinkedIn Outreach Comparison",
+        description: "Compare NetworkUp vs Reachy for AI-assisted lead discovery and automated sequences.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const reachyOverlap: OverlapItems = {
     left: [

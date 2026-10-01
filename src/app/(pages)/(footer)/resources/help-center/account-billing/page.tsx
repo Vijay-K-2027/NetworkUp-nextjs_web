@@ -1,10 +1,44 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
+
+export const metadata: Metadata = {
+    title: "Account & Billing Support | NetworkUp Help Center",
+    description: "Manage your NetworkUp subscription, update payment methods, upgrade/downgrade plans, invite team members, and check usage quotas.",
+    keywords: ["networkup billing", "account settings", "subscription management", "upgrade plan", "team seat management"],
+    alternates: {
+        canonical: "https://networkup.io/resources/help-center/account-billing"
+    },
+    openGraph: {
+        title: "Account & Billing Support | NetworkUp Help Center",
+        description: "Manage your NetworkUp subscription, update payment methods, upgrade/downgrade plans, invite team members, and check usage quotas.",
+        url: "https://networkup.io/resources/help-center/account-billing",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "Account & Billing Support"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Account & Billing Support | NetworkUp",
+        description: "Manage team roles, update payment methods and view usage statistics.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const accountBillingItems: DocItem[] = [
     {

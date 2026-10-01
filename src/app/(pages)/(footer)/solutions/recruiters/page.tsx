@@ -7,10 +7,44 @@ import Section22Template from "../templates/section22";
 import Section3245Template from "../templates/section3245";
 import Section124Template from "../templates/section124";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
     title: "NetworkUp for Recruiters | Automated LinkedIn Sourcing & Talent Pipeline",
     description:
         "Empower recruiting teams and executive search firms to discover qualified candidates, personalize outreach, automate follow-ups, and manage talent pipelines from one connected workspace.",
+    keywords: ["linkedin talent sourcing", "automated candidate outreach", "recruiter linkedin automation", "talent pipeline platform", "executive search automation", "networkup for recruiters"],
+    alternates: {
+        canonical: "https://networkup.io/solutions/recruiters"
+    },
+    openGraph: {
+        title: "NetworkUp for Recruiters | Automated LinkedIn Sourcing & Talent Pipeline",
+        description:
+            "Empower recruiting teams and executive search firms to discover qualified candidates, personalize outreach, automate follow-ups, and manage talent pipelines from one connected workspace.",
+        url: "https://networkup.io/solutions/recruiters",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "NetworkUp for Recruiters"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NetworkUp for Recruiters | Automated LinkedIn Sourcing & Talent Pipeline",
+        description:
+            "Empower recruiting teams and executive search firms to discover qualified candidates, personalize outreach, automate follow-ups, and manage talent pipelines from one connected workspace.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
 };
 
 const recruiterComparisonCards: ComparisonCardItem[] = [

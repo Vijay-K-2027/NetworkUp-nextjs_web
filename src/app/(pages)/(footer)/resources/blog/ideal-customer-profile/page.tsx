@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,6 +12,41 @@ import {
     CircleCheck,
     TrendingUp,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "How to Build an Ideal Customer Profile (ICP) That Converts | NetworkUp Blog",
+    description: "A practical framework to define and target the right prospects on LinkedIn. Learn ICP scoring, firmographic filters, and buyer intent triggers.",
+    keywords: ["ideal customer profile", "icp framework", "b2b targeting strategy", "linkedin lead generation icp", "prospect targeting b2b"],
+    alternates: {
+        canonical: "https://networkup.io/resources/blog/ideal-customer-profile"
+    },
+    openGraph: {
+        title: "How to Build an Ideal Customer Profile (ICP) That Converts | NetworkUp Blog",
+        description: "A practical framework to define and target the right prospects on LinkedIn. Learn ICP scoring, firmographic filters, and buyer intent triggers.",
+        url: "https://networkup.io/resources/blog/ideal-customer-profile",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/footer/resources/blog/Article3.png",
+                width: 1200,
+                height: 630,
+                alt: "How to Build an Ideal Customer Profile That Converts"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "How to Build an Ideal Customer Profile (ICP) That Converts",
+        description: "A practical framework to define and target the right prospects.",
+        images: ["https://networkup.io/footer/resources/blog/Article3.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 export default function IdealCustomerProfileArticlePage() {
     return (

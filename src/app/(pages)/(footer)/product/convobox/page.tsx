@@ -10,15 +10,15 @@ import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
 
 export const metadata: Metadata = {
-    title: "Convobox | 10x Your LinkedIn Outbound | NetworkUp.io",
-    description: "Find the right people, run smarter campaigns, automate follow-ups, and manage conversations — all in one connected workspace.",
-    keywords: ["networkup convobox", "linkedin outbound", "lead finder", "campaigns", "smart followups", "unified inbox", "analytics"],
+    title: "Convobox | Unified LinkedIn Inbox & Conversation Management | NetworkUp.io",
+    description: "Streamline your sales conversations with Convobox. A unified multi-account LinkedIn inbox with AI intent classification, message tagging, and team collaboration.",
+    keywords: ["unified linkedin inbox", "convobox", "linkedin message management", "ai intent classification", "multi-account linkedin inbox", "sales conversation manager", "networkup convobox"],
     alternates: {
         canonical: "https://networkup.io/product/convobox"
     },
     openGraph: {
-        title: "Convobox | 10x Your LinkedIn Outbound | NetworkUp.io",
-        description: "Find the right people, run smarter campaigns, automate follow-ups, and manage conversations — all in one connected workspace.",
+        title: "Convobox | Unified LinkedIn Inbox & Conversation Management | NetworkUp.io",
+        description: "Streamline your sales conversations with Convobox. A unified multi-account LinkedIn inbox with AI intent classification, message tagging, and team collaboration.",
         url: "https://networkup.io/product/convobox",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
                 url: "https://networkup.io/og-about.png",
                 width: 1200,
                 height: 630,
-                alt: "Convobox - NetworkUp"
+                alt: "NetworkUp Convobox Unified Inbox"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Convobox | 10x Your LinkedIn Outbound | NetworkUp.io",
-        description: "Find the right people, run smarter campaigns, automate follow-ups, and manage conversations — all in one connected workspace.",
+        title: "Convobox | Unified LinkedIn Inbox & Conversation Management | NetworkUp.io",
+        description: "Streamline your sales conversations with Convobox. A unified multi-account LinkedIn inbox with AI intent classification, message tagging, and team collaboration.",
         images: ["https://networkup.io/og-about.png"]
     },
     robots: {

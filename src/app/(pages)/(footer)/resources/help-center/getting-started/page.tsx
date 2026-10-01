@@ -1,10 +1,44 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
+
+export const metadata: Metadata = {
+    title: "Getting Started Guide | NetworkUp Help Center",
+    description: "Learn how to create your NetworkUp account, securely connect LinkedIn profiles, add leads, and launch your first AI outreach campaign in minutes.",
+    keywords: ["getting started with networkup", "networkup setup guide", "connect linkedin account", "create first campaign", "networkup onboarding"],
+    alternates: {
+        canonical: "https://networkup.io/resources/help-center/getting-started"
+    },
+    openGraph: {
+        title: "Getting Started Guide | NetworkUp Help Center",
+        description: "Learn how to create your NetworkUp account, securely connect LinkedIn profiles, add leads, and launch your first AI outreach campaign in minutes.",
+        url: "https://networkup.io/resources/help-center/getting-started",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "Getting Started Guide"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Getting Started Guide | NetworkUp",
+        description: "Quick start guide to setting up your workspace and outreach campaigns.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const gettingStartedItems: DocItem[] = [
     {

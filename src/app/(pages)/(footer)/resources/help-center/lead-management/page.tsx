@@ -1,10 +1,44 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
+
+export const metadata: Metadata = {
+    title: "Lead Management & Discovery Guide | NetworkUp Help Center",
+    description: "Learn how to discover verified contacts, import lead lists, organize audience segments, enrich company data, and score ICP fit inside NetworkUp.",
+    keywords: ["lead management guide", "prospect discovery tutorial", "enrich contact data", "lead scoring icp", "lead lists management"],
+    alternates: {
+        canonical: "https://networkup.io/resources/help-center/lead-management"
+    },
+    openGraph: {
+        title: "Lead Management & Discovery Guide | NetworkUp Help Center",
+        description: "Learn how to discover verified contacts, import lead lists, organize audience segments, enrich company data, and score ICP fit inside NetworkUp.",
+        url: "https://networkup.io/resources/help-center/lead-management",
+        siteName: "NetworkUp.io",
+        locale: "en_US",
+        type: "article",
+        images: [
+            {
+                url: "https://networkup.io/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "Lead Management Guide"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Lead Management Guide | NetworkUp",
+        description: "Organize contacts, segment audiences, and track lead lifecycle events.",
+        images: ["https://networkup.io/og-about.png"]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
+};
 
 const leadManagementItems: DocItem[] = [
     {

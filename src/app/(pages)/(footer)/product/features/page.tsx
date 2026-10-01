@@ -13,34 +13,32 @@ import Section8 from "./components/Section8";
 
 
 export const metadata: Metadata = {
-    title: "About Us | NetworkUp.io",
-    // make a description of 120 - 150 words
-    description: "Meet the team and learn about the mission behind NetworkUp.io. We are building the future of AI-powered professional networking and outreach.",
-    keywords: ["networkup story", "about networkup", "linkedin automation team", "ai outreach mission", "professional networking history"],
+    title: "All Features | LinkedIn Lead Generation & Outreach Automation | NetworkUp.io",
+    description: "Explore NetworkUp's complete suite of LinkedIn automation features. Discover high-intent leads, build multi-step campaigns, manage conversations in a unified inbox, and track real-time analytics.",
+    keywords: ["linkedin automation features", "linkedin outreach tool", "b2b lead generation platform", "multi-step campaign builder", "unified linkedin inbox", "networkup features"],
     alternates: {
-        canonical: "https://networkup.io/aboutus"
+        canonical: "https://networkup.io/product/features"
     },
     openGraph: {
-        title: "About Us | NetworkUp.io",
-        description: "Meet the team and learn about the mission behind NetworkUp.io. We are building the future of AI-powered professional networking and outreach.",
-        url: "https://networkup.io/aboutus",
+        title: "All Features | LinkedIn Lead Generation & Outreach Automation | NetworkUp.io",
+        description: "Explore NetworkUp's complete suite of LinkedIn automation features. Discover high-intent leads, build multi-step campaigns, manage conversations in a unified inbox, and track real-time analytics.",
+        url: "https://networkup.io/product/features",
         siteName: "NetworkUp.io",
         locale: "en_US",
         type: "website",
-        // Make sure to put images in public
         images: [
             {
                 url: "https://networkup.io/og-about.png",
                 width: 1200,
                 height: 630,
-                alt: "About NetworkUp"
+                alt: "NetworkUp Platform Features"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "About Us | NetworkUp.io",
-        description: "Meet the team and learn about the mission behind NetworkUp.io. We are building the future of AI-powered professional networking and outreach.",
+        title: "All Features | LinkedIn Lead Generation & Outreach Automation | NetworkUp.io",
+        description: "Explore NetworkUp's complete suite of LinkedIn automation features. Discover high-intent leads, build multi-step campaigns, manage conversations in a unified inbox, and track real-time analytics.",
         images: ["https://networkup.io/og-about.png"]
     },
     robots: {
