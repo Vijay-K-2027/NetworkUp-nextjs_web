@@ -105,8 +105,95 @@ const marketingReadinessCards: EnterpriseReadinessCard[] = [
 ];
 
 export default function MarketingTeamPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://networkup.io/solutions/marketing-team#service",
+                "name": "NetworkUp for Marketing Teams & ABM Leaders",
+                "serviceType": "LinkedIn Account-Based Marketing (ABM) & Demand Generation",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io"
+                },
+                "audience": {
+                    "@type": "Audience",
+                    "audienceType": "Demand Gen Marketers, ABM Leaders, Growth Marketing Directors, CMOs"
+                },
+                "description": "Account-based LinkedIn demand generation platform to identify high-intent target accounts, warm up enterprise buying committees, and sync engagement directly with HubSpot and Salesforce.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "description": "Free Trial Available"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/solutions/marketing-team#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Solutions",
+                        "item": "https://networkup.io/solutions/sales-team"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "For Marketing Teams",
+                        "item": "https://networkup.io/solutions/marketing-team"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://networkup.io/solutions/marketing-team#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How does NetworkUp support Account-Based Marketing (ABM) on LinkedIn?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp enables marketing teams to target specific tier-1 enterprise accounts, map entire buying committees, and orchestrate coordinated multi-profile LinkedIn outreach aligned with active paid campaigns."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can we sync LinkedIn campaign engagement data to HubSpot or Salesforce?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, NetworkUp offers 2-way CRM synchronization that updates lead status, logs message replies, and maps attribution to active marketing campaigns."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does NetworkUp lower customer acquisition cost (CAC) compared to LinkedIn Ads?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "By engaging target decision-makers directly through personalized 1-on-1 conversations rather than relying solely on high-CPM sponsored content, NetworkUp generates qualified pipeline at a fraction of paid ad spend."
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="w-full flex flex-col">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* HERO SECTION */}
             <Section1Template
                 breadcrumbCategory="Solutions"

@@ -37,5 +37,70 @@ export const metadata: Metadata = {
 };
 
 export default function ContactUsPage() {
-    return <ContactUsClient />;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ContactPage",
+                "@id": "https://networkup.io/company/contact-us#contact",
+                "name": "Contact NetworkUp Team",
+                "description": "Get in touch with NetworkUp for product inquiries, sales questions, partner programs, and customer support.",
+                "url": "https://networkup.io/company/contact-us",
+                "mainEntity": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io",
+                    "logo": "https://networkup.io/brand/Logo.svg",
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "contactType": "customer support",
+                            "email": "support@networkup.io",
+                            "availableLanguage": ["English"]
+                        },
+                        {
+                            "@type": "ContactPoint",
+                            "contactType": "sales",
+                            "email": "sales@networkup.io",
+                            "availableLanguage": ["English"]
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/company/contact-us#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Company",
+                        "item": "https://networkup.io/aboutus"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Contact Us",
+                        "item": "https://networkup.io/company/contact-us"
+                    }
+                ]
+            }
+        ]
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <ContactUsClient />
+        </>
+    );
 }

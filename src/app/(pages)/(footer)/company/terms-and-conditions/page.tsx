@@ -37,5 +37,50 @@ export const metadata: Metadata = {
 };
 
 export default function TermsAndConditionsPage() {
-    return <TermsAndConditionsClient />;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://networkup.io/company/terms-and-conditions#webpage",
+                "name": "NetworkUp Terms and Conditions",
+                "description": "Terms of Service, subscriber agreements, usage rules, and SLA terms for using NetworkUp's LinkedIn automation platform.",
+                "url": "https://networkup.io/company/terms-and-conditions"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/company/terms-and-conditions#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Company",
+                        "item": "https://networkup.io/aboutus"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Terms and Conditions",
+                        "item": "https://networkup.io/company/terms-and-conditions"
+                    }
+                ]
+            }
+        ]
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <TermsAndConditionsClient />
+        </>
+    );
 }

@@ -54,8 +54,67 @@ export const metadata: Metadata = {
 };
 
 export default function LinkedInConnectionMessageArticlePage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "@id": "https://networkup.io/resources/blog/linkedin-connection-message#article",
+                "headline": "15 LinkedIn Connection Message Templates That Actually Work",
+                "description": "Copy, personalize, and test 15 high-converting LinkedIn connection request templates tailored for sales reps, recruiters, founders, and agency operators.",
+                "image": "https://networkup.io/footer/resources/blog/Article2.png",
+                "datePublished": "2026-08-10T08:00:00+00:00",
+                "dateModified": "2026-08-10T08:00:00+00:00",
+                "author": {
+                    "@type": "Person",
+                    "name": "NetworkUp Editorial Team",
+                    "jobTitle": "Outreach Specialists"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io",
+                    "logo": "https://networkup.io/brand/Logo.svg"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://networkup.io/resources/blog/linkedin-connection-message"
+                },
+                "keywords": "linkedin connection message templates, linkedin connection note, how to connect on linkedin, cold outreach templates, linkedin message examples"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/resources/blog/linkedin-connection-message#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://networkup.io/resources/blog"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "15 LinkedIn Connection Message Templates That Actually Work",
+                        "item": "https://networkup.io/resources/blog/linkedin-connection-message"
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="w-full bg-[#f7f9fb] min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <div className="bg-white w-full max-w-9xl mx-auto rounded-2xl p-5">
                 {/* 1. BREADCRUMB */}
                 <nav className="flex items-center gap-2 text-xs sm:text-sm text-[#414a37] mb-6 sm:mb-8">

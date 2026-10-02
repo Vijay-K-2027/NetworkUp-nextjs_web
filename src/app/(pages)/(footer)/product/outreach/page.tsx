@@ -45,8 +45,101 @@ export const metadata: Metadata = {
 };
 
 export default function OutreachPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://networkup.io/product/outreach#software",
+                "name": "NetworkUp Outreach Automation",
+                "applicationCategory": "BusinessApplication, SalesEngagementSoftware",
+                "operatingSystem": "All (Cloud-Based)",
+                "url": "https://networkup.io/product/outreach",
+                "description": "Smart LinkedIn outreach automation with dynamic AI personalization, trigger-based follow-up cadences, and cloud-safe rate limiting.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "description": "Free Trial Available"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "ratingCount": "285",
+                    "bestRating": "5"
+                },
+                "featureList": [
+                    "Automated Connection Requests with Personalized Notes",
+                    "Trigger-Based Smart Follow-Up Sequences",
+                    "AI Message Copy Generator & Icebreakers",
+                    "A/B Testing Copy Optimization",
+                    "Withdraw Pending Invites Automatically"
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/product/outreach#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Product",
+                        "item": "https://networkup.io/product/features"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Outreach",
+                        "item": "https://networkup.io/product/outreach"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://networkup.io/product/outreach#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How does NetworkUp personalize LinkedIn outreach messages?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp uses AI to analyze prospect profiles, recent activity, company news, and ICP fit to generate customized icebreakers and dynamic message variables that feel authentically 1-to-1."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What happens when a prospect replies to an automated outreach sequence?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp automatically detects incoming responses, halts further automated follow-up messages for that lead, and immediately routes the conversation into your unified Convobox inbox for manual review or instant reply."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How many LinkedIn outreach messages can I send safely per day?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp stays strictly within LinkedIn's safety boundaries by enforcing adaptive daily limits, gradual account warmup, and human-randomized sending intervals through cloud proxies."
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Navbar />
             <div className="bg-[#f7f9fb] lg:p-10">
                 <Section1 />

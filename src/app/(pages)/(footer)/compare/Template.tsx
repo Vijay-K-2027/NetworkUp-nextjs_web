@@ -197,8 +197,90 @@ export default function Template({
 }: ComparisonTemplateProps) {
     const finalOverlapTitle = overlapTitle || `Where NetworkUp and ${competitorName} overlap`;
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ItemPage",
+                "@id": `https://networkup.io/compare/${competitorName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}#comparison`,
+                "name": `NetworkUp.io vs ${competitorName} Comparison`,
+                "description": `Comprehensive feature and capability comparison between NetworkUp.io and ${competitorName} for LinkedIn outreach automation and B2B lead generation.`,
+                "mainEntity": {
+                    "@type": "SoftwareApplication",
+                    "name": "NetworkUp.io",
+                    "applicationCategory": "BusinessApplication, SalesAutomationSoftware",
+                    "operatingSystem": "All (Cloud-Based)",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD",
+                        "description": "Free Trial Available"
+                    }
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": `https://networkup.io/compare/${competitorName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}#breadcrumb`,
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Compare",
+                        "item": "https://networkup.io/compare/compare-all"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": `NetworkUp vs ${competitorName}`,
+                        "item": `https://networkup.io/compare/${competitorName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": `https://networkup.io/compare/${competitorName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}#faq`,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": `Why choose NetworkUp over ${competitorName}?`,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": `NetworkUp provides cloud-native LinkedIn automation with dedicated residential proxies, predictive campaign simulations, AI intent-based conversation routing, and unified multi-account management that outperforms ${competitorName} in scale and account safety.`
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": `What are the key differences between NetworkUp and ${competitorName}?`,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": `While ${competitorName} offers basic outreach sequences, NetworkUp adds predictive campaign simulation, real-time buying signal detection, AI prospect research, unified multi-account Convobox messaging, and automated 24/7 campaign health monitoring.`
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": `Is NetworkUp safer for my LinkedIn profile than ${competitorName}?`,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": `Yes. NetworkUp runs entirely in the cloud with isolated residential proxies, randomized human action delays, and proactive health monitoring, protecting your profile from detection risks common in extension-based tools.`
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="w-full bg-[#fafdf8]/50 min-h-screen relative overflow-hidden py-7 sm:py-10 px-4 sm:px-6 lg:px-8">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Top-Right Ambient Glow Background */}
             <div
                 className="w-full pointer-events-none py-5 px-10 "

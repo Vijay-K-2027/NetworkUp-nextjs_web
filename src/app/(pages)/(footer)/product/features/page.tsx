@@ -48,8 +48,102 @@ export const metadata: Metadata = {
 };
 
 export default function OverviewPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://networkup.io/product/features#software",
+                "name": "NetworkUp Features Suite",
+                "applicationCategory": "BusinessApplication, MarketingApplication, SalesAutomationSoftware",
+                "operatingSystem": "All (Cloud-Based)",
+                "url": "https://networkup.io/product/features",
+                "description": "Comprehensive LinkedIn automation suite featuring AI lead generation, personalized multi-step sequence building, unified multi-account inbox, and predictive campaign optimization.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "description": "Free Trial with Full Feature Access"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "ratingCount": "340",
+                    "bestRating": "5"
+                },
+                "featureList": [
+                    "AI-Driven B2B Prospect Discovery & ICP Scoring",
+                    "Multi-Step Branching Outreach Sequences",
+                    "Convobox: Unified Multi-Account LinkedIn Inbox",
+                    "Natural Human Action Delays with Cloud Residential IPs",
+                    "Predictive Campaign Simulator & Health Monitoring",
+                    "Native CRM & Webhook Integrations"
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/product/features#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Product",
+                        "item": "https://networkup.io/product/features"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Features",
+                        "item": "https://networkup.io/product/features"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://networkup.io/product/features#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What features are included in NetworkUp.io?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp includes AI Lead Finder, automated multi-step outreach campaigns with branching logic, Convobox unified inbox for multiple LinkedIn accounts, predictive campaign simulator, AI icebreaker personalization, and real-time campaign health monitoring."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How does NetworkUp ensure LinkedIn account safety?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp runs 100% in the cloud on dedicated residential IP proxies with randomized human-like typing delays, automated activity limits, and 24/7 account health monitoring to keep LinkedIn accounts secure without browser extension risks."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I connect multiple LinkedIn accounts and collaborate with my team?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, NetworkUp is built for scaling sales teams and agencies, allowing you to connect multiple LinkedIn profiles, manage all conversations in a centralized unified inbox, and assign roles across workspaces."
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Navbar />
             <div className="bg-[#f7f9fb]">
                 <Section1 />
@@ -64,5 +158,5 @@ export default function OverviewPage() {
             <CTABanner />
             <Footer />
         </>
-    )
+    );
 }

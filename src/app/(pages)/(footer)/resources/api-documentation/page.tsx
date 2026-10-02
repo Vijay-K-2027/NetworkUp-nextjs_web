@@ -37,5 +37,57 @@ export const metadata: Metadata = {
 };
 
 export default function ApiDocumentationPage() {
-    return <ApiDocumentationClient />;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "TechArticle",
+                "@id": "https://networkup.io/resources/api-documentation#techarticle",
+                "headline": "NetworkUp REST API Documentation & Webhooks Guide",
+                "description": "Comprehensive developer reference for integrating NetworkUp's LinkedIn outreach engine, lead discovery endpoints, campaign triggers, and real-time webhook events into your CRM.",
+                "url": "https://networkup.io/resources/api-documentation",
+                "dependencies": "REST API, JSON, HTTPS, Bearer Authentication",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io",
+                    "logo": "https://networkup.io/brand/Logo.svg"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/resources/api-documentation#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Resources",
+                        "item": "https://networkup.io/resources/blog"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "API Documentation",
+                        "item": "https://networkup.io/resources/api-documentation"
+                    }
+                ]
+            }
+        ]
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <ApiDocumentationClient />
+        </>
+    );
 }

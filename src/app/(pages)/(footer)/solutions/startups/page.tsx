@@ -152,8 +152,95 @@ const startupReadinessCards: EnterpriseReadinessCard[] = [
 ];
 
 export default function StartupsPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://networkup.io/solutions/startups#service",
+                "name": "NetworkUp for Startups & Lean GTM Teams",
+                "serviceType": "Founder-Led LinkedIn Outbound & B2B Pipeline Growth",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io"
+                },
+                "audience": {
+                    "@type": "Audience",
+                    "audienceType": "Startup Founders, Co-Founders, Early-Stage GTM Teams, Growth Leads"
+                },
+                "description": "LinkedIn prospecting platform for startup founders to book early customer discovery demos, test ICP messaging, and build early revenue pipeline without hiring expensive SDR teams.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "description": "Free Startup Trial Available"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/solutions/startups#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Solutions",
+                        "item": "https://networkup.io/solutions/sales-team"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "For Startups",
+                        "item": "https://networkup.io/solutions/startups"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://networkup.io/solutions/startups#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How does NetworkUp help early-stage founders scale outbound sales?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp allows startup founders to automate connection requests, personalize messages with AI, and test different market positioning angles on LinkedIn without needing a dedicated sales team or prior outbound experience."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can we pool LinkedIn seats across founders, co-founders, and advisors?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, NetworkUp supports multi-seat founder and advisor pooling so you can orchestrate synchronized outreach campaigns from multiple high-credibility executive profiles simultaneously."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How fast can a startup validate its Ideal Customer Profile (ICP)?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "With NetworkUp's real-time campaign analytics and A/B test variations, founders can test response rates across different industries and job titles within 7 to 14 days."
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="w-full flex flex-col">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* HERO SECTION */}
             <Section1Template
                 breadcrumbCategory="Solutions"

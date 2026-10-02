@@ -81,8 +81,95 @@ const recruiterComparisonCards: ComparisonCardItem[] = [
 ];
 
 export default function RecruitersPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://networkup.io/solutions/recruiters#service",
+                "name": "NetworkUp for Recruiters & Search Firms",
+                "serviceType": "Automated LinkedIn Talent Sourcing & Candidate Engagement",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io"
+                },
+                "audience": {
+                    "@type": "Audience",
+                    "audienceType": "Tech Recruiters, Executive Search Consultants, Headhunters, Talent Acquisition Leaders"
+                },
+                "description": "Recruiter LinkedIn automation platform to source passive top-tier candidates, automate personalized connection outreach without burning InMail credits, and sync responses to your ATS.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "description": "Free Recruiter Trial Available"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/solutions/recruiters#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Solutions",
+                        "item": "https://networkup.io/solutions/sales-team"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "For Recruiters",
+                        "item": "https://networkup.io/solutions/recruiters"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://networkup.io/solutions/recruiters#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How does NetworkUp help recruiters reach passive candidates without LinkedIn InMail credits?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp automates hyper-personalized direct connection requests and follow-up sequences using candidate profile data, achieving up to 3.8x higher response rates than generic cold InMails without consuming monthly InMail credits."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can recruiting teams integrate NetworkUp with their Applicant Tracking System (ATS)?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, NetworkUp supports integrations and webhooks with popular ATS platforms like Greenhouse, Lever, Ashby, and Bullhorn to sync interested candidate profiles automatically."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is automated candidate sourcing on LinkedIn safe for my recruiter profile?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp operates 100% in the cloud with Smart Shield™ safety algorithms, randomized human behavior delays, and strict pacing to ensure recruiter accounts stay 100% safe."
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="w-full flex flex-col bg-[#f7f9fb]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* HERO SECTION */}
             <Section1Template
                 breadcrumbCategory="Solutions"

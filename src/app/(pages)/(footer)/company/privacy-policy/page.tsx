@@ -37,5 +37,50 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPolicyPage() {
-    return <PrivacyPolicyClient />;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://networkup.io/company/privacy-policy#webpage",
+                "name": "NetworkUp Privacy Policy",
+                "description": "NetworkUp data collection policies, GDPR and CCPA compliance, AES-256 encryption standards, and user privacy protections.",
+                "url": "https://networkup.io/company/privacy-policy"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/company/privacy-policy#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Company",
+                        "item": "https://networkup.io/aboutus"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Privacy Policy",
+                        "item": "https://networkup.io/company/privacy-policy"
+                    }
+                ]
+            }
+        ]
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <PrivacyPolicyClient />
+        </>
+    );
 }

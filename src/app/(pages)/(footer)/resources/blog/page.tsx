@@ -37,5 +37,56 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-    return <BlogClient />;
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Blog",
+                "@id": "https://networkup.io/resources/blog#blog",
+                "name": "NetworkUp B2B Growth & LinkedIn Outreach Blog",
+                "description": "Actionable frameworks, AI personalization strategies, and B2B sales playbooks to scale LinkedIn pipeline.",
+                "url": "https://networkup.io/resources/blog",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io",
+                    "logo": "https://networkup.io/brand/Logo.svg"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/resources/blog#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Resources",
+                        "item": "https://networkup.io/resources/blog"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Blog",
+                        "item": "https://networkup.io/resources/blog"
+                    }
+                ]
+            }
+        ]
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <BlogClient />
+        </>
+    );
 }

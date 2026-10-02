@@ -49,8 +49,67 @@ export const metadata: Metadata = {
 };
 
 export default function LinkedInOutreachArticlePage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "@id": "https://networkup.io/resources/blog/linkedin-outreach#article",
+                "headline": "How AI is Changing LinkedIn Outreach in 2027",
+                "description": "Explore how artificial intelligence is transforming B2B prospecting, personalization, buying signal detection, and sequence automation on LinkedIn.",
+                "image": "https://networkup.io/footer/resources/blog/Article1.png",
+                "datePublished": "2026-08-15T08:00:00+00:00",
+                "dateModified": "2026-08-15T08:00:00+00:00",
+                "author": {
+                    "@type": "Person",
+                    "name": "NetworkUp AI Research",
+                    "jobTitle": "Lead AI Researcher"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io",
+                    "logo": "https://networkup.io/brand/Logo.svg"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://networkup.io/resources/blog/linkedin-outreach"
+                },
+                "keywords": "ai linkedin outreach, future of linkedin automation, b2b sales ai trends, ai prospecting tools, smart outreach automation"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/resources/blog/linkedin-outreach#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://networkup.io/resources/blog"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "How AI is Changing LinkedIn Outreach in 2027",
+                        "item": "https://networkup.io/resources/blog/linkedin-outreach"
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="w-full bg-[#fafdf8]/40 min-h-screen py-8 sm:py-12 px-5 lg:px-15">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <div className="w-full max-w-9xl mx-auto">
                 {/* 1. BREADCRUMB */}
                 <nav className="flex items-center gap-2 text-xs sm:text-sm text-[#414a37] mb-6 sm:mb-8">

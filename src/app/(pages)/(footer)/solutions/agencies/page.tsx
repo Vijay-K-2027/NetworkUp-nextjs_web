@@ -161,8 +161,95 @@ const agencyGovernanceStats: GovernanceStatItem[] = [
 ];
 
 export default function AgenciesPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://networkup.io/solutions/agencies#service",
+                "name": "NetworkUp for Lead Generation Agencies",
+                "serviceType": "Multi-Client LinkedIn Fleet Management & Lead Generation",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io"
+                },
+                "audience": {
+                    "@type": "Audience",
+                    "audienceType": "Lead Generation Agencies, B2B Marketing Agencies, Appointment Setting Firms"
+                },
+                "description": "Multi-client agency fleet infrastructure for LinkedIn outreach. Manage dozens of client retainers in isolated workspaces with dedicated geo-proxies and automated client reporting.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "description": "Agency Trial & Custom Volume Plans"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/solutions/agencies#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Solutions",
+                        "item": "https://networkup.io/solutions/sales-team"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "For Agencies",
+                        "item": "https://networkup.io/solutions/agencies"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://networkup.io/solutions/agencies#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How does NetworkUp keep client workspaces and data separated?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "NetworkUp provides strict multi-tenant workspace isolation. Each client account has its own lead lists, sender profiles, campaign workflows, analytics, and dedicated residential proxies to prevent any cross-client data contamination."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can agency team members switch between client accounts easily?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, agency managers can instantly switch between client workspaces from a centralized master agency dashboard without having to log in and out."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does NetworkUp support client-facing reporting for agency retainers?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, NetworkUp generates clear visual performance reports detailing acceptance rates, response rates, and meeting conversions that you can share with your clients."
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="w-full flex flex-col">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* HERO SECTION */}
             <Section1Template
                 breadcrumbCategory="Solutions"

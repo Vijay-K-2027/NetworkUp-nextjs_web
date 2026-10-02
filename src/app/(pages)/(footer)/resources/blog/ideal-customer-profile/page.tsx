@@ -49,8 +49,67 @@ export const metadata: Metadata = {
 };
 
 export default function IdealCustomerProfileArticlePage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "@id": "https://networkup.io/resources/blog/ideal-customer-profile#article",
+                "headline": "How to Build an Ideal Customer Profile (ICP) That Converts",
+                "description": "A practical framework to define and target the right prospects on LinkedIn. Learn ICP scoring, firmographic filters, and buyer intent triggers.",
+                "image": "https://networkup.io/footer/resources/blog/Article3.png",
+                "datePublished": "2026-08-01T08:00:00+00:00",
+                "dateModified": "2026-08-01T08:00:00+00:00",
+                "author": {
+                    "@type": "Person",
+                    "name": "Rashi Gupta",
+                    "jobTitle": "Growth & Content Lead"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "NetworkUp.io",
+                    "url": "https://networkup.io",
+                    "logo": "https://networkup.io/brand/Logo.svg"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://networkup.io/resources/blog/ideal-customer-profile"
+                },
+                "keywords": "ideal customer profile, icp framework, b2b targeting strategy, linkedin lead generation icp, prospect targeting b2b"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/resources/blog/ideal-customer-profile#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://networkup.io/resources/blog"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "How to Build an Ideal Customer Profile (ICP) That Converts",
+                        "item": "https://networkup.io/resources/blog/ideal-customer-profile"
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="w-full bg-[#f7f9fb] min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <div className="bg-white w-full max-w-9xl mx-auto rounded-xl p-5">
                 {/* 1. BREADCRUMB */}
                 <nav className="flex items-center gap-2 text-xs sm:text-sm text-[#414a37] mb-6 sm:mb-8">
