@@ -176,12 +176,12 @@ export default function Contact() {
                         <div className="p-6 sm:p-10 flex flex-col flex-grow justify-between -mt-12">
 
                             <div className="space-y-4">
-                                <Link href="/subscription" className="flex items-center justify-center gap-2 bg-gradient-to-b from-[#b2ff7a] to-[#7ceb2a] text-[#0b2f16] font-extrabold text-sm py-4 px-6 rounded-2xl hover:scale-[1.01] transition-all">
+                                <Link href="" className="flex items-center justify-center gap-2 bg-gradient-to-b from-[#b2ff7a] to-[#7ceb2a] text-[#0b2f16] font-extrabold text-sm py-4 px-6 rounded-2xl hover:scale-[1.01] transition-all">
                                     <span>Set up a demo online</span>
                                     <ArrowRight size={16} />
                                 </Link>
 
-                                <Link href="#" className="flex items-center justify-center border border-white/20 hover:border-white/40 hover:bg-white/5 font-extrabold text-sm py-4 px-6 rounded-2xl transition-colors">
+                                <Link href="/company/contact-us" className="flex items-center justify-center border border-white/20 hover:border-white/40 hover:bg-white/5 font-extrabold text-sm py-4 px-6 rounded-2xl transition-colors">
                                     Talk to Sales
                                 </Link>
                             </div>

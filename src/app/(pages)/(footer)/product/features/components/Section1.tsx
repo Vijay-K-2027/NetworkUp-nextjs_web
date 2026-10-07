@@ -15,7 +15,7 @@ export default function Section1() {
                     Discover ideal prospects, organize you leads, automate connection workflows, and measure every outreach campaign-all from one unified workspace designed for high-growth teams.
                 </h3>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-[#191c1e] my-5">
-                    <Link href="/subscription" className="bg-gradient-to-b from-[#b9ff85] to-[#7ceb2a] rounded-full py-5 px-10 hover:-translate-[2px] text-xl font-bold ">Start Free Trial</Link>
+                    <Link href="https://app.networkup.io/#/login" className="bg-gradient-to-b from-[#b9ff85] to-[#7ceb2a] rounded-full py-5 px-10 hover:-translate-[2px] text-xl font-bold ">Start Free Trial</Link>
                     <Link href="/subscription" className="flex flex-row items-center justify-center bg-white rounded-full py-5 px-10 text-xl font-bold border border-[#c0caae] hover:-translate-[2px]" >Explore the Platform <span><ArrowRightIcon size={20} /></span></Link>
                 </div>
             </div>

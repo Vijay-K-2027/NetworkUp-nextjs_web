@@ -16,7 +16,7 @@ export default function Section1() {
                     NetworkUp helps you create personalized connection requests, dynamic follow-ups, and automate repetitive tasks. Manage every interaction from one unified workspace while keeping your pipeline full.
                 </h3>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 my-3">
-                    <Link href="/subscription" className="flex flex-row items-center justify-center bg-gradient-to-b from-[#BBFF89] to-[#7CEB2A] rounded-lg py-5 px-10 hover:bg-[#71EB34] hover:-translate-[2px] text-xl font-bold ">Start Free Trial <span><ArrowRightIcon size={20} /></span></Link>
+                    <Link href="https://app.networkup.io/#/login" className="flex flex-row items-center justify-center bg-gradient-to-b from-[#BBFF89] to-[#7CEB2A] rounded-lg py-5 px-10 hover:bg-[#71EB34] hover:-translate-[2px] text-xl font-bold ">Start Free Trial <span><ArrowRightIcon size={20} /></span></Link>
                     <Link href="/subscription" className="bg-white rounded-lg py-5 px-10 text-xl font-bold border border-black hover:-translate-[2px]" >See How Outreach Works</Link>
                 </div>
             </div>

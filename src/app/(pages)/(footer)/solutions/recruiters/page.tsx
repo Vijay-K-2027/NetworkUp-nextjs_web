@@ -188,9 +188,9 @@ export default function RecruitersPage() {
                 }
                 description="Empower recruiting teams and executive search firms to discover qualified candidates, personalize outreach, automate follow-ups, and manage talent pipelines from one connected workspace."
                 primaryCtaText="Start Free Trial"
-                primaryCtaHref="/signup"
+                primaryCtaHref="https://app.networkup.io/#/login"
                 secondaryCtaText="Book Demo"
-                secondaryCtaHref="/book-demo"
+                secondaryCtaHref="/company/contact-us"
                 featureChecks={[
                     {
                         label: "Zero InMail credit waste",

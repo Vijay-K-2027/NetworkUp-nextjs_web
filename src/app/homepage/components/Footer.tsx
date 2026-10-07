@@ -160,7 +160,7 @@ export default function Footer() {
                                         );
                                     })}
                                 </div>
-                                <Link href="/subscription" className="w-full my-3 inline-flex items-center justify-center bg-gradient-to-b from-[#b6ff80] to-[#7ceb2a] text-[#000000] font-bold text-sm sm:text-base py-3 px-10 rounded-2xl hover:scale-[1.03] transition-all duration-200">
+                                <Link href="https://app.networkup.io/#/login" className="w-full my-3 inline-flex items-center justify-center bg-gradient-to-b from-[#b6ff80] to-[#7ceb2a] text-[#000000] font-bold text-sm sm:text-base py-3 px-10 rounded-2xl hover:scale-[1.03] transition-all duration-200">
                                     Start Free Trial ➜
                                 </Link>
 

@@ -41,13 +41,13 @@ export default function Section1() {
                         {/* CTA Buttons */}
                         <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
                             <Link
-                                href="/subscription"
+                                href="https://app.networkup.io/#/login"
                                 className="inline-flex items-center justify-center bg-gradient-to-b from-[#B8FF84] to-[#7CEB2A] text-black font-bold text-sm sm:text-base px-7 py-3.5 rounded-2xl shadow-xs transition-all hover:scale-[1.02] active:scale-[0.98]"
                             >
                                 Create Campaign
                             </Link>
                             <Link
-                                href="/subscription"
+                                href="https://app.networkup.io/#/login"
                                 className="inline-flex items-center justify-center bg-[#F7F9FB] text-black font-bold text-sm sm:text-base px-7 py-3.5 rounded-2xl border border-gray-200/60 shadow-2xs transition-all hover:scale-[1.02] active:scale-[0.98]"
                             >
                                 View Templates

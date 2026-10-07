@@ -56,9 +56,9 @@ export const defaultSection1Props: Section1TemplateProps = {
         "Give SDRs, AEs, and sales leaders one workspace to discover qualified prospects, personalize outreach with AI, automate follow-ups, and turn LinkedIn conversations into opportunities.",
 
     primaryCtaText: "Start Free Trial",
-    primaryCtaHref: "/signup",
+    primaryCtaHref: "https://app.networkup.io/#/login",
     secondaryCtaText: "Book Demo",
-    secondaryCtaHref: "/book-demo",
+    secondaryCtaHref: "/company/contact-us",
 
     featureChecks: [
         "Smart Activity Controls",
@@ -182,7 +182,7 @@ export default function Section1Template(props: Section1TemplateProps) {
                         <div className="flex flex-wrap items-center gap-3.5 sm:gap-4 mt-6 sm:mt-8 w-full sm:w-auto">
                             {primaryCtaText && (
                                 <Link
-                                    href={primaryCtaHref || "/signup"}
+                                    href={primaryCtaHref || "https://app.networkup.io/#/login"}
                                     className="px-6 sm:px-8 py-3.5 rounded-xl bg-gradient-to-b from-[#caff95] to-[#71e300] hover:brightness-105 active:scale-[0.98] text-[#041c11] font-bold text-sm sm:text-base shadow-sm transition-all duration-200 text-center w-full sm:w-auto"
                                 >
                                     {primaryCtaText}
@@ -190,7 +190,7 @@ export default function Section1Template(props: Section1TemplateProps) {
                             )}
                             {secondaryCtaText && (
                                 <Link
-                                    href={secondaryCtaHref || "/book-demo"}
+                                    href={secondaryCtaHref || "/company/contact-us"}
                                     className="px-6 sm:px-8 py-3.5 rounded-xl bg-white border border-[#041c11] hover:bg-[#fbfdf9] hover:border-[#181d13] active:scale-[0.98] text-[#181d13] font-bold text-sm sm:text-base transition-all duration-200 shadow-2xs text-center w-full sm:w-auto"
                                 >
                                     {secondaryCtaText}

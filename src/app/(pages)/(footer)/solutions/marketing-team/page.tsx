@@ -210,9 +210,9 @@ export default function MarketingTeamPage() {
                 }
                 description="Help marketing teams discover in-market prospects, personalize LinkedIn outreach, coordinate account-based campaigns, and turn engagement into measurable pipeline."
                 primaryCtaText="Start Free Trial"
-                primaryCtaHref="/signup"
+                primaryCtaHref="https://app.networkup.io/#/login"
                 secondaryCtaText="Book Demo"
-                secondaryCtaHref="/book-demo"
+                secondaryCtaHref="/company/contact-us"
                 featureChecks={[
                     "Smart Activity Controls",
                     "2-way CRM & MAP attribution sync",

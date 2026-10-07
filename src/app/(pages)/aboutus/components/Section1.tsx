@@ -22,8 +22,8 @@ export default function Section1() {
                         <h4 className="text-[#254300] w-full text-left text-lg md:text-xl leading-wide">At NetworkUp.io, we're on a mission to make LinkedIn outreach smarter, safer, and more effective. Built by the team behind WhiterApps, we combine deep product expertise with a passion for helping businesses grow through meaningful connections.</h4>
                     </div>
                     <div className="flex flex-row gap-x-5 my-8">
-                        <Link href="/subscription" className="bg-gradient-to-b from-[#bcff8b] to-[#7ceb24] text-black font-bold hover:border-2 border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-50">Start Free Trial </Link>
-                        <Link href="/subscription" className="bg-transparent text-black font-bold hover:border-2 hover:text-[#71EB34] border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-30">Book a Demo</Link>
+                        <Link href="https://app.networkup.io/#/login" className="bg-gradient-to-b from-[#bcff8b] to-[#7ceb24] text-black font-bold hover:border-2 border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-50">Start Free Trial </Link>
+                        <Link href="/company/contact-us" className="bg-transparent text-black font-bold hover:border-2 hover:text-[#71EB34] border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-30">Book a Demo</Link>
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@ export default function Section1() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto mt-2">
                     <Link
-                        href="/subscription"
+                        href="https://app.networkup.io/#/login"
                         className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-b from-[#b4ff7d] to-[#7ceb2a] rounded-full py-3.5 sm:py-4 px-7 sm:px-8 text-base sm:text-lg md:text-xl text-[#191c1e] font-bold shadow-xs hover:-translate-y-0.5 transition-all text-center"
                     >
                         <span>Start Free Trial</span>

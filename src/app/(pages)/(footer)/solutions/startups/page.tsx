@@ -256,9 +256,9 @@ export default function StartupsPage() {
                 }
                 description="Help founders and lean GTM teams discover the right prospects, personalize outreach with AI, automate follow-ups, and build a repeatable B2B pipeline without adding unnecessary manual work."
                 primaryCtaText="Start Free Trial"
-                primaryCtaHref="/signup"
+                primaryCtaHref="https://app.networkup.io/#/login"
                 secondaryCtaText="Book Demo"
-                secondaryCtaHref="/book-demo"
+                secondaryCtaHref="/company/contact-us"
                 featureChecks={[
                     "Zero outbound experience needed",
                     "Rapid ICP message testing",

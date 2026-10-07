@@ -265,9 +265,9 @@ export default function AgenciesPage() {
                 }
                 description="Help your agency manage client campaigns, coordinate outreach, personalize messages with AI, and track performance from one connected workspace."
                 primaryCtaText="Start Free Trial"
-                primaryCtaHref="/signup"
+                primaryCtaHref="https://app.networkup.io/#/login"
                 secondaryCtaText="Book Demo"
-                secondaryCtaHref="/book-demo"
+                secondaryCtaHref="/company/contact-us"
                 featureChecks={[
                     "Multi-Account Management",
                     "Client Workspace Organization",

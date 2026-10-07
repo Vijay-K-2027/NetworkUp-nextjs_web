@@ -105,19 +105,17 @@ export default function Section3() {
 
                         {/* Footer Buttons */}
                         <div className="flex flex-row items-center justify-between w-full">
-                            <button
-                                type="button"
-                                className="flex items-center gap-x-2 border border-gray-200 bg-white hover:bg-slate-50 active:bg-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold text-slate-700 shadow-sm transition-colors duration-200 cursor-pointer"
+                            <div
+                                className="flex items-center gap-x-2 border border-gray-200 bg-white hover:bg-slate-50 active:bg-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold text-slate-700 shadow-sm transition-colors duration-200 "
                             >
                                 <RotateCw size={14} className="text-slate-600" />
                                 <span>Regenerate</span>
-                            </button>
-                            <button
-                                type="button"
-                                className="bg-[#71EB34] hover:bg-[#64d02e] active:bg-[#57b827] rounded-xl px-6 py-2.5 text-sm font-bold text-black shadow-sm transition-colors duration-200 cursor-pointer"
+                            </div>
+                            <div
+                                className="bg-[#71EB34] hover:bg-[#64d02e] active:bg-[#57b827] rounded-xl px-6 py-2.5 text-sm font-bold text-black shadow-sm transition-colors duration-200"
                             >
                                 Use Message
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </motion.div>

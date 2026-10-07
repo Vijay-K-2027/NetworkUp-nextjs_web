@@ -31,14 +31,14 @@ export default function Hero() {
                 {/* CTA Buttons */}
                 <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
 
-                    <Link href="/subscription">
+                    <Link href="https://app.networkup.io/#/login">
                         <div className="flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#caff95] to-[#71e300] px-8 py-4 text-sm font-semibold text-[#041c11] shadow-md transition hover:bg-lime-500">
                             Get Started Free
                             <ArrowRight size={18} strokeWidth={3} />
                         </div>
                     </Link>
 
-                    <Link href="/subscription"
+                    <Link href=""
                         className="flex items-center gap-2 rounded-xl border border-[#c9d2c4] bg-white px-8 py-4 text-sm font-bold text-[#1d1b20] transition hover:bg-gray-100"
                     >
                         <PlayCircle size={18} strokeWidth={3} />

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Section2() {
     return (
-        <section className="w-full bg-[#F9FAFB] p-4 sm:p-6 lg:p-10">
+        <section className="w-full bg-gray-100 p-4 sm:p-6 lg:p-10">
             <div className="w-full max-w-[1340px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8 xl:gap-12">
 
                 {/* Left Column */}
@@ -31,7 +31,7 @@ export default function Section2() {
                     {/* Action Buttons */}
                     <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
                         <Link
-                            href="/subscription"
+                            href="https://app.networkup.io/#/login"
                             className="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-gradient-to-b from-[#C8FFA0] to-[#7CEB2A] hover:bg-[#8edb1e] text-gray-950 font-bold text-base shadow-sm transition-all transform hover:-translate-y-0.5 text-center"
                         >
                             Try Smart Follow-ups
