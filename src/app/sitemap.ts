@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Resources & Blog
     { url: `${baseUrl}/resources/blog`, lastModified: currentDate, changeFrequency: 'daily', priority: 0.9 },
+    { url: `${baseUrl}/feed.xml`, lastModified: currentDate, changeFrequency: 'daily', priority: 0.8 },
     { url: `${baseUrl}/resources/blog/ideal-customer-profile`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/resources/blog/linkedin-connection-message`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/resources/blog/linkedin-outreach`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.7 },

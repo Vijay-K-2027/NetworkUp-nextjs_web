@@ -80,6 +80,11 @@ export const metadata: Metadata = {
     follow: true,
   },
   metadataBase: new URL("https://networkup.io"),
+  alternates: {
+    types: {
+      "application/rss+xml": "https://networkup.io/feed.xml",
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -101,17 +106,51 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const orgSchema = {
+  const rootJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NetworkUp",
-    "url": "https://networkup.io",
-    "logo": "https://networkup.io/brand/Logo.svg",
-    "sameAs": [
-      "https://www.linkedin.com/company/networkup",
-      "https://twitter.com/networkup_io",
-      "https://github.com/networkup-io",
-      "https://www.crunchbase.com/organization/networkup"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://networkup.io/#organization",
+        "name": "NetworkUp",
+        "url": "https://networkup.io",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://networkup.io/brand/Logo.svg",
+          "caption": "NetworkUp Logo"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/networkup",
+          "https://twitter.com/networkup_io",
+          "https://github.com/networkup-io",
+          "https://www.crunchbase.com/organization/networkup"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "url": "https://networkup.io/company/contact-us"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://networkup.io/#website",
+        "url": "https://networkup.io",
+        "name": "NetworkUp.io",
+        "description": "AI-Powered LinkedIn Growth & Outreach Automation Platform",
+        "publisher": {
+          "@id": "https://networkup.io/#organization"
+        },
+        "potentialAction": [
+          {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://networkup.io/resources/blog?search={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        ]
+      }
     ]
   };
 
@@ -124,7 +163,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white text-[#171717]">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(rootJsonLd) }}
         />
         {children}
       </body>

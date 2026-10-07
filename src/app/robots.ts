@@ -21,7 +21,7 @@ export default function robots(): MetadataRoute.Robots {
           'FacebookBot',
           'Diffbot',
         ],
-        allow: ['/', '/llms.txt'],
+        allow: ['/', '/llms.txt', '/feed.xml'],
         disallow: ['/login', '/api/'],
       },
       {
