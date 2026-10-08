@@ -258,7 +258,7 @@ export default function StartupsPage() {
                 primaryCtaText="Start Free Trial"
                 primaryCtaHref="https://app.networkup.io/#/login"
                 secondaryCtaText="Book Demo"
-                secondaryCtaHref="/company/contact-us"
+                secondaryCtaHref="https://calendly.com/networkup-io/30min"
                 featureChecks={[
                     "Zero outbound experience needed",
                     "Rapid ICP message testing",

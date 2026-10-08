@@ -267,7 +267,7 @@ export default function AgenciesPage() {
                 primaryCtaText="Start Free Trial"
                 primaryCtaHref="https://app.networkup.io/#/login"
                 secondaryCtaText="Book Demo"
-                secondaryCtaHref="/company/contact-us"
+                secondaryCtaHref="https://calendly.com/networkup-io/30min"
                 featureChecks={[
                     "Multi-Account Management",
                     "Client Workspace Organization",

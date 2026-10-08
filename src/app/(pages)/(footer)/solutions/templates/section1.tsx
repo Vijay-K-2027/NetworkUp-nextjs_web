@@ -58,7 +58,7 @@ export const defaultSection1Props: Section1TemplateProps = {
     primaryCtaText: "Start Free Trial",
     primaryCtaHref: "https://app.networkup.io/#/login",
     secondaryCtaText: "Book Demo",
-    secondaryCtaHref: "/company/contact-us",
+    secondaryCtaHref: "https://calendly.com/networkup-io/30min",
 
     featureChecks: [
         "Smart Activity Controls",
@@ -108,6 +108,10 @@ export default function Section1Template(props: Section1TemplateProps) {
     const isRecruiter =
         breadcrumbPageTitle?.toLowerCase().includes("recruiter") ||
         breadcrumbCategoryHref?.toLowerCase().includes("recruiter");
+
+    const resolvedSecondaryHref =
+        secondaryCtaHref || defaultSection1Props.secondaryCtaHref || "https://calendly.com/networkup-io/30min";
+    const isExternalSecondary = resolvedSecondaryHref.startsWith("http");
 
     const resolvedSectionClass =
         sectionClass ||
@@ -190,7 +194,9 @@ export default function Section1Template(props: Section1TemplateProps) {
                             )}
                             {secondaryCtaText && (
                                 <Link
-                                    href={secondaryCtaHref || "/company/contact-us"}
+                                    href={resolvedSecondaryHref}
+                                    target={isExternalSecondary ? "_blank" : undefined}
+                                    rel={isExternalSecondary ? "noopener noreferrer" : undefined}
                                     className="px-6 sm:px-8 py-3.5 rounded-xl bg-white border border-[#041c11] hover:bg-[#fbfdf9] hover:border-[#181d13] active:scale-[0.98] text-[#181d13] font-bold text-sm sm:text-base transition-all duration-200 shadow-2xs text-center w-full sm:w-auto"
                                 >
                                     {secondaryCtaText}

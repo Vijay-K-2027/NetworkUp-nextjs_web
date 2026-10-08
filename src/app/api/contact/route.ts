@@ -2,79 +2,79 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
-    try {
-        const body = await req.json();
-        const { fullName, workEmail, company, inquiryType, message } = body;
+  try {
+    const body = await req.json();
+    const { fullName, workEmail, company, inquiryType, message } = body;
 
-        // 1. Validate required fields
-        if (!fullName || typeof fullName !== "string" || !fullName.trim()) {
-            return NextResponse.json(
-                { error: "Full name is required." },
-                { status: 400 }
-            );
-        }
+    // 1. Validate required fields
+    if (!fullName || typeof fullName !== "string" || !fullName.trim()) {
+      return NextResponse.json(
+        { error: "Full name is required." },
+        { status: 400 }
+      );
+    }
 
-        if (
-            !workEmail ||
-            typeof workEmail !== "string" ||
-            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail.trim())
-        ) {
-            return NextResponse.json(
-                { error: "A valid work email is required." },
-                { status: 400 }
-            );
-        }
+    if (
+      !workEmail ||
+      typeof workEmail !== "string" ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail.trim())
+    ) {
+      return NextResponse.json(
+        { error: "A valid work email is required." },
+        { status: 400 }
+      );
+    }
 
-        if (!message || typeof message !== "string" || !message.trim()) {
-            return NextResponse.json(
-                { error: "Message content is required." },
-                { status: 400 }
-            );
-        }
+    if (!message || typeof message !== "string" || !message.trim()) {
+      return NextResponse.json(
+        { error: "Message content is required." },
+        { status: 400 }
+      );
+    }
 
-        // 2. Setup SMTP Transporter
-        const host = process.env.SMTP_HOST || "smtp.hostinger.com";
-        const port = Number(process.env.SMTP_PORT) || 465;
-        const secure = process.env.SMTP_SECURE !== "false"; // true for 465, false for 587
-        const user = process.env.SMTP_USER || "support@networkup.io";
-        const pass = process.env.SMTP_PASS;
-        const toEmail = process.env.CONTACT_TO_EMAIL || "support@networkup.io";
+    // 2. Setup SMTP Transporter
+    const host = process.env.SMTP_HOST || "smtp.hostinger.com";
+    const port = Number(process.env.SMTP_PORT) || 465;
+    const secure = process.env.SMTP_SECURE !== "false"; // true for 465, false for 587
+    const user = process.env.SMTP_USER || "support@networkup.io";
+    const pass = process.env.SMTP_PASS;
+    const toEmail = process.env.CONTACT_TO_EMAIL || "support@networkup.io";
 
-        if (!pass) {
-            console.error("Missing SMTP_PASS in environment variables.");
-            return NextResponse.json(
-                {
-                    error: "Email server configuration is incomplete (SMTP_PASS missing). Please configure your .env.local file.",
-                },
-                { status: 500 }
-            );
-        }
+    if (!pass) {
+      console.error("Missing SMTP_PASS in environment variables.");
+      return NextResponse.json(
+        {
+          error: "Email server configuration is incomplete (SMTP_PASS missing). Please configure your .env.local file.",
+        },
+        { status: 500 }
+      );
+    }
 
-        const transporter = nodemailer.createTransport({
-            host,
-            port,
-            secure,
-            auth: {
-                user,
-                pass,
-            },
-        });
+    const transporter = nodemailer.createTransport({
+      host,
+      port,
+      secure,
+      auth: {
+        user,
+        pass,
+      },
+    });
 
-        const selectedInquiry = inquiryType || "Sales Inquiry";
-        const trimmedCompany = company?.trim() || "Not specified";
-        const submissionTime = new Date().toLocaleString("en-US", {
-            dateStyle: "full",
-            timeStyle: "short",
-            timeZone: "UTC",
-        });
+    const selectedInquiry = inquiryType || "Sales Inquiry";
+    const trimmedCompany = company?.trim() || "Not specified";
+    const submissionTime = new Date().toLocaleString("en-US", {
+      dateStyle: "full",
+      timeStyle: "short",
+      timeZone: "UTC",
+    });
 
-        // 3. Send notification email to support@networkup.io
-        await transporter.sendMail({
-            from: `"NetworkUp Form" <${user}>`,
-            to: toEmail,
-            replyTo: workEmail.trim(), // Key: clicking reply in email client responds to the user!
-            subject: `[Inquiry: ${selectedInquiry}] ${fullName.trim()} (${trimmedCompany})`,
-            text: `
+    // 3. Send notification email to support@networkup.io
+    await transporter.sendMail({
+      from: `"NetworkUp Form" <${user}>`,
+      to: toEmail,
+      replyTo: workEmail.trim(), // Key: clicking reply in email client responds to the user!
+      subject: `[Inquiry: ${selectedInquiry}] ${fullName.trim()} (${trimmedCompany})`,
+      text: `
 New Contact Form Submission on NetworkUp.io
 
 Name: ${fullName.trim()}
@@ -86,7 +86,7 @@ Date (UTC): ${submissionTime}
 Message:
 ${message.trim()}
             `.trim(),
-            html: `
+      html: `
 <!DOCTYPE html>
 <html>
 <head>
@@ -154,18 +154,18 @@ ${message.trim()}
 </body>
 </html>
             `.trim(),
-        });
+    });
 
-        return NextResponse.json({ success: true }, { status: 200 });
-    } catch (error: any) {
-        console.error("Contact Form API Error:", error);
-        return NextResponse.json(
-            {
-                error:
-                    error?.message ||
-                    "An unexpected error occurred while sending your message. Please try again later.",
-            },
-            { status: 500 }
-        );
-    }
+    return NextResponse.json({ success: true }, { status: 200 });
+  } catch (error: any) {
+    console.error("Contact Form API Error:", error);
+    return NextResponse.json(
+      {
+        error:
+          error?.message ||
+          "An unexpected error occurred while sending your message. Please try again later.",
+      },
+      { status: 500 }
+    );
+  }
 }

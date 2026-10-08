@@ -190,7 +190,7 @@ export default function RecruitersPage() {
                 primaryCtaText="Start Free Trial"
                 primaryCtaHref="https://app.networkup.io/#/login"
                 secondaryCtaText="Book Demo"
-                secondaryCtaHref="/company/contact-us"
+                secondaryCtaHref="https://calendly.com/networkup-io/30min"
                 featureChecks={[
                     {
                         label: "Zero InMail credit waste",

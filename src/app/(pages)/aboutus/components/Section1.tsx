@@ -23,7 +23,7 @@ export default function Section1() {
                     </div>
                     <div className="flex flex-row gap-x-5 my-8">
                         <Link href="https://app.networkup.io/#/login" className="bg-gradient-to-b from-[#bcff8b] to-[#7ceb24] text-black font-bold hover:border-2 border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-50">Start Free Trial </Link>
-                        <Link href="/company/contact-us" className="bg-transparent text-black font-bold hover:border-2 hover:text-[#71EB34] border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-30">Book a Demo</Link>
+                        <Link href="https://calendly.com/networkup-io/30min" target="_blank" rel="noopener noreferrer" className="bg-transparent text-black font-bold hover:border-2 hover:text-[#71EB34] border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-30">Book a Demo</Link>
                     </div>
                 </div>
             </div>

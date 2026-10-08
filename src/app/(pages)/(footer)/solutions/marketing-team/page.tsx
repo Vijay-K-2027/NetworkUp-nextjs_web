@@ -212,7 +212,7 @@ export default function MarketingTeamPage() {
                 primaryCtaText="Start Free Trial"
                 primaryCtaHref="https://app.networkup.io/#/login"
                 secondaryCtaText="Book Demo"
-                secondaryCtaHref="/company/contact-us"
+                secondaryCtaHref="https://calendly.com/networkup-io/30min"
                 featureChecks={[
                     "Smart Activity Controls",
                     "2-way CRM & MAP attribution sync",

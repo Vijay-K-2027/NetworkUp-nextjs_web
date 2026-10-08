@@ -16,6 +16,7 @@ import {
     Check,
     Loader2,
     AlertCircle,
+    Sparkles,
 } from "lucide-react";
 
 const inquiryOptions = [
@@ -160,6 +161,30 @@ export default function ContactUsClient() {
                                     </div>
                                 )}
 
+                                {/* Quick Calendly Instant Booking Banner */}
+                                <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#f3fcdb] to-[#e4f8c2] border border-[#bef264] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                    <div className="flex items-center gap-2.5">
+                                        <Sparkles className="w-4 h-4 text-[#396b00] shrink-0" />
+                                        <div>
+                                            <span className="text-xs sm:text-[13px] font-bold text-[#1e4802] block">
+                                                Looking for an instant 30-minute product demo?
+                                            </span>
+                                            <span className="text-[11px] text-[#426b15]">
+                                                Choose your preferred time slot directly on our live calendar.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a
+                                        href="https://calendly.com/networkup-io/30min"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-[#181d13] text-[#acf847] hover:bg-black font-bold text-xs shadow-xs transition-all shrink-0 hover:scale-[1.02]"
+                                    >
+                                        <span>Book via Calendly</span>
+                                        <ArrowUpRight className="w-3.5 h-3.5" />
+                                    </a>
+                                </div>
+
                                 {/* Row 1: Full Name & Work Email */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                                     <div>
@@ -256,8 +281,8 @@ export default function ContactUsClient() {
                                                             setIsDropdownOpen(false);
                                                         }}
                                                         className={`w-full text-left px-4 py-2.5 text-xs sm:text-sm font-medium transition-colors cursor-pointer ${isSelected
-                                                                ? "bg-[#d9d2da] text-[#000400] font-bold rounded-lg mx-1 w-[calc(100%-8px)]"
-                                                                : "text-[#334155] hover:bg-slate-50"
+                                                            ? "bg-[#d9d2da] text-[#000400] font-bold rounded-lg mx-1 w-[calc(100%-8px)]"
+                                                            : "text-[#334155] hover:bg-slate-50"
                                                             }`}
                                                     >
                                                         {option}
