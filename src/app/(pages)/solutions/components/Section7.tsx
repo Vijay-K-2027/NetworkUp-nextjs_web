@@ -58,7 +58,7 @@ export default function Section7() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     <Image
-                        src="/product/extractor.png"
+                        src="/product/LeadExtractor.png"
                         alt="Lead Extractor"
                         width={1200}
                         height={900}
