@@ -48,7 +48,7 @@ export default function Section3() {
     return (
         <section className="bg-[#fafcf7] overflow-hidden">
             <div className="w-full max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col items-center justify-center gap-y-10 lg:gap-y-15 py-12 lg:py-16 px-6 sm:px-10">
+                <div className="flex flex-col items-center justify-center gap-y-10 lg:gap-y-15 py-6 lg:py-10 px-6 sm:px-10">
                     {/* Header */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

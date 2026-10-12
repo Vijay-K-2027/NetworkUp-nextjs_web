@@ -11,7 +11,7 @@ const connectionFeatures = [
 
 export default function Section3() {
     return (
-        <section className="w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 bg-transparent flex flex-col items-center justify-center">
+        <section className="w-full py-10 sm:py-12 lg:py-14 px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col items-center justify-center">
             <div className="max-w-[1400px] mx-auto w-full flex flex-col gap-20 sm:gap-24 lg:gap-28">
 
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14 xl:gap-20 w-full">
@@ -114,7 +114,7 @@ export default function Section3() {
 
                 </div>
 
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14 xl:gap-20 w-full">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 xl:gap-12 w-full">
 
                     {/* Left Column: Contextual Follow-ups Explainer */}
                     <motion.div

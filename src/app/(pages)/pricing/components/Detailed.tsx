@@ -136,7 +136,7 @@ export default function Detailed() {
             return <X size={25} className="stroke-[#ef4444] stroke-[2] shrink-0" />;
         }
         return (
-            <span className={`text-xs sm:text-sm ${isGrowth ? "text-black font-extrabold" : "text-gray-600 font-medium"}`}>
+            <span className={`text-xs sm:text-sm ${isGrowth ? "text-black font-bold" : "text-gray-600 font-medium"}`}>
                 {val}
             </span>
         );

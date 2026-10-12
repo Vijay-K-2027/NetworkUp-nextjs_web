@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 
 export default function AIFeatures() {
     return (
-        <>
+        <div className="bg-[#fafcf7]">
             <Section1 />
             <Section2 />
             <Section3 />
@@ -56,6 +56,6 @@ export default function AIFeatures() {
             <Section9 />
             <Section4 />
             <Section6 />
-        </>
+        </div>
     )
 }

@@ -29,7 +29,7 @@ const section4Data = [
 
 export default function Section4() {
     return (
-        <section className="bg-[#fafcf7] py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#fafcf7] py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-9xl mx-auto w-full">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-8">
                     <div className="flex flex-1 flex-col gap-y-2 text-left mx-2 sm:mx-10 w-full">

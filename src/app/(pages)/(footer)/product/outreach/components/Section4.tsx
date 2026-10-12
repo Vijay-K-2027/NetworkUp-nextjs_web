@@ -68,7 +68,7 @@ const flowSteps = [
 
 export default function Section4() {
     return (
-        <section className="w-full py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-8 md:px-12">
+        <section className="w-full py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-8 md:px-12">
             <div className="max-w-[1500px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12 xl:gap-16 w-full">
 
                 {/* Column 1: Left Title & Description */}

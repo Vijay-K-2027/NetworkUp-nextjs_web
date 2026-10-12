@@ -33,7 +33,7 @@ const timelineItems = [
 
 export default function Section2() {
     return (
-        <section className="bg-[#fafcf7] w-full max-w-8xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#fafcf7] w-full max-w-8xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-start justify-center gap-12 lg:gap-16">
 
                 {/* Left Side: Story */}

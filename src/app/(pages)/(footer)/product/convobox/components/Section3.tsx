@@ -2,7 +2,7 @@ import { History, MessageSquare, Sparkles, ArrowRight } from "lucide-react";
 
 export default function Section3() {
     return (
-        <section className="w-[96%] mx-auto bg-[#F9FAFB] py-16 px-4 sm:px-6 lg:px-10 border-t border-[#C0CCAE]">
+        <section className="w-[96%] mx-auto bg-[#ffffff] py-16 px-4 sm:px-6 lg:px-10 border-t border-[#C0CCAE]">
             <div className="w-full max-w-[1280px] mx-auto flex flex-col items-center">
 
                 {/* Heading */}

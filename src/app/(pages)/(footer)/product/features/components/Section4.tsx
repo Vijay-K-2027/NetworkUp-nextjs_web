@@ -33,7 +33,7 @@ export default function Section4() {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed mb-5 sm:mb-6 max-w-[430px]">
+                        <p className="text-[#414a34] text-sm sm:text-base lg:text-lg leading-relaxed mb-5 sm:mb-6 max-w-[430px]">
                             Maintain a centralized, living database of your connections. Enrich profiles automatically, organize with customs tags, attach internal notes, and seamlessly associate leads with active outreach campaigns to track their journey.
                         </p>
                     </motion.div>

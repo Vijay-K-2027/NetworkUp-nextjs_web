@@ -14,7 +14,7 @@ const features = [
 
 export default function Section7() {
     return (
-        <section className="bg-[#fafcf7] w-full py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#fafcf7] w-full py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 w-full">
 
                 {/* Column 1: Left Title & Description */}

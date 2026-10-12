@@ -22,7 +22,7 @@ export default function Teams() {
                     {row1.map((team) => (
                         <span
                             key={team}
-                            className="text-lg text-black/80 px-5 py-2 bg-gradient-to-r from-[#defad0]/70 via-white to-[#defad0]/70 border border-[#defad0]/40 rounded-lg shadow-[2px_2px_2px_0.5px_rgba(222,250,208,1)] cursor-pointer select-none transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_10px_20px_-5px_rgba(222,250,208,0.4)]"
+                            className="text-lg text-[#3b3b3b] px-5 py-2 bg-gradient-to-r from-[#71ce22]/20 via-[#f5feee]/20 via-[#e4fdcf]/20 to-[#8ef636]/20 border border-[#a9ff3c]/90 rounded-lg shadow-[2px_2px_2px_0.5px_rgba(222,250,208,1)] cursor-pointer select-none transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_10px_20px_-5px_rgba(222,250,208,0.4)]"
                         >
                             {team}
                         </span>
@@ -35,7 +35,7 @@ export default function Teams() {
                     {row2.map((team) => (
                         <span
                             key={team}
-                            className="text-lg text-black/80 px-5 py-2 bg-gradient-to-r from-[#defad0]/70 via-white to-[#defad0]/70 border border-[#defad0]/40 rounded-lg shadow-[2px_2px_2px_0.5px_rgba(222,250,208,1)] cursor-pointer select-none transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_10px_20px_-5px_rgba(222,250,208,0.4)]"
+                            className="text-lg text-[#3b3b3b] px-5 py-2 bg-gradient-to-r from-[#71ce22]/20 via-[#f5feee]/20 via-[#e4fdcf]/20 to-[#8ef636]/20 border border-[#a9ff3c]/90 rounded-lg shadow-[2px_2px_2px_0.5px_rgba(222,250,208,1)] cursor-pointer select-none transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_10px_20px_-5px_rgba(222,250,208,0.4)]"
                         >
                             {team}
                         </span>

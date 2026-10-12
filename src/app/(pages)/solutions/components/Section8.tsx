@@ -21,7 +21,7 @@ export default function Section8() {
     };
 
     return (
-        <section className="w-full py-16 px-4 sm:px-6 lg:px-8">
+        <section className="w-full py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12 xl:gap-16 w-full">
 
                 {/* Column 1: Left Title & Description (50% Flex) */}

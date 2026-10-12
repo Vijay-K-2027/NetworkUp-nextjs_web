@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Section1() {
     return (
-        <section className="bg-[#fafcf7] w-full max-w-8xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#fafcf7] w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
                 <div className="w-full lg:w-[45%] bg-transparent p-4 lg:p-10 flex justify-center">
                     <Image src="/aboutus/AboutUs.png" alt="Building Relationship Image" width={600} height={400} className="w-full h-auto max-w-[600px]" />
