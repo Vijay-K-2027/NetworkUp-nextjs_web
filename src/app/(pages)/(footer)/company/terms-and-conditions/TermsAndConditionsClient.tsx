@@ -47,7 +47,7 @@ export default function TermsAndConditionsClient() {
                         <div className="mt-0.5">DOC ID: NKUP-TC-2025</div>
                     </div>
 
-                    <div className="space-y-10 sm:space-y-12">
+                    <div className="space-y-5 sm:space-y-6">
                         {/* SEC. 01: Acceptance of Terms */}
                         <section className="space-y-3.5">
                             <div className="flex items-center gap-3">

@@ -23,19 +23,16 @@ export default function Navbar() {
 
     return (
         <header className="w-full border-b border-gray-200 bg-white sticky top-0 z-50">
-            <div className="w-full bg-[#031c10] border-b border-emerald-950/40 px-4 py-2.5 text-right sm:px-6 lg:px-8">
+            {/* <div className="w-full bg-[#031c10] border-b border-emerald-950/40 px-4 py-2.5 text-right sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-xs sm:text-sm font-medium tracking-wide text-white">
-                    {/* Rocket Emoji Asset */}
                     <span role="img" aria-label="rocket" className="inline-block animate-pulse text-sm">
                         🚀
                     </span>
 
-                    {/* Main Text Structure */}
                     <span className="text-zinc-200">
                         NEW — Smart AI Follow-ups are now available.
                     </span>
 
-                    {/* Action Link Button */}
                     <a
                         href="#"
                         className="text-white underline underline-offset-4 font-semibold hover:text-emerald-400 transition-colors ml-1"
@@ -43,7 +40,7 @@ export default function Navbar() {
                         Check it out
                     </a>
                 </div>
-            </div>
+            </div> */}
             <div className="max-w-8xl mx-auto w-full flex h-20 items-center justify-between px-6 lg:px-8">
 
                 {/* Left side: Logo and Desktop Navigation */}

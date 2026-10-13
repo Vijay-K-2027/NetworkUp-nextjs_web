@@ -73,7 +73,7 @@ export default function PrivacyPolicyClient() {
                     </section>
 
                     {/* 02. Data We Collect */}
-                    <section className="space-y-4 pt-10 sm:pt-12">
+                    <section className="space-y-4 pt-5 sm:pt-6">
                         <div className="flex items-center gap-3 border-b border-[#c0caae]/50">
                             <Database className="w-5 h-5 text-[#89cf1c] stroke-[2.2] shrink-0" />
                             <h2 className="text-xl sm:text-2xl font-bold text-[#191c1e] tracking-tight">
@@ -125,7 +125,7 @@ export default function PrivacyPolicyClient() {
                     </section>
 
                     {/* 03. How We Use Your Information */}
-                    <section className="space-y-4 pt-10 sm:pt-12">
+                    <section className="space-y-4 pt-5 sm:pt-6">
                         <div className="flex items-center gap-3 border-b border-[#c0caae]/50">
                             <Image
                                 src="/footer/GlowSetting.png"
@@ -193,7 +193,7 @@ export default function PrivacyPolicyClient() {
                     </section>
 
                     {/* 04. Cookies & Tracking */}
-                    <section className="space-y-4 pt-10 sm:pt-12">
+                    <section className="space-y-4 pt-5 sm:pt-6">
                         <div className="flex items-center gap-3 border-b border-[#c0caae]/50">
                             <Cookie className="w-5 h-5 text-[#89CF1C] stroke-[2.2] shrink-0" />
                             <h2 className="text-xl sm:text-2xl font-bold text-[#191c1e] tracking-tight">
@@ -211,7 +211,7 @@ export default function PrivacyPolicyClient() {
                     </section>
 
                     {/* 05. Data Security */}
-                    <section className="space-y-4 pt-10 sm:pt-12">
+                    <section className="space-y-4 pt-5 sm:pt-6">
                         <div className="flex items-center gap-3 border-b border-[#c0caae]/50">
                             <Lock className="w-5 h-5 text-[#89CF1C] stroke-[2.2] shrink-0" />
                             <h2 className="text-xl sm:text-2xl font-bold text-[#191c1e] tracking-tight">
@@ -238,7 +238,7 @@ export default function PrivacyPolicyClient() {
                     </section>
 
                     {/* 06. Your Rights */}
-                    <section className="space-y-4 pt-10 sm:pt-12">
+                    <section className="space-y-4 pt-5 sm:pt-6">
                         <div className="flex items-center gap-3 border-b border-[#c0caae]/50">
                             <Image
                                 src="/footer/Right.png"
