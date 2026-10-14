@@ -23,6 +23,9 @@ NetworkUp.io  strictly complies with LinkedIn's terms of service and security me
 
 const UNIFIED_PROMPT = "Provide a comprehensive explanation of NetworkUp.io , its core features, who it is built for (target audience), a quick manual on how to use it, and how it ensures complete account safety and policy compliance with LinkedIn regulations (specifically connection limits, daily action freezes, and residential static proxy location pinning).";
 
+const NOTEBOOK_LM_NOTEBOOK_ID = process.env.NEXT_PUBLIC_NOTEBOOKLM_ID || "NOTEBOOK_ID";
+const NOTEBOOK_LM_URL = `https://notebooklm.google.com/notebook/${NOTEBOOK_LM_NOTEBOOK_ID}`;
+
 const models = [
     {
         name: "ChatGPT",
@@ -33,7 +36,7 @@ const models = [
     {
         name: "Claude",
         icon: "/product/ai-tools/claude-ai-icon.svg",
-        url: "https://claude.ai/",
+        url: "https://claude.ai/new",
         prompt: UNIFIED_PROMPT
     },
     {
@@ -57,7 +60,7 @@ const models = [
     {
         name: "NotebookLM",
         icon: "/product/ai-tools/notebook-lm-dark.svg",
-        url: "https://gemini.google.com/notebooks/create",
+        url: NOTEBOOK_LM_URL,
         prompt: UNIFIED_PROMPT
     }
 ];
@@ -97,6 +100,8 @@ export default function PromptAssistant() {
         let redirectUrl = model.url;
         if (model.name === "ChatGPT") {
             redirectUrl = `${model.url}?q=${encodeURIComponent(fullPrompt)}`;
+        } else if (model.name === "Claude") {
+            redirectUrl = `https://claude.ai/new?q=${encodeURIComponent(fullPrompt)}`;
         } else if (model.name === "Perplexity") {
             redirectUrl = `https://www.perplexity.ai/search?q=${encodeURIComponent(fullPrompt)}`;
         }
@@ -158,9 +163,9 @@ export default function PromptAssistant() {
         setShowInstructionModal(true);
 
         if (model.name === "NotebookLM") {
-            setToastMessage("We need you to sign in to Gemini to redirect to NotebookLM.");
-        } else if (model.name === "Claude") {
-            setToastMessage("We need you to sign in to Claude to redirect to Claude.");
+            setToastMessage("Opening NotebookLM! Copied prompt — paste it (Ctrl + V) in the notebook.");
+        } else if (model.name === "Claude" || model.name === "ChatGPT" || model.name === "Perplexity") {
+            setToastMessage(`Opening ${model.name} with pre-filled prompt!`);
         } else {
             setToastMessage(`Copied prompt for ${model.name}! Paste it (Ctrl + V) in the new tab.`);
         }
@@ -249,7 +254,11 @@ export default function PromptAssistant() {
         setModalPromptText(prompt);
         setShowInstructionModal(true);
 
-        setToastMessage(`Copied custom prompt! Paste it (Ctrl + V) in the new tab.`);
+        if (selectedModel === "ChatGPT" || selectedModel === "Claude" || selectedModel === "Perplexity") {
+            setToastMessage(`Opening ${selectedModel} with pre-filled prompt!`);
+        } else {
+            setToastMessage(`Copied custom prompt! Paste it (Ctrl + V) in the new tab.`);
+        }
         setTimeout(() => setToastMessage(null), 4000);
 
         performRedirection(selectedModel, prompt);
@@ -301,7 +310,7 @@ export default function PromptAssistant() {
                                             </div>
                                         </div>
                                         <span className={`text-[10px] font-semibold tracking-wide transition-all duration-300 ${copiedIndex === index ? "text-[#a3e635] scale-105" : "text-zinc-500 group-hover:text-zinc-300"}`}>
-                                            {copiedIndex === index ? "Copied!" : model.name}
+                                            {copiedIndex === index ? (model.name === "ChatGPT" || model.name === "Claude" || model.name === "Perplexity" ? "Pre-filled!" : "Copied!") : model.name}
                                         </span>
                                     </motion.div>
                                 );
@@ -417,16 +426,16 @@ export default function PromptAssistant() {
 
                                 {/* Body */}
                                 <div className="space-y-4 text-left">
-                                    {(modalModelName === "NotebookLM" || modalModelName === "Claude") ? (
+                                    {modalModelName === "NotebookLM" ? (
                                         <>
                                             <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-semibold text-[#a3e635]">
-                                                {modalModelName === "NotebookLM" ? "Google Gemini Sign-in Required" : "Claude Sign-in Required"}
+                                                NotebookLM Workspace
                                             </p>
                                             <p className="text-xs sm:text-[13px] text-zinc-300 leading-relaxed">
-                                                We have opened {modalModelName === "NotebookLM" ? "Gemini Notebooks" : "Claude"} in a new tab. We need you to sign in to {modalModelName === "NotebookLM" ? "Gemini" : "Claude"} to redirect to {modalModelName}.
+                                                We have opened the NetworkUp NotebookLM workspace in a new tab. If prompted, please sign in with your Google account.
                                             </p>
                                             <p className="text-xs sm:text-[13px] text-zinc-400 leading-relaxed">
-                                                Once signed in, you can paste your copied prompt directly into the input area:
+                                                Your prompt is already copied to your clipboard. Paste it directly into the chat input:
                                             </p>
                                             <div className="bg-[#032a0d]/50 border border-lime-500/20 rounded-xl p-3.5 flex flex-col items-center justify-center gap-1">
                                                 <span className="text-[10px] uppercase font-bold text-lime-400 tracking-wider">Paste Shortcut</span>
@@ -443,13 +452,13 @@ export default function PromptAssistant() {
                                                 </div>
                                             </div>
                                         </>
-                                    ) : (modalModelName === "ChatGPT" || modalModelName === "Perplexity") ? (
+                                    ) : (modalModelName === "ChatGPT" || modalModelName === "Claude" || modalModelName === "Perplexity") ? (
                                         <>
                                             <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-semibold">
                                                 We have opened <span className="text-[#a3e635] font-extrabold">{modalModelName}</span> in a new tab.
                                             </p>
                                             <p className="text-xs sm:text-[13px] text-zinc-400 leading-relaxed">
-                                                Since {modalModelName} supports automatic search pre-filling, your prompt has been passed through the URL. It should populate in their chat input field shortly!
+                                                Since {modalModelName} supports automatic prompt pre-filling, your prompt has been passed through the URL. It should populate in their chat input field shortly!
                                             </p>
                                         </>
                                     ) : (
