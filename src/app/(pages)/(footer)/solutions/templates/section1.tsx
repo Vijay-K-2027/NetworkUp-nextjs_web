@@ -146,7 +146,7 @@ export default function Section1Template(props: Section1TemplateProps) {
 
                 {/* 2-COLUMN HERO GRID */}
                 <div className={`${isRecruiter ? "bg-[#eff4ff]" : "bg-[#fbfdfa]"
-                    } grid grid-cols-1 lg:grid-cols-12 gap-x-5 gap-y-10 items-center px-5 py-10 rounded-2xl`}>
+                    } grid grid-cols-1 lg:grid-cols-12 gap-x-5 gap-y-10 items-center px-10 py-10 rounded-2xl`}>
 
                     {/* LEFT COLUMN: HERO COPY & CTAS */}
                     <motion.div

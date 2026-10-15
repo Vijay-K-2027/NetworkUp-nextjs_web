@@ -43,25 +43,25 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
     const renderFaqDetail = () => {
         if (selectedFaqIndex === 0) {
             return (
-                <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
-                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                <div className="bg-[#292a2a] p-4 sm:p-5 rounded-2xl border border-[#414a34] w-full flex flex-col gap-y-4 text-left">
+                    <p className="text-[#e322e2] text-xs sm:text-sm leading-relaxed">
                         Creating a campaign only takes a few minutes. Follow these steps:
                     </p>
                     <div className="flex flex-col gap-y-2.5 mt-2">
                         <div className="flex items-center gap-3 p-3 bg-[#1f1f1f] rounded-xl">
-                            <span className="bg-[#71EB34]/15 text-[#71EB34] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">01</span>
+                            <span className="bg-[#9ffb06]/10 text-[#86d700] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">01</span>
                             <span className="text-white text-xs font-medium">Go to Campaign Builder</span>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-[#1f1f1f] rounded-xl">
-                            <span className="bg-[#71EB34]/15 text-[#71EB34] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">02</span>
+                            <span className="bg-[#9ffb06]/10 text-[#86d700] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">02</span>
                             <span className="text-white text-xs font-medium">Click New Campaign</span>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-[#1f1f1f] rounded-xl">
-                            <span className="bg-[#71EB34]/15 text-[#71EB34] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">03</span>
+                            <span className="bg-[#9ffb06]/10 text-[#86d700] text-xs font-bold w-6 h-6 flex items-center justify-center rounded">03</span>
                             <span className="text-white text-xs font-medium">Import or choose your lead list</span>
                         </div>
                     </div>
-                    <span className="text-[#71EB34] text-[9px] font-extrabold tracking-wider uppercase mt-3">
+                    <span className="text-[#86d700] text-[9px] font-extrabold tracking-wider uppercase mt-3">
                         READY FOR LAUNCH SEQUENCE
                     </span>
                 </div>
@@ -70,12 +70,12 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
 
         if (selectedFaqIndex === 1) {
             return (
-                <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
-                    <span className="text-[#71EB34] text-[10px] font-bold tracking-wider uppercase flex items-center gap-1.5">
+                <div className="bg-[#292a2a] p-4 sm:p-5 rounded-2xl border border-[#414a34] w-full flex flex-col gap-y-4 text-left">
+                    <span className="text-[#86d700] text-[10px] font-bold tracking-wider uppercase flex items-center gap-1.5">
                         🔗 QUICK SETUP
                     </span>
-                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-                        Open <span className="text-[#71EB34] font-semibold">Settings → LinkedIn Accounts</span>. Click <span className="text-[#71EB34] font-semibold underline cursor-pointer">Connect Account</span> and follow the OAuth authorization flow.
+                    <p className="text-[#e322e2] text-xs sm:text-sm leading-relaxed">
+                        Open <span className="text-[#86d700] font-semibold">Settings → LinkedIn Accounts</span>. Click <span className="text-[#86d700] font-semibold underline cursor-pointer">Connect Account</span> and follow the OAuth authorization flow.
                     </p>
                 </div>
             )
@@ -83,25 +83,25 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
 
         if (selectedFaqIndex === 2) {
             return (
-                <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
-                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                <div className="bg-[#292a2a] p-4 sm:p-5 rounded-2xl border border-[#414a34] w-full flex flex-col gap-y-4 text-left">
+                    <p className="text-[#e322e2] text-xs sm:text-sm leading-relaxed">
                         Our neural engine scrapes real-time data to craft hyper-relevant hooks based on:
                     </p>
                     <div className="grid grid-cols-2 gap-2 mt-2">
-                        <div className="bg-[#1f1f1f] rounded-xl p-3 flex flex-col items-start gap-1">
-                            <span className="text-zinc-500 text-[8px] font-bold uppercase tracking-wider">TARGET DATA</span>
+                        <div className="bg-[#121414] border border-[#414a34]/10 rounded-xl p-3 flex flex-col items-start gap-1">
+                            <span className="text-[#c0caae] text-[8px] font-bold uppercase tracking-wider">TARGET DATA</span>
                             <span className="text-white text-xs font-semibold">Job Title</span>
                         </div>
-                        <div className="bg-[#1f1f1f] rounded-xl p-3 flex flex-col items-start gap-1">
-                            <span className="text-zinc-500 text-[8px] font-bold uppercase tracking-wider">SIGNAL</span>
+                        <div className="bg-[#121414] border border-[#414a34]/10 rounded-xl p-3 flex flex-col items-start gap-1">
+                            <span className="text-[#c0caae] text-[8px] font-bold uppercase tracking-wider">SIGNAL</span>
                             <span className="text-white text-xs font-semibold">Recent Activity</span>
                         </div>
-                        <div className="bg-[#1f1f1f] rounded-xl p-3 flex flex-col items-start gap-1">
-                            <span className="text-zinc-500 text-[8px] font-bold uppercase tracking-wider">CONTEXT</span>
+                        <div className="bg-[#121414] border border-[#414a34]/10 rounded-xl p-3 flex flex-col items-start gap-1">
+                            <span className="text-[#c0caae] text-[8px] font-bold uppercase tracking-wider">CONTEXT</span>
                             <span className="text-white text-xs font-semibold">Mutual Conn.</span>
                         </div>
-                        <div className="bg-[#1f1f1f] rounded-xl p-3 flex flex-col items-start gap-1">
-                            <span className="text-zinc-500 text-[8px] font-bold uppercase tracking-wider">FIRMOGRAPHIC</span>
+                        <div className="bg-[#121414] border border-[#414a34]/10 rounded-xl p-3 flex flex-col items-start gap-1">
+                            <span className="text-[#c0caae] text-[8px] font-bold uppercase tracking-wider">FIRMOGRAPHIC</span>
                             <span className="text-white text-xs font-semibold">Company Info</span>
                         </div>
                     </div>
@@ -111,19 +111,19 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
 
         if (selectedFaqIndex === 3) {
             return (
-                <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
-                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-                        Seamlessly sync data to your workflow:
+                <div className="bg-[#292a2a] p-4 sm:p-5 rounded-2xl border border-[#414a34]/10 w-full flex flex-col gap-y-4 text-left">
+                    <p className="text-[#e322e2] text-xs sm:text-sm leading-relaxed">
+                        Sync data to your workflow:
                     </p>
                     <div className="flex flex-wrap gap-2 mt-2">
-                        <span className="bg-[#383838] text-white font-medium text-xs px-3 py-1 rounded-xl">HubSpot</span>
-                        <span className="bg-[#383838] text-white font-medium text-xs px-3 py-1 rounded-xl">Salesforce</span>
-                        <span className="bg-[#383838] text-white font-medium text-xs px-3 py-1 rounded-xl">Pipedrive</span>
-                        <span className="bg-[#243e12]/80 text-[#71EB34] font-semibold text-xs px-3 py-1 rounded-xl">Zapier</span>
+                        <span className="bg-[#343535] text-[#e3e2e2] font-medium text-xs px-3 py-1 rounded-xl">HubSpot</span>
+                        <span className="bg-[#343535] text-[#e3e2e2] font-medium text-xs px-3 py-1 rounded-xl">Salesforce</span>
+                        <span className="bg-[#343535] text-[#e3e2e2] font-medium text-xs px-3 py-1 rounded-xl">Pipedrive</span>
+                        <span className="bg-[#9ffb06]/20 text-[#86d700] font-semibold text-xs px-3 py-1 rounded-xl">Zapier</span>
                     </div>
-                    <div className="flex items-center justify-between text-xs font-bold text-[#71EB34] hover:text-white cursor-pointer mt-4 border-t border-white/5 pt-3 transition-colors">
+                    <div className="flex items-center justify-between text-xs font-bold text-[#c0caae] hover:text-white cursor-pointer mt-4 border-t border-white/5 pt-3 transition-colors">
                         <span>Go to Integrations</span>
-                        <ArrowRight size={14} className="text-[#71EB34]" />
+                        <ArrowRight size={14} className="text-[#86d700]" />
                     </div>
                 </div>
             )
@@ -132,23 +132,23 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
         if (selectedFaqIndex === 4) {
             return (
                 <div className="bg-[#282828] p-4 sm:p-5 rounded-2xl border border-white/5 w-full flex flex-col gap-y-4 text-left">
-                    <span className="text-[#71EB34] text-xs font-bold tracking-wide uppercase flex items-center gap-1.5">
-                        <ShieldCheck size={16} className="text-[#71EB34]" /> PROTOCOL SECURED
+                    <span className="text-[#86f700] text-xs font-bold tracking-wide uppercase flex items-center gap-1.5">
+                        <ShieldCheck size={16} className="text-[#86d700]" /> PROTOCOL SECURED
                     </span>
-                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-[#e3e2e2] text-xs sm:text-sm leading-relaxed">
                         We maintain account health via:
                     </p>
                     <ul className="flex flex-col gap-y-3 mt-2 pl-0.5">
-                        <li className="flex items-center gap-2.5 text-xs text-white">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#71EB34] shrink-0 mt-1.5"></span>
+                        <li className="flex items-center gap-2.5 text-xs text-[#c0caae]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#86d700] shrink-0 mt-1.5"></span>
                             Human-like activity patterns
                         </li>
-                        <li className="flex items-center gap-2.5 text-xs text-white">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#71EB34] shrink-0 mt-1.5"></span>
+                        <li className="flex items-center gap-2.5 text-xs text-[#c0caae]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#86d700] shrink-0 mt-1.5"></span>
                             Randomized message delays
                         </li>
-                        <li className="flex items-center gap-2.5 text-xs text-white">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#71EB34] shrink-0 mt-1.5"></span>
+                        <li className="flex items-center gap-2.5 text-xs text-[#c0caae]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#86d700] shrink-0 mt-1.5"></span>
                             Safety limit thresholds
                         </li>
                     </ul>
@@ -161,10 +161,10 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
 
     return (
         <>
-            <header className="mx-auto h-[50px] w-[300px] rounded-t-2xl px-5 pt-3.5 flex flex-row items-center justify-between bg-[#02140b] shrink-0">
+            <header className="mx-auto h-[50px] w-[300px] rounded-t-2xl px-5 pt-3.5 flex flex-row items-center justify-between bg-[#0f1416] shrink-0">
                 <div className="flex flex-row items-center gap-x-2">
                     <Image src="/brand/Logo.svg" alt="Logo" width={24} height={24} style={{ height: "auto" }} />
-                    <h3 className="text-sm text-[#00d400]/70 font-semibold">NetworkUp.io</h3>
+                    <h3 className="text-md text-[#689e24] font-extrabold font-[family-name:var(--font-comfortaa)] scale-105">NetworkUp.io</h3>
                 </div>
                 <div className="flex flex-row items-center gap-x-2">
                     <div className="flex flex-row -space-x-1.5 mr-2">
@@ -185,7 +185,7 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
                         />
                     </div>
                     <button
-                        className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                        className="text-[#9ca3a7] hover:text-[#689e24] transition-colors cursor-pointer"
                         onClick={onClose}
                     >
                         <X size={16} />
@@ -209,7 +209,7 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
                         <div className="mt-5 flex flex-row items-center shrink-0 w-full">
                             <div className="flex flex-col items-start ml-2">
                                 <h1 className="text-white text-3xl font-bold w-[160px] text-left">Hey there!</h1>
-                                <h3 className="text-gray-200/80 text-sm w-[150px] text-left">How can we help today?</h3>
+                                <h3 className="text-[#9ca3af] text-sm w-[150px] text-left">How can we help today?</h3>
                             </div>
                             <div className="ml-auto border-[2px] border-[#02140b] rounded-l-full overflow-hidden shrink-0">
                                 <Image src="/Ai-black.png" alt="AIPage" width={80} height={80} style={{ height: "auto" }} />
@@ -220,7 +220,7 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
                             <div className="bg-white rounded-xl p-3 flex flex-row items-center justify-between shadow-md">
                                 <div className="text-left">
                                     <h2 className="text-black text-[14px] font-bold">Ask a question</h2>
-                                    <h4 className="text-gray-400 text-[9px] w-[140px] leading-tight">AI Agent and our team are here to help</h4>
+                                    <h4 className="text-[#6b7280] text-[9px] w-[140px] leading-tight">AI Agent and our team are here to help</h4>
                                 </div>
                                 <div className="flex flex-row -space-x-1.5">
                                     <div className="w-6 h-6 rounded-full border-2 border-white overflow-hidden shrink-0">
@@ -244,7 +244,7 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
-                                    <div className="w-6 h-6 rounded-full bg-lime-400 text-[7px] font-extrabold flex items-center justify-center border-2 border-white text-black shrink-0">
+                                    <div className="w-6 h-6 rounded-full bg-[#a3ff12] text-[7px] font-extrabold flex items-center justify-center border-2 border-white text-black shrink-0">
                                         +12
                                     </div>
                                 </div>
@@ -254,12 +254,12 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
                         <div className="shrink-0 w-full">
                             <div
                                 onClick={onNavigateToChat}
-                                className="flex flex-row items-center bg-white/10 border border-white/5 rounded-2xl px-3 py-1.5 cursor-pointer hover:bg-white/15 transition-colors"
+                                className="flex flex-row items-center bg-[#12191b] border border-white/5 rounded-2xl px-3 py-1.5 cursor-pointer hover:bg-white/15 transition-colors"
                             >
-                                <span className="text-white/40 text-xs text-left py-1 w-full select-none">
+                                <span className="text-[#6b7280] text-xs text-left py-1 w-full select-none">
                                     Search for help
                                 </span>
-                                <Search size={16} stroke="#2cff05" className="shrink-0 ml-2" />
+                                <Search size={16} stroke="#a3ff12" className="shrink-0 ml-2" />
                             </div>
                         </div>
 
@@ -274,19 +274,19 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
                                         className="flex flex-row items-center justify-between w-full group cursor-pointer hover:bg-white/5 p-1 rounded-xl transition-all duration-150"
                                     >
                                         <div className="flex flex-row items-center gap-x-3">
-                                            <div className="w-8.5 h-8.5 bg-[#0c2014] border border-[#1b3b28] rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#122e1d] transition-colors duration-150">
-                                                <IconComponent size={16} stroke="#2cff05" strokeWidth={2} />
+                                            <div className="w-8.5 h-8.5 bg-[#1a2022] border border-[#1b3b28] rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#122e1d] transition-colors duration-150">
+                                                <IconComponent size={16} stroke="#a3ff12" strokeWidth={2} />
                                             </div>
                                             <div className="flex flex-col items-start leading-tight">
                                                 <h4 className="text-white text-[11px] font-semibold text-left tracking-wide leading-snug">
                                                     {faq.title}
                                                 </h4>
-                                                <p className="text-gray-400/80 text-[9px] text-left mt-0.5 leading-snug">
+                                                <p className="text-[#6b7280] text-[9px] text-left mt-0.5 leading-snug">
                                                     {faq.description}
                                                 </p>
                                             </div>
                                         </div>
-                                        <ChevronRight size={14} stroke="#2cff05" className="shrink-0 ml-1 group-hover:translate-x-0.5 transition-transform duration-150" />
+                                        <ChevronRight size={14} stroke="#a3ff12" className="shrink-0 ml-1 group-hover:translate-x-0.5 transition-transform duration-150" />
                                     </div>
                                 );
                             })}
@@ -296,7 +296,7 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
                             onClick={onNavigateToChat}
                             className="rounded-full py-1.5 shrink-0 text-center w-full border border-white/5 bg-white/[0.02] cursor-pointer hover:bg-white/5 transition-all"
                         >
-                            <h3 className="text-lime-400 text-[10px] font-semibold tracking-wide">Still need help? Contact our support team →</h3>
+                            <h3 className="text-[#a3ff12] text-[10px] font-semibold tracking-wide">Still need help? Contact our support team →</h3>
                         </div>
                     </>
                 )}

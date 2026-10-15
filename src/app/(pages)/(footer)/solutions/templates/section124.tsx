@@ -180,7 +180,7 @@ export default function Section124Template(props: Section124TemplateProps) {
         campaigns = defaultSection124Props.campaigns,
 
         containerClass = "max-w-7xl mx-auto",
-        sectionClass = "w-full bg-[#fbfdfa] py-14 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden",
+        sectionClass = "w-full bg-[#fbfdfa] py-7 sm:py-10 lg:py-14 px-4 sm:px-6 lg:px-8 overflow-hidden",
     } = props;
 
     const [activeTab, setActiveTab] = useState(defaultActiveTab);
@@ -192,10 +192,10 @@ export default function Section124Template(props: Section124TemplateProps) {
             (item.iconType === "lock"
                 ? "/footer/solutions/section2/2/lock.png"
                 : item.iconType === "share"
-                ? "/footer/solutions/section2/2/integrate.png"
-                : item.iconType === "role"
-                ? "/footer/solutions/section2/2/id.png"
-                : null);
+                    ? "/footer/solutions/section2/2/integrate.png"
+                    : item.iconType === "role"
+                        ? "/footer/solutions/section2/2/id.png"
+                        : null);
 
         if (src) {
             return (

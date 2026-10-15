@@ -1,6 +1,7 @@
 import React from "react";
-import { Check, RefreshCw, ShieldCheck, Shield, ArrowLeftRight } from "lucide-react";
-import Section1Template from "../templates/section1";
+import Link from "next/link";
+import Image from "next/image";
+import { Check, ShieldCheck, Shield, ArrowLeftRight, ChevronRight } from "lucide-react";
 import Section2Template from "../templates/section2";
 import Section3Template, { ComparisonCardItem } from "../templates/section3";
 import Section22Template from "../templates/section22";
@@ -171,43 +172,114 @@ export default function RecruitersPage() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             {/* HERO SECTION */}
-            <Section1Template
-                breadcrumbCategory="Solutions"
-                breadcrumbCategoryHref="/solutions"
-                breadcrumbPageTitle="For Recruiters"
-                topRightNotice="⚡3.8X CANDIDATE INMAIL ACCEPTANCE RATE WITHOUT BURNING INVENTORIES"
-                badgeText="TALENT PIPELINE ACCELERATION & SOURCING"
-                badgeIcon={<Shield className="w-3.5 h-3.5 text-[#7deb2c] shrink-0" />}
-                badgeClassName="bg-[#112a06] text-[#7deb2c] border border-[#234b10]"
-                title={
-                    <>
-                        Empower Your Recruiters to Build <br className="hidden md:inline" />
-                        a Stronger Talent Pipeline on <br className="hidden md:inline" />
-                        LinkedIn
-                    </>
-                }
-                description="Empower recruiting teams and executive search firms to discover qualified candidates, personalize outreach, automate follow-ups, and manage talent pipelines from one connected workspace."
-                primaryCtaText="Start Free Trial"
-                primaryCtaHref="https://app.networkup.io/#/login"
-                secondaryCtaText="Book Demo"
-                secondaryCtaHref="https://calendly.com/networkup-io/30min"
-                featureChecks={[
-                    {
-                        label: "Zero InMail credit waste",
-                        icon: <Check className="w-3 h-3 text-[#416900] stroke-[2.5]" />,
-                    },
-                    {
-                        label: "2-way ATS sync",
-                        icon: <ArrowLeftRight className="w-3 h-3 text-[#416900] stroke-[2]" />,
-                    },
-                    {
-                        label: "Smart Shield™ safety",
-                        icon: <ShieldCheck className="w-3 h-3 text-[#416900] stroke-[2]" />,
-                    },
-                ]}
-                imageSrc="/footer/solutions/2.png"
-                imageAlt="Empower Your Recruiters to Build a Stronger Talent Pipeline on LinkedIn"
-            />
+            <section className="w-full pb-4 sm:pb-6 lg:pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                <div className="max-w-9xl mx-auto lg:px-10 space-y-4 sm:space-y-6">
+
+                    {/* TOP ROW: BREADCRUMB + NOTICE */}
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-5 px-2 sm:gap-4">
+                        <nav className="flex items-center gap-1.5 text-xs sm:text-sm text-[#43483e]">
+                            <Link
+                                href="/solutions"
+                                className="hover:text-[#3a6a00] transition-colors font-medium"
+                            >
+                                Solutions
+                            </Link>
+                            <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+                            <span className="font-bold text-[#000400]">
+                                For Recruiters
+                            </span>
+                        </nav>
+
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-gray-200/80 text-[10px] sm:text-[11px] font-bold tracking-wider text-[#30382b] shadow-2xs self-start sm:self-auto">
+                            <span className="w-2 h-2 bg-[#416900] rounded-full"></span>
+                            <span>⚡3.8X CANDIDATE INMAIL ACCEPTANCE RATE WITHOUT BURNING INVENTORIES</span>
+                        </div>
+                    </div>
+
+                    {/* 2-COLUMN HERO GRID */}
+                    <div className="bg-[#eff4ff] grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-10 items-center px-6 sm:px-10 py-8 sm:py-10 rounded-2xl">
+
+                        {/* LEFT COLUMN: HERO COPY & CTAS */}
+                        <div className="lg:col-span-7 w-full flex flex-col justify-start items-start text-left">
+                            {/* Category Badge */}
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg mb-4 sm:mb-5 bg-[#112a06] text-[#7deb2c] border border-[#234b10]">
+                                <Shield className="w-3.5 h-3.5 text-[#7deb2c] shrink-0" />
+                                <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase">
+                                    TALENT PIPELINE ACCELERATION & SOURCING
+                                </span>
+                            </div>
+
+                            {/* Title */}
+                            <h1 className="text-3xl sm:text-4xl md:text-[45px] font-bold text-[#000400] tracking-tight leading-[1.15]">
+                                Empower Your Recruiters to Build <br className="hidden md:inline" />
+                                a Stronger Talent Pipeline on <br className="hidden md:inline" />
+                                LinkedIn
+                            </h1>
+
+                            {/* Description */}
+                            <p className="text-sm sm:text-base md:text-lg text-[#43483e] leading-relaxed mt-4 sm:mt-5 max-w-xl font-normal">
+                                Empower recruiting teams and executive search firms to discover qualified candidates, personalize outreach, automate follow-ups, and manage talent pipelines from one connected workspace.
+                            </p>
+
+                            {/* CTA Buttons */}
+                            <div className="flex flex-wrap items-center gap-3.5 sm:gap-4 mt-6 sm:mt-8 w-full sm:w-auto">
+                                <Link
+                                    href="https://app.networkup.io/#/login"
+                                    className="px-6 sm:px-8 py-3.5 rounded-xl bg-gradient-to-b from-[#caff95] to-[#71e300] hover:brightness-105 active:scale-[0.98] text-[#041c11] font-bold text-sm sm:text-base shadow-sm transition-all duration-200 text-center w-full sm:w-auto"
+                                >
+                                    Start Free Trial
+                                </Link>
+                                <Link
+                                    href="https://calendly.com/networkup-io/30min"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-6 sm:px-8 py-3.5 rounded-xl bg-white border border-[#041c11] hover:bg-[#fbfdf9] hover:border-[#181d13] active:scale-[0.98] text-[#181d13] font-bold text-sm sm:text-base transition-all duration-200 shadow-2xs text-center w-full sm:w-auto"
+                                >
+                                    Book Demo
+                                </Link>
+                            </div>
+
+                            {/* Trust Check Badges */}
+                            <div className="flex flex-wrap items-center gap-x-5 gap-y-2.5 mt-6 sm:mt-8 text-xs sm:text-sm text-[#43483e]">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-5 h-5 bg-[#416900]/15 rounded-full flex items-center justify-center">
+                                        <Check className="w-3 h-3 text-[#416900] stroke-[2.5]" />
+                                    </div>
+                                    <span>Zero InMail credit waste</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <div className="w-5 h-5 bg-[#416900]/15 rounded-full flex items-center justify-center">
+                                        <ArrowLeftRight className="w-3 h-3 text-[#416900] stroke-[2]" />
+                                    </div>
+                                    <span>2-way ATS sync</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <div className="w-5 h-5 bg-[#416900]/15 rounded-full flex items-center justify-center">
+                                        <ShieldCheck className="w-3 h-3 text-[#416900] stroke-[2]" />
+                                    </div>
+                                    <span>Smart Shield™ safety</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* RIGHT COLUMN: DYNAMIC IMAGE FILE */}
+                        <div className="lg:col-span-5 w-full flex items-center justify-center py-2">
+                            <div className="w-full flex items-center justify-center">
+                                <Image
+                                    src="/footer/solutions/2.png"
+                                    alt="Empower Your Recruiters to Build a Stronger Talent Pipeline on LinkedIn"
+                                    width={2326}
+                                    height={2776}
+                                    priority
+                                    className="w-full h-auto max-w-[460px] lg:max-w-[620px] max-h-[560px] object-contain drop-shadow-sm transition-transform duration-300 hover:scale-[1.01]"
+                                />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
 
             {/* TRUSTED LOGOS SECTION */}
             <Section2Template

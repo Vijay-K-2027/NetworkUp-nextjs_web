@@ -86,7 +86,7 @@ export default function Section22Template(props: Section22TemplateProps) {
         subtitle = defaultSection22Props.subtitle,
         cards = defaultSection22Props.cards,
         containerClass = "max-w-7xl mx-auto",
-        sectionClass = "w-full bg-[#062300] py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden",
+        sectionClass = "w-full bg-[#062300] py-8 sm:py-10 lg:py-14 px-4 sm:px-6 lg:px-8 overflow-hidden",
     } = props;
 
     const renderFooterIcon = (card: MetricCardItem) => {

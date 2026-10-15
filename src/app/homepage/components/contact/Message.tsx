@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect, ReactNode } from "react";
 import {
     Send, ChevronRight, X, ArrowRight, ShieldCheck, Zap, ChevronLeft,
-    Wrench, HelpCircle, CreditCard, MoreHorizontal, FileText, Settings, Mail, Headphones, Check, RefreshCw
+    Wrench, HelpCircle, CreditCard, MoreHorizontal, FileText, Settings, Mail, Headphones, Check, RefreshCw,
+    ChevronUp, Box, Sun, User, MessageSquare
 } from "lucide-react";
 import Link from "next/link";
 
@@ -656,38 +657,52 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
 
         if (type === "trouble") {
             return (
-                <div className="flex flex-col gap-y-3.5 text-left w-full">
-                    <span className="text-[#71EB34] text-[10px] font-bold tracking-wider uppercase flex items-center gap-1.5 border-b border-white/5 pb-2">
-                        <Wrench size={12} /> Something isn't working
-                    </span>
-                    <p className="text-gray-300 text-[10px] leading-relaxed">
-                        Sorry about that! Let's get it fixed. Here are a few things you can try:
-                    </p>
-                    <div className="flex flex-col gap-y-2 mt-1 pl-0.5">
-                        {[
-                            "Refresh the page and try again.",
-                            "Clear your browser cache and cookies.",
-                            "Make sure you're using the latest version of your browser.",
-                            "Check our status page for any ongoing issues."
-                        ].map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-2.5 text-left">
-                                <div className="w-3.5 h-3.5 rounded-full bg-[#71EB34]/15 border border-[#71EB34]/20 flex items-center justify-center shrink-0 mt-0.5">
-                                    <Check size={9} className="text-[#71EB34]" />
-                                </div>
-                                <span className="text-gray-300 text-[10px] leading-snug">{item}</span>
-                            </div>
-                        ))}
+                <div className="flex flex-col gap-y-2.5 text-left w-full">
+                    <div className="flex items-center justify-between gap-2.5 pb-1">
+                        <div className="w-7 h-7 rounded-lg bg-[#122e1d] border border-[#1e4a28] flex items-center justify-center shrink-0">
+                            <Wrench size={13} className="text-[#71EB34]" />
+                        </div>
+                        <span className="text-white text-[11px] font-semibold flex-1 leading-snug">
+                            Something isn't working (error, crash, feature broken)
+                        </span>
+                        <ChevronUp size={14} className="text-[#71EB34] shrink-0" />
                     </div>
-                    <div className="flex items-start gap-3 p-3 bg-white/[0.02] border border-white/5 rounded-xl mt-3 text-left">
-                        <Headphones size={14} className="text-gray-400 shrink-0 mt-0.5" />
-                        <div className="flex flex-col items-start leading-tight">
-                            <span className="text-gray-400 text-[9px]">Still stuck? Our support team is here to help.</span>
-                            <button
-                                onClick={() => handleSend("I need to speak to support")}
-                                className="text-[#71EB34] hover:text-white text-[10px] font-bold flex items-center gap-1.5 transition-colors cursor-pointer mt-1"
-                            >
-                                Contact Support <ArrowRight size={10} />
-                            </button>
+                    <div className="bg-[#040e07] border border-[#14321c] rounded-xl p-3 flex flex-col gap-y-2 w-full text-left">
+                        <p className="text-gray-300 text-[10px] leading-relaxed">
+                            Sorry about that! Let's get it fixed.
+                        </p>
+                        <p className="text-[#d4e373] text-[10px] font-medium leading-relaxed">
+                            Here are a few things you can try:
+                        </p>
+                        <div className="flex flex-col gap-y-2 mt-0.5">
+                            {[
+                                "Refresh the page and try again.",
+                                "Clear your browser cache and cookies.",
+                                "Make sure you're using the latest version of your browser.",
+                                "Check our status page for any ongoing issues."
+                            ].map((item, idx) => (
+                                <div key={idx} className="flex items-start gap-2 text-left">
+                                    <div className="w-3.5 h-3.5 rounded-full bg-[#71EB34] flex items-center justify-center shrink-0 mt-0.5">
+                                        <Check size={9} strokeWidth={3} className="text-black" />
+                                    </div>
+                                    <span className="text-gray-300 text-[10px] leading-snug">{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="flex items-start gap-2.5 pt-2.5 mt-1 border-t border-white/5 text-left">
+                            <div className="w-7 h-7 rounded-full bg-[#122e1d] border border-[#1e4a28] flex items-center justify-center shrink-0">
+                                <Headphones size={13} className="text-[#71EB34]" />
+                            </div>
+                            <div className="flex flex-col items-start leading-tight">
+                                <span className="text-gray-400 text-[9px] leading-tight">Still stuck? Our support team is here to help.</span>
+                                <button
+                                    type="button"
+                                    onClick={() => handleSend("I need to speak to support")}
+                                    className="text-[#71EB34] hover:text-white text-[10px] font-bold flex items-center gap-1 transition-colors cursor-pointer mt-0.5"
+                                >
+                                    Contact Support <ArrowRight size={10} />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -696,39 +711,51 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
 
         if (type === "product_guide") {
             return (
-                <div className="flex flex-col gap-y-3 text-left w-full">
-                    <span className="text-[#71EB34] text-[10px] font-bold tracking-wider uppercase flex items-center gap-1.5 border-b border-white/5 pb-2">
-                        <HelpCircle size={12} /> How do the product works?
-                    </span>
-                    <p className="text-gray-300 text-[10px] leading-relaxed">
-                        We're here to help! Browse our documentation to learn how NetworkUp works and how to get the most out of it.
-                    </p>
-                    <div className="grid grid-cols-2 gap-2 mt-2">
-                        <Link
-                            href="/product/features"
-                            className="bg-white/5 hover:bg-white/10 text-white text-[10px] font-bold py-2 px-3 rounded-xl border border-white/5 flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                        >
-                            <FileText size={12} className="text-[#71EB34]" />
-                            Product Overview
-                        </Link>
-                        <Link
-                            href="/solutions"
-                            className="bg-white/5 hover:bg-white/10 text-white text-[10px] font-bold py-2 px-3 rounded-xl border border-white/5 flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                        >
-                            <Zap size={12} className="text-[#71EB34]" />
-                            How It Works
-                        </Link>
+                <div className="flex flex-col gap-y-2.5 text-left w-full">
+                    <div className="flex items-center justify-between gap-2.5 pb-1">
+                        <div className="w-7 h-7 rounded-lg bg-[#122e1d] border border-[#1e4a28] flex items-center justify-center shrink-0">
+                            <HelpCircle size={13} className="text-[#71EB34]" />
+                        </div>
+                        <span className="text-white text-[11px] font-semibold flex-1 leading-snug">
+                            How do the product works?
+                        </span>
+                        <ChevronUp size={14} className="text-[#71EB34] shrink-0" />
                     </div>
-                    <div className="flex items-start gap-3 p-3 bg-white/[0.02] border border-white/5 rounded-xl mt-3 text-left">
-                        <HelpCircle size={14} className="text-gray-400 shrink-0 mt-0.5" />
-                        <div className="flex flex-col items-start leading-tight">
-                            <span className="text-gray-400 text-[9px]">Can't find what you're looking for?</span>
-                            <button
-                                onClick={() => handleSend("I want to ask a question")}
-                                className="text-[#71EB34] hover:text-white text-[10px] font-bold flex items-center gap-1.5 transition-colors cursor-pointer mt-1"
+                    <div className="bg-[#040e07] border border-[#14321c] rounded-xl p-3 flex flex-col gap-y-2.5 w-full text-left">
+                        <p className="text-gray-300 text-[10px] leading-relaxed">
+                            We're here to help! Browse our documentation to learn how<br />
+                            NetworkUp works and how to get the most out of it.
+                        </p>
+                        <div className="grid grid-cols-2 gap-2 mt-1">
+                            <Link
+                                href="/product/features"
+                                className="bg-[#0c1a12] hover:bg-[#12261b] text-white text-[10px] font-semibold py-2 px-2.5 rounded-xl border border-[#1a3824] flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                             >
-                                Ask a Question <ArrowRight size={10} />
-                            </button>
+                                <Box size={13} className="text-[#71EB34] shrink-0" />
+                                <span>Product Overview</span>
+                            </Link>
+                            <Link
+                                href="/solutions"
+                                className="bg-[#0c1a12] hover:bg-[#12261b] text-white text-[10px] font-semibold py-2 px-2.5 rounded-xl border border-[#1a3824] flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                            >
+                                <Sun size={13} className="text-[#71EB34] shrink-0" />
+                                <span>How It Works</span>
+                            </Link>
+                        </div>
+                        <div className="flex items-start gap-2.5 pt-2.5 mt-1 border-t border-white/5 text-left">
+                            <div className="w-7 h-7 rounded-full bg-[#122e1d] border border-[#1e4a28] flex items-center justify-center shrink-0">
+                                <HelpCircle size={13} className="text-[#71EB34]" />
+                            </div>
+                            <div className="flex flex-col items-start leading-tight">
+                                <span className="text-gray-400 text-[9px] leading-tight">Can't find what you're looking for?</span>
+                                <button
+                                    type="button"
+                                    onClick={() => handleSend("I want to ask a question")}
+                                    className="text-[#71EB34] hover:text-white text-[10px] font-bold flex items-center gap-1 transition-colors cursor-pointer mt-0.5"
+                                >
+                                    Ask a Question <ArrowRight size={10} />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -737,53 +764,67 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
 
         if (type === "billing_guide") {
             return (
-                <div className="flex flex-col gap-y-3.5 text-left w-full">
-                    <span className="text-[#71EB34] text-[10px] font-bold tracking-wider uppercase flex items-center gap-1.5 border-b border-white/5 pb-2">
-                        <CreditCard size={12} /> Billing or account
-                    </span>
-                    <p className="text-gray-300 text-[10px] leading-relaxed">
-                        Manage your subscription, invoices, payment methods, and account settings.
-                    </p>
-                    <div className="grid grid-cols-2 gap-2 mt-2">
-                        <Link
-                            href="/subscription"
-                            className="bg-white/5 hover:bg-white/10 text-white text-[10px] font-bold py-2 px-3 rounded-xl border border-white/5 flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                        >
-                            <FileText size={12} className="text-[#71EB34]" />
-                            View Invoices
-                        </Link>
-                        <Link
-                            href="/subscription"
-                            className="bg-white/5 hover:bg-white/10 text-white text-[10px] font-bold py-2 px-3 rounded-xl border border-white/5 flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                        >
-                            <CreditCard size={12} className="text-[#71EB34]" />
-                            Payment Methods
-                        </Link>
-                        <Link
-                            href="/subscription"
-                            className="bg-white/5 hover:bg-white/10 text-white text-[10px] font-bold py-2 px-3 rounded-xl border border-white/5 flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                        >
-                            <RefreshCw size={12} className="text-[#71EB34]" />
-                            Manage Sub.
-                        </Link>
-                        <Link
-                            href="/login"
-                            className="bg-white/5 hover:bg-white/10 text-white text-[10px] font-bold py-2 px-3 rounded-xl border border-white/5 flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                        >
-                            <Settings size={12} className="text-[#71EB34]" />
-                            Account Settings
-                        </Link>
+                <div className="flex flex-col gap-y-2.5 text-left w-full">
+                    <div className="flex items-center justify-between gap-2.5 pb-1">
+                        <div className="w-7 h-7 rounded-lg bg-[#122e1d] border border-[#1e4a28] flex items-center justify-center shrink-0">
+                            <CreditCard size={13} className="text-[#71EB34]" />
+                        </div>
+                        <span className="text-white text-[11px] font-semibold flex-1 leading-snug">
+                            Billing or account
+                        </span>
+                        <ChevronUp size={14} className="text-[#71EB34] shrink-0" />
                     </div>
-                    <div className="flex items-start gap-3 p-3 bg-white/[0.02] border border-white/5 rounded-xl mt-3 text-left">
-                        <Mail size={14} className="text-gray-400 shrink-0 mt-0.5" />
-                        <div className="flex flex-col items-start leading-tight">
-                            <span className="text-gray-400 text-[9px]">Still need help? Our billing team is ready.</span>
-                            <button
-                                onClick={() => handleSend("I need billing support")}
-                                className="text-[#71EB34] hover:text-white text-[10px] font-bold flex items-center gap-1.5 transition-colors cursor-pointer mt-1"
+                    <div className="bg-[#040e07] border border-[#14321c] rounded-xl p-3 flex flex-col gap-y-2.5 w-full text-left">
+                        <p className="text-gray-300 text-[10px] leading-relaxed">
+                            Manage your subscription, invoices, payment methods, and account settings.
+                        </p>
+                        <div className="grid grid-cols-2 gap-2 mt-1">
+                            <Link
+                                href="/subscription"
+                                className="bg-[#0c1a12] hover:bg-[#12261b] text-white text-[10px] font-semibold py-2 px-2.5 rounded-xl border border-[#1a3824] flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                             >
-                                Contact Billing Support <ArrowRight size={10} />
-                            </button>
+                                <FileText size={13} className="text-[#71EB34] shrink-0" />
+                                <span>View Invoices</span>
+                            </Link>
+                            <Link
+                                href="/subscription"
+                                className="bg-[#0c1a12] hover:bg-[#12261b] text-white text-[10px] font-semibold py-2 px-2.5 rounded-xl border border-[#1a3824] flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                            >
+                                <CreditCard size={13} className="text-[#71EB34] shrink-0" />
+                                <span>Payment Methods</span>
+                            </Link>
+                            <Link
+                                href="/subscription"
+                                className="bg-[#0c1a12] hover:bg-[#12261b] text-white text-[10px] font-semibold py-1.5 px-2.5 rounded-xl border border-[#1a3824] flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                            >
+                                <RefreshCw size={13} className="text-[#71EB34] shrink-0" />
+                                <div className="flex flex-col text-left leading-tight">
+                                    <span>Manage</span>
+                                    <span>Subscription</span>
+                                </div>
+                            </Link>
+                            <Link
+                                href="/login"
+                                className="bg-[#0c1a12] hover:bg-[#12261b] text-white text-[10px] font-semibold py-2 px-2.5 rounded-xl border border-[#1a3824] flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                            >
+                                <User size={13} className="text-[#71EB34] shrink-0" />
+                                <span>Account Settings</span>
+                            </Link>
+                        </div>
+                        <div className="flex items-start gap-2.5 pt-2.5 mt-1 border-t border-white/5 text-left">
+                            <div className="w-7 h-7 rounded-full bg-[#122e1d] border border-[#1e4a28] flex items-center justify-center shrink-0">
+                                <Mail size={13} className="text-[#71EB34]" />
+                            </div>
+                            <div className="flex flex-col items-start leading-tight">
+                                <span className="text-gray-400 text-[9px] leading-tight">Still need help? Our billing team is ready to assist.</span>
+                                <button
+                                    type="button"
+                                    onClick={() => handleSend("I need billing support")}
+                                    className="text-[#71EB34] hover:text-white text-[10px] font-bold flex items-center gap-1 transition-colors cursor-pointer mt-0.5"
+                                >
+                                    Contact Billing Support <ArrowRight size={10} />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -792,9 +833,30 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
 
         if (type === "other_help") {
             return (
-                <span className="text-white text-[11px] leading-relaxed">
-                    What do you need help with?
-                </span>
+                <div className="flex flex-col gap-y-2.5 text-left w-full">
+                    <div className="flex items-center justify-between gap-2.5 pb-1">
+                        <div className="w-7 h-7 rounded-lg bg-[#122e1d] border border-[#1e4a28] flex items-center justify-center shrink-0">
+                            <MoreHorizontal size={13} className="text-[#71EB34]" />
+                        </div>
+                        <span className="text-white text-[11px] font-semibold flex-1 leading-snug">
+                            Other
+                        </span>
+                        <ChevronUp size={14} className="text-[#71EB34] shrink-0" />
+                    </div>
+                    <div className="bg-[#040e07] border border-[#14321c] rounded-xl p-3 flex flex-col gap-y-3 w-full text-left">
+                        <p className="text-gray-300 text-[10px] leading-relaxed">
+                            If your question doesn't fit into any of the categories, we're happy to help.
+                        </p>
+                        <button
+                            type="button"
+                            onClick={() => handleSend("I need to speak to support")}
+                            className="w-full bg-[#0c1a12] hover:bg-[#12261b] border border-[#1a3824] rounded-xl py-2 px-3 flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                        >
+                            <MessageSquare size={13} className="text-[#71EB34]" />
+                            <span className="text-[#71EB34] text-[10px] font-bold">Contact Support Team</span>
+                        </button>
+                    </div>
+                </div>
             );
         }
 
@@ -849,7 +911,9 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
                                 <div className={`rounded-2xl text-[11px] leading-relaxed text-left ${msg.sender === "user"
                                     ? "bg-[#8ee51d] text-black font-bold rounded-tr-none w-fit self-end px-4 py-2.5 text-xs shadow-sm whitespace-pre-wrap break-words"
                                     : msg.customType
-                                        ? "p-4 bg-[#282828] text-white rounded-2xl border border-white/5 w-full shadow-md"
+                                        ? ["trouble", "product_guide", "billing_guide", "other_help"].includes(msg.customType)
+                                            ? "p-3 bg-[#0a160f] text-white rounded-2xl border border-[#14321c] w-full shadow-md"
+                                            : "p-4 bg-[#282828] text-white rounded-2xl border border-white/5 w-full shadow-md"
                                         : "p-3.5 sm:p-4 bg-white/10 text-white rounded-tl-none border border-white/5 w-full"
                                     }`}>
                                     {msg.customType ? (

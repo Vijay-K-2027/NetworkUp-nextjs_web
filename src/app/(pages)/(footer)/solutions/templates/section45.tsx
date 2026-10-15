@@ -60,7 +60,7 @@ export default function Section45Template(props: Section45TemplateProps) {
         heading = defaultSection45Props.heading,
         cards = defaultSection45Props.cards,
         containerClass = "max-w-7xl mx-auto",
-        sectionClass = "w-full bg-[#062300] py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden border border-[#e5e7eb]",
+        sectionClass = "w-full bg-[#062300] py-8 sm:py-10 lg:py-14 px-4 sm:px-6 lg:px-8 overflow-hidden border border-[#e5e7eb]",
     } = props;
 
     return (

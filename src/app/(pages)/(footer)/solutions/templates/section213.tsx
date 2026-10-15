@@ -57,7 +57,7 @@ export default function Section213Template(props: Section213TemplateProps) {
         heading = defaultSection213Props.heading,
         cards = defaultSection213Props.cards,
         containerClass = "max-w-7xl mx-auto",
-        sectionClass = "w-full bg-[#0a1a0a] py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden",
+        sectionClass = "w-full bg-[#0a1a0a] py-8 sm:py-10 lg:py-14 px-4 sm:px-6 lg:px-8 overflow-hidden",
     } = props;
 
     return (
