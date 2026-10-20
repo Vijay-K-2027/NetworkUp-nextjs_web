@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-features.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp Platform Features"
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "All Features | LinkedIn Lead Generation & Outreach Automation | NetworkUp.io",
         description: "Explore NetworkUp's complete suite of LinkedIn automation features. Discover high-intent leads, build multi-step campaigns, manage conversations in a unified inbox, and track real-time analytics.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {
         index: true,

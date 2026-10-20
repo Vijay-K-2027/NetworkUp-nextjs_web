@@ -7,8 +7,10 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: [
           'GPTBot',
           'ChatGPT-User',
+          'OAI-SearchBot',
           'PerplexityBot',
           'ClaudeBot',
+          'Claude-Web',
           'anthropic-ai',
           'Google-Extended',
           'GoogleOther',
@@ -21,7 +23,7 @@ export default function robots(): MetadataRoute.Robots {
           'FacebookBot',
           'Diffbot',
         ],
-        allow: ['/', '/llms.txt', '/feed.xml'],
+        allow: ['/', '/llms.txt', '/llms-full.txt', '/feed.xml'],
         disallow: ['/login', '/api/'],
       },
       {

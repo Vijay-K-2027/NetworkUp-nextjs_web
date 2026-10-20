@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-about.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp vs Heyreach Comparison"
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "NetworkUp vs Heyreach | LinkedIn Multi-Account Outreach Comparison",
         description: "Compare NetworkUp vs Heyreach for agency scale LinkedIn outreach.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {
         index: true,

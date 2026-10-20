@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-about.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp Competitor Comparison Matrix"
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "NetworkUp vs All Competitors | Complete LinkedIn Outreach Comparison",
         description: "Compare NetworkUp against Sendpilot, Waalaxy, Dripify, Expandi, Reachy, Heyreach, Apollo, Lemlist, and Sales Navigator.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {
         index: true,

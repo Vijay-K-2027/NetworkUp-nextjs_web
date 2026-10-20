@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         type: "article",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-about.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp FAQs"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Frequently Asked Questions | NetworkUp",
         description: "Answers to common questions about NetworkUp, campaigns, and account setup.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {
         index: true,

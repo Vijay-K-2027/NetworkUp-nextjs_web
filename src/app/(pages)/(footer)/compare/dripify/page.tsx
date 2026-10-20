@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-about.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp vs Dripify Comparison"
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "NetworkUp vs Dripify | Smart LinkedIn Automation Comparison",
         description: "Compare NetworkUp vs Dripify for LinkedIn prospecting and automated outreach.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {
         index: true,

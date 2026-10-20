@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-solutions.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp for Agencies"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         title: "NetworkUp for Agencies | Multi-Client LinkedIn Lead Generation",
         description:
             "Help your agency manage client campaigns, coordinate outreach, personalize messages with AI, and track performance from one connected workspace.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-solutions.jpg"]
     },
     robots: {
         index: true,

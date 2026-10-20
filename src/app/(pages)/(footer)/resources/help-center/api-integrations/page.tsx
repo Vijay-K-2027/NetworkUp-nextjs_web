@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         type: "article",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-about.jpg",
                 width: 1200,
                 height: 630,
                 alt: "API & Integrations Support"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "API & Integrations Support | NetworkUp",
         description: "Connect NetworkUp to your tech stack using webhooks and REST endpoints.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {
         index: true,

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-solutions.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp for Sales Teams"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         title: "NetworkUp for Sales Teams | LinkedIn Outreach & Pipeline Platform",
         description:
             "Empower SDRs, AEs, and sales leaders to discover qualified prospects, personalize outreach with AI, manage multi-rep accounts, and accelerate sales pipeline.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-solutions.jpg"]
     },
     robots: {
         index: true,

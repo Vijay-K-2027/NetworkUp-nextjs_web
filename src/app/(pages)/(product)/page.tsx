@@ -16,18 +16,18 @@ export const metadata: Metadata = {
     description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
     keywords: ["linkedin outreach automation", "smart prospecting tool", "linkedin campaign builder", "unified inbox linkedin", "residential static proxy safety", "human-in-the-loop validation", "sales intelligence platform", "recruiter sourcing tool", "linkedin compliance safety limits"],
     alternates: {
-        canonical: "https://www.networkup.io"
+        canonical: "https://networkup.io"
     },
     openGraph: {
         title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
         description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
-        url: "https://www.networkup.io",
+        url: "https://networkup.io",
         siteName: "NetworkUp",
         locale: "en_US",
         type: "website",
         images: [
             {
-                url: "https://www.networkup.io/seo/og-home.jpg",
+                url: "https://networkup.io/seo/og-home.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp AI Platform"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
         description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
-        images: ["https://www.networkup.io/seo/og-home.jpg"]
+        images: ["https://networkup.io/seo/og-home.jpg"]
     },
     robots: {
         index: true,

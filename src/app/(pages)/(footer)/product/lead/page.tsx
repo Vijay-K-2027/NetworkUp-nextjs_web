@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-features.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp AI Lead Finder"
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Lead Finder | AI-Powered B2B Prospect Discovery | NetworkUp.io",
         description: "Discover high-intent decision-makers and build verified prospect lists with NetworkUp's AI Lead Finder. Filter by seniority, industry, tech stack, and intent signals before launching outreach.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {
         index: true,

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         type: "article",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-about.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Getting Started Guide"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Getting Started Guide | NetworkUp",
         description: "Quick start guide to setting up your workspace and outreach campaigns.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {
         index: true,
@@ -55,7 +55,7 @@ const gettingStartedItems: DocItem[] = [
     },
     {
         question: "How do I create my first campaign?",
-        answer: "Go to Campaigns →< Create Campaign, select your target leads, configure your outreach sequence, personalize your message, and launch the campaign.",
+        answer: "Go to Campaigns → Create Campaign, select your target leads, configure your outreach sequence, personalize your message, and launch the campaign.",
     },
     {
         question: "Do I need technical knowledge to use NetworkUp?",

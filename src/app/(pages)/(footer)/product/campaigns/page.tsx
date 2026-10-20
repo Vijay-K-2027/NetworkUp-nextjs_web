@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-features.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp Multi-Step Campaign Builder"
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Campaigns | Multi-Step LinkedIn Outreach Builder | NetworkUp.io",
         description: "Build high-converting LinkedIn outreach campaigns that work while you sleep. Design branching sequences, set smart delays, A/B test copy, and scale outbound safely.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {
         index: true,

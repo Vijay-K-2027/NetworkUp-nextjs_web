@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-features.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp Convobox Unified Inbox"
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Convobox | Unified LinkedIn Inbox & Conversation Management | NetworkUp.io",
         description: "Streamline your sales conversations with Convobox. A unified multi-account LinkedIn inbox with AI intent classification, message tagging, and team collaboration.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {
         index: true,

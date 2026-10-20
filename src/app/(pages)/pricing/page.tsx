@@ -10,18 +10,18 @@ export const metadata: Metadata = {
     description: "Compare NetworkUp.io pricing packages and find the perfect plan to scale your LinkedIn outreach. We offer clear, transparent pricing tiers (Starter, Growth, and Enterprise) designed for individuals, sales teams, agencies, and recruiting companies. Read our detailed feature comparison to see how NetworkUp compares to traditional outreach tools in cost-efficiency, safety proxy routing, daily connection capacities, and overall lead generation ROI. Review our pricing comparison chart to evaluate tool features across all pricing plans, and check our comprehensive documentation FAQ to resolve questions about subscriptions, billing cycles, team add-ons, and refund policies. Start driving pipeline growth safely and compare the value of our compliant automation features today.",
     keywords: ["networkup pricing", "linkedin tool cost", "saas pricing sales", "recruiting software pricing", "b2b outreach subscription", "linkedin outreach pricing compare", "networkup vs outreach tools", "sales engagement cost comparison", "starter vs growth pricing plan"],
     alternates: {
-        canonical: "https://www.networkup.io/pricing"
+        canonical: "https://networkup.io/pricing"
     },
     openGraph: {
         title: "Pricing Plans & Packages | NetworkUp.io",
         description: "Compare NetworkUp.io pricing packages and find the perfect plan to scale your LinkedIn outreach. We offer clear, transparent pricing tiers (Starter, Growth, and Enterprise) designed for individuals, sales teams, agencies, and recruiting companies. Read our detailed feature comparison to see how NetworkUp compares to traditional outreach tools in cost-efficiency, safety proxy routing, daily connection capacities, and overall lead generation ROI. Review our pricing comparison chart to evaluate tool features across all pricing plans, and check our comprehensive documentation FAQ to resolve questions about subscriptions, billing cycles, team add-ons, and refund policies. Start driving pipeline growth safely and compare the value of our compliant automation features today.",
-        url: "https://www.networkup.io/pricing",
+        url: "https://networkup.io/pricing",
         siteName: "NetworkUp",
         locale: "en_US",
         type: "website",
         images: [
             {
-                url: "https://www.networkup.io/seo/og-pricing.jpg",
+                url: "https://networkup.io/seo/og-pricing.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp Pricing Plans"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Pricing Plans & Packages | NetworkUp.io",
         description: "Compare NetworkUp.io pricing packages and find the perfect plan to scale your LinkedIn outreach. We offer clear, transparent pricing tiers (Starter, Growth, and Enterprise) designed for individuals, sales teams, agencies, and recruiting companies. Read our detailed feature comparison to see how NetworkUp compares to traditional outreach tools in cost-efficiency, safety proxy routing, daily connection capacities, and overall lead generation ROI. Review our pricing comparison chart to evaluate tool features across all pricing plans, and check our comprehensive documentation FAQ to resolve questions about subscriptions, billing cycles, team add-ons, and refund policies. Start driving pipeline growth safely and compare the value of our compliant automation features today.",
-        images: ["https://www.networkup.io/seo/og-pricing.jpg"]
+        images: ["https://networkup.io/seo/og-pricing.jpg"]
     },
     robots: {
         index: true,
@@ -44,17 +44,44 @@ export const metadata: Metadata = {
 export default function PricingSection() {
     const productSchema = {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "NetworkUp Subscription Plans",
-        "image": "https://www.networkup.io/seo/og-pricing.jpg",
-        "description": "Choose from NetworkUp's flexible LinkedIn outreach automation subscription packages starting at $21/mo. Compare plans including Starter, Growth, and Enterprise.",
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "USD",
-            "lowPrice": "21.00",
-            "highPrice": "129.00",
-            "offerCount": "3"
-        }
+        "@type": ["SoftwareApplication", "Product"],
+        "name": "NetworkUp.io LinkedIn Outreach Software",
+        "image": "https://networkup.io/seo/og-pricing.jpg",
+        "description": "Enterprise-grade cloud LinkedIn outreach automation and B2B lead generation platform. Choose from Starter ($21/mo), Growth ($59/mo), and Enterprise ($129/mo) plans.",
+        "applicationCategory": "BusinessApplication, SalesEngagementSoftware",
+        "operatingSystem": "Cloud, Web-Based",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Starter Plan",
+                "price": "21.00",
+                "priceCurrency": "USD",
+                "priceValidUntil": "2027-12-31",
+                "availability": "https://schema.org/InStock",
+                "url": "https://networkup.io/pricing",
+                "description": "For solo founders and individuals starting outreach. 1 account, AI outreach writer, unified inbox."
+            },
+            {
+                "@type": "Offer",
+                "name": "Growth Plan",
+                "price": "59.00",
+                "priceCurrency": "USD",
+                "priceValidUntil": "2027-12-31",
+                "availability": "https://schema.org/InStock",
+                "url": "https://networkup.io/pricing",
+                "description": "For growing sales teams. 3 accounts, unlimited campaigns, AI health monitoring, CRM sync."
+            },
+            {
+                "@type": "Offer",
+                "name": "Enterprise Plan",
+                "price": "129.00",
+                "priceCurrency": "USD",
+                "priceValidUntil": "2027-12-31",
+                "availability": "https://schema.org/InStock",
+                "url": "https://networkup.io/pricing",
+                "description": "For agencies and large sales organizations. Unlimited accounts, custom AI workflows, SSO, dedicated success manager."
+            }
+        ]
     };
 
     const faqSchema = {

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-subscription.png",
+                url: "https://networkup.io/seo/og-pricing.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Checkout NetworkUp Plans"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Choose Your Subscription Plan | NetworkUp.io",
         description: "Start your free trial or subscribe to a Growth or Enterprise plan to unlock advanced AI-powered LinkedIn outreach tools.",
-        images: ["https://networkup.io/og-subscription.png"]
+        images: ["https://networkup.io/seo/og-pricing.jpg"]
     },
     robots: {
         index: true,

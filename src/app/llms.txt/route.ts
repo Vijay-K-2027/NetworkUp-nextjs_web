@@ -4,6 +4,8 @@ export async function GET() {
   const markdownSummary = `# NetworkUp.io - AI-Powered LinkedIn Growth & Outreach Automation Platform
 
 > NetworkUp is an enterprise-grade, cloud-native LinkedIn automation and B2B lead generation platform. It empowers sales teams, agencies, recruiters, founders, and marketers to discover high-intent prospects, build personalized multi-step outreach sequences, and manage multi-account conversations in a unified smart inbox—all with dedicated residential proxy pinning and 100% cloud safety.
+>
+> Full In-Depth Documentation: https://networkup.io/llms-full.txt
 
 ## 1. Executive Summary & Value Proposition
 - **Cloud-Native Architecture**: Operates 100% in the cloud without browser extensions, ensuring zero local downtime, dedicated residential proxy pinning, and enterprise-grade account safety.
@@ -147,6 +149,7 @@ All plans include a free trial with full feature access. Billed monthly or annua
 - **Blog & Playbooks**: https://networkup.io/resources/blog
 - **Product Guides & Manual**: https://networkup.io/resources/guides
 - **Help Center & FAQs**: https://networkup.io/resources/help-center
+- **Full LLM Reference (Single-File)**: https://networkup.io/llms-full.txt
 - **API Documentation**: https://networkup.io/resources/api-documentation
 - **Contact Us**: https://networkup.io/company/contact-us
 - **Privacy Policy**: https://networkup.io/company/privacy-policy
@@ -155,7 +158,7 @@ All plans include a free trial with full feature access. Billed monthly or annua
 
   return new NextResponse(markdownSummary, {
     headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
+      'Content-Type': 'text/markdown; charset=utf-8',
       'Cache-Control': 'public, max-age=86400',
     },
   });

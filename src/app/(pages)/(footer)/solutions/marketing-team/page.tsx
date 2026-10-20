@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-solutions.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp for Marketing Teams"
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         title: "NetworkUp for Marketing Teams | LinkedIn ABM & Demand Generation",
         description:
             "Help marketing teams discover in-market prospects, personalize LinkedIn outreach, coordinate account-based campaigns, and turn engagement into measurable pipeline.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-solutions.jpg"]
     },
     robots: {
         index: true,

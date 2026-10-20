@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-solutions.jpg",
                 width: 1200,
                 height: 630,
                 alt: "NetworkUp for Startups"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         title: "NetworkUp for Startups | Founder-Led LinkedIn Outbound & Pipeline",
         description:
             "Help founders and lean GTM teams discover the right prospects, personalize outreach with AI, automate follow-ups, and build a repeatable B2B pipeline without adding unnecessary manual work.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-solutions.jpg"]
     },
     robots: {
         index: true,

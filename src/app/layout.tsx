@@ -81,8 +81,10 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://networkup.io"),
   alternates: {
+    canonical: "./",
     types: {
       "application/rss+xml": "https://networkup.io/feed.xml",
+      "text/markdown": "https://networkup.io/llms.txt",
     },
   },
   openGraph: {
@@ -92,12 +94,21 @@ export const metadata: Metadata = {
     title: "NetworkUp.io - AI-Powered LinkedIn Growth & Outreach Automation",
     description: "Automate your LinkedIn outreach and grow your professional network with precision. Find high-intent leads, optimize campaigns with AI, and manage conversations in a unified inbox.",
     siteName: "NetworkUp.io",
+    images: [
+      {
+        url: "https://networkup.io/seo/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NetworkUp.io - AI-Powered LinkedIn Growth & Outreach Automation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "NetworkUp.io - AI-Powered LinkedIn Growth & Outreach Automation",
     description: "Automate your LinkedIn outreach and grow your professional network with precision. Find high-intent leads, optimize campaigns with AI, and manage conversations in a unified inbox.",
     creator: "@networkup",
+    images: ["https://networkup.io/seo/og-home.jpg"],
   }
 };
 

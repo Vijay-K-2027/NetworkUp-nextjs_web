@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         type: "article",
         images: [
             {
-                url: "https://networkup.io/og-about.png",
+                url: "https://networkup.io/seo/og-about.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Lead Management Guide"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Lead Management Guide | NetworkUp",
         description: "Organize contacts, segment audiences, and track lead lifecycle events.",
-        images: ["https://networkup.io/og-about.png"]
+        images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {
         index: true,
