@@ -9,7 +9,7 @@ export default function Hero() {
                 {/* Badge */}
                 <div className="w-350 mb-8 rounded-full border border-[#71e300]/20 bg-[#71e300]/10 px-6 py-2 text-sm font-medium text-[#041c11]">
                     <span className="mr-2 text-[#71e300]">●</span>
-                    #1 LinkedIn Outreach Automation & AI Growth Platform
+                    AI-Powered Linkedin Growth Platform
                 </div>
 
                 {/* Heading */}
