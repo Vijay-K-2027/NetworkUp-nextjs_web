@@ -57,7 +57,7 @@ export default function Section3() {
                         transition={{ duration: 0.5 }}
                         className="text-left w-full gap-y-3 flex flex-col"
                     >
-                        <h1 className="uppercase text-md text-[#5a9300]/70 font-bold leading-wider tracking-wide">What Drives Us ———</h1>
+                        <h2 className="uppercase text-md text-[#5a9300]/70 font-bold leading-wider tracking-wide">What Drives Us ———</h2>
                         <p className="text-black text-3xl sm:text-4xl lg:text-5xl font-bold max-w-lg">Our values shape everything we do</p>
                     </motion.div>
 

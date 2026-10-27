@@ -11,9 +11,21 @@ import Section6 from "./components/Section6";
 
 
 export const metadata: Metadata = {
-    title: "Lead Finder | AI-Powered B2B Prospect Discovery | NetworkUp.io",
+    title: "Lead Finder | AI-Powered B2B Prospect Discovery",
     description: "Discover high-intent decision-makers and build verified prospect lists with NetworkUp's AI Lead Finder. Filter by seniority, industry, tech stack, and intent signals before launching outreach.",
-    keywords: ["linkedin lead finder", "b2b prospect discovery", "lead enrichment", "icp lead scoring", "sales prospecting tool", "networkup lead finder"],
+    keywords: [
+        "linkedin outreach automation",
+        "linkedin lead finder",
+        "b2b prospect discovery",
+        "linkedin lead generation",
+        "lead enrichment",
+        "icp lead scoring",
+        "sales prospecting tool",
+        "find decision makers linkedin",
+        "b2b contact discovery",
+        "verified b2b leads",
+        "networkup lead finder"
+    ],
     alternates: {
         canonical: "https://networkup.io/product/lead"
     },

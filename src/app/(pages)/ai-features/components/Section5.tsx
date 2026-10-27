@@ -49,12 +49,12 @@ export default function Section5() {
 
                         <div className="flex flex-row items-center gap-x-4 w-full">
                             <div className="flex flex-col items-start justify-center rounded-xl border border-[#316b00]/10 gap-y-1 py-4 px-3 w-full max-w-[48%] bg-[#316b00]/5 shrink-0">
-                                <h1 className="text-3xl sm:text-4xl font-bold text-left">18%</h1>
-                                <h2 className="text-[10px] sm:text-xs font-bold uppercase text-[#316b00] text-left">Acceptance Rate ▲</h2>
+                                <span className="text-3xl sm:text-4xl font-bold text-left">18%</span>
+                                <span className="text-[10px] sm:text-xs font-bold uppercase text-[#316b00] text-left">Acceptance Rate ▲</span>
                             </div>
                             <div className="flex flex-col items-start justify-center rounded-xl border border-[#4e644a]/10 gap-y-1 py-4 px-3 w-full max-w-[48%] bg-[#4e644a]/5 shrink-0">
-                                <h1 className="text-3xl sm:text-4xl font-bold text-left">42%</h1>
-                                <h2 className="text-[10px] sm:text-xs font-bold uppercase text-[#4e644a] text-left">Reply Rate</h2>
+                                <span className="text-3xl sm:text-4xl font-bold text-left">42%</span>
+                                <span className="text-[10px] sm:text-xs font-bold uppercase text-[#4e644a] text-left">Reply Rate</span>
                             </div>
                         </div>
 

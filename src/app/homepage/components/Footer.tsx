@@ -185,6 +185,8 @@ export default function Footer() {
                                 <a
                                     key={index}
                                     href={model.href}
+                                    title={`NetworkUp on ${model.name}`}
+                                    aria-label={`NetworkUp on ${model.name}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex h-9 w-9 items-center justify-center rounded-xl border border-black bg-white hover:opacity-90 hover:-translate-y-1 shadow-sm transition-all"
@@ -204,7 +206,7 @@ export default function Footer() {
                             <ul className="space-y-3.5 text-sm font-medium text-[#060c00]">
                                 {productLinks.map((item) => (
                                     <li key={item.name}>
-                                        <Link href={item.href} className="hover:text-green-600 transition-colors">
+                                        <Link href={item.href} title={item.name} className="hover:text-green-600 transition-colors">
                                             {item.name}
                                         </Link>
                                     </li>
@@ -220,7 +222,7 @@ export default function Footer() {
                             <ul className="space-y-3.5 text-sm font-medium text-[#060c00]">
                                 {solutionsLinks.map((item) => (
                                     <li key={item.name}>
-                                        <Link href={item.href} className="hover:text-green-600 transition-colors">
+                                        <Link href={item.href} title={item.name} className="hover:text-green-600 transition-colors">
                                             {item.name}
                                         </Link>
                                     </li>
@@ -236,7 +238,7 @@ export default function Footer() {
                             <ul className="space-y-3.5 text-sm font-medium text-[#060c00]">
                                 {resourcesLinks.map((item) => (
                                     <li key={item.name}>
-                                        <Link href={item.href} className="hover:text-green-600 transition-colors">
+                                        <Link href={item.href} title={item.name} className="hover:text-green-600 transition-colors">
                                             {item.name}
                                         </Link>
                                     </li>
@@ -252,13 +254,13 @@ export default function Footer() {
                             <ul className="space-y-3.5 text-[15px] font-medium text-[#060c00] break-words">
                                 {compareLinks.map((item) => (
                                     <li key={item.name}>
-                                        <Link href={item.href} className="hover:text-green-600 transition-colors block">
+                                        <Link href={item.href} title={`NetworkUp.io vs ${item.name}`} className="hover:text-green-600 transition-colors block">
                                             NetworkUp.io vs {item.name}
                                         </Link>
                                     </li>
                                 ))}
                             </ul>
-                            <Link href="/compare/compare-all" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#4C5246] hover:text-[#356221] mt-5 transition-colors">
+                            <Link href="/compare/compare-all" title="Compare NetworkUp vs All Alternatives" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#4C5246] hover:text-[#356221] mt-5 transition-colors">
                                 <span>NetworkUp vs All</span>
                                 <ArrowRightIcon size={14} />
                             </Link>
@@ -274,7 +276,7 @@ export default function Footer() {
                             <ul className="space-y-3.5 text-sm font-medium text-[#060c00]">
                                 {companyLinks.map((item) => (
                                     <li key={item.name}>
-                                        <Link href={item.href} className="hover:text-green-600 transition-colors">
+                                        <Link href={item.href} title={item.name} className="hover:text-green-600 transition-colors">
                                             {item.name}
                                         </Link>
                                     </li>

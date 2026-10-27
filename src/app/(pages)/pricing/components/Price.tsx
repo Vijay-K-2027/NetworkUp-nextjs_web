@@ -125,9 +125,9 @@ export default function Price() {
 
                 {/* Header */}
                 <div className="flex flex-col items-center text-center mb-20">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight mb-4">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight mb-4">
                         Architected for high-growth teams
-                    </h2>
+                    </h1>
                     <p className="text-[#253a00] text-sm sm:text-base w-[300px] sm:w-[550px] leading-relaxed">
                         Choose the tier that matches your scale. Precision-engineered for high-performance LinkedIn networking.
                     </p>

@@ -133,20 +133,20 @@ export default function Section8() {
                         </div>
 
                         <div className="flex flex-col items-start justify-center gap-y-3 rounded-b-[24px] sm:rounded-b-[36px] w-full bg-[#fafcf5]/40 px-8 pb-6 text-left">
-                            <h1 className="uppercase text-[#434840] w-full text-left text-xs font-bold tracking-wider">AI Risk Detection</h1>
+                            <span className="uppercase text-[#434840] w-full text-left text-xs font-bold tracking-wider">AI Risk Detection</span>
                             <div className="p-2.5 flex flex-row gap-x-2 bg-[#fff8e1] border border-[#ffe0b2] items-center rounded-xl w-full">
                                 <AlertTriangle size={32} className="fill-[#ffb020] stroke-white shrink-0" />
-                                <span className="font-semibold text-xs sm:text-sm text-[#f57c00] text-left">
-                                    <h1>Connection limit nearing</h1>
-                                    <h2 className="text-[#f57c00] text-xs mt-0.5">Campaign "Q3 Enterprise" is at 85% of safe limit.</h2>
-                                </span>
+                                <div className="text-left">
+                                    <p className="font-semibold text-xs sm:text-sm text-[#f57c00]">Connection limit nearing</p>
+                                    <p className="text-[#f57c00] text-xs mt-0.5">Campaign "Q3 Enterprise" is at 85% of safe limit.</p>
+                                </div>
                             </div>
                             <div className="p-2.5 flex flex-row gap-x-2 bg-[#ffdad6]/40 border border-[#ba1a1a]/20 items-center rounded-xl w-full">
                                 <AlertCircle size={32} className="fill-[#ba1a1a] stroke-white shrink-0" />
-                                <span className="font-semibold text-xs sm:text-sm text-[#ba1a1a] text-left">
-                                    <h1>Low reply rate in Segment A</h1>
-                                    <h2 className="text-[#93000a] text-xs mt-0.5">Messaging variant A is underperforming baseline by 40%.</h2>
-                                </span>
+                                <div className="text-left">
+                                    <p className="font-semibold text-xs sm:text-sm text-[#ba1a1a]">Low reply rate in Segment A</p>
+                                    <p className="text-[#93000a] text-xs mt-0.5">Messaging variant A is underperforming baseline by 40%.</p>
+                                </div>
                             </div>
                         </div>
                     </motion.div>

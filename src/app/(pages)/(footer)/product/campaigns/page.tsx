@@ -8,9 +8,20 @@ import Section3 from "./components/Section3";
 import Section4 from "./components/Section4";
 
 export const metadata: Metadata = {
-    title: "Campaigns | Multi-Step LinkedIn Outreach Builder | NetworkUp.io",
+    title: "Campaigns | Multi-Step LinkedIn Outreach Builder",
     description: "Build high-converting LinkedIn outreach campaigns that work while you sleep. Design branching sequences, set smart delays, A/B test copy, and scale outbound safely.",
-    keywords: ["networkup campaigns", "linkedin campaigns", "automated outreach engine", "drip campaigns linkedin", "connection request sequences", "b2b campaign builder"],
+    keywords: [
+        "linkedin outreach automation",
+        "linkedin campaign builder",
+        "linkedin drip campaigns",
+        "automated outreach engine",
+        "connection request sequences",
+        "b2b campaign builder",
+        "multi-step linkedin sequences",
+        "automated linkedin messaging",
+        "smart delay outreach",
+        "networkup campaigns"
+    ],
     alternates: {
         canonical: "https://networkup.io/product/campaigns"
     },

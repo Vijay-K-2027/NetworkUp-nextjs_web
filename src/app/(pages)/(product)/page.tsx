@@ -12,17 +12,48 @@ import Contact from "./components/Contact";
 import Document from "./components/Documentation";
 
 export const metadata: Metadata = {
-    title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
+    title: {
+        absolute: "LinkedIn Outreach Automation Tool & AI Lead Gen | NetworkUp.io"
+    },
     description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
-    keywords: ["linkedin outreach automation", "smart prospecting tool", "linkedin campaign builder", "unified inbox linkedin", "residential static proxy safety", "human-in-the-loop validation", "sales intelligence platform", "recruiter sourcing tool", "linkedin compliance safety limits"],
+    keywords: [
+        "linkedin outreach automation",
+        "linkedin outreach automation tool",
+        "linkedin automation",
+        "linkedin automation software",
+        "automated linkedin outreach",
+        "linkedin lead generation tool",
+        "linkedin outreach platform",
+        "b2b linkedin outreach",
+        "cloud linkedin automation",
+        "safe linkedin automation",
+        "smart prospecting tool",
+        "linkedin campaign builder",
+        "unified inbox linkedin",
+        "residential static proxy safety",
+        "human-in-the-loop validation",
+        "sales intelligence platform",
+        "recruiter sourcing tool",
+        "linkedin compliance safety limits",
+        "automated linkedin connection requests",
+        "linkedin drip campaigns",
+        "ai linkedin message writer",
+        "waalaxy alternative",
+        "expandi alternative",
+        "heyreach alternative",
+        "dripify alternative",
+        "multi account linkedin outreach",
+        "networkup",
+        "networkup.io"
+    ],
     alternates: {
         canonical: "https://networkup.io"
     },
     openGraph: {
-        title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
+        title: "LinkedIn Outreach Automation Tool & AI Lead Gen | NetworkUp.io",
         description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
         url: "https://networkup.io",
-        siteName: "NetworkUp",
+        siteName: "NetworkUp.io",
         locale: "en_US",
         type: "website",
         images: [
@@ -30,13 +61,13 @@ export const metadata: Metadata = {
                 url: "https://networkup.io/seo/og-home.jpg",
                 width: 1200,
                 height: 630,
-                alt: "NetworkUp AI Platform"
+                alt: "NetworkUp - #1 LinkedIn Outreach Automation Platform"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp.io | AI-Powered LinkedIn Growth & Outreach Automation Platform",
+        title: "LinkedIn Outreach Automation Tool & AI Lead Gen | NetworkUp.io",
         description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
         images: ["https://networkup.io/seo/og-home.jpg"]
     },
@@ -51,8 +82,12 @@ export default function ProductPage() {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "NetworkUp",
-        "operatingSystem": "Windows, macOS, Linux",
-        "applicationCategory": "BusinessApplication",
+        "headline": "LinkedIn Outreach Automation & AI Lead Generation Software",
+        "operatingSystem": "All (Cloud-Based)",
+        "applicationCategory": "BusinessApplication, SalesEngagementSoftware",
+        "applicationSubCategory": "LinkedIn Outreach Automation, Lead Generation",
+        "description": "NetworkUp is a cloud-based LinkedIn outreach automation and B2B lead generation platform featuring automated drip campaigns, dedicated residential proxies, smart prospecting, and unified multi-account inbox management.",
+        "keywords": "LinkedIn outreach automation, LinkedIn automation tool, B2B lead generation, sales engagement software, cloud LinkedIn automation, multi-account LinkedIn inbox, Waalaxy alternative, Expandi alternative",
         "offers": {
             "@type": "Offer",
             "price": "21.00",
@@ -62,7 +97,15 @@ export default function ProductPage() {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "ratingCount": "10420"
-        }
+        },
+        "featureList": [
+            "AI-Powered Smart Prospecting",
+            "Branching LinkedIn Campaign Builder",
+            "Convobox Unified Multi-Account Inbox",
+            "Dedicated Static Residential Proxies",
+            "Human-in-the-Loop Safe Delay Sequences",
+            "AI Follow-up Personalization"
+        ]
     };
 
     return (

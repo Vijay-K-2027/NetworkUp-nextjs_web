@@ -12,7 +12,7 @@ import Part2 from "./components/Section4/Part2";
 import Part1 from "./components/Section4/Part1";
 
 export const metadata: Metadata = {
-    title: "Outreach Solutions for Sales, Recruiters & Agencies | NetworkUp.io",
+    title: "Outreach Solutions for Sales, Recruiters & Agencies",
     // description needs to explain more in detail (120 - 150 words)
     description: "Explore tailored LinkedIn outreach solutions at NetworkUp.io. Scale prospecting workflows designed specifically for Sales Teams to automate lead generation and sync key contacts with CRMs like Salesforce and HubSpot. Empower Recruitment Teams to build custom candidate sequences and track engagement to fill empty roles faster. Assist Lead Gen Agencies to manage multiple profiles, target specific industries, and export Event-Ready leads. Protect your LinkedIn account with our Safety and Compliance stack, enforcing strict connection limits (max 100 per week), action limits (max 50 per day), location-pinned static proxies, and human-like delay thresholds to safely grow your pipeline without bot detection flags.",
     keywords: ["linkedin outreach", "lead generation", "sales prospecting", "agency growth", "recruiter automation", "startup networking", "b2b outreach", "crm integration hubspot", "candidate sourcing pipelines", "safety limits proxies"],

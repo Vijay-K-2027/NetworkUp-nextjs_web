@@ -13,9 +13,23 @@ import Section8 from "./components/Section8";
 
 
 export const metadata: Metadata = {
-    title: "All Features | LinkedIn Lead Generation & Outreach Automation | NetworkUp.io",
+    title: "All Features | LinkedIn Lead Generation & Outreach Automation",
     description: "Explore NetworkUp's complete suite of LinkedIn automation features. Discover high-intent leads, build multi-step campaigns, manage conversations in a unified inbox, and track real-time analytics.",
-    keywords: ["linkedin automation features", "linkedin outreach tool", "b2b lead generation platform", "multi-step campaign builder", "unified linkedin inbox", "networkup features"],
+    keywords: [
+        "linkedin outreach automation",
+        "linkedin automation features",
+        "linkedin outreach tool",
+        "b2b lead generation platform",
+        "multi-step campaign builder",
+        "unified linkedin inbox",
+        "cloud linkedin automation",
+        "sales prospecting software",
+        "linkedin proxy automation",
+        "ai icebreaker generator",
+        "waalaxy alternative",
+        "expandi alternative",
+        "networkup features"
+    ],
     alternates: {
         canonical: "https://networkup.io/product/features"
     },

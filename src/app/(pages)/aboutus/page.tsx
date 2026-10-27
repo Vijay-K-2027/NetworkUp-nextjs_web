@@ -7,7 +7,7 @@ import Section5 from "./components/Section5";
 
 
 export const metadata: Metadata = {
-    title: "About Us | NetworkUp.io",
+    title: "About Us | Our Mission to Power LinkedIn Outreach",
     description: "Learn the mission behind NetworkUp.io by WhiterApps. Founded in 2019, WhiterApps has built productivity tools focused on workflow efficiency, introducing NetworkUp.io to redefine professional outreach through an uncompromising focus on account safety, privacy, and human-centric prospecting. Engineered with dedicated residential proxy pinning, intelligent rate-limit throttling, and localized browser execution, NetworkUp mirrors natural user behavior to protect profile integrity. Discover how our team prioritizes account security and reliable automation to help recruiters, sales teams, and agencies connect with decision-makers safely and efficiently.", keywords: ["networkup story", "about networkup", "linkedin automation team", "ai outreach mission", "professional networking history"],
     alternates: {
         canonical: "https://networkup.io/aboutus"
@@ -56,8 +56,8 @@ export default function OverviewPage() {
             <Section4 />
             <Section5 />
             <section className="w-full max-w-9xl bg-[#fafcf7] mx-auto mb-5 text-center">
-                <h1 className="text-lg tracking-wide text-[#183000]">NetworkUp.io is <span className="text-[#7fd000]">our flagship product,</span> built with the experience, technology, and values</h1>
-                <h2 className="text-lg tracking-wide text-[#183000]">we've gained while building products that customers love.</h2>
+                <p className="text-lg tracking-wide text-[#183000]">NetworkUp.io is <span className="text-[#7fd000]">our flagship product,</span> built with the experience, technology, and values</p>
+                <p className="text-lg tracking-wide text-[#183000]">we've gained while building products that customers love.</p>
             </section>
         </>
     )

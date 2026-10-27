@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import { headers } from "next/headers";
 
 export const metadata: Metadata = {
-    title: "Choose Your Subscription Plan | NetworkUp.io",
+    title: "Choose Your Subscription Plan",
     description: "Start your free trial or subscribe to a Growth or Enterprise plan to unlock advanced AI-powered LinkedIn outreach tools.",
     keywords: ["networkup trial", "growth plan setup", "enterprise subscription networkup", "linkedin tool checkout"],
     alternates: {

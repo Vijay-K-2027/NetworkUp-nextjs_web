@@ -29,7 +29,7 @@ export default function Part2() {
                     height={50}
                     className="rounded-lg object-cover"
                 />
-                <h1 className="text-xs font-bold text-black">Find Leads</h1>
+                <span className="text-xs font-bold text-black">Find Leads</span>
             </motion.div>
 
             <motion.hr
@@ -54,7 +54,7 @@ export default function Part2() {
                     height={50}
                     className="rounded-lg object-cover"
                 />
-                <h1 className="text-xs font-bold text-black">Add to List</h1>
+                <span className="text-xs font-bold text-black">Add to List</span>
             </motion.div>
 
             <motion.hr
@@ -79,7 +79,7 @@ export default function Part2() {
                     height={50}
                     className="rounded-lg object-cover"
                 />
-                <h1 className="text-xs font-bold text-black">Send Outreach</h1>
+                <span className="text-xs font-bold text-black">Send Outreach</span>
             </motion.div>
         </div>
     )

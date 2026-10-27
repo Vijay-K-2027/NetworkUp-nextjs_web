@@ -126,6 +126,7 @@ export default function Section1Template(props: Section1TemplateProps) {
                     <nav className="flex items-center gap-1.5 text-xs sm:text-sm text-[#43483e]">
                         <Link
                             href={breadcrumbCategoryHref || "/solutions"}
+                            title={breadcrumbCategory || "Solutions"}
                             className="hover:text-[#3a6a00] transition-colors font-medium"
                         >
                             {breadcrumbCategory}
@@ -187,6 +188,7 @@ export default function Section1Template(props: Section1TemplateProps) {
                             {primaryCtaText && (
                                 <Link
                                     href={primaryCtaHref || "https://app.networkup.io/#/login"}
+                                    title={primaryCtaText}
                                     className="px-6 sm:px-8 py-3.5 rounded-xl bg-gradient-to-b from-[#caff95] to-[#71e300] hover:brightness-105 active:scale-[0.98] text-[#041c11] font-bold text-sm sm:text-base shadow-sm transition-all duration-200 text-center w-full sm:w-auto"
                                 >
                                     {primaryCtaText}
@@ -195,6 +197,7 @@ export default function Section1Template(props: Section1TemplateProps) {
                             {secondaryCtaText && (
                                 <Link
                                     href={resolvedSecondaryHref}
+                                    title={secondaryCtaText}
                                     target={isExternalSecondary ? "_blank" : undefined}
                                     rel={isExternalSecondary ? "noopener noreferrer" : undefined}
                                     className="px-6 sm:px-8 py-3.5 rounded-xl bg-white border border-[#041c11] hover:bg-[#fbfdf9] hover:border-[#181d13] active:scale-[0.98] text-[#181d13] font-bold text-sm sm:text-base transition-all duration-200 shadow-2xs text-center w-full sm:w-auto"

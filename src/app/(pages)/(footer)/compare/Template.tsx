@@ -298,8 +298,7 @@ export default function Template({
                     className="text-center max-w-5xl mx-auto"
                 >
                     <h1 className="text-3xl sm:text-4xl md:text-[55px] font-black font-bold text-[#000400] tracking-tight leading-[1.12]">
-                        NetworkUp.io vs {competitorName}:
-                        <br />
+                        NetworkUp.io vs {competitorName}:{" "}
                         <span className="text-[#416900]">The Enterprise Choice</span>
                     </h1>
                     <p className="mt-5 text-sm sm:text-base md:text-lg text-[#43483e] font-normal leading-relaxed max-w-2xl mx-auto">

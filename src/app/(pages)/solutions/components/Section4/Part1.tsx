@@ -53,8 +53,8 @@ export default function Part1() {
                         className="flex-none"
                     >
                         <div className="flex flex-col items-center w-[100px] sm:w-[120px] bg-[#f9fafb] rounded-md px-4 py-2 hover:-translate-y-1 transition-all duration-300 hover:bg-gray-200">
-                            <h1 className="text-[#9ca3af] text-xs sm:text-sm text-center">{data.title}</h1>
-                            <h2 className="font-bold text-[#111827] text-lg sm:text-xl text-center">{data.no}</h2>
+                            <p className="text-[#9ca3af] text-xs sm:text-sm text-center">{data.title}</p>
+                            <p className="font-bold text-[#111827] text-lg sm:text-xl text-center">{data.no}</p>
                         </div>
                     </motion.div>
                 ))}
@@ -67,10 +67,10 @@ export default function Part1() {
                 transition={{ duration: 0.5, delay: 0.15 }}
                 className="flex flex-row items-center justify-between w-full px-4 mt-4 rounded-xl bg-gray-50/50 py-2"
             >
-                <h1 className="font-bold text-black text-sm text-left">Client Name</h1>
+                <span className="font-bold text-black text-sm text-left">Client Name</span>
                 <div className="flex flex-row items-center gap-x-5">
-                    <h2 className="font-bold text-black text-sm text-right">Acceptance</h2>
-                    <h3 className="font-bold text-black text-sm text-right">Replies</h3>
+                    <span className="font-bold text-black text-sm text-right">Acceptance</span>
+                    <span className="font-bold text-black text-sm text-right">Replies</span>
                 </div>
             </motion.div>
 
@@ -89,10 +89,10 @@ export default function Part1() {
                 transition={{ duration: 0.5, delay: 0.15 + part1Column.length * 0.25 }}
                 className="flex flex-row items-center justify-between w-full px-4 rounded-xl bg-gray-50/50 py-2"
             >
-                <h1 className="text-[#111827] text-sm text-left">Client A</h1>
+                <span className="text-[#111827] text-sm text-left">Client A</span>
                 <div className="flex flex-row items-center gap-x-12">
-                    <h2 className="text-[#16a34a] text-sm text-right font-medium">32.8%</h2>
-                    <h3 className="text-[#111827] text-sm text-right font-medium">120</h3>
+                    <span className="text-[#16a34a] text-sm text-right font-medium">32.8%</span>
+                    <span className="text-[#111827] text-sm text-right font-medium">120</span>
                 </div>
             </motion.div>
         </motion.div>

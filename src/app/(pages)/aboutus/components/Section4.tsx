@@ -54,12 +54,11 @@ export default function Section4() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.15 }}
                             >
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">Empower more people to</h1>
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">build</h2>
-                                <h3 className="text-3xl sm:text-4xl md:text-5xl text-[#609d00] font-bold w-full">meaningful connections</h3>
-                                <h4 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">and</h4>
-                                <h5 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">unlock new</h5>
-                                <h6 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">opportunities.</h6>
+                                <h2 className="text-3xl sm:text-4xl md:text-5xl text-black font-bold w-full">
+                                    Empower more people to<br />
+                                    build <span className="text-[#609d00]">meaningful connections</span><br />
+                                    and unlock new opportunities.
+                                </h2>
                             </motion.div>
 
                             {/* Right Side: Description */}
@@ -70,9 +69,9 @@ export default function Section4() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.3 }}
                             >
-                                <h1 className="text-xl sm:text-2xl text-[#316b00] text-left leading-relaxed">
+                                <p className="text-xl sm:text-2xl text-[#316b00] text-left leading-relaxed">
                                     LinkedIn is full of opportunities. Our mission is to help you reach the right people, start the right conversations, and grow your business — the smart way.
-                                </h1>
+                                </p>
                             </motion.div>
                         </div>
                     </div>
@@ -93,7 +92,7 @@ export default function Section4() {
                                 <data.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#609b00]" />
                             </div>
                             <div className="flex flex-col gap-0.5 items-start">
-                                <h1 className="text-[#609d00] text-2xl sm:text-3xl font-bold leading-snug">{data.quantity}</h1>
+                                <span className="text-[#609d00] text-2xl sm:text-3xl font-bold leading-snug">{data.quantity}</span>
                                 <p className="text-black text-xs sm:text-sm leading-snug">{data.description}</p>
                             </div>
                         </motion.div>

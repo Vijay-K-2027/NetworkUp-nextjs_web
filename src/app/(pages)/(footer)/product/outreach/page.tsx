@@ -10,14 +10,30 @@ import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
 
 export const metadata: Metadata = {
-    title: "Outreach Automation | Personalized LinkedIn Sequences | NetworkUp.io",
+    title: "LinkedIn Outreach Automation Tool | Automated LinkedIn Sequences",
     description: "Scale LinkedIn outbound without sacrificing personalization. Automate smart connection requests, trigger-based follow-ups, and multi-channel engagement safely with NetworkUp.",
-    keywords: ["linkedin outreach automation", "personalized linkedin messages", "automated followups", "sales outreach software", "b2b outreach sequences", "networkup outreach"],
+    keywords: [
+        "linkedin outreach automation",
+        "linkedin outreach tool",
+        "automated linkedin outreach",
+        "linkedin automation software",
+        "personalized linkedin messages",
+        "automated followups",
+        "linkedin drip campaigns",
+        "sales outreach software",
+        "b2b outreach sequences",
+        "automated linkedin connection requests",
+        "safe linkedin automation",
+        "cloud linkedin automation",
+        "waalaxy alternative",
+        "expandi alternative",
+        "networkup outreach"
+    ],
     alternates: {
         canonical: "https://networkup.io/product/outreach"
     },
     openGraph: {
-        title: "Outreach Automation | Personalized LinkedIn Sequences | NetworkUp.io",
+        title: "LinkedIn Outreach Automation Tool | Automated LinkedIn Sequences | NetworkUp.io",
         description: "Scale LinkedIn outbound without sacrificing personalization. Automate smart connection requests, trigger-based follow-ups, and multi-channel engagement safely with NetworkUp.",
         url: "https://networkup.io/product/outreach",
         siteName: "NetworkUp.io",
@@ -28,13 +44,13 @@ export const metadata: Metadata = {
                 url: "https://networkup.io/seo/og-features.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Outreach Automation - NetworkUp"
+                alt: "LinkedIn Outreach Automation - NetworkUp"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Outreach Automation | Personalized LinkedIn Sequences | NetworkUp.io",
+        title: "LinkedIn Outreach Automation Tool | Automated LinkedIn Sequences | NetworkUp.io",
         description: "Scale LinkedIn outbound without sacrificing personalization. Automate smart connection requests, trigger-based follow-ups, and multi-channel engagement safely with NetworkUp.",
         images: ["https://networkup.io/seo/og-features.jpg"]
     },

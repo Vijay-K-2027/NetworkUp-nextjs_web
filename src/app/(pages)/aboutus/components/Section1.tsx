@@ -11,7 +11,7 @@ export default function Section1() {
                 </div>
                 <div className="w-full lg:w-[45%] p-5">
                     <div className="flex flex-col items-start gap-y-4">
-                        <h1 className="text-[#a3ff12] uppercase text-md font-bold">About Us ——</h1>
+                        <span className="text-[#a3ff12] uppercase text-md font-bold">About Us ——</span>
                         <div className="flex flex-col text-left">
                             <h1 className="text-black text-4xl sm:text-6xl font-bold ">We build tools that</h1>
                             <h2 className="text-black text-4xl sm:text-6xl font-bold ">help people <span className="text-[#a3ff12]">connect</span>, </h2>
@@ -22,7 +22,7 @@ export default function Section1() {
                         <h4 className="text-[#254300] w-full text-left text-lg md:text-xl leading-wide">At NetworkUp.io, we're on a mission to make LinkedIn outreach smarter, safer, and more effective. Built by the team behind WhiterApps, we combine deep product expertise with a passion for helping businesses grow through meaningful connections.</h4>
                     </div>
                     <div className="flex flex-row gap-x-5 my-8">
-                        <Link href="https://app.networkup.io/#/login" className="bg-gradient-to-b from-[#bcff8b] to-[#7ceb24] text-black font-bold hover:border-2 border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-50">Start Free Trial </Link>
+                        <Link href="https://app.networkup.io/#/login" title="Start Free Trial with NetworkUp" className="bg-gradient-to-b from-[#bcff8b] to-[#7ceb24] text-black font-bold hover:border-2 border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-50">Start Free Trial </Link>
                         <Link href="https://calendly.com/networkup-io/30min" target="_blank" rel="noopener noreferrer" className="bg-transparent text-black font-bold hover:border-2 hover:text-[#71EB34] border-[#71EB34] px-6 py-3 rounded-xl transition-all duration-30">Book a Demo</Link>
                     </div>
                 </div>

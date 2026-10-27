@@ -45,10 +45,10 @@ export default function Navbar() {
 
                 {/* Left side: Logo and Desktop Navigation */}
                 <div className="flex items-center gap-6 lg:gap-12">
-                    <Link href="/" className="flex items-center gap-2 lg:gap-3 flex-shrink-0">
+                    <Link href="/" title="NetworkUp.io - Home" className="flex items-center gap-2 lg:gap-3 flex-shrink-0">
                         <Image
                             src="/brand/Logo.svg"
-                            alt="Logo"
+                            alt="NetworkUp Logo"
                             width={38}
                             height={38}
                             style={{ height: "auto" }}
@@ -66,6 +66,7 @@ export default function Navbar() {
                                     <li key={index} className="h-20 flex items-center">
                                         <Link
                                             href={item.path}
+                                            title={item.label}
                                             className={`text-[10px] lg:text-[15px] font-bold transition-all duration-200 pb-0.5 ${isActive
                                                 ? "text-[#76e11b] border-b-2 border-black/60" : "text-gray-600 hover:text-[#356221] border-b-2 border-transparent"
                                                 }`}
@@ -83,14 +84,16 @@ export default function Navbar() {
                 <div className="flex items-center gap-2 sm:gap-4">
                     <Link
                         href="https://app.networkup.io/#/login"
+                        title="Login to NetworkUp"
                         className="hidden sm:inline-flex rounded-xl bg-white text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-bold text-black border border-black shadow transition hover:bg-lime-500 hover:border-none"
                     >
                         Login
                     </Link>
 
                     <Link
-                        className="hidden sm:inline-flex rounded-xl bg-gradient-to-b from-[#CAFF95] to-[#71E300] text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
                         href="/subscription"
+                        title="Start NetworkUp Free Trial"
+                        className="hidden sm:inline-flex rounded-xl bg-gradient-to-b from-[#CAFF95] to-[#71E300] text-center px-4 lg:px-6 py-2.5 lg:py-3 text-xs font-semibold text-black shadow transition hover:bg-lime-500"
                     >
                         Start Free Trial
                     </Link>
@@ -99,6 +102,7 @@ export default function Navbar() {
                         onClick={() => setIsOpen(!isOpen)}
                         className="flex lg:hidden h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl border border-gray-200 hover:bg-gray-50 text-gray-700"
                         aria-label="Toggle Menu"
+                        title="Toggle Menu"
                     >
                         {isOpen ? <X size={20} /> : <Menu size={20} />}
                     </button>
@@ -116,6 +120,7 @@ export default function Navbar() {
                                     <li key={index}>
                                         <Link
                                             href={item.path}
+                                            title={item.label}
                                             onClick={() => setIsOpen(false)}
                                             className={`block py-1 transition-colors duration-200 ${isActive ? "text-[#356221] font-bold" : "hover:text-green-600"
                                                 }`}
@@ -131,7 +136,8 @@ export default function Navbar() {
                     {/* Compact Login/Signup inside Drawer for Mobile Screen Adjustments */}
                     <div className="border-t border-gray-100 pt-4 flex flex-col gap-2.5 sm:hidden">
                         <Link
-                            href="/login"
+                            href="https://app.networkup.io/#/login"
+                            title="Log In to NetworkUp"
                             onClick={() => setIsOpen(false)}
                             className="w-full text-center rounded-xl bg-lime-400 py-3 text-xs font-bold text-black shadow transition hover:bg-lime-500"
                         >

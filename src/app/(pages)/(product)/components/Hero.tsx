@@ -9,7 +9,7 @@ export default function Hero() {
                 {/* Badge */}
                 <div className="w-350 mb-8 rounded-full border border-[#71e300]/20 bg-[#71e300]/10 px-6 py-2 text-sm font-medium text-[#041c11]">
                     <span className="mr-2 text-[#71e300]">●</span>
-                    AI-Powered LinkedIn Growth Platform
+                    #1 LinkedIn Outreach Automation & AI Growth Platform
                 </div>
 
                 {/* Heading */}
@@ -23,22 +23,29 @@ export default function Hero() {
 
                 {/* Description */}
                 <p className="mt-8 max-w-[1250px] text-[21px] text-[#263b00]">
-                    Automate your LinkedIn networking with precision.
-                    Reach the right decision-makers and convert
-                    conversations into opportunities at scale.
+                    Scale your LinkedIn outreach automation with AI precision.
+                    Reach verified decision-makers, launch multi-channel drip sequences,
+                    and convert conversations into pipeline at scale.
                 </p>
 
                 {/* CTA Buttons */}
                 <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
 
-                    <Link href="https://app.networkup.io/#/login">
+                    <Link
+                        href="https://app.networkup.io/#/login"
+                        title="Get Started Free with NetworkUp LinkedIn Outreach Automation"
+                        aria-label="Get Started Free with NetworkUp LinkedIn Outreach Automation"
+                    >
                         <div className="flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#caff95] to-[#71e300] px-8 py-4 text-sm font-semibold text-[#041c11] shadow-md transition hover:bg-lime-500">
                             Get Started Free
                             <ArrowRight size={18} strokeWidth={3} />
                         </div>
                     </Link>
 
-                    <Link href=""
+                    <Link
+                        href="https://app.networkup.io/#/login"
+                        title="Watch NetworkUp Platform Demo"
+                        aria-label="Watch NetworkUp Platform Demo"
                         className="flex items-center gap-2 rounded-xl border border-[#c9d2c4] bg-white px-8 py-4 text-sm font-bold text-[#1d1b20] transition hover:bg-gray-100"
                     >
                         <PlayCircle size={18} strokeWidth={3} />
@@ -54,17 +61,17 @@ export default function Hero() {
                         <img
                             src="https://i.pravatar.cc/40?img=1"
                             className="h-9 w-9 rounded-full border-2 border-white"
-                            alt=""
+                            alt="NetworkUp active customer profile 1"
                         />
                         <img
                             src="https://i.pravatar.cc/40?img=2"
                             className="h-9 w-9 rounded-full border-2 border-white"
-                            alt=""
+                            alt="NetworkUp active customer profile 2"
                         />
                         <img
                             src="https://i.pravatar.cc/40?img=3"
                             className="h-9 w-9 rounded-full border-2 border-white"
-                            alt=""
+                            alt="NetworkUp active customer profile 3"
                         />
                     </div>
 

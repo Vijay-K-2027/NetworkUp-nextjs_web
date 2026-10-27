@@ -10,9 +10,20 @@ import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
 
 export const metadata: Metadata = {
-    title: "Convobox | Unified LinkedIn Inbox & Conversation Management | NetworkUp.io",
+    title: "Convobox | Unified LinkedIn Inbox & Conversation Management",
     description: "Streamline your sales conversations with Convobox. A unified multi-account LinkedIn inbox with AI intent classification, message tagging, and team collaboration.",
-    keywords: ["unified linkedin inbox", "convobox", "linkedin message management", "ai intent classification", "multi-account linkedin inbox", "sales conversation manager", "networkup convobox"],
+    keywords: [
+        "linkedin outreach automation",
+        "unified linkedin inbox",
+        "convobox",
+        "multi account linkedin inbox",
+        "linkedin message management",
+        "ai intent classification",
+        "sales conversation manager",
+        "multi-account linkedin outreach",
+        "cloud linkedin inbox",
+        "networkup convobox"
+    ],
     alternates: {
         canonical: "https://networkup.io/product/convobox"
     },

@@ -18,10 +18,10 @@ export default function Section2() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-950 tracking-tight leading-[1.08]">
+                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-950 tracking-tight leading-[1.08]">
                         Follow up smarter.<br />
                         <span className="text-[#414A34]">Keep the <br />conversation<br /> moving.</span>
-                    </h1>
+                    </h2>
 
                     {/* Description */}
                     <p className="mt-6 text-base sm:text-lg text-gray-600 font-normal leading-relaxed max-w-[500px]">
