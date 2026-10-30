@@ -197,30 +197,52 @@ export default function Template({
 }: ComparisonTemplateProps) {
     const finalOverlapTitle = overlapTitle || `Where NetworkUp and ${competitorName} overlap`;
 
+    const competitorSlug = competitorName.toLowerCase().includes("apollo")
+        ? "apollo"
+        : competitorName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+$/, "");
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "ItemPage",
-                "@id": `https://networkup.io/compare/${competitorName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}#comparison`,
+                "@type": "WebPage",
+                "@id": `https://networkup.io/compare/${competitorSlug}#webpage`,
+                "url": `https://networkup.io/compare/${competitorSlug}`,
                 "name": `NetworkUp.io vs ${competitorName} Comparison`,
                 "description": `Comprehensive feature and capability comparison between NetworkUp.io and ${competitorName} for LinkedIn outreach automation and B2B lead generation.`,
+                "breadcrumb": {
+                    "@id": `https://networkup.io/compare/${competitorSlug}#breadcrumb`
+                },
                 "mainEntity": {
-                    "@type": "SoftwareApplication",
-                    "name": "NetworkUp.io",
-                    "applicationCategory": "BusinessApplication, SalesAutomationSoftware",
-                    "operatingSystem": "All (Cloud-Based)",
-                    "offers": {
-                        "@type": "Offer",
-                        "price": "0",
-                        "priceCurrency": "USD",
-                        "description": "Free Trial Available"
-                    }
+                    "@id": `https://networkup.io/compare/${competitorSlug}#software`
+                }
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": `https://networkup.io/compare/${competitorSlug}#software`,
+                "name": "NetworkUp",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "All (Cloud-Based)",
+                "url": "https://networkup.io",
+                "description": "Cloud-native LinkedIn outreach automation platform featuring dedicated residential proxies, AI prospect scoring, visual campaign builder, and unified multi-account inbox management.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "21.00",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "description": "Starter Plan with 14-day Free Trial"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "ratingCount": "10420",
+                    "bestRating": "5",
+                    "worstRating": "1"
                 }
             },
             {
                 "@type": "BreadcrumbList",
-                "@id": `https://networkup.io/compare/${competitorName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}#breadcrumb`,
+                "@id": `https://networkup.io/compare/${competitorSlug}#breadcrumb`,
                 "itemListElement": [
                     {
                         "@type": "ListItem",
@@ -238,13 +260,13 @@ export default function Template({
                         "@type": "ListItem",
                         "position": 3,
                         "name": `NetworkUp vs ${competitorName}`,
-                        "item": `https://networkup.io/compare/${competitorName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`
+                        "item": `https://networkup.io/compare/${competitorSlug}`
                     }
                 ]
             },
             {
                 "@type": "FAQPage",
-                "@id": `https://networkup.io/compare/${competitorName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}#faq`,
+                "@id": `https://networkup.io/compare/${competitorSlug}#faq`,
                 "mainEntity": [
                     {
                         "@type": "Question",
