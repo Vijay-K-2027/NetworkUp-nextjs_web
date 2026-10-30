@@ -804,7 +804,7 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
                                 </div>
                             </Link>
                             <Link
-                                href="/login"
+                                href="https://app.networkup.io/#/login"
                                 className="bg-[#0c1a12] hover:bg-[#12261b] text-white text-[10px] font-semibold py-2 px-2.5 rounded-xl border border-[#1a3824] flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                             >
                                 <User size={13} className="text-[#71EB34] shrink-0" />
@@ -892,7 +892,7 @@ export default function Message({ onClose, onNavigateToHome }: MessageProps) {
                         >
                             <ChevronLeft size={16} strokeWidth={2.5} />
                         </button>
-                        <h1 className="text-white text-md sm:text-lg font-bold">Hi there! 👋</h1>
+                        <p className="text-white text-md sm:text-lg font-bold">Hi there! 👋</p>
                         <p className="text-white/60 text-[10px] sm:text-xs mt-1">Ask us anything or share your feedback.</p>
                     </div>
                     {messages.map((msg) => (

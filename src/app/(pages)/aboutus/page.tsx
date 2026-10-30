@@ -46,7 +46,7 @@ export default function OverviewPage() {
             <div className="w-full max-w-9xl bg-[#fafcf7] mx-auto">
                 <div className="flex flex-col items-center justify-center py-10 gap-y-3 ">
                     <h4 className="uppercase text-[#71EB34] text-xl text-center font-bold">Our Story</h4>
-                    <h2 className="text-2xl sm:text-3xl max-w-[400px] w-full text-center font-bold text-[#0A0C10] tracking-tighter -mt-2 px-4">How it all started </h2>
+                    <h1 className="text-2xl sm:text-3xl max-w-[500px] w-full text-center font-bold text-[#0A0C10] tracking-tighter -mt-2 px-4">About NetworkUp: How it all started</h1>
                     <h3 className="w-full text-center text-md sm:text-lg text-[#6B7280] px-4">A journey driven by a simple belief — outreach should be human, not manual.</h3>
                 </div>
             </div>

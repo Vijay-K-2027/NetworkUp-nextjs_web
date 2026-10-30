@@ -5,16 +5,16 @@ import Comparision from "./components/Comparision"
 import Price from "./components/Price"
 
 export const metadata: Metadata = {
-    title: "Pricing Plans & Packages | LinkedIn Outreach Automation",
-    // Make the description 120-150 words
-    description: "Compare NetworkUp.io pricing packages and find the perfect plan to scale your LinkedIn outreach. We offer clear, transparent pricing tiers (Starter, Growth, and Enterprise) designed for individuals, sales teams, agencies, and recruiting companies. Read our detailed feature comparison to see how NetworkUp compares to traditional outreach tools in cost-efficiency, safety proxy routing, daily connection capacities, and overall lead generation ROI. Review our pricing comparison chart to evaluate tool features across all pricing plans, and check our comprehensive documentation FAQ to resolve questions about subscriptions, billing cycles, team add-ons, and refund policies. Start driving pipeline growth safely and compare the value of our compliant automation features today.",
+    title: { absolute: "Pricing Plans & Packages | NetworkUp.io" },
+
+    description: "Explore NetworkUp pricing plans for sales teams and agencies. Compare Starter, Growth, and Enterprise tiers with transparent pricing and a 14-day free trial.",
     keywords: ["networkup pricing", "linkedin tool cost", "saas pricing sales", "recruiting software pricing", "b2b outreach subscription", "linkedin outreach pricing compare", "networkup vs outreach tools", "sales engagement cost comparison", "starter vs growth pricing plan"],
     alternates: {
         canonical: "https://networkup.io/pricing"
     },
     openGraph: {
         title: "Pricing Plans & Packages | NetworkUp.io",
-        description: "Compare NetworkUp.io pricing packages and find the perfect plan to scale your LinkedIn outreach. We offer clear, transparent pricing tiers (Starter, Growth, and Enterprise) designed for individuals, sales teams, agencies, and recruiting companies. Read our detailed feature comparison to see how NetworkUp compares to traditional outreach tools in cost-efficiency, safety proxy routing, daily connection capacities, and overall lead generation ROI. Review our pricing comparison chart to evaluate tool features across all pricing plans, and check our comprehensive documentation FAQ to resolve questions about subscriptions, billing cycles, team add-ons, and refund policies. Start driving pipeline growth safely and compare the value of our compliant automation features today.",
+        description: "Explore NetworkUp pricing plans for sales teams and agencies. Compare Starter, Growth, and Enterprise tiers with transparent pricing and a 14-day free trial.",
         url: "https://networkup.io/pricing",
         siteName: "NetworkUp",
         locale: "en_US",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Pricing Plans & Packages | NetworkUp.io",
-        description: "Compare NetworkUp.io pricing packages and find the perfect plan to scale your LinkedIn outreach. We offer clear, transparent pricing tiers (Starter, Growth, and Enterprise) designed for individuals, sales teams, agencies, and recruiting companies. Read our detailed feature comparison to see how NetworkUp compares to traditional outreach tools in cost-efficiency, safety proxy routing, daily connection capacities, and overall lead generation ROI. Review our pricing comparison chart to evaluate tool features across all pricing plans, and check our comprehensive documentation FAQ to resolve questions about subscriptions, billing cycles, team add-ons, and refund policies. Start driving pipeline growth safely and compare the value of our compliant automation features today.",
+        description: "Explore NetworkUp pricing plans for sales teams and agencies. Compare Starter, Growth, and Enterprise tiers with transparent pricing and a 14-day free trial.",
         images: ["https://networkup.io/seo/og-pricing.jpg"]
     },
     robots: {

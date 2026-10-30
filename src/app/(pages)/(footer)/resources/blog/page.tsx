@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import BlogClient from "./BlogClient";
 
 export const metadata: Metadata = {
-    title: "NetworkUp Blog | LinkedIn Outreach Strategies & Growth Insights",
+    title: { absolute: "NetworkUp Blog: LinkedIn Outreach & Growth Insights" },
     description: "Explore the latest insights, strategies, AI personalization guides, and lead generation playbooks to scale your B2B sales pipeline on LinkedIn.",
     keywords: ["linkedin outreach blog", "b2b lead generation blog", "ai personalization guides", "sales automation strategies", "linkedin cold messaging tips"],
     alternates: {
         canonical: "https://networkup.io/resources/blog"
     },
     openGraph: {
-        title: "NetworkUp Blog | LinkedIn Outreach Strategies & Growth Insights",
+        title: "NetworkUp Blog: LinkedIn Outreach & Growth Insights",
         description: "Explore the latest insights, strategies, AI personalization guides, and lead generation playbooks to scale your B2B sales pipeline on LinkedIn.",
         url: "https://networkup.io/resources/blog",
         siteName: "NetworkUp.io",

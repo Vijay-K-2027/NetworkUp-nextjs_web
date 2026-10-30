@@ -19,14 +19,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "15 LinkedIn Connection Message Templates That Actually Work | NetworkUp Blog",
+    title: "15 LinkedIn Connection Message Templates That Work",
     description: "Copy, personalize, and test 15 high-converting LinkedIn connection request templates tailored for sales reps, recruiters, founders, and agency operators.",
     keywords: ["linkedin connection message templates", "linkedin connection note", "how to connect on linkedin", "cold outreach templates", "linkedin message examples"],
     alternates: {
         canonical: "https://networkup.io/resources/blog/linkedin-connection-message"
     },
     openGraph: {
-        title: "15 LinkedIn Connection Message Templates That Actually Work | NetworkUp Blog",
+        title: "15 LinkedIn Connection Message Templates That Work | NetworkUp.io",
         description: "Copy, personalize, and test 15 high-converting LinkedIn connection request templates tailored for sales reps, recruiters, founders, and agency operators.",
         url: "https://networkup.io/resources/blog/linkedin-connection-message",
         siteName: "NetworkUp.io",

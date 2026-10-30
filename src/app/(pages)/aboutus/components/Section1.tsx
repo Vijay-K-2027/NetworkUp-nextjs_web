@@ -13,10 +13,10 @@ export default function Section1() {
                     <div className="flex flex-col items-start gap-y-4">
                         <span className="text-[#a3ff12] uppercase text-md font-bold">About Us ——</span>
                         <div className="flex flex-col text-left">
-                            <h1 className="text-black text-4xl sm:text-6xl font-bold ">We build tools that</h1>
-                            <h2 className="text-black text-4xl sm:text-6xl font-bold ">help people <span className="text-[#a3ff12]">connect</span>, </h2>
-                            <h3 className="text-black text-4xl sm:text-6xl font-bold ">conversations that</h3>
-                            <h4 className="text-[#a3ff12] text-4xl sm:text-6xl font-bold ">create opportunities.</h4>
+                            <h2 className="text-black text-4xl sm:text-6xl font-bold ">We build tools that</h2>
+                            <p className="text-black text-4xl sm:text-6xl font-bold ">help people <span className="text-[#a3ff12]">connect</span>, </p>
+                            <p className="text-black text-4xl sm:text-6xl font-bold ">conversations that</p>
+                            <p className="text-[#a3ff12] text-4xl sm:text-6xl font-bold ">create opportunities.</p>
                         </div>
                         <hr className="border-2 border-[#a3ff12]/30 w-full" />
                         <h4 className="text-[#254300] w-full text-left text-lg md:text-xl leading-wide">At NetworkUp.io, we're on a mission to make LinkedIn outreach smarter, safer, and more effective. Built by the team behind WhiterApps, we combine deep product expertise with a passion for helping businesses grow through meaningful connections.</h4>

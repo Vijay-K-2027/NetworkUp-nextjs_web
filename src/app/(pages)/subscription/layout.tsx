@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         images: ["https://networkup.io/seo/og-pricing.jpg"]
     },
     robots: {
-        index: true,
+        index: false,
         follow: true
     }
 };

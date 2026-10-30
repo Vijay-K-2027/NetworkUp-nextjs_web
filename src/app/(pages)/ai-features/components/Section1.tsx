@@ -26,12 +26,12 @@ export default function Section1() {
                     {/* Content */}
                     <div className="my-5 w-full flex flex-col items-center">
                         <motion.h1
-                            className="text-4xl sm:text-5xl lg:text-6xl text-[#191c1e] font-bold max-w-[800px] w-full text-center mb-5 tracking-tightpx-2"
+                            className="text-4xl sm:text-5xl lg:text-6xl text-[#191c1e] font-bold max-w-[850px] w-full text-center mb-5 tracking-tight px-2"
                             initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.15 }}
                         >
-                            Supercharge your outreach with <span className="text-[#316b00]">Autonomous Growth</span>
+                            Supercharge you outreach with <span className="text-[#316b00]">Autonomous Growth</span>
                         </motion.h1>
 
                         <motion.p

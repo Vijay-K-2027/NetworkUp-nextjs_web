@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: {
         absolute: "LinkedIn Outreach Automation Tool & AI Lead Gen | NetworkUp.io"
     },
-    description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
+    description: "Scale LinkedIn outreach with NetworkUp. Automate multi-step sequences, find high-intent leads, and manage conversations in a unified multi-account inbox.",
     keywords: [
         "linkedin outreach automation",
         "linkedin outreach automation tool",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "LinkedIn Outreach Automation Tool & AI Lead Gen | NetworkUp.io",
-        description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
+        description: "Scale LinkedIn outreach with NetworkUp. Automate multi-step sequences, find high-intent leads, and manage conversations in a unified multi-account inbox.",
         url: "https://networkup.io",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "LinkedIn Outreach Automation Tool & AI Lead Gen | NetworkUp.io",
-        description: "Scale your LinkedIn outreach with NetworkUp.io. Featuring Smart Prospecting, branching Campaign Builder sequences, a Unified Inbox, and CRM sync. Protect your account with static residential proxies, human-like delay limits, and human-in-the-loop validation, while leveraging AI Campaign Optimization and Relationship Intelligence to maximize response rates.",
+        description: "Scale LinkedIn outreach with NetworkUp. Automate multi-step sequences, find high-intent leads, and manage conversations in a unified multi-account inbox.",
         images: ["https://networkup.io/seo/og-home.jpg"]
     },
     robots: {

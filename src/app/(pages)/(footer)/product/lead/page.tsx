@@ -12,7 +12,7 @@ import Section6 from "./components/Section6";
 
 export const metadata: Metadata = {
     title: "Lead Finder | AI-Powered B2B Prospect Discovery",
-    description: "Discover high-intent decision-makers and build verified prospect lists with NetworkUp's AI Lead Finder. Filter by seniority, industry, tech stack, and intent signals before launching outreach.",
+    description: "Find high-intent decision-makers with NetworkUp's AI Lead Finder. Filter by seniority, tech stack, and buying signals to build verified B2B prospect lists.",
     keywords: [
         "linkedin outreach automation",
         "linkedin lead finder",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Lead Finder | AI-Powered B2B Prospect Discovery | NetworkUp.io",
-        description: "Discover high-intent decision-makers and build verified prospect lists with NetworkUp's AI Lead Finder. Filter by seniority, industry, tech stack, and intent signals before launching outreach.",
+        description: "Find high-intent decision-makers with NetworkUp's AI Lead Finder. Filter by seniority, tech stack, and buying signals to build verified B2B prospect lists.",
         url: "https://networkup.io/product/lead",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Lead Finder | AI-Powered B2B Prospect Discovery | NetworkUp.io",
-        description: "Discover high-intent decision-makers and build verified prospect lists with NetworkUp's AI Lead Finder. Filter by seniority, industry, tech stack, and intent signals before launching outreach.",
+        description: "Find high-intent decision-makers with NetworkUp's AI Lead Finder. Filter by seniority, tech stack, and buying signals to build verified B2B prospect lists.",
         images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {

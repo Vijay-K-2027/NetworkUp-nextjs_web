@@ -14,14 +14,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "How to Build an Ideal Customer Profile (ICP) That Converts | NetworkUp Blog",
+    title: "How to Build an ICP That Converts",
     description: "A practical framework to define and target the right prospects on LinkedIn. Learn ICP scoring, firmographic filters, and buyer intent triggers.",
     keywords: ["ideal customer profile", "icp framework", "b2b targeting strategy", "linkedin lead generation icp", "prospect targeting b2b"],
     alternates: {
         canonical: "https://networkup.io/resources/blog/ideal-customer-profile"
     },
     openGraph: {
-        title: "How to Build an Ideal Customer Profile (ICP) That Converts | NetworkUp Blog",
+        title: "How to Build an ICP That Converts | NetworkUp.io",
         description: "A practical framework to define and target the right prospects on LinkedIn. Learn ICP scoring, firmographic filters, and buyer intent triggers.",
         url: "https://networkup.io/resources/blog/ideal-customer-profile",
         siteName: "NetworkUp.io",

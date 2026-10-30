@@ -9,14 +9,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "The SaaS LinkedIn Outreach Playbook | NetworkUp Blog",
+    title: "The SaaS LinkedIn Outreach Playbook",
     description: "A step-by-step playbook to build, launch, test, and scale winning LinkedIn outbound campaigns for SaaS growth teams and sales development reps.",
     keywords: ["saas outreach playbook", "linkedin outreach strategy", "b2b outbound sales", "saas lead generation", "sales prospecting playbook"],
     alternates: {
         canonical: "https://networkup.io/resources/blog/outreach-playbook"
     },
     openGraph: {
-        title: "The SaaS LinkedIn Outreach Playbook | NetworkUp Blog",
+        title: "The SaaS LinkedIn Outreach Playbook | NetworkUp.io",
         description: "A step-by-step playbook to build, launch, test, and scale winning LinkedIn outbound campaigns for SaaS growth teams and sales development reps.",
         url: "https://networkup.io/resources/blog/outreach-playbook",
         siteName: "NetworkUp.io",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "The SaaS LinkedIn Outreach Playbook",
+        title: "The SaaS LinkedIn Outreach Playbook | NetworkUp.io",
         description: "A step-by-step playbook to build, launch and scale winning campaigns.",
         images: ["https://networkup.io/footer/resources/blog/Article5.png"]
     },

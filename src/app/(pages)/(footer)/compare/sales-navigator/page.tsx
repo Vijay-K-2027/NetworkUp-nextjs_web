@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: "NetworkUp vs LinkedIn Sales Navigator | Outreach Automation & Intelligence Comparison",
-    description: "Compare NetworkUp vs LinkedIn Sales Navigator. Turn manual prospecting into automated, multi-step AI outreach sequences, buying signal triggers, and unified lead conversations.",
+    title: { absolute: "NetworkUp vs Sales Navigator: Outreach Comparison" },
+    description: "Compare NetworkUp vs LinkedIn Sales Navigator. Turn manual prospecting into automated multi-step outreach sequences, buying signals, and unified conversations.",
     keywords: ["networkup vs sales navigator", "linkedin sales navigator alternative", "sales navigator automation", "sales navigator outreach", "sales navigator vs networkup", "linkedin prospecting automation"],
     alternates: {
         canonical: "https://networkup.io/compare/sales-navigator"
     },
     openGraph: {
-        title: "NetworkUp vs LinkedIn Sales Navigator | Outreach Automation & Intelligence Comparison",
-        description: "Compare NetworkUp vs LinkedIn Sales Navigator. Turn manual prospecting into automated, multi-step AI outreach sequences, buying signal triggers, and unified lead conversations.",
+        title: "NetworkUp vs Sales Navigator: Outreach Comparison",
+        description: "Compare NetworkUp vs LinkedIn Sales Navigator. Turn manual prospecting into automated multi-step outreach sequences, buying signals, and unified conversations.",
         url: "https://networkup.io/compare/sales-navigator",
         siteName: "NetworkUp.io",
         locale: "en_US",

@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: "NetworkUp vs Dripify | Smart LinkedIn Automation Platform Comparison",
-    description: "Compare NetworkUp vs Dripify. Discover why NetworkUp's AI conversation analysis, predictive ICP scoring, and real-time buying signals outperform basic LinkedIn drip sequences.",
+    title: { absolute: "NetworkUp vs Dripify: LinkedIn Automation Comparison" },
+    description: "Compare NetworkUp vs Dripify. Explore side-by-side capabilities for LinkedIn outreach sequences, unified multi-account inboxes, AI messaging, and lead discovery.",
     keywords: ["networkup vs dripify", "dripify alternative", "dripify competitors", "best dripify alternative", "linkedin drip automation", "dripify vs networkup"],
     alternates: {
         canonical: "https://networkup.io/compare/dripify"
     },
     openGraph: {
-        title: "NetworkUp vs Dripify | Smart LinkedIn Automation Platform Comparison",
-        description: "Compare NetworkUp vs Dripify. Discover why NetworkUp's AI conversation analysis, predictive ICP scoring, and real-time buying signals outperform basic LinkedIn drip sequences.",
+        title: "NetworkUp vs Dripify: LinkedIn Automation Comparison",
+        description: "Compare NetworkUp vs Dripify. Explore side-by-side capabilities for LinkedIn outreach sequences, unified multi-account inboxes, AI messaging, and lead discovery.",
         url: "https://networkup.io/compare/dripify",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs Dripify | Smart LinkedIn Automation Comparison",
-        description: "Compare NetworkUp vs Dripify for LinkedIn prospecting and automated outreach.",
+        title: "NetworkUp vs Dripify: LinkedIn Automation Comparison",
+        description: "Compare NetworkUp vs Dripify. Explore side-by-side capabilities for LinkedIn outreach sequences, unified multi-account inboxes, AI messaging, and lead discovery.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

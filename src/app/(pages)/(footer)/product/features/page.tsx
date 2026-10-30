@@ -13,8 +13,8 @@ import Section8 from "./components/Section8";
 
 
 export const metadata: Metadata = {
-    title: "All Features | LinkedIn Lead Generation & Outreach Automation",
-    description: "Explore NetworkUp's complete suite of LinkedIn automation features. Discover high-intent leads, build multi-step campaigns, manage conversations in a unified inbox, and track real-time analytics.",
+    title: { absolute: "All Features: LinkedIn Outreach Automation | NetworkUp.io" },
+    description: "Explore NetworkUp's LinkedIn automation features: AI lead discovery, multi-step sequence builder, unified multi-account inbox, and campaign analytics.",
     keywords: [
         "linkedin outreach automation",
         "linkedin automation features",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
         canonical: "https://networkup.io/product/features"
     },
     openGraph: {
-        title: "All Features | LinkedIn Lead Generation & Outreach Automation | NetworkUp.io",
-        description: "Explore NetworkUp's complete suite of LinkedIn automation features. Discover high-intent leads, build multi-step campaigns, manage conversations in a unified inbox, and track real-time analytics.",
+        title: "All Features: LinkedIn Outreach Automation | NetworkUp.io",
+        description: "Explore NetworkUp's LinkedIn automation features: AI lead discovery, multi-step sequence builder, unified multi-account inbox, and campaign analytics.",
         url: "https://networkup.io/product/features",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "All Features | LinkedIn Lead Generation & Outreach Automation | NetworkUp.io",
-        description: "Explore NetworkUp's complete suite of LinkedIn automation features. Discover high-intent leads, build multi-step campaigns, manage conversations in a unified inbox, and track real-time analytics.",
+        title: "All Features: LinkedIn Outreach Automation | NetworkUp.io",
+        description: "Explore NetworkUp's LinkedIn automation features: AI lead discovery, multi-step sequence builder, unified multi-account inbox, and campaign analytics.",
         images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {

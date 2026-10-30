@@ -11,14 +11,14 @@ import Section9 from "./components/Section9";
 
 export const metadata: Metadata = {
     title: "AI-Powered LinkedIn Outreach Features",
-    description: "Discover the AI outreach engine driving NetworkUp.io. Our AI Features page guides you through our Smart Prospecting tool with intent lead scoring to isolate high-value prospects. Leverage the AI Message Writer to draft personalized connection invites and InMails in seconds. Monitor campaign performance via our Analytics telemetry suite, featuring A/B testing reports, reply sentiment analysis, and vertical benchmarking. Maximize safety with the AI Health Center's real-time risk detection and safety limits compliance alerts. Experience our 24/7 Context-aware AI Help Desk for custom outreach optimizations, alongside Inbound Automation triggers that automatically sequence replies and manage DMs on autopilot to securely scale relationships without triggering robotic spam warning filters.",
+    description: "Explore NetworkUp's AI features for LinkedIn outreach: automated message writing, ICP intent scoring, buying signal detection, and campaign analytics.",
     keywords: ["ai linkedin tool", "automated prospecting", "ai message builder", "smart follow-ups", "linkedin automation features", "linkedin lead scoring", "reply sentiment analysis", "inbound automation", "ab testing linkedin", "outreach risk detection"],
     alternates: {
         canonical: "https://networkup.io/ai-features"
     },
     openGraph: {
         title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
-        description: "Discover the AI outreach engine driving NetworkUp.io. Our AI Features page guides you through our Smart Prospecting tool with intent lead scoring to isolate high-value prospects. Leverage the AI Message Writer to draft personalized connection invites and InMails in seconds. Monitor campaign performance via our Analytics telemetry suite, featuring A/B testing reports, reply sentiment analysis, and vertical benchmarking. Maximize safety with the AI Health Center's real-time risk detection and safety limits compliance alerts. Experience our 24/7 Context-aware AI Help Desk for custom outreach optimizations, alongside Inbound Automation triggers that automatically sequence replies and manage DMs on autopilot to securely scale relationships without triggering robotic spam warning filters.",
+        description: "Explore NetworkUp's AI features for LinkedIn outreach: automated message writing, ICP intent scoring, buying signal detection, and campaign analytics.",
         url: "https://networkup.io/ai-features",
         siteName: "NetworkUp",
         locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
-        description: "Discover the AI outreach engine driving NetworkUp.io. Our AI Features page guides you through our Smart Prospecting tool with intent lead scoring to isolate high-value prospects. Leverage the AI Message Writer to draft personalized connection invites and InMails in seconds. Monitor campaign performance via our Analytics telemetry suite, featuring A/B testing reports, reply sentiment analysis, and vertical benchmarking. Maximize safety with the AI Health Center's real-time risk detection and safety limits compliance alerts. Experience our 24/7 Context-aware AI Help Desk for custom outreach optimizations, alongside Inbound Automation triggers that automatically sequence replies and manage DMs on autopilot to securely scale relationships without triggering robotic spam warning filters.",
+        description: "Explore NetworkUp's AI features for LinkedIn outreach: automated message writing, ICP intent scoring, buying signal detection, and campaign analytics.",
         images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {
@@ -45,8 +45,43 @@ export const metadata: Metadata = {
 };
 
 export default function AIFeatures() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://networkup.io/ai-features#webpage",
+                "name": "AI-Powered LinkedIn Outreach Features",
+                "description": "Explore NetworkUp's AI features for LinkedIn outreach: automated message writing, ICP intent scoring, buying signal detection, and campaign analytics.",
+                "url": "https://networkup.io/ai-features"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://networkup.io/ai-features#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://networkup.io"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "AI Features",
+                        "item": "https://networkup.io/ai-features"
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="bg-[#fafcf7]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Section1 />
             <Section2 />
             <Section3 />

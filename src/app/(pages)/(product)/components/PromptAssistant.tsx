@@ -5,23 +5,44 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Sparkles, Send } from "lucide-react";
 
-const APP_CONTEXT = `NetworkUp.io is an AI-powered LinkedIn growth and outreach automation platform created by WhiterApps.
+const APP_CONTEXT = `NetworkUp.io is an enterprise-grade, 100% cloud-native LinkedIn outreach automation and B2B lead generation platform created by WhiterApps. It operates entirely in the cloud without browser extensions, ensuring zero local downtime, 24/7 headless execution, and dedicated residential proxy pinning.
 
-Core Features:
-1. Smart Prospecting: Real-time intent lead scoring, profile activity analysis, reply sentiment analysis, and vertical benchmarking.
-2. Campaign Builder: Creates branching sequence flows (checks connection status 'If Connected', sends invites, dispatches follow-ups, and manages CRM sync with Salesforce/HubSpot).
-3. Unified Inbox: Consolidates messages across all connected profiles into a single inbox.
-4. AI Health Center: Continuous risk detection, campaign health tracking, and auto-warmup delivery optimizations.
+Core Product Modules:
+1. AI Lead Finder (/product/lead): B2B prospect discovery with ICP fit scoring, buying signal detection (funding, executive hiring), and 1-click campaign enrollment.
+2. Outreach Automation (/product/outreach): Personalized connection requests, trigger-based follow-up cadences that auto-pause on reply, and smart warmup pacing.
+3. Visual Campaign Builder (/product/campaigns): Drag-and-drop workflow canvas with conditional branching (If Connected, If Replied, If Viewed), multi-sender account pooling, and A/B copy testing.
+4. Convobox Unified Inbox (/product/convobox): Consolidates messages across all connected LinkedIn accounts into one shared cockpit with AI sentiment tagging (Interested, Not Now, Wrong Contact, Objection), collision prevention, and 1-click CRM sync (HubSpot, Salesforce, Pipedrive).
+5. AI Features & Intelligence (/ai-features): Context-aware message writer, predictive campaign simulator, and 24/7 campaign health risk monitoring.
 
-Workflows Supported: Custom outreach tools tailored for Sales Teams, Recruitment Teams, and Lead Gen Agencies.
+Solutions by Persona (/solutions/*):
+- Sales Teams: Multi-touch automated sequences, global lead deduplication, and pipeline tracking.
+- Lead Gen Agencies: Multi-client isolated workspaces, client sender pooling, and white-label reporting.
+- Recruiters: Candidate sourcing without InMail costs and 2-way ATS sync.
+- Startups & Founders: Founder-led outbound sales, multi-seat founder pooling, and rapid ICP validation.
+- Marketing Teams: ABM account targeting on LinkedIn aligned with CRM attribution.
 
-LinkedIn Security, Regulations & Policies:
-NetworkUp.io  strictly complies with LinkedIn's terms of service and security measures to ensure account safety:
-- Connection Limits: Every connected LinkedIn account gets a limit of maximum 100 connection requests sent per week. Every single account connected adheres to this limit, and there is no way to override or increase it. Users can set their account limits lower if they'd like.
-- Action Limits: Every connected account has a daily limit of 50 actions. An action constitutes any actionable block added to a campaign (e.g., send message, view profile, and send connection request). If any account reaches this daily limit, it is frozen automatically and will reset ready for use the following day.
-- Static Proxy & Location Pinning: Since LinkedIn tracks the IP address and approximate location of logins to check for suspicious activity, NetworkUp.io session-hosts each account using a dedicated, stable resident proxy IP matching the user's chosen location. This proxy IP never changes or rotates, preventing unusual activity warnings and maintaining a secure, stable connection.`;
+LinkedIn Safety, Compliance & Proxy Architecture:
+NetworkUp strictly adheres to LinkedIn terms of service and safety policies:
+- Weekly Connection Cap: Maximum 100 connection requests per week per account. Hard system limit with no overrides (users can adjust lower).
+- Daily Action Limits: Maximum 50 actions per day per account (invites, messages, profile views). Reaching this limit automatically freezes the account until the next day.
+- Static Residential Proxy Pinning: Dedicated residential IP matched to the user's geographic location; never rotates, preventing unusual activity flags.
+- Human Behavior Emulation: Randomized delays, natural activity curves, and automated profile warmup.
 
-const UNIFIED_PROMPT = "Provide a comprehensive explanation of NetworkUp.io , its core features, who it is built for (target audience), a quick manual on how to use it, and how it ensures complete account safety and policy compliance with LinkedIn regulations (specifically connection limits, daily action freezes, and residential static proxy location pinning).";
+Competitive Positioning (/compare/*):
+- vs. Waalaxy & Dripify: Cloud-native execution with static residential proxies (no fragile Chrome extension), multi-sender pooling, and predictive simulation.
+- vs. Expandi & Heyreach: Integrated AI Lead Finder, buying signals, and unified multi-account Convobox.
+- vs. Apollo.io & Sales Navigator: Automates the multi-step outreach execution and conversation triage that database tools leave manual.
+
+Pricing & Plans (/pricing):
+- Starter: $21/mo ($15/mo billed annually) - 1 account, 1 workspace, 1 active campaign, Convobox, basic analytics, Zapier CRM sync.
+- Growth: $59/mo ($49/mo billed annually) - 3 accounts, multi-workspace, unlimited campaigns, advanced AI, native CRM sync.
+- Enterprise: $129/mo ($99/mo billed annually) - Unlimited accounts & workspaces, custom AI workflows, API/webhooks, dedicated manager.
+- All plans include a 14-day free trial with full feature access.
+
+Integrations & API (/resources/api-documentation):
+Native 2-way sync with HubSpot, Salesforce, Pipedrive, Zapier, Make, real-time webhooks, and REST API.`;
+
+const UNIFIED_PROMPT = "Provide a comprehensive overview of NetworkUp.io, explaining its cloud-native architecture, core product modules (Lead Finder, Campaign Builder, Convobox, AI Features), persona solutions (Sales, Agencies, Recruiters, Startups), pricing plans, and its strict LinkedIn safety model (100 weekly invite limit, 50 daily action freeze, and static residential proxy pinning).";
 
 const NOTEBOOK_LM_NOTEBOOK_ID = process.env.NEXT_PUBLIC_NOTEBOOKLM_ID || "NOTEBOOK_ID";
 const NOTEBOOK_LM_URL = `https://notebooklm.google.com/notebook/${NOTEBOOK_LM_NOTEBOOK_ID}`;
@@ -75,10 +96,12 @@ const placeholders: Record<string, string> = {
 };
 
 const popularPrompts = [
-    "How does smart prospecting work?",
-    "What makes NetworkUp.io safe?",
-    "Integrations supported",
-    "Explain campaign analytics"
+    "How does the AI Lead Finder and ICP scoring work?",
+    "What makes NetworkUp's cloud proxy architecture safe?",
+    "How does Convobox manage multi-account inboxes?",
+    "How does NetworkUp compare to Waalaxy, Expandi & Apollo?",
+    "Explain pricing plans and the 14-day free trial",
+    "How do agency workspaces and sender pooling work?"
 ];
 
 export default function PromptAssistant() {

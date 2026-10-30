@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://networkup.io';
+
   return {
     rules: [
       {
@@ -23,8 +25,8 @@ export default function robots(): MetadataRoute.Robots {
           'FacebookBot',
           'Diffbot',
         ],
-        allow: ['/', '/llms.txt', '/llms-full.txt', '/feed.xml'],
-        disallow: ['/login', '/api/'],
+        allow: '/',
+        disallow: ['/private/', '/login', '/api/'],
       },
       {
         userAgent: '*',
@@ -32,8 +34,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/private/', '/login', '/api/'],
       },
     ],
-    sitemap: 'https://networkup.io/sitemap.xml',
-    host: 'https://networkup.io',
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
 

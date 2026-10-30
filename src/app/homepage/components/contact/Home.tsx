@@ -208,7 +208,7 @@ export default function Home({ onClose, onNavigateToChat }: HomeProps) {
                     <>
                         <div className="mt-5 flex flex-row items-center shrink-0 w-full">
                             <div className="flex flex-col items-start ml-2">
-                                <h1 className="text-white text-3xl font-bold w-[160px] text-left">Hey there!</h1>
+                                <p className="text-white text-3xl font-bold w-[160px] text-left">Hey there!</p>
                                 <h3 className="text-[#9ca3af] text-sm w-[150px] text-left">How can we help today?</h3>
                             </div>
                             <div className="ml-auto border-[2px] border-[#02140b] rounded-l-full overflow-hidden shrink-0">

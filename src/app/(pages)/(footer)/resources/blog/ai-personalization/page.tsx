@@ -13,14 +13,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "How AI Personalization Can 3x Your Reply Rates | NetworkUp Blog",
+    title: "How AI Personalization Boosts Reply Rates",
     description: "Learn how to use AI personalization to write hyper-relevant LinkedIn messages that feel human, avoid spam filters, and 3x your reply rates.",
     keywords: ["ai personalization linkedin", "linkedin message personalization", "improve reply rates", "ai outreach messaging", "b2b sales personalization"],
     alternates: {
         canonical: "https://networkup.io/resources/blog/ai-personalization"
     },
     openGraph: {
-        title: "How AI Personalization Can 3x Your Reply Rates | NetworkUp Blog",
+        title: "How AI Personalization Boosts Reply Rates | NetworkUp.io",
         description: "Learn how to use AI personalization to write hyper-relevant LinkedIn messages that feel human, avoid spam filters, and 3x your reply rates.",
         url: "https://networkup.io/resources/blog/ai-personalization",
         siteName: "NetworkUp.io",
