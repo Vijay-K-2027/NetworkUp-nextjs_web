@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import ApiDocumentationClient from "./ApiDocumentationClient";
 
 export const metadata: Metadata = {
-    title: "REST API Documentation | Developer Guides & Endpoints",
-    description: "Programmatic access to NetworkUp's outreach engine, lead enrichment, sequence automation, and webhooks. Integrate LinkedIn automation into your CRM and apps.",
+    title: { absolute: "NetworkUp API Documentation | Developer Reference" },
+    description: "Explore NetworkUp API documentation for available endpoints, authentication, integrations and webhook events. Use the developer reference to connect.",
     keywords: ["networkup api", "linkedin automation api", "rest api documentation", "lead enrichment api", "outreach webhooks", "developer documentation"],
     alternates: {
         canonical: "https://networkup.io/resources/api-documentation"
     },
     openGraph: {
-        title: "REST API Documentation | Developer Guides & Endpoints",
-        description: "Programmatic access to NetworkUp's outreach engine, lead enrichment, sequence automation, and webhooks. Integrate LinkedIn automation into your CRM and apps.",
+        title: "NetworkUp API Documentation | Developer Reference",
+        description: "Explore NetworkUp API documentation for available endpoints, authentication, integrations and webhook events. Use the developer reference to connect.",
         url: "https://networkup.io/resources/api-documentation",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "REST API Documentation | NetworkUp",
-        description: "Explore the NetworkUp REST API, endpoints, SDKs, and webhook events.",
+        title: "NetworkUp API Documentation | Developer Reference",
+        description: "Explore NetworkUp API documentation for available endpoints, authentication, integrations and webhook events. Use the developer reference to connect.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

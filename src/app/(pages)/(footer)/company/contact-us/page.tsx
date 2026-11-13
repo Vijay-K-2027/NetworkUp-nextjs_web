@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import ContactUsClient from "./ContactUsClient";
 
 export const metadata: Metadata = {
-    title: "Contact Us | Get in Touch with NetworkUp Team",
-    description: "Have questions about our LinkedIn automation platform or need technical support? Contact our sales, support, and partnership teams.",
+    title: { absolute: "Contact NetworkUp | Sales & Product Support" },
+    description: "Contact NetworkUp for product enquiries, sales discussions, technical support or partnership opportunities using the contact options on this page.",
     keywords: ["contact networkup", "networkup support", "sales inquiry", "linkedin automation support", "customer service networkup"],
     alternates: {
         canonical: "https://networkup.io/company/contact-us"
     },
     openGraph: {
-        title: "Contact Us | Get in Touch with NetworkUp Team",
-        description: "Have questions about our LinkedIn automation platform or need technical support? Contact our sales, support, and partnership teams.",
+        title: "Contact NetworkUp | Sales & Product Support",
+        description: "Contact NetworkUp for product enquiries, sales discussions, technical support or partnership opportunities using the contact options on this page.",
         url: "https://networkup.io/company/contact-us",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Contact Us | NetworkUp Team",
-        description: "Get in touch with NetworkUp for sales inquiries, technical support, and partnership opportunities.",
+        title: "Contact NetworkUp | Sales & Product Support",
+        description: "Contact NetworkUp for product enquiries, sales discussions, technical support or partnership opportunities using the contact options on this page.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

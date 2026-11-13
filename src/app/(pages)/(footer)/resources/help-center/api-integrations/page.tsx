@@ -6,15 +6,15 @@ import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
 
 export const metadata: Metadata = {
-    title: "API & Integrations Support | NetworkUp Help Center",
-    description: "Learn how to generate API keys, configure OAuth 2.0 authentication, listen to webhook events, and integrate NetworkUp with HubSpot, Salesforce, and custom CRMs.",
+    title: { absolute: "API & Integrations Help | NetworkUp Help Center" },
+    description: "Learn how to configure supported NetworkUp integrations and API workflows. Review authentication, API keys and webhook instructions available in them.",
     keywords: ["api key setup", "webhook integration", "crm sync help", "api authentication", "rest api troubleshooting"],
     alternates: {
         canonical: "https://networkup.io/resources/help-center/api-integrations"
     },
     openGraph: {
-        title: "API & Integrations Support | NetworkUp Help Center",
-        description: "Learn how to generate API keys, configure OAuth 2.0 authentication, listen to webhook events, and integrate NetworkUp with HubSpot, Salesforce, and custom CRMs.",
+        title: "API & Integrations Help | NetworkUp Help Center",
+        description: "Learn how to configure supported NetworkUp integrations and API workflows. Review authentication, API keys and webhook instructions available in them.",
         url: "https://networkup.io/resources/help-center/api-integrations",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "API & Integrations Support | NetworkUp",
-        description: "Connect NetworkUp to your tech stack using webhooks and REST endpoints.",
+        title: "API & Integrations Help | NetworkUp Help Center",
+        description: "Learn how to configure supported NetworkUp integrations and API workflows. Review authentication, API keys and webhook instructions available in them.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

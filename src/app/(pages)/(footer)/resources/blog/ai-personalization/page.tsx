@@ -13,15 +13,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "How AI Personalization Boosts Reply Rates",
-    description: "Learn how to use AI personalization to write hyper-relevant LinkedIn messages that feel human, avoid spam filters, and 3x your reply rates.",
+    title: { absolute: "AI Personalisation for LinkedIn Outreach | NetworkUp" },
+    description: "Learn how to personalise LinkedIn outreach with AI-assisted research and relevant messaging. Explore practical approaches, examples and review steps.",
     keywords: ["ai personalization linkedin", "linkedin message personalization", "improve reply rates", "ai outreach messaging", "b2b sales personalization"],
     alternates: {
         canonical: "https://networkup.io/resources/blog/ai-personalization"
     },
     openGraph: {
-        title: "How AI Personalization Boosts Reply Rates | NetworkUp.io",
-        description: "Learn how to use AI personalization to write hyper-relevant LinkedIn messages that feel human, avoid spam filters, and 3x your reply rates.",
+        title: "AI Personalisation for LinkedIn Outreach | NetworkUp",
+        description: "Learn how to personalise LinkedIn outreach with AI-assisted research and relevant messaging. Explore practical approaches, examples and review steps.",
         url: "https://networkup.io/resources/blog/ai-personalization",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How AI Personalization Can 3x Your Reply Rates",
-        description: "Use AI to write personalized messages that feel human and drive replies.",
+        title: "AI Personalisation for LinkedIn Outreach | NetworkUp",
+        description: "Learn how to personalise LinkedIn outreach with AI-assisted research and relevant messaging. Explore practical approaches, examples and review steps.",
         images: ["https://networkup.io/footer/resources/blog/Article4.png"]
     },
     robots: {

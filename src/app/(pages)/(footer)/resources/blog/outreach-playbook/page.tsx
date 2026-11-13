@@ -9,15 +9,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "The SaaS LinkedIn Outreach Playbook",
-    description: "A step-by-step playbook to build, launch, test, and scale winning LinkedIn outbound campaigns for SaaS growth teams and sales development reps.",
+    title: { absolute: "SaaS LinkedIn Outreach Playbook | NetworkUp" },
+    description: "Use this SaaS LinkedIn outreach playbook to plan prospecting, create relevant messages, organise follow-ups and review campaign performance.",
     keywords: ["saas outreach playbook", "linkedin outreach strategy", "b2b outbound sales", "saas lead generation", "sales prospecting playbook"],
     alternates: {
         canonical: "https://networkup.io/resources/blog/outreach-playbook"
     },
     openGraph: {
-        title: "The SaaS LinkedIn Outreach Playbook | NetworkUp.io",
-        description: "A step-by-step playbook to build, launch, test, and scale winning LinkedIn outbound campaigns for SaaS growth teams and sales development reps.",
+        title: "SaaS LinkedIn Outreach Playbook | NetworkUp",
+        description: "Use this SaaS LinkedIn outreach playbook to plan prospecting, create relevant messages, organise follow-ups and review campaign performance.",
         url: "https://networkup.io/resources/blog/outreach-playbook",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "The SaaS LinkedIn Outreach Playbook | NetworkUp.io",
-        description: "A step-by-step playbook to build, launch and scale winning campaigns.",
+        title: "SaaS LinkedIn Outreach Playbook | NetworkUp",
+        description: "Use this SaaS LinkedIn outreach playbook to plan prospecting, create relevant messages, organise follow-ups and review campaign performance.",
         images: ["https://networkup.io/footer/resources/blog/Article5.png"]
     },
     robots: {

@@ -10,8 +10,8 @@ import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
 
 export const metadata: Metadata = {
-    title: "LinkedIn Outreach Automation Tool | Automated LinkedIn Sequences",
-    description: "Scale LinkedIn outbound without sacrificing personalization. Automate smart connection requests, trigger-based follow-ups, and multi-channel engagement safely with NetworkUp.",
+    title: { absolute: "LinkedIn Outreach Automation Tool | NetworkUp" },
+    description: "Automate LinkedIn outreach workflows with NetworkUp. Organise connection requests, follow-ups and prospect conversations with a structured campaign process.",
     keywords: [
         "linkedin outreach automation",
         "linkedin outreach tool",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
         canonical: "https://networkup.io/product/outreach"
     },
     openGraph: {
-        title: "LinkedIn Outreach Automation Tool | Automated LinkedIn Sequences | NetworkUp.io",
-        description: "Scale LinkedIn outbound without sacrificing personalization. Automate smart connection requests, trigger-based follow-ups, and multi-channel engagement safely with NetworkUp.",
+        title: "LinkedIn Outreach Automation Tool | NetworkUp",
+        description: "Automate LinkedIn outreach workflows with NetworkUp. Organise connection requests, follow-ups and prospect conversations with a structured campaign process.",
         url: "https://networkup.io/product/outreach",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "LinkedIn Outreach Automation Tool | Automated LinkedIn Sequences | NetworkUp.io",
-        description: "Scale LinkedIn outbound without sacrificing personalization. Automate smart connection requests, trigger-based follow-ups, and multi-channel engagement safely with NetworkUp.",
+        title: "LinkedIn Outreach Automation Tool | NetworkUp",
+        description: "Automate LinkedIn outreach workflows with NetworkUp. Organise connection requests, follow-ups and prospect conversations with a structured campaign process.",
         images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {

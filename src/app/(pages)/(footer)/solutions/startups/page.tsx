@@ -9,17 +9,15 @@ import { Users, Radio, Inbox, SlidersHorizontal, Laptop, Award, Shield, BadgeChe
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "NetworkUp for Startups | Founder-Led LinkedIn Outbound & Pipeline",
-    description:
-        "Help founders and lean GTM teams discover the right prospects, personalize outreach with AI, automate follow-ups, and build a repeatable B2B pipeline without adding unnecessary manual work.",
+    title: { absolute: "LinkedIn Outreach for Startups | NetworkUp" },
+    description: "Help startup teams organise B2B prospecting, personalise LinkedIn outreach and build repeatable follow-up workflows with NetworkUp.",
     keywords: ["linkedin outreach for startups", "founder led sales outbound", "startup lead generation", "lean gtm prospecting", "b2b pipeline builder", "networkup for startups"],
     alternates: {
         canonical: "https://networkup.io/solutions/startups"
     },
     openGraph: {
-        title: "NetworkUp for Startups | Founder-Led LinkedIn Outbound & Pipeline",
-        description:
-            "Help founders and lean GTM teams discover the right prospects, personalize outreach with AI, automate follow-ups, and build a repeatable B2B pipeline without adding unnecessary manual work.",
+        title: "LinkedIn Outreach for Startups | NetworkUp",
+        description: "Help startup teams organise B2B prospecting, personalise LinkedIn outreach and build repeatable follow-up workflows with NetworkUp.",
         url: "https://networkup.io/solutions/startups",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -35,9 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp for Startups | Founder-Led LinkedIn Outbound & Pipeline",
-        description:
-            "Help founders and lean GTM teams discover the right prospects, personalize outreach with AI, automate follow-ups, and build a repeatable B2B pipeline without adding unnecessary manual work.",
+        title: "LinkedIn Outreach for Startups | NetworkUp",
+        description: "Help startup teams organise B2B prospecting, personalise LinkedIn outreach and build repeatable follow-up workflows with NetworkUp.",
         images: ["https://networkup.io/seo/og-solutions.jpg"]
     },
     robots: {

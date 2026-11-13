@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: { absolute: "NetworkUp vs Apollo.io: LinkedIn Outreach Comparison" },
-    description: "Compare NetworkUp vs Apollo.io. Evaluate side-by-side features for LinkedIn outreach automation, unified messaging, AI personalization, and lead discovery.",
+    title: { absolute: "NetworkUp vs Apollo | LinkedIn Outreach Comparison" },
+    description: "Compare NetworkUp and Apollo for LinkedIn outreach workflows, prospecting, messaging and team requirements. Review current features before choosing a platform.",
     keywords: ["networkup vs apollo", "apollo.io alternative", "apollo linkedin automation", "apollo alternative for linkedin", "b2b lead generation tools", "linkedin outreach vs apollo"],
     alternates: {
         canonical: "https://networkup.io/compare/apollo"
     },
     openGraph: {
-        title: "NetworkUp vs Apollo.io: LinkedIn Outreach Comparison",
-        description: "Compare NetworkUp vs Apollo.io. Evaluate side-by-side features for LinkedIn outreach automation, unified messaging, AI personalization, and lead discovery.",
+        title: "NetworkUp vs Apollo | LinkedIn Outreach Comparison",
+        description: "Compare NetworkUp and Apollo for LinkedIn outreach workflows, prospecting, messaging and team requirements. Review current features before choosing a platform.",
         url: "https://networkup.io/compare/apollo",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs Apollo.io: LinkedIn Outreach Comparison",
-        description: "Compare NetworkUp vs Apollo.io. Evaluate side-by-side features for LinkedIn outreach automation, unified messaging, AI personalization, and lead discovery.",
+        title: "NetworkUp vs Apollo | LinkedIn Outreach Comparison",
+        description: "Compare NetworkUp and Apollo for LinkedIn outreach workflows, prospecting, messaging and team requirements. Review current features before choosing a platform.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

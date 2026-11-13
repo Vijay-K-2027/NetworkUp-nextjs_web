@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: "NetworkUp vs Heyreach | LinkedIn Agency & Multi-Account Outreach Comparison",
-    description: "Compare NetworkUp vs Heyreach. Compare AI personalization, real-time buying signals, predictive campaign simulation, and multi-account scaling for agencies and sales teams.",
+    title: { absolute: "NetworkUp vs HeyReach | LinkedIn Outreach Comparison" },
+    description: "Compare NetworkUp and HeyReach for LinkedIn outreach, campaign management, multi-account workflows and team collaboration using verified features.",
     keywords: ["networkup vs heyreach", "heyreach alternative", "heyreach competitors", "best heyreach alternative", "multi account linkedin automation", "agency linkedin outreach tool"],
     alternates: {
         canonical: "https://networkup.io/compare/heyreach"
     },
     openGraph: {
-        title: "NetworkUp vs Heyreach | LinkedIn Agency & Multi-Account Outreach Comparison",
-        description: "Compare NetworkUp vs Heyreach. Compare AI personalization, real-time buying signals, predictive campaign simulation, and multi-account scaling for agencies and sales teams.",
+        title: "NetworkUp vs HeyReach | LinkedIn Outreach Comparison",
+        description: "Compare NetworkUp and HeyReach for LinkedIn outreach, campaign management, multi-account workflows and team collaboration using verified features.",
         url: "https://networkup.io/compare/heyreach",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs Heyreach | LinkedIn Multi-Account Outreach Comparison",
-        description: "Compare NetworkUp vs Heyreach for agency scale LinkedIn outreach.",
+        title: "NetworkUp vs HeyReach | LinkedIn Outreach Comparison",
+        description: "Compare NetworkUp and HeyReach for LinkedIn outreach, campaign management, multi-account workflows and team collaboration using verified features.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

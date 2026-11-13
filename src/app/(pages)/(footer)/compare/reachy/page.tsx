@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: { absolute: "NetworkUp vs Reachy.ai: LinkedIn Outreach Comparison" },
-    description: "Compare NetworkUp vs Reachy.ai for LinkedIn outreach. Compare features for automated sequences, multi-account inbox management, and AI message personalization.",
+    title: { absolute: "NetworkUp vs Reachy | LinkedIn Outreach Comparison" },
+    description: "Compare NetworkUp and Reachy for LinkedIn outreach workflows, campaign automation, messaging and multi-account management using verified product information.",
     keywords: ["networkup vs reachy", "reachy ai alternative", "reachy competitors", "best reachy alternative", "ai outreach reachy vs networkup", "linkedin prospecting tool"],
     alternates: {
         canonical: "https://networkup.io/compare/reachy"
     },
     openGraph: {
-        title: "NetworkUp vs Reachy.ai: LinkedIn Outreach Comparison",
-        description: "Compare NetworkUp vs Reachy.ai for LinkedIn outreach. Compare features for automated sequences, multi-account inbox management, and AI message personalization.",
+        title: "NetworkUp vs Reachy | LinkedIn Outreach Comparison",
+        description: "Compare NetworkUp and Reachy for LinkedIn outreach workflows, campaign automation, messaging and multi-account management using verified product information.",
         url: "https://networkup.io/compare/reachy",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs Reachy.ai: LinkedIn Outreach Comparison",
-        description: "Compare NetworkUp vs Reachy.ai for LinkedIn outreach. Compare features for automated sequences, multi-account inbox management, and AI message personalization.",
+        title: "NetworkUp vs Reachy | LinkedIn Outreach Comparison",
+        description: "Compare NetworkUp and Reachy for LinkedIn outreach workflows, campaign automation, messaging and multi-account management using verified product information.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import TermsAndConditionsClient from "./TermsAndConditionsClient";
 
 export const metadata: Metadata = {
-    title: "Terms and Conditions | Legal Framework & Usage Terms",
-    description: "Read the Terms and Conditions for using NetworkUp's LinkedIn automation and outreach software, account responsibilities, and subscription policies.",
+    title: { absolute: "NetworkUp Terms & Conditions | Terms of Use" },
+    description: "Read the terms and conditions governing access to and use of NetworkUp, including account responsibilities and applicable subscription terms.",
     keywords: ["networkup terms and conditions", "terms of service", "user agreement", "linkedin automation legal terms", "subscription policies"],
     alternates: {
         canonical: "https://networkup.io/company/terms-and-conditions"
     },
     openGraph: {
-        title: "Terms and Conditions | Legal Framework & Usage Terms",
-        description: "Read the Terms and Conditions for using NetworkUp's LinkedIn automation and outreach software, account responsibilities, and subscription policies.",
+        title: "NetworkUp Terms & Conditions | Terms of Use",
+        description: "Read the terms and conditions governing access to and use of NetworkUp, including account responsibilities and applicable subscription terms.",
         url: "https://networkup.io/company/terms-and-conditions",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Terms and Conditions | NetworkUp",
-        description: "Understand your rights and terms when using the NetworkUp LinkedIn growth platform.",
+        title: "NetworkUp Terms & Conditions | Terms of Use",
+        description: "Read the terms and conditions governing access to and use of NetworkUp, including account responsibilities and applicable subscription terms.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

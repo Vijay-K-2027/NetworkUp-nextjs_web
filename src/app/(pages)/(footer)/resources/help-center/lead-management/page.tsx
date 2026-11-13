@@ -6,15 +6,15 @@ import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
 
 export const metadata: Metadata = {
-    title: "Lead Management & Discovery Guide | NetworkUp Help Center",
-    description: "Learn how to discover verified contacts, import lead lists, organize audience segments, enrich company data, and score ICP fit inside NetworkUp.",
+    title: { absolute: "Lead Management Guide | NetworkUp Help Center" },
+    description: "Learn how to organise prospects in NetworkUp, manage lead lists and use available filters or enrichment features to support B2B outreach.",
     keywords: ["lead management guide", "prospect discovery tutorial", "enrich contact data", "lead scoring icp", "lead lists management"],
     alternates: {
         canonical: "https://networkup.io/resources/help-center/lead-management"
     },
     openGraph: {
-        title: "Lead Management & Discovery Guide | NetworkUp Help Center",
-        description: "Learn how to discover verified contacts, import lead lists, organize audience segments, enrich company data, and score ICP fit inside NetworkUp.",
+        title: "Lead Management Guide | NetworkUp Help Center",
+        description: "Learn how to organise prospects in NetworkUp, manage lead lists and use available filters or enrichment features to support B2B outreach.",
         url: "https://networkup.io/resources/help-center/lead-management",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Lead Management Guide | NetworkUp",
-        description: "Organize contacts, segment audiences, and track lead lifecycle events.",
+        title: "Lead Management Guide | NetworkUp Help Center",
+        description: "Learn how to organise prospects in NetworkUp, manage lead lists and use available filters or enrichment features to support B2B outreach.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

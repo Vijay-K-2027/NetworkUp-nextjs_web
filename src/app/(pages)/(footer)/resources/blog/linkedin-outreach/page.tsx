@@ -14,15 +14,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "How AI is Changing LinkedIn Outreach in 2027",
-    description: "Explore how artificial intelligence is transforming B2B prospecting, personalization, buying signal detection, and sequence automation on LinkedIn.",
+    title: { absolute: "LinkedIn Outreach Strategies for B2B Prospecting | NetworkUp" },
+    description: "Explore practical LinkedIn outreach strategies for B2B prospecting, personalised messaging, follow-ups and campaign workflows.",
     keywords: ["ai linkedin outreach", "future of linkedin automation", "b2b sales ai trends", "ai prospecting tools", "smart outreach automation"],
     alternates: {
         canonical: "https://networkup.io/resources/blog/linkedin-outreach"
     },
     openGraph: {
-        title: "How AI is Changing LinkedIn Outreach in 2027 | NetworkUp.io",
-        description: "Explore how artificial intelligence is transforming B2B prospecting, personalization, buying signal detection, and sequence automation on LinkedIn.",
+        title: "LinkedIn Outreach Strategies for B2B Prospecting | NetworkUp",
+        description: "Explore practical LinkedIn outreach strategies for B2B prospecting, personalised messaging, follow-ups and campaign workflows.",
         url: "https://networkup.io/resources/blog/linkedin-outreach",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How AI is Changing LinkedIn Outreach in 2027 | NetworkUp.io",
-        description: "Explore how AI is transforming prospecting, personalization and outreach.",
+        title: "LinkedIn Outreach Strategies for B2B Prospecting | NetworkUp",
+        description: "Explore practical LinkedIn outreach strategies for B2B prospecting, personalised messaging, follow-ups and campaign workflows.",
         images: ["https://networkup.io/footer/resources/blog/Article1.png"]
     },
     robots: {

@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import HelpCenterClient from "./HelpCenterClient";
 
 export const metadata: Metadata = {
-    title: "Help Center & Support Knowledge Base | NetworkUp",
-    description: "Find guides, troubleshooting articles, setup instructions, and FAQs for getting started, running campaigns, managing leads, and integrating APIs with NetworkUp.",
+    title: { absolute: "NetworkUp Help Center | Setup Guides & Support" },
+    description: "Find NetworkUp setup guides, product instructions and troubleshooting resources for campaigns, lead management, integrations and account support.",
     keywords: ["networkup help center", "networkup customer support", "linkedin outreach tutorials", "campaign setup troubleshooting", "networkup documentation"],
     alternates: {
         canonical: "https://networkup.io/resources/help-center"
     },
     openGraph: {
-        title: "Help Center & Support Knowledge Base | NetworkUp",
-        description: "Find guides, troubleshooting articles, setup instructions, and FAQs for getting started, running campaigns, managing leads, and integrating APIs with NetworkUp.",
+        title: "NetworkUp Help Center | Setup Guides & Support",
+        description: "Find NetworkUp setup guides, product instructions and troubleshooting resources for campaigns, lead management, integrations and account support.",
         url: "https://networkup.io/resources/help-center",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Help Center & Knowledge Base | NetworkUp",
-        description: "Search our knowledge base, guides, and FAQs for NetworkUp.",
+        title: "NetworkUp Help Center | Setup Guides & Support",
+        description: "Find NetworkUp setup guides, product instructions and troubleshooting resources for campaigns, lead management, integrations and account support.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: "NetworkUp vs Lemlist | LinkedIn & Multichannel Outreach Comparison",
-    description: "Compare NetworkUp vs Lemlist. See how NetworkUp specializes in LinkedIn engagement with native AI conversation analysis, predictive ICP scoring, and unified messaging.",
+    title: { absolute: "NetworkUp vs Lemlist | Outreach Platform Comparison" },
+    description: "Compare NetworkUp and Lemlist for LinkedIn outreach, multichannel prospecting, personalisation and campaign workflows based on current product capabilities.",
     keywords: ["networkup vs lemlist", "lemlist alternative", "lemlist linkedin automation", "best lemlist alternative", "cold email vs linkedin automation", "lemlist competitors"],
     alternates: {
         canonical: "https://networkup.io/compare/lemlist"
     },
     openGraph: {
-        title: "NetworkUp vs Lemlist | LinkedIn & Multichannel Outreach Comparison",
-        description: "Compare NetworkUp vs Lemlist. See how NetworkUp specializes in LinkedIn engagement with native AI conversation analysis, predictive ICP scoring, and unified messaging.",
+        title: "NetworkUp vs Lemlist | Outreach Platform Comparison",
+        description: "Compare NetworkUp and Lemlist for LinkedIn outreach, multichannel prospecting, personalisation and campaign workflows based on current product capabilities.",
         url: "https://networkup.io/compare/lemlist",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs Lemlist | LinkedIn Outreach Platform Comparison",
-        description: "Compare NetworkUp vs Lemlist for intelligent LinkedIn prospecting and campaign workflows.",
+        title: "NetworkUp vs Lemlist | Outreach Platform Comparison",
+        description: "Compare NetworkUp and Lemlist for LinkedIn outreach, multichannel prospecting, personalisation and campaign workflows based on current product capabilities.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

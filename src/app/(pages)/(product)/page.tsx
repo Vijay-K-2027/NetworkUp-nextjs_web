@@ -12,10 +12,8 @@ import Contact from "./components/Contact";
 import Document from "./components/Documentation";
 
 export const metadata: Metadata = {
-    title: {
-        absolute: "LinkedIn Outreach Automation Tool & AI Lead Gen | NetworkUp.io"
-    },
-    description: "Scale LinkedIn outreach with NetworkUp. Automate multi-step sequences, find high-intent leads, and manage conversations in a unified multi-account inbox.",
+    title: { absolute: "LinkedIn Outreach Automation & AI Lead Generation | NetworkUp" },
+    description: "Automate LinkedIn outreach with NetworkUp. Find qualified B2B prospects, personalise follow-ups and manage conversations from one unified workspace.",
     keywords: [
         "linkedin outreach automation",
         "linkedin outreach automation tool",
@@ -50,8 +48,8 @@ export const metadata: Metadata = {
         canonical: "https://networkup.io"
     },
     openGraph: {
-        title: "LinkedIn Outreach Automation Tool & AI Lead Gen | NetworkUp.io",
-        description: "Scale LinkedIn outreach with NetworkUp. Automate multi-step sequences, find high-intent leads, and manage conversations in a unified multi-account inbox.",
+        title: "LinkedIn Outreach Automation & AI Lead Generation | NetworkUp",
+        description: "Automate LinkedIn outreach with NetworkUp. Find qualified B2B prospects, personalise follow-ups and manage conversations from one unified workspace.",
         url: "https://networkup.io",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -67,8 +65,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "LinkedIn Outreach Automation Tool & AI Lead Gen | NetworkUp.io",
-        description: "Scale LinkedIn outreach with NetworkUp. Automate multi-step sequences, find high-intent leads, and manage conversations in a unified multi-account inbox.",
+        title: "LinkedIn Outreach Automation & AI Lead Generation | NetworkUp",
+        description: "Automate LinkedIn outreach with NetworkUp. Find qualified B2B prospects, personalise follow-ups and manage conversations from one unified workspace.",
         images: ["https://networkup.io/seo/og-home.jpg"]
     },
     robots: {

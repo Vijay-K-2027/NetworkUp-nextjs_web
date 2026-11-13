@@ -11,17 +11,15 @@ import Section124Template from "../templates/section124";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "NetworkUp for Recruiters | Automated LinkedIn Sourcing & Talent Pipeline",
-    description:
-        "Empower recruiting teams and executive search firms to discover qualified candidates, personalize outreach, automate follow-ups, and manage talent pipelines from one connected workspace.",
+    title: { absolute: "LinkedIn Recruiting Automation for Recruiters | NetworkUp" },
+    description: "Organise candidate prospecting and LinkedIn outreach with NetworkUp. Personalise messages, manage follow-ups and keep recruiting conversations organised.",
     keywords: ["linkedin talent sourcing", "automated candidate outreach", "recruiter linkedin automation", "talent pipeline platform", "executive search automation", "networkup for recruiters"],
     alternates: {
         canonical: "https://networkup.io/solutions/recruiters"
     },
     openGraph: {
-        title: "NetworkUp for Recruiters | Automated LinkedIn Sourcing & Talent Pipeline",
-        description:
-            "Empower recruiting teams and executive search firms to discover qualified candidates, personalize outreach, automate follow-ups, and manage talent pipelines from one connected workspace.",
+        title: "LinkedIn Recruiting Automation for Recruiters | NetworkUp",
+        description: "Organise candidate prospecting and LinkedIn outreach with NetworkUp. Personalise messages, manage follow-ups and keep recruiting conversations organised.",
         url: "https://networkup.io/solutions/recruiters",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -37,9 +35,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp for Recruiters | Automated LinkedIn Sourcing & Talent Pipeline",
-        description:
-            "Empower recruiting teams and executive search firms to discover qualified candidates, personalize outreach, automate follow-ups, and manage talent pipelines from one connected workspace.",
+        title: "LinkedIn Recruiting Automation for Recruiters | NetworkUp",
+        description: "Organise candidate prospecting and LinkedIn outreach with NetworkUp. Personalise messages, manage follow-ups and keep recruiting conversations organised.",
         images: ["https://networkup.io/seo/og-solutions.jpg"]
     },
     robots: {

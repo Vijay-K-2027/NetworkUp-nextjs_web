@@ -10,15 +10,15 @@ import Section8 from "./components/Section8";
 import Section9 from "./components/Section9";
 
 export const metadata: Metadata = {
-    title: "AI-Powered LinkedIn Outreach Features",
-    description: "Explore NetworkUp's AI features for LinkedIn outreach: automated message writing, ICP intent scoring, buying signal detection, and campaign analytics.",
+    title: { absolute: "AI-Powered LinkedIn Outreach Features | NetworkUp" },
+    description: "Explore NetworkUp's AI-assisted LinkedIn outreach capabilities, including message personalisation, prospect insights and campaign analytics where supported.",
     keywords: ["ai linkedin tool", "automated prospecting", "ai message builder", "smart follow-ups", "linkedin automation features", "linkedin lead scoring", "reply sentiment analysis", "inbound automation", "ab testing linkedin", "outreach risk detection"],
     alternates: {
         canonical: "https://networkup.io/ai-features"
     },
     openGraph: {
-        title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
-        description: "Explore NetworkUp's AI features for LinkedIn outreach: automated message writing, ICP intent scoring, buying signal detection, and campaign analytics.",
+        title: "AI-Powered LinkedIn Outreach Features | NetworkUp",
+        description: "Explore NetworkUp's AI-assisted LinkedIn outreach capabilities, including message personalisation, prospect insights and campaign analytics where supported.",
         url: "https://networkup.io/ai-features",
         siteName: "NetworkUp",
         locale: "en_US",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "AI-Powered LinkedIn Outreach Features | NetworkUp.io",
-        description: "Explore NetworkUp's AI features for LinkedIn outreach: automated message writing, ICP intent scoring, buying signal detection, and campaign analytics.",
+        title: "AI-Powered LinkedIn Outreach Features | NetworkUp",
+        description: "Explore NetworkUp's AI-assisted LinkedIn outreach capabilities, including message personalisation, prospect insights and campaign analytics where supported.",
         images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {

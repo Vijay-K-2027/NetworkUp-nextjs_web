@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: "NetworkUp vs Sendpilot | Next-Gen LinkedIn Automation Comparison",
-    description: "Compare NetworkUp vs Sendpilot. Discover why teams choose NetworkUp for deeper AI ICP scoring, predictive campaign simulation, and intelligent unified inbox management.",
+    title: { absolute: "NetworkUp vs Sendpilot | LinkedIn Automation Comparison" },
+    description: "Compare NetworkUp and Sendpilot for LinkedIn automation, campaign workflows, messaging and prospect management using verified product information.",
     keywords: ["networkup vs sendpilot", "sendpilot alternative", "sendpilot competitors", "best sendpilot alternative", "linkedin automation tools comparison", "sendpilot vs networkup"],
     alternates: {
         canonical: "https://networkup.io/compare/sendpilot"
     },
     openGraph: {
-        title: "NetworkUp vs Sendpilot | Next-Gen LinkedIn Automation Comparison",
-        description: "Compare NetworkUp vs Sendpilot. Discover why teams choose NetworkUp for deeper AI ICP scoring, predictive campaign simulation, and intelligent unified inbox management.",
+        title: "NetworkUp vs Sendpilot | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp and Sendpilot for LinkedIn automation, campaign workflows, messaging and prospect management using verified product information.",
         url: "https://networkup.io/compare/sendpilot",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "NetworkUp vs Sendpilot | LinkedIn Automation Comparison",
-        description: "Compare NetworkUp vs Sendpilot for automated LinkedIn outreach sequences.",
+        description: "Compare NetworkUp and Sendpilot for LinkedIn automation, campaign workflows, messaging and prospect management using verified product information.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

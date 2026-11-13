@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import BlogClient from "./BlogClient";
 
 export const metadata: Metadata = {
-    title: { absolute: "NetworkUp Blog: LinkedIn Outreach & Growth Insights" },
-    description: "Explore the latest insights, strategies, AI personalization guides, and lead generation playbooks to scale your B2B sales pipeline on LinkedIn.",
+    title: { absolute: "LinkedIn Outreach Blog | B2B Prospecting Insights | NetworkUp" },
+    description: "Explore LinkedIn outreach strategies, B2B prospecting guides, AI personalisation insights and lead-generation playbooks for sales teams.",
     keywords: ["linkedin outreach blog", "b2b lead generation blog", "ai personalization guides", "sales automation strategies", "linkedin cold messaging tips"],
     alternates: {
         canonical: "https://networkup.io/resources/blog"
     },
     openGraph: {
-        title: "NetworkUp Blog: LinkedIn Outreach & Growth Insights",
-        description: "Explore the latest insights, strategies, AI personalization guides, and lead generation playbooks to scale your B2B sales pipeline on LinkedIn.",
+        title: "LinkedIn Outreach Blog | B2B Prospecting Insights | NetworkUp",
+        description: "Explore LinkedIn outreach strategies, B2B prospecting guides, AI personalisation insights and lead-generation playbooks for sales teams.",
         url: "https://networkup.io/resources/blog",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp Blog | Smart LinkedIn Outreach Resources",
-        description: "Actionable playbooks, AI personalization tactics, and outbound strategies.",
+        title: "LinkedIn Outreach Blog | B2B Prospecting Insights | NetworkUp",
+        description: "Explore LinkedIn outreach strategies, B2B prospecting guides, AI personalisation insights and lead-generation playbooks for sales teams.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

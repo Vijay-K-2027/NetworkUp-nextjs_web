@@ -10,8 +10,8 @@ import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
 
 export const metadata: Metadata = {
-    title: "Convobox | Unified LinkedIn Inbox & Conversation Management",
-    description: "Streamline your sales conversations with Convobox. A unified multi-account LinkedIn inbox with AI intent classification, message tagging, and team collaboration.",
+    title: { absolute: "Unified LinkedIn Inbox | Conversation Management | NetworkUp" },
+    description: "Manage LinkedIn conversations from a unified inbox with NetworkUp. Organise messages and review conversations across connected accounts where supported.",
     keywords: [
         "linkedin outreach automation",
         "unified linkedin inbox",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
         canonical: "https://networkup.io/product/convobox"
     },
     openGraph: {
-        title: "Convobox | Unified LinkedIn Inbox & Conversation Management | NetworkUp.io",
-        description: "Streamline your sales conversations with Convobox. A unified multi-account LinkedIn inbox with AI intent classification, message tagging, and team collaboration.",
+        title: "Unified LinkedIn Inbox | Conversation Management | NetworkUp",
+        description: "Manage LinkedIn conversations from a unified inbox with NetworkUp. Organise messages and review conversations across connected accounts where supported.",
         url: "https://networkup.io/product/convobox",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Convobox | Unified LinkedIn Inbox & Conversation Management | NetworkUp.io",
-        description: "Streamline your sales conversations with Convobox. A unified multi-account LinkedIn inbox with AI intent classification, message tagging, and team collaboration.",
+        title: "Unified LinkedIn Inbox | Conversation Management | NetworkUp",
+        description: "Manage LinkedIn conversations from a unified inbox with NetworkUp. Organise messages and review conversations across connected accounts where supported.",
         images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {

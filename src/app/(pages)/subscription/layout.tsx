@@ -6,15 +6,15 @@ import { Metadata } from "next";
 import { headers } from "next/headers";
 
 export const metadata: Metadata = {
-    title: "Choose Your Subscription Plan",
-    description: "Start your free trial or subscribe to a Growth or Enterprise plan to unlock advanced AI-powered LinkedIn outreach tools.",
+    title: { absolute: "Choose Your NetworkUp Subscription Plan" },
+    description: "Choose a NetworkUp subscription plan for LinkedIn outreach and prospecting. Review available options and subscription details before continuing.",
     keywords: ["networkup trial", "growth plan setup", "enterprise subscription networkup", "linkedin tool checkout"],
     alternates: {
         canonical: "https://networkup.io/subscription"
     },
     openGraph: {
-        title: "Choose Your Subscription Plan | NetworkUp.io",
-        description: "Start your free trial or subscribe to a Growth or Enterprise plan to unlock advanced AI-powered LinkedIn outreach tools.",
+        title: "Choose Your NetworkUp Subscription Plan",
+        description: "Choose a NetworkUp subscription plan for LinkedIn outreach and prospecting. Review available options and subscription details before continuing.",
         url: "https://networkup.io/subscription",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Choose Your Subscription Plan | NetworkUp.io",
-        description: "Start your free trial or subscribe to a Growth or Enterprise plan to unlock advanced AI-powered LinkedIn outreach tools.",
+        title: "Choose Your NetworkUp Subscription Plan",
+        description: "Choose a NetworkUp subscription plan for LinkedIn outreach and prospecting. Review available options and subscription details before continuing.",
         images: ["https://networkup.io/seo/og-pricing.jpg"]
     },
     robots: {

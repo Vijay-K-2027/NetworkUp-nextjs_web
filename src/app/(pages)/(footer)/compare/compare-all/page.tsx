@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import CompareAllClient from "./CompareAllClient";
 
 export const metadata: Metadata = {
-    title: "NetworkUp vs All Competitors | Complete LinkedIn Outreach Comparison",
-    description: "Compare NetworkUp against Sendpilot, Waalaxy, Dripify, Expandi, Reachy, Heyreach, Apollo, Lemlist, and Sales Navigator. See full feature-by-feature matrix and advantages.",
+    title: { absolute: "LinkedIn Automation Tools Compared | NetworkUp" },
+    description: "Compare NetworkUp with relevant LinkedIn outreach and automation platforms. Review verified features, workflows and use cases to evaluate the options.",
     keywords: ["linkedin outreach tools comparison", "networkup vs competitors", "best linkedin automation tool 2026", "waalaxy alternative", "expandi alternative", "dripify alternative", "apollo alternative"],
     alternates: {
         canonical: "https://networkup.io/compare/compare-all"
     },
     openGraph: {
-        title: "NetworkUp vs All Competitors | Complete LinkedIn Outreach Comparison",
-        description: "Compare NetworkUp against Sendpilot, Waalaxy, Dripify, Expandi, Reachy, Heyreach, Apollo, Lemlist, and Sales Navigator. See full feature-by-feature matrix and advantages.",
+        title: "LinkedIn Automation Tools Compared | NetworkUp",
+        description: "Compare NetworkUp with relevant LinkedIn outreach and automation platforms. Review verified features, workflows and use cases to evaluate the options.",
         url: "https://networkup.io/compare/compare-all",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs All Competitors | Complete LinkedIn Outreach Comparison",
-        description: "Compare NetworkUp against Sendpilot, Waalaxy, Dripify, Expandi, Reachy, Heyreach, Apollo, Lemlist, and Sales Navigator.",
+        title: "LinkedIn Automation Tools Compared | NetworkUp",
+        description: "Compare NetworkUp with relevant LinkedIn outreach and automation platforms. Review verified features, workflows and use cases to evaluate the options.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: "NetworkUp vs Waalaxy | Top LinkedIn Automation Alternative Comparison",
-    description: "Compare NetworkUp vs Waalaxy. See why modern growth teams switch to NetworkUp for advanced AI ICP scoring, predictive campaign simulation, and intelligent multi-account scaling.",
+    title: { absolute: "NetworkUp vs Waalaxy | LinkedIn Automation Comparison" },
+    description: "Compare NetworkUp and Waalaxy for LinkedIn outreach, prospecting, multichannel workflows and campaign management using current product details.",
     keywords: ["networkup vs waalaxy", "waalaxy alternative", "waalaxy competitors", "best waalaxy alternative 2026", "waalaxy vs networkup", "cloud linkedin automation tool"],
     alternates: {
         canonical: "https://networkup.io/compare/waalaxy"
     },
     openGraph: {
-        title: "NetworkUp vs Waalaxy | Top LinkedIn Automation Alternative Comparison",
-        description: "Compare NetworkUp vs Waalaxy. See why modern growth teams switch to NetworkUp for advanced AI ICP scoring, predictive campaign simulation, and intelligent multi-account scaling.",
+        title: "NetworkUp vs Waalaxy | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp and Waalaxy for LinkedIn outreach, prospecting, multichannel workflows and campaign management using current product details.",
         url: "https://networkup.io/compare/waalaxy",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs Waalaxy | Top LinkedIn Automation Alternative",
-        description: "Compare NetworkUp vs Waalaxy for automated LinkedIn prospecting and lead outreach.",
+        title: "NetworkUp vs Waalaxy | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp and Waalaxy for LinkedIn outreach, prospecting, multichannel workflows and campaign management using current product details.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

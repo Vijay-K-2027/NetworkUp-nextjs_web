@@ -9,17 +9,15 @@ import Section313Template, { GovernanceCardItem, GovernanceStatItem } from "../t
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "NetworkUp for Agencies | Multi-Client LinkedIn Lead Generation",
-    description:
-        "Help your agency manage client campaigns, coordinate outreach, personalize messages with AI, and track performance from one connected workspace with isolated client environments and white-label reporting.",
+    title: { absolute: "LinkedIn Lead Generation for Agencies | NetworkUp" },
+    description: "Organise agency LinkedIn prospecting with NetworkUp. Manage outreach campaigns, personalise follow-ups and coordinate client workflows from one workspace.",
     keywords: ["linkedin outreach for agencies", "multi client lead generation", "white label linkedin automation", "agency fleet management", "client workspace isolation", "networkup for agencies"],
     alternates: {
         canonical: "https://networkup.io/solutions/agencies"
     },
     openGraph: {
-        title: "NetworkUp for Agencies | Multi-Client LinkedIn Lead Generation",
-        description:
-            "Help your agency manage client campaigns, coordinate outreach, personalize messages with AI, and track performance from one connected workspace with isolated client environments and white-label reporting.",
+        title: "LinkedIn Lead Generation for Agencies | NetworkUp",
+        description: "Organise agency LinkedIn prospecting with NetworkUp. Manage outreach campaigns, personalise follow-ups and coordinate client workflows from one workspace.",
         url: "https://networkup.io/solutions/agencies",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -35,9 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp for Agencies | Multi-Client LinkedIn Lead Generation",
-        description:
-            "Help your agency manage client campaigns, coordinate outreach, personalize messages with AI, and track performance from one connected workspace.",
+        title: "LinkedIn Lead Generation for Agencies | NetworkUp",
+        description: "Organise agency LinkedIn prospecting with NetworkUp. Manage outreach campaigns, personalise follow-ups and coordinate client workflows from one workspace.",
         images: ["https://networkup.io/seo/og-solutions.jpg"]
     },
     robots: {

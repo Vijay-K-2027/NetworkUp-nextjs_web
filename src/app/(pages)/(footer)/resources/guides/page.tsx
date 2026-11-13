@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import GuidesClient from "./GuidesClient";
 
 export const metadata: Metadata = {
-    title: "Product Manual & Guides | Step-by-Step LinkedIn Outreach Guide",
-    description: "Master NetworkUp with our 8-step product manual. Learn account connection, prospect discovery, multi-step campaign building, AI message writing, and campaign scaling.",
+    title: { absolute: "LinkedIn Outreach Guides | NetworkUp Product Guides" },
+    description: "Explore NetworkUp guides for account setup, prospect discovery, LinkedIn outreach campaigns, message personalisation and campaign management.",
     keywords: ["networkup user guide", "product manual", "linkedin automation tutorial", "how to scale linkedin outreach", "b2b prospecting guide", "campaign builder walkthrough"],
     alternates: {
         canonical: "https://networkup.io/resources/guides"
     },
     openGraph: {
-        title: "Product Manual & Guides | Step-by-Step LinkedIn Outreach Guide",
-        description: "Master NetworkUp with our 8-step product manual. Learn account connection, prospect discovery, multi-step campaign building, AI message writing, and campaign scaling.",
+        title: "LinkedIn Outreach Guides | NetworkUp Product Guides",
+        description: "Explore NetworkUp guides for account setup, prospect discovery, LinkedIn outreach campaigns, message personalisation and campaign management.",
         url: "https://networkup.io/resources/guides",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Product Manual & Guides | NetworkUp",
-        description: "Scale your LinkedIn outreach with our comprehensive 8-step guide.",
+        title: "LinkedIn Outreach Guides | NetworkUp Product Guides",
+        description: "Explore NetworkUp guides for account setup, prospect discovery, LinkedIn outreach campaigns, message personalisation and campaign management.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

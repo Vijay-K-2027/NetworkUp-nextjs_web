@@ -9,17 +9,15 @@ import Section313Template from "../templates/section313";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "NetworkUp for Sales Teams | LinkedIn Outreach & Pipeline Platform",
-    description:
-        "Empower SDRs, AEs, and sales leaders to discover qualified prospects, personalize outreach with AI, manage multi-rep accounts, and accelerate sales pipeline.",
+    title: { absolute: "LinkedIn Sales Automation for Sales Teams | NetworkUp" },
+    description: "Help sales teams organise LinkedIn prospecting, personalise outreach and manage follow-up conversations with NetworkUp's sales workflow tools.",
     keywords: ["linkedin outreach for sales teams", "b2b sales engagement", "sdr outbound automation", "ae prospecting tool", "sales pipeline acceleration", "networkup for sales"],
     alternates: {
         canonical: "https://networkup.io/solutions/sales-team"
     },
     openGraph: {
-        title: "NetworkUp for Sales Teams | LinkedIn Outreach & Pipeline Platform",
-        description:
-            "Empower SDRs, AEs, and sales leaders to discover qualified prospects, personalize outreach with AI, manage multi-rep accounts, and accelerate sales pipeline.",
+        title: "LinkedIn Sales Automation for Sales Teams | NetworkUp",
+        description: "Help sales teams organise LinkedIn prospecting, personalise outreach and manage follow-up conversations with NetworkUp's sales workflow tools.",
         url: "https://networkup.io/solutions/sales-team",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -35,9 +33,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp for Sales Teams | LinkedIn Outreach & Pipeline Platform",
-        description:
-            "Empower SDRs, AEs, and sales leaders to discover qualified prospects, personalize outreach with AI, manage multi-rep accounts, and accelerate sales pipeline.",
+        title: "LinkedIn Sales Automation for Sales Teams | NetworkUp",
+        description: "Help sales teams organise LinkedIn prospecting, personalise outreach and manage follow-up conversations with NetworkUp's sales workflow tools.",
         images: ["https://networkup.io/seo/og-solutions.jpg"]
     },
     robots: {

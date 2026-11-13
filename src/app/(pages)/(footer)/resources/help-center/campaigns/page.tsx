@@ -6,15 +6,15 @@ import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
 
 export const metadata: Metadata = {
-    title: "Campaigns Support & Setup Guide | NetworkUp Help Center",
-    description: "Learn how to build multi-step LinkedIn sequences, set up conditional branching workflows, schedule sending hours, and optimize campaign performance with AI.",
+    title: { absolute: "LinkedIn Campaign Setup Guide | NetworkUp Help Center" },
+    description: "Learn how to set up LinkedIn outreach campaigns in NetworkUp, organise sequence steps and manage campaign settings supported by the platform.",
     keywords: ["linkedin campaigns guide", "multi-step sequences tutorial", "conditional workflows", "campaign scheduling", "outreach optimization"],
     alternates: {
         canonical: "https://networkup.io/resources/help-center/campaigns"
     },
     openGraph: {
-        title: "Campaigns Support & Setup Guide | NetworkUp Help Center",
-        description: "Learn how to build multi-step LinkedIn sequences, set up conditional branching workflows, schedule sending hours, and optimize campaign performance with AI.",
+        title: "LinkedIn Campaign Setup Guide | NetworkUp Help Center",
+        description: "Learn how to set up LinkedIn outreach campaigns in NetworkUp, organise sequence steps and manage campaign settings supported by the platform.",
         url: "https://networkup.io/resources/help-center/campaigns",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Campaigns Setup Guide | NetworkUp",
-        description: "Create, manage, and optimize automated outreach campaigns.",
+        title: "LinkedIn Campaign Setup Guide | NetworkUp Help Center",
+        description: "Learn how to set up LinkedIn outreach campaigns in NetworkUp, organise sequence steps and manage campaign settings supported by the platform.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

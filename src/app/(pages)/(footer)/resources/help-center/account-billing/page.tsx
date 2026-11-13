@@ -6,15 +6,15 @@ import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
 
 export const metadata: Metadata = {
-    title: "Account & Billing Support | NetworkUp Help Center",
-    description: "Manage your NetworkUp subscription, update payment methods, upgrade/downgrade plans, invite team members, and check usage quotas.",
+    title: { absolute: "Account & Billing Help | NetworkUp Help Center" },
+    description: "Get help with NetworkUp account and billing tasks, including subscription details, payment methods and account settings covered in the help guide.",
     keywords: ["networkup billing", "account settings", "subscription management", "upgrade plan", "team seat management"],
     alternates: {
         canonical: "https://networkup.io/resources/help-center/account-billing"
     },
     openGraph: {
-        title: "Account & Billing Support | NetworkUp Help Center",
-        description: "Manage your NetworkUp subscription, update payment methods, upgrade/downgrade plans, invite team members, and check usage quotas.",
+        title: "Account & Billing Help | NetworkUp Help Center",
+        description: "Get help with NetworkUp account and billing tasks, including subscription details, payment methods and account settings covered in the help guide.",
         url: "https://networkup.io/resources/help-center/account-billing",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Account & Billing Support | NetworkUp",
-        description: "Manage team roles, update payment methods and view usage statistics.",
+        title: "Account & Billing Help | NetworkUp Help Center",
+        description: "Get help with NetworkUp account and billing tasks, including subscription details, payment methods and account settings covered in the help guide.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

@@ -6,15 +6,15 @@ import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
 
 export const metadata: Metadata = {
-    title: "Getting Started Guide | NetworkUp Help Center",
-    description: "Learn how to create your NetworkUp account, securely connect LinkedIn profiles, add leads, and launch your first AI outreach campaign in minutes.",
+    title: { absolute: "Getting Started with NetworkUp | Setup Guide" },
+    description: "Follow the NetworkUp getting-started guide to set up your account, connect supported profiles, organise prospects and begin your first outreach workflow.",
     keywords: ["getting started with networkup", "networkup setup guide", "connect linkedin account", "create first campaign", "networkup onboarding"],
     alternates: {
         canonical: "https://networkup.io/resources/help-center/getting-started"
     },
     openGraph: {
-        title: "Getting Started Guide | NetworkUp Help Center",
-        description: "Learn how to create your NetworkUp account, securely connect LinkedIn profiles, add leads, and launch your first AI outreach campaign in minutes.",
+        title: "Getting Started with NetworkUp | Setup Guide",
+        description: "Follow the NetworkUp getting-started guide to set up your account, connect supported profiles, organise prospects and begin your first outreach workflow.",
         url: "https://networkup.io/resources/help-center/getting-started",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Getting Started Guide | NetworkUp",
-        description: "Quick start guide to setting up your workspace and outreach campaigns.",
+        title: "Getting Started with NetworkUp | Setup Guide",
+        description: "Follow the NetworkUp getting-started guide to set up your account, connect supported profiles, organise prospects and begin your first outreach workflow.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

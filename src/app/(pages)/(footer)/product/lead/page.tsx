@@ -11,8 +11,8 @@ import Section6 from "./components/Section6";
 
 
 export const metadata: Metadata = {
-    title: "Lead Finder | AI-Powered B2B Prospect Discovery",
-    description: "Find high-intent decision-makers with NetworkUp's AI Lead Finder. Filter by seniority, tech stack, and buying signals to build verified B2B prospect lists.",
+    title: { absolute: "B2B Lead Finder | Prospect Discovery Tool | NetworkUp" },
+    description: "Discover B2B prospects with NetworkUp. Explore available filters and prospect insights to organise a more focused LinkedIn outreach list.",
     keywords: [
         "linkedin outreach automation",
         "linkedin lead finder",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
         canonical: "https://networkup.io/product/lead"
     },
     openGraph: {
-        title: "Lead Finder | AI-Powered B2B Prospect Discovery | NetworkUp.io",
-        description: "Find high-intent decision-makers with NetworkUp's AI Lead Finder. Filter by seniority, tech stack, and buying signals to build verified B2B prospect lists.",
+        title: "B2B Lead Finder | Prospect Discovery Tool | NetworkUp",
+        description: "Discover B2B prospects with NetworkUp. Explore available filters and prospect insights to organise a more focused LinkedIn outreach list.",
         url: "https://networkup.io/product/lead",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Lead Finder | AI-Powered B2B Prospect Discovery | NetworkUp.io",
-        description: "Find high-intent decision-makers with NetworkUp's AI Lead Finder. Filter by seniority, tech stack, and buying signals to build verified B2B prospect lists.",
+        title: "B2B Lead Finder | Prospect Discovery Tool | NetworkUp",
+        description: "Discover B2B prospects with NetworkUp. Explore available filters and prospect insights to organise a more focused LinkedIn outreach list.",
         images: ["https://networkup.io/seo/og-features.jpg"]
     },
     robots: {

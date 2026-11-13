@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: "NetworkUp vs Expandi.io | Advanced LinkedIn Automation Comparison",
-    description: "Compare NetworkUp vs Expandi.io. Explore how NetworkUp delivers AI message personalization, predictive ICP scoring, and unified messaging at a fraction of the complexity.",
+    title: { absolute: "NetworkUp vs Expandi | LinkedIn Automation Comparison" },
+    description: "Compare NetworkUp and Expandi for LinkedIn outreach automation, campaign management, personalisation and team workflows using verified product details.",
     keywords: ["networkup vs expandi", "expandi alternative", "expandi.io competitors", "best expandi alternative", "linkedin outreach expandi vs networkup", "cloud linkedin automation"],
     alternates: {
         canonical: "https://networkup.io/compare/expandi"
     },
     openGraph: {
-        title: "NetworkUp vs Expandi.io | Advanced LinkedIn Automation Comparison",
-        description: "Compare NetworkUp vs Expandi.io. Explore how NetworkUp delivers AI message personalization, predictive ICP scoring, and unified messaging at a fraction of the complexity.",
+        title: "NetworkUp vs Expandi | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp and Expandi for LinkedIn outreach automation, campaign management, personalisation and team workflows using verified product details.",
         url: "https://networkup.io/compare/expandi",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs Expandi.io | LinkedIn Outreach Automation Comparison",
-        description: "Compare NetworkUp vs Expandi for multi-account LinkedIn campaign automation.",
+        title: "NetworkUp vs Expandi | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp and Expandi for LinkedIn outreach automation, campaign management, personalisation and team workflows using verified product details.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

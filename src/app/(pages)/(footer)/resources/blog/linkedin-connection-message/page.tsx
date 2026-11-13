@@ -19,15 +19,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "15 LinkedIn Connection Message Templates That Work",
-    description: "Copy, personalize, and test 15 high-converting LinkedIn connection request templates tailored for sales reps, recruiters, founders, and agency operators.",
+    title: { absolute: "LinkedIn Connection Message Examples & Templates | NetworkUp" },
+    description: "Explore LinkedIn connection message examples for sales professionals, recruiters and founders. Adapt each template to the recipient and context.",
     keywords: ["linkedin connection message templates", "linkedin connection note", "how to connect on linkedin", "cold outreach templates", "linkedin message examples"],
     alternates: {
         canonical: "https://networkup.io/resources/blog/linkedin-connection-message"
     },
     openGraph: {
-        title: "15 LinkedIn Connection Message Templates That Work | NetworkUp.io",
-        description: "Copy, personalize, and test 15 high-converting LinkedIn connection request templates tailored for sales reps, recruiters, founders, and agency operators.",
+        title: "LinkedIn Connection Message Examples & Templates | NetworkUp",
+        description: "Explore LinkedIn connection message examples for sales professionals, recruiters and founders. Adapt each template to the recipient and context.",
         url: "https://networkup.io/resources/blog/linkedin-connection-message",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "15 LinkedIn Connection Message Templates That Actually Work",
-        description: "Copy, personalize and start more conversations that convert.",
+        title: "LinkedIn Connection Message Examples & Templates | NetworkUp",
+        description: "Explore LinkedIn connection message examples for sales professionals, recruiters and founders. Adapt each template to the recipient and context.",
         images: ["https://networkup.io/footer/resources/blog/Article2.png"]
     },
     robots: {

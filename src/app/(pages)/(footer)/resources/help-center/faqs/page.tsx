@@ -6,15 +6,15 @@ import HelpCenterHeader from "../components/HelpCenterHeader";
 import Documentation, { DocItem } from "../Documentation";
 
 export const metadata: Metadata = {
-    title: "Frequently Asked Questions (FAQs) | NetworkUp Help Center",
-    description: "Find answers to frequently asked questions about NetworkUp features, LinkedIn safety, AI message writing, CRM integrations, and pricing plans.",
+    title: { absolute: "NetworkUp FAQs | LinkedIn Outreach & Platform Help" },
+    description: "Find answers to common questions about NetworkUp features, account setup, LinkedIn outreach, integrations and subscription options.",
     keywords: ["networkup faqs", "frequently asked questions", "is networkup safe for linkedin", "linkedin automation questions", "networkup pricing faqs"],
     alternates: {
         canonical: "https://networkup.io/resources/help-center/faqs"
     },
     openGraph: {
-        title: "Frequently Asked Questions (FAQs) | NetworkUp Help Center",
-        description: "Find answers to frequently asked questions about NetworkUp features, LinkedIn safety, AI message writing, CRM integrations, and pricing plans.",
+        title: "NetworkUp FAQs | LinkedIn Outreach & Platform Help",
+        description: "Find answers to common questions about NetworkUp features, account setup, LinkedIn outreach, integrations and subscription options.",
         url: "https://networkup.io/resources/help-center/faqs",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Frequently Asked Questions | NetworkUp",
-        description: "Answers to common questions about NetworkUp, campaigns, and account setup.",
+        title: "NetworkUp FAQs | LinkedIn Outreach & Platform Help",
+        description: "Find answers to common questions about NetworkUp features, account setup, LinkedIn outreach, integrations and subscription options.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

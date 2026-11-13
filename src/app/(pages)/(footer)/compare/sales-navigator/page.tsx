@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: { absolute: "NetworkUp vs Sales Navigator: Outreach Comparison" },
-    description: "Compare NetworkUp vs LinkedIn Sales Navigator. Turn manual prospecting into automated multi-step outreach sequences, buying signals, and unified conversations.",
+    title: { absolute: "NetworkUp vs LinkedIn Sales Navigator | Comparison" },
+    description: "Compare NetworkUp and LinkedIn Sales Navigator by purpose, prospect discovery, outreach workflows and automation capabilities. Explain where the tools differ.",
     keywords: ["networkup vs sales navigator", "linkedin sales navigator alternative", "sales navigator automation", "sales navigator outreach", "sales navigator vs networkup", "linkedin prospecting automation"],
     alternates: {
         canonical: "https://networkup.io/compare/sales-navigator"
     },
     openGraph: {
-        title: "NetworkUp vs Sales Navigator: Outreach Comparison",
-        description: "Compare NetworkUp vs LinkedIn Sales Navigator. Turn manual prospecting into automated multi-step outreach sequences, buying signals, and unified conversations.",
+        title: "NetworkUp vs LinkedIn Sales Navigator | Comparison",
+        description: "Compare NetworkUp and LinkedIn Sales Navigator by purpose, prospect discovery, outreach workflows and automation capabilities. Explain where the tools differ.",
         url: "https://networkup.io/compare/sales-navigator",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs LinkedIn Sales Navigator Comparison",
-        description: "Compare NetworkUp vs LinkedIn Sales Navigator for B2B prospecting and automated outreach.",
+        title: "NetworkUp vs LinkedIn Sales Navigator | Comparison",
+        description: "Compare NetworkUp and LinkedIn Sales Navigator by purpose, prospect discovery, outreach workflows and automation capabilities. Explain where the tools differ.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

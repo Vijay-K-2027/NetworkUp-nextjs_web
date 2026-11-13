@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: { absolute: "NetworkUp vs Dripify: LinkedIn Automation Comparison" },
-    description: "Compare NetworkUp vs Dripify. Explore side-by-side capabilities for LinkedIn outreach sequences, unified multi-account inboxes, AI messaging, and lead discovery.",
+    title: { absolute: "NetworkUp vs Dripify | LinkedIn Automation Comparison" },
+    description: "Compare NetworkUp and Dripify across LinkedIn outreach sequences, campaign workflows, messaging and team needs using current product information.",
     keywords: ["networkup vs dripify", "dripify alternative", "dripify competitors", "best dripify alternative", "linkedin drip automation", "dripify vs networkup"],
     alternates: {
         canonical: "https://networkup.io/compare/dripify"
     },
     openGraph: {
-        title: "NetworkUp vs Dripify: LinkedIn Automation Comparison",
-        description: "Compare NetworkUp vs Dripify. Explore side-by-side capabilities for LinkedIn outreach sequences, unified multi-account inboxes, AI messaging, and lead discovery.",
+        title: "NetworkUp vs Dripify | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp and Dripify across LinkedIn outreach sequences, campaign workflows, messaging and team needs using current product information.",
         url: "https://networkup.io/compare/dripify",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs Dripify: LinkedIn Automation Comparison",
-        description: "Compare NetworkUp vs Dripify. Explore side-by-side capabilities for LinkedIn outreach sequences, unified multi-account inboxes, AI messaging, and lead discovery.",
+        title: "NetworkUp vs Dripify | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp and Dripify across LinkedIn outreach sequences, campaign workflows, messaging and team needs using current product information.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

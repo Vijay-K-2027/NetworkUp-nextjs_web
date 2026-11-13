@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import PrivacyPolicyClient from "./PrivacyPolicyClient";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy | Transparent Data & Security Protection",
-    description: "Learn how NetworkUp protects your personal information, encrypted credentials, cookies, and data compliance in accordance with GDPR and CCPA regulations.",
+    title: { absolute: "NetworkUp Privacy Policy | Data & Privacy Information" },
+    description: "Read NetworkUp's privacy policy to understand how personal information, account data, cookies and related information are collected and handled.",
     keywords: ["networkup privacy policy", "data security", "gdpr compliance", "linkedin automation security", "privacy terms"],
     alternates: {
         canonical: "https://networkup.io/company/privacy-policy"
     },
     openGraph: {
-        title: "Privacy Policy | Transparent Data & Security Protection",
-        description: "Learn how NetworkUp protects your personal information, encrypted credentials, cookies, and data compliance in accordance with GDPR and CCPA regulations.",
+        title: "NetworkUp Privacy Policy | Data & Privacy Information",
+        description: "Read NetworkUp's privacy policy to understand how personal information, account data, cookies and related information are collected and handled.",
         url: "https://networkup.io/company/privacy-policy",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Privacy Policy | NetworkUp",
-        description: "Review our transparent data collection, AES-256 encryption, and privacy protections.",
+        title: "NetworkUp Privacy Policy | Data & Privacy Information",
+        description: "Read NetworkUp's privacy policy to understand how personal information, account data, cookies and related information are collected and handled.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {

@@ -14,15 +14,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "How to Build an ICP That Converts",
-    description: "A practical framework to define and target the right prospects on LinkedIn. Learn ICP scoring, firmographic filters, and buyer intent triggers.",
+    title: { absolute: "Ideal Customer Profile (ICP): How to Build One | NetworkUp" },
+    description: "Learn how to define an ideal customer profile for B2B prospecting. Explore firmographic criteria, audience fit and ways to prioritise relevant LinkedIn.",
     keywords: ["ideal customer profile", "icp framework", "b2b targeting strategy", "linkedin lead generation icp", "prospect targeting b2b"],
     alternates: {
         canonical: "https://networkup.io/resources/blog/ideal-customer-profile"
     },
     openGraph: {
-        title: "How to Build an ICP That Converts | NetworkUp.io",
-        description: "A practical framework to define and target the right prospects on LinkedIn. Learn ICP scoring, firmographic filters, and buyer intent triggers.",
+        title: "Ideal Customer Profile (ICP): How to Build One | NetworkUp",
+        description: "Learn how to define an ideal customer profile for B2B prospecting. Explore firmographic criteria, audience fit and ways to prioritise relevant LinkedIn.",
         url: "https://networkup.io/resources/blog/ideal-customer-profile",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Build an Ideal Customer Profile (ICP) That Converts",
-        description: "A practical framework to define and target the right prospects.",
+        title: "Ideal Customer Profile (ICP): How to Build One | NetworkUp",
+        description: "Learn how to define an ideal customer profile for B2B prospecting. Explore firmographic criteria, audience fit and ways to prioritise relevant LinkedIn.",
         images: ["https://networkup.io/footer/resources/blog/Article3.png"]
     },
     robots: {

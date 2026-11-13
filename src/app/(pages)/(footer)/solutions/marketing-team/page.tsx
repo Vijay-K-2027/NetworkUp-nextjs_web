@@ -10,17 +10,15 @@ import { RefreshCw, Lock, Target, Users } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "NetworkUp for Marketing Teams | LinkedIn ABM & Demand Generation",
-    description:
-        "Help marketing teams discover in-market prospects, personalize LinkedIn outreach, coordinate account-based campaigns, and turn engagement into measurable pipeline.",
+    title: { absolute: "LinkedIn Marketing Automation for Teams | NetworkUp" },
+    description: "Support B2B demand generation with NetworkUp. Organise LinkedIn prospecting, personalise outreach and coordinate campaign engagement.",
     keywords: ["linkedin abm platform", "account based marketing linkedin", "demand generation outreach", "b2b marketing automation", "lead intent prospecting", "networkup for marketing"],
     alternates: {
         canonical: "https://networkup.io/solutions/marketing-team"
     },
     openGraph: {
-        title: "NetworkUp for Marketing Teams | LinkedIn ABM & Demand Generation",
-        description:
-            "Help marketing teams discover in-market prospects, personalize LinkedIn outreach, coordinate account-based campaigns, and turn engagement into measurable pipeline.",
+        title: "LinkedIn Marketing Automation for Teams | NetworkUp",
+        description: "Support B2B demand generation with NetworkUp. Organise LinkedIn prospecting, personalise outreach and coordinate campaign engagement.",
         url: "https://networkup.io/solutions/marketing-team",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -36,9 +34,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp for Marketing Teams | LinkedIn ABM & Demand Generation",
-        description:
-            "Help marketing teams discover in-market prospects, personalize LinkedIn outreach, coordinate account-based campaigns, and turn engagement into measurable pipeline.",
+        title: "LinkedIn Marketing Automation for Teams | NetworkUp",
+        description: "Support B2B demand generation with NetworkUp. Organise LinkedIn prospecting, personalise outreach and coordinate campaign engagement.",
         images: ["https://networkup.io/seo/og-solutions.jpg"]
     },
     robots: {
