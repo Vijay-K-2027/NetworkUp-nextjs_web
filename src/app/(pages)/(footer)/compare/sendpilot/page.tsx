@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import Template, { OverlapItems, ComparisonRow } from "../Template";
 
 export const metadata: Metadata = {
-    title: { absolute: "NetworkUp vs Sendpilot | LinkedIn Automation Comparison" },
-    description: "Compare NetworkUp and Sendpilot for LinkedIn automation, campaign workflows, messaging and prospect management using verified product information.",
-    keywords: ["networkup vs sendpilot", "sendpilot alternative", "sendpilot competitors", "best sendpilot alternative", "linkedin automation tools comparison", "sendpilot vs networkup"],
+    title: { absolute: "NetworkUp vs Sendler | LinkedIn Automation Comparison" },
+    description: "Compare NetworkUp and Sendler for LinkedIn automation, campaign workflows, messaging and prospect management using verified product information.",
+    keywords: ["networkup vs sendler", "sendler alternative", "sendler competitors", "best sendler alternative", "linkedin automation tools comparison", "sendler vs networkup"],
     alternates: {
         canonical: "https://networkup.io/compare/sendpilot"
     },
     openGraph: {
-        title: "NetworkUp vs Sendpilot | LinkedIn Automation Comparison",
-        description: "Compare NetworkUp and Sendpilot for LinkedIn automation, campaign workflows, messaging and prospect management using verified product information.",
+        title: "NetworkUp vs Sendler | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp and Sendler for LinkedIn automation, campaign workflows, messaging and prospect management using verified product information.",
         url: "https://networkup.io/compare/sendpilot",
         siteName: "NetworkUp.io",
         locale: "en_US",
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
                 url: "https://networkup.io/seo/og-about.jpg",
                 width: 1200,
                 height: 630,
-                alt: "NetworkUp vs Sendpilot Comparison"
+                alt: "NetworkUp vs Sendler Comparison"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "NetworkUp vs Sendpilot | LinkedIn Automation Comparison",
-        description: "Compare NetworkUp and Sendpilot for LinkedIn automation, campaign workflows, messaging and prospect management using verified product information.",
+        title: "NetworkUp vs Sendler | LinkedIn Automation Comparison",
+        description: "Compare NetworkUp and Sendler for LinkedIn automation, campaign workflows, messaging and prospect management using verified product information.",
         images: ["https://networkup.io/seo/og-about.jpg"]
     },
     robots: {
@@ -156,7 +156,7 @@ const sendpilotComparisonRows: ComparisonRow[] = [
 export default function Sendpilot() {
     return (
         <Template
-            competitorName="SendPilot"
+            competitorName="Sendler"
             overlapItems={sendpilotOverlap}
             comparisonRows={sendpilotComparisonRows}
         />

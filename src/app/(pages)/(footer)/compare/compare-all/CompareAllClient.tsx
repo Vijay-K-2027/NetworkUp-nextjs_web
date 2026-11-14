@@ -374,7 +374,7 @@ export default function CompareAllClient() {
                                     Feature
                                 </div>
                                 <div className="text-center text-[#000400] font-extrabold">NetworkUp</div>
-                                <div className="text-center text-[#43483e]">Sendpilot</div>
+                                <div className="text-center text-[#43483e]">Sendler</div>
                                 <div className="text-center text-[#43483e]">Waalaxy</div>
                                 <div className="text-center text-[#43483e]">Dripify</div>
                                 <div className="text-center text-[#43483e]">Expandi</div>

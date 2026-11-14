@@ -44,7 +44,7 @@ export default function CompareAllPage() {
                 "@type": "WebPage",
                 "@id": "https://networkup.io/compare/compare-all#webpage",
                 "name": "NetworkUp vs All Competitors Comparison Matrix",
-                "description": "Full side-by-side feature matrix comparing NetworkUp.io with Sendpilot, Waalaxy, Dripify, Expandi, Reachy, Heyreach, Apollo, Lemlist, and Sales Navigator.",
+                "description": "Full side-by-side feature matrix comparing NetworkUp.io with Sendler, Waalaxy, Dripify, Expandi, Reachy, Heyreach, Apollo, Lemlist, and Sales Navigator.",
                 "url": "https://networkup.io/compare/compare-all"
             },
             {

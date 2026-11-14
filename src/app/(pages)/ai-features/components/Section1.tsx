@@ -31,7 +31,7 @@ export default function Section1() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.15 }}
                         >
-                            Supercharge you outreach with <span className="text-[#316b00]">Autonomous Growth</span>
+                            Supercharge your outreach with <span className="text-[#316b00]">Autonomous Growth</span>
                         </motion.h1>
 
                         <motion.p

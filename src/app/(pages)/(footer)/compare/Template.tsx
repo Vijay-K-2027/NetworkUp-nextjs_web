@@ -190,7 +190,7 @@ function StatusIcon({ status }: { status: FeatureStatus }) {
 }
 
 export default function Template({
-    competitorName = "SendPilot",
+    competitorName = "Sendler",
     overlapTitle,
     overlapItems = defaultOverlapItems,
     comparisonRows = defaultComparisonRows,

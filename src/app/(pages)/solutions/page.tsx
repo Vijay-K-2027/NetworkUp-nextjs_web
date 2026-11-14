@@ -13,7 +13,6 @@ import Part1 from "./components/Section4/Part1";
 
 export const metadata: Metadata = {
     title: { absolute: "LinkedIn Outreach Solutions for Sales & Growth Teams | NetworkUp" },
-    // description needs to explain more in detail (120 - 150 words)
     description: "Explore NetworkUp solutions for sales teams, recruiters, agencies and growing businesses. Find the outreach workflow that fits your team's needs.",
     keywords: ["linkedin outreach", "lead generation", "sales prospecting", "agency growth", "recruiter automation", "startup networking", "b2b outreach", "crm integration hubspot", "candidate sourcing pipelines", "safety limits proxies"],
     alternates: {

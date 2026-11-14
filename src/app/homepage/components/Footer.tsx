@@ -33,7 +33,7 @@ const resourcesLinks = [
 ];
 
 const compareLinks = [
-    { name: "Sendpilot", href: "/compare/sendpilot" },
+    { name: "Sendler", href: "/compare/sendpilot" },
     { name: "Waalaxy", href: "/compare/waalaxy" },
     { name: "Heyreach", href: "/compare/heyreach" },
     { name: "Dripify", href: "/compare/dripify" },
